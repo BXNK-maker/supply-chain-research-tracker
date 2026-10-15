@@ -4,13 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Evolutionary Giant Tour for CVRP using NSE and ML Heuristic"
-description: "This paper introduces an evolutionary giant-tour approach for the Capacitated Vehicle Routing Problem (CVRP) that separates the evolutionary search from route construction. The method combines an adapted Node Shift Encoding (NSE) with an unsupervised machine-learning repair heuristic to restore fleet feasibility following an unconstrained linear split. Computational evaluations on standard benchmark instances indicate that NSE outperforms existing encodings, and the proposed ML-driven pipeline delivers lower routing costs and higher feasibility rates than conventional fleet-constrained split methods."
+description: "This paper investigates an evolutionary giant-tour approach for the Capacitated Vehicle Routing Problem (CVRP) by decoupling the evolutionary search from route construction. The authors adapt Node Shift Encoding (NSE) to the CVRP giant-tour representation and introduce an unsupervised machine-learning repair heuristic to restore fleet feasibility after unconstrained linear splitting. Computational results on standard benchmarks demonstrate that NSE combined with the ML-based repair pipeline consistently surpasses traditional encodings and constrained split methods in both solution cost and feasibility."
 resource: "https://arxiv.org/abs/2610.03816"
 tags:
-  - "machine-learning"
-  - "evolutionary-algorithms"
   - "combinatorial-optimization"
-timestamp: "2026-10-15T04:44:07Z"
+  - "evolutionary-algorithms"
+  - "machine-learning"
+  - "vehicle-routing-problem"
+timestamp: "2026-10-15T09:34:37Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,8 +33,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-15T04:44:07Z"
-created_at: "2026-10-15T04:44:07Z"
+processed_at: "2026-10-15T09:34:37Z"
+created_at: "2026-10-15T09:34:37Z"
 ---
 
 # Evolutionary Giant Tour for CVRP using NSE and ML Heuristic
@@ -44,21 +45,24 @@ created_at: "2026-10-15T04:44:07Z"
 
 ## Summary
 
-This paper introduces an evolutionary giant-tour approach for the Capacitated Vehicle Routing Problem (CVRP) that separates the evolutionary search from route construction. The method combines an adapted Node Shift Encoding (NSE) with an unsupervised machine-learning repair heuristic to restore fleet feasibility following an unconstrained linear split. Computational evaluations on standard benchmark instances indicate that NSE outperforms existing encodings, and the proposed ML-driven pipeline delivers lower routing costs and higher feasibility rates than conventional fleet-constrained split methods.
+This paper investigates an evolutionary giant-tour approach for the Capacitated Vehicle Routing Problem (CVRP) by decoupling the evolutionary search from route construction. The authors adapt Node Shift Encoding (NSE) to the CVRP giant-tour representation and introduce an unsupervised machine-learning repair heuristic to restore fleet feasibility after unconstrained linear splitting. Computational results on standard benchmarks demonstrate that NSE combined with the ML-based repair pipeline consistently surpasses traditional encodings and constrained split methods in both solution cost and feasibility.
 
 ## Key Contributions
 
-- Adapted Node Shift Encoding (NSE) to the Capacitated Vehicle Routing Problem (CVRP) giant-tour setting, demonstrating superior solution quality and feasibility over Path Representation and Double Chromosome.
-- Proposed an unsupervised machine-learning repair heuristic that restores fleet feasibility after an unconstrained linear split, achieving success in approximately 72% of cases.
-- Demonstrated that the Linear-Split-ML-Heuristic pipeline is more robust than traditional fleet-constrained split methods from the literature, delivering lower costs and higher feasibility rates.
+- Adapted Node Shift Encoding (NSE) to the Capacitated Vehicle Routing Problem giant-tour setting, outperforming Path Representation and Double Chromosome in solution quality and feasibility.
+- Proposed an unsupervised machine-learning repair heuristic that restores fleet feasibility after an unconstrained linear split in approximately 72% of cases.
+- Demonstrated that the Linear-Split-ML-Heuristic pipeline is more robust than traditional constrained split methods, delivering lower costs and higher feasibility rates on standard benchmark instances.
 
 ## Limitations
 
-Evaluation is limited to standard benchmark instances for CVRP, and the machine-learning repair heuristic successfully restores feasibility in about 72% of cases rather than guaranteeing 100% feasibility.
+The abstract does not specify runtime overheads or scalability limits on extremely large-scale CVRP instances beyond standard benchmark tests.
 
 ## Archivist Review
 
-No concepts met the strict bar for permanent vault storage. Node Shift Encoding and Linear-Split-ML-Heuristic are paper-specific adaptations/pipelines within combinatorial optimization rather than broad foundational concepts with independent future reuse.
+Applied strict selection criteria: no standalone concepts or open questions met the bar for long-term vault inclusion, as the techniques are specific to CVRP evolutionary algorithms.
+
+### Rejected Candidates
+- [open_question] Smarter Repair and Route Equity (`smarter-dismantling-and-route-equity-extensions`) - paper_local: Paper-specific future work directions regarding repair heuristics and route equity in CVRP.
 
 ## Links
 

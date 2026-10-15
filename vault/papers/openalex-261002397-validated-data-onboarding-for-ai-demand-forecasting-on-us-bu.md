@@ -4,14 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Validated Data Onboarding for AI Demand Forecasting on U.S. Building Meter Data: Design, Controlled Evaluation, and a Corrected Negative Result"
-description: "This paper introduces a validated data-onboarding pipeline designed to detect and repair defects in electric meter data prior to AI demand forecasting, using exclusively past-available information to prevent data leakage. Evaluated on 12 U.S. buildings from the Building Data Genome 2 dataset, the pipeline successfully restores forecasting accuracy degraded by seeded defects across gradient boosting, ridge regression, and random forest models. Additionally, the report details a corrected negative result where an initial pipeline iteration over-cleaned natural data, highlighting the necessity of careful per-building calibration."
+description: "This paper presents a validated data-onboarding pipeline that detects and repairs defects in electric meter data using only past-available information prior to model training. Evaluating on hourly data from twelve U.S. buildings, the author demonstrates that minor data corruptions drastically degrade gradient-boosting, ridge regression, and random forest forecasting performance, and that the proposed pipeline successfully restores accuracy to clean-data baselines. The study also transparently documents and corrects a negative result where an initial pipeline version over-cleaned natural data."
 resource: "https://arxiv.org/abs/2610.02397"
 tags:
+  - "data-cleaning"
+  - "demand-forecasting"
   - "machine-learning"
   - "time-series"
-  - "demand-forecasting"
-  - "data-cleaning"
-timestamp: "2026-10-15T04:43:39Z"
+timestamp: "2026-10-15T09:33:29Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,12 +28,13 @@ architectures:
 concepts:
   []
 datasets:
-  []
+  - name: "Building Data Genome 2"
+    description: "Hourly electricity data for twelve U.S. buildings (210,528 rows, 2016-2017) used for controlled evaluation of demand forecasting."
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-15T04:43:39Z"
-created_at: "2026-10-15T04:43:39Z"
+processed_at: "2026-10-15T09:33:29Z"
+created_at: "2026-10-15T09:33:29Z"
 ---
 
 # Validated Data Onboarding for AI Demand Forecasting on U.S. Building Meter Data: Design, Controlled Evaluation, and a Corrected Negative Result
@@ -44,25 +45,25 @@ created_at: "2026-10-15T04:43:39Z"
 
 ## Summary
 
-This paper introduces a validated data-onboarding pipeline designed to detect and repair defects in electric meter data prior to AI demand forecasting, using exclusively past-available information to prevent data leakage. Evaluated on 12 U.S. buildings from the Building Data Genome 2 dataset, the pipeline successfully restores forecasting accuracy degraded by seeded defects across gradient boosting, ridge regression, and random forest models. Additionally, the report details a corrected negative result where an initial pipeline iteration over-cleaned natural data, highlighting the necessity of careful per-building calibration.
+This paper presents a validated data-onboarding pipeline that detects and repairs defects in electric meter data using only past-available information prior to model training. Evaluating on hourly data from twelve U.S. buildings, the author demonstrates that minor data corruptions drastically degrade gradient-boosting, ridge regression, and random forest forecasting performance, and that the proposed pipeline successfully restores accuracy to clean-data baselines. The study also transparently documents and corrects a negative result where an initial pipeline version over-cleaned natural data.
 
 ## Key Contributions
 
-- Proposed a validated data-onboarding pipeline that detects and repairs defects in meter data using only past-available information prior to model training.
-- Demonstrated on Building Data Genome 2 that seeded defects touching 0.10% of training data raise gradient-boosting forecasting error by 86%, which is fully mitigated by the pipeline while retaining 93% of training targets.
-- Documented a corrected negative result showing that an early version of the pipeline over-cleaned natural data and degraded forecasts by 25%, resolved via per-building calibration.
-- Achieved robust reproducibility with SHA-256 verified pinned inputs, automated testing, and continuous integration.
+- Demonstrated that seeded, hash-logged defects affecting 0.10% of training data raise gradient-boosting forecasting error by 86% on U.S. building meter data.
+- Showed that a past-only data-onboarding pipeline successfully returns forecasting error to the clean-data baseline (MASE 0.760 clean, 1.415 corrupted, 0.729 repaired) while retaining 93% of training targets.
+- Documented a corrected negative result where an initial pipeline version over-cleaned natural data and worsened forecasts by 25%, resolved via per-building calibration.
 
 ## Limitations
 
-Initial versions of the pipeline over-cleaned natural data, requiring careful per-building calibration to prevent forecast degradation.
+Evaluated specifically on electricity meter data from twelve U.S. buildings; generalization to broader smart-meter or alternative multi-modal grid telemetry remains to be explored.
 
 ## Archivist Review
 
-The proposed concept of a validated data-onboarding pipeline for building meter data is too application-specific and lacks generalizability across distinct machine learning domains. Therefore, no concepts or datasets are approved for permanent vault inclusion in this review.
+The paper presents a valuable empirical study on data cleaning and onboarding for building meter demand forecasting, but its concepts (such as the specific onboarding pipeline) are paper-local data-engineering implementations rather than reusable vault-level primitives. The Building Data Genome 2 dataset is approved as a standard benchmark dataset for building energy time-series analysis.
 
-### Rejected Candidates
-- [concept] Validated Data Onboarding Pipeline (`validated-data-onboarding-pipeline`) - not_reusable: A specific data-cleaning pipeline applied to building meter data is domain-specific and insufficiently reusable across diverse machine learning subfields to merit a permanent vault note.
+## Datasets
+
+- [[Building Data Genome 2]]
 
 ## Links
 

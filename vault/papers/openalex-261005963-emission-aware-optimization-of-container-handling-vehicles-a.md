@@ -4,14 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Emission-Aware Optimization of Container Handling Vehicles: A HaminaKotka Port Case Study"
-description: "This paper presents a data-driven fleet scheduling framework for landside port operations aimed at operational decarbonization, using a two-year dataset of 77 port-operating vehicles from the Port of HaminaKotka. The scheduling task is formulated as a linear programming workload allocation problem that minimizes CO2eq emissions and energy consumption while keeping total operating hours fixed. Solved via the HiGHS linear programming solver, the optimized schedule achieves an approximately 31% reduction in total CO2eq emissions and a 9.4% reduction in total energy consumption without reducing the aggregate workload."
+description: "This paper presents a data-driven fleet scheduling framework for landside port operations at the Port of HaminaKotka, aimed at operational decarbonization. By formulating the scheduling task as a linear programming workload allocation problem, the framework reallocates operating hours away from high-intensity vehicles to more efficient units. Evaluated on a two-year dataset from 77 port vehicles, the optimized schedule achieves approximately a 31% reduction in total CO2eq emissions and a 9.4% reduction in energy consumption without reducing total operating hours."
 resource: "https://arxiv.org/abs/2610.05963"
 tags:
-  - "machine-learning"
-  - "smart-ports"
   - "decarbonization"
   - "fleet-scheduling"
-timestamp: "2026-10-15T04:45:10Z"
+  - "smart-ports"
+timestamp: "2026-10-15T09:35:26Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,10 +31,11 @@ concepts:
 datasets:
   []
 open_questions:
-  []
+  - name: "operational-realism-multi-objective-port-fleet-optimization"
+    description: "Extend the linear programming fleet scheduling and port decarbonization framework to integrate operational realism, including minimum and maximum utilization constraints, vehicle availability windows, maintenance schedules, and multi-objective optimization models that jointly minimize emissions, energy use, and operational costs."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-15T04:45:10Z"
-created_at: "2026-10-15T04:45:10Z"
+processed_at: "2026-10-15T09:35:26Z"
+created_at: "2026-10-15T09:35:26Z"
 ---
 
 # Emission-Aware Optimization of Container Handling Vehicles: A HaminaKotka Port Case Study
@@ -46,24 +46,28 @@ created_at: "2026-10-15T04:45:10Z"
 
 ## Summary
 
-This paper presents a data-driven fleet scheduling framework for landside port operations aimed at operational decarbonization, using a two-year dataset of 77 port-operating vehicles from the Port of HaminaKotka. The scheduling task is formulated as a linear programming workload allocation problem that minimizes CO2eq emissions and energy consumption while keeping total operating hours fixed. Solved via the HiGHS linear programming solver, the optimized schedule achieves an approximately 31% reduction in total CO2eq emissions and a 9.4% reduction in total energy consumption without reducing the aggregate workload.
+This paper presents a data-driven fleet scheduling framework for landside port operations at the Port of HaminaKotka, aimed at operational decarbonization. By formulating the scheduling task as a linear programming workload allocation problem, the framework reallocates operating hours away from high-intensity vehicles to more efficient units. Evaluated on a two-year dataset from 77 port vehicles, the optimized schedule achieves approximately a 31% reduction in total CO2eq emissions and a 9.4% reduction in energy consumption without reducing total operating hours.
 
 ## Key Contributions
 
-- Formulates a data-driven fleet scheduling framework for landside port operations as a linear programming workload allocation problem that minimizes total CO2eq emissions and energy consumption while preserving the total workload.
-- Derives vehicle-specific intensity metrics (CO2eq per operating hour) using a two-year dataset from 77 port-operating vehicles at the Port of HaminaKotka Mussalo terminal.
-- Achieves approximately a 31% reduction in total CO2eq emissions and a 9.4% reduction in total energy consumption on the Port of HaminaKotka dataset by reallocating operating hours away from high-intensity vehicles.
+- Formulates a linear programming workload allocation framework for container handling vehicles that minimizes total CO2eq emissions while preserving aggregate workload.
+- Utilizes a two-year operational dataset from 77 port vehicles at the Port of HaminaKotka to derive vehicle-specific emission intensity metrics.
+- Demonstrates through HiGHS-based optimization that shifting utilization toward efficient units achieves a ~31% reduction in total CO2eq and a 9.4% reduction in total energy consumption.
 
 ## Limitations
 
-The framework focuses specifically on linear programming workload reallocation for landside port operations and relies on historical vehicle-specific intensity metrics derived from a two-year dataset.
+The framework focuses on workload reallocation under fixed aggregate hours and does not dynamically optimize real-time routing or variable arrival schedules.
+
+## Open Questions & Future Work
+
+- [[operational-realism-multi-objective-port-fleet-optimization]]
 
 ## Archivist Review
 
-Applied strict selection criteria. The paper's contribution is a case-specific linear programming application for port vehicle scheduling using standard solvers, which lacks broad foundational methodological novelty or reusable architecture for the core ML vault. The single open question was rejected because it proposes standard application-specific extensions (incorporating maintenance windows and cost terms) rather than a fundamental scientific bottleneck.
+Approved the open question on operational realism and multi-objective port fleet optimization as it addresses a substantive methodological bottleneck in smart-port fleet decarbonization. No concepts or datasets met the strict reusability and novelty criteria.
 
-### Rejected Candidates
-- [open_question] Operational Realism in Fleet Scheduling (`operational-realism-multiobjective-fleet-scheduling`) - low_impact: This open question essentially requests routine extensions to constraints and multi-objective optimization, which is standard application-specific future work rather than an architectural or fundamental ML bottleneck.
+### Approved Open Questions
+- Operational Realism and Multi-Objective Optimization in Port Fleets: Crucial for bridging the gap between theoretical linear optimization models and practical, implementable smart-port fleet management systems under real-world constraints.
 
 ## Links
 

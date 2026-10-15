@@ -4,11 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Integrated omics reveals actionable drivers of bioactive variation in US milk"
-description: "The paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, combining genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics to map health-relevant bioactivity. The authors identified 6,714 compounds and quantified 5,288 with absolute concentrations, making these available through the newly established Dairy Molecule Database (DMD). Furthermore, antimicrobial assays validated several computationally predicted peptides, and association analyses linked bioactive variation to genetic, breed, and supply-chain factors."
+description: "This paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, combining genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics to map molecular bioactivity and compositional variation. The authors identify thousands of compounds, establish the public Dairy Molecule Database (DMD), and validate predicted antimicrobial peptides against drug-resistant pathogens. Furthermore, association analyses reveal that bioactivity efficacy correlates with purchase region, genetic markers, breed proportion, and miRNA abundance, highlighting actionable avenues for supply-chain and breeding optimization."
 resource: "https://arxiv.org/abs/2610.04970"
 tags:
   - "machine-learning"
-timestamp: "2026-10-15T04:44:03Z"
+  - "interpretable-machine-learning"
+  - "multi-omics"
+timestamp: "2026-10-15T09:34:02Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -56,8 +58,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-15T04:44:03Z"
-created_at: "2026-10-15T04:44:03Z"
+processed_at: "2026-10-15T09:34:02Z"
+created_at: "2026-10-15T09:34:02Z"
 ---
 
 # Integrated omics reveals actionable drivers of bioactive variation in US milk
@@ -68,25 +70,25 @@ created_at: "2026-10-15T04:44:03Z"
 
 ## Summary
 
-The paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, combining genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics to map health-relevant bioactivity. The authors identified 6,714 compounds and quantified 5,288 with absolute concentrations, making these available through the newly established Dairy Molecule Database (DMD). Furthermore, antimicrobial assays validated several computationally predicted peptides, and association analyses linked bioactive variation to genetic, breed, and supply-chain factors.
+This paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, combining genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics to map molecular bioactivity and compositional variation. The authors identify thousands of compounds, establish the public Dairy Molecule Database (DMD), and validate predicted antimicrobial peptides against drug-resistant pathogens. Furthermore, association analyses reveal that bioactivity efficacy correlates with purchase region, genetic markers, breed proportion, and miRNA abundance, highlighting actionable avenues for supply-chain and breeding optimization.
 
 ## Key Contributions
 
-- Integrated a seven-layer omics characterization (genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics) across 60 US retail milk samples.
-- Identified 6,714 compounds and quantified 5,288 with absolute concentrations, providing absolute estimates for 5,220 previously uncharacterized compounds.
-- Developed the Dairy Molecule Database (DMD), a web-accessible resource linking milk compound concentrations with SNPs, miRNAs, and product-level factors.
-- Validated 35 out of 54 computationally predicted antimicrobial candidate peptides, with 6 demonstrating IC50 values below 256 μg/mL against A. baumannii.
+- Performs an integrated seven-layer omics characterization (genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics) of 60 US retail milk samples across ten geographic regions.
+- Identifies 6,714 compounds and quantifies 5,288 with absolute concentrations, yielding 5,220 previously unavailable absolute concentration estimates in milk databases.
+- Establishes the Dairy Molecule Database (DMD), a web-accessible resource linking milk compound concentrations with SNPs, miRNAs, and product-level factors.
+- Demonstrates biological validation by testing 54 predicted antimicrobial candidate peptides, discovering 35 active peptides and 6 with IC50 values below 256 ug/mL against Acinetobacter baumannii.
 
 ## Limitations
 
-The study is based on 60 US retail milk samples, which may require expanded geographical and temporal sampling to fully generalize across broader agricultural and supply-chain variations.
+The study is limited to 60 US retail milk samples, which may not capture the full spectrum of global or seasonal variations in milk composition.
 
 ## Archivist Review
 
-The paper presents a comprehensive multi-omics analysis of milk samples and introduces a domain-specific biological database (Dairy Molecule Database). Since this vault focuses on general machine learning concepts, architectures, and foundational computational methods rather than domain-specific biological repositories, the concept is rejected as low impact for general machine learning.
+Applied strict ML vault filtering standards. The proposed concept is a domain-specific biological resource rather than a reusable machine learning mechanism or algorithmic technique, so no candidates were approved for permanent vault inclusion.
 
 ### Rejected Candidates
-- [concept] Dairy Molecule Database (`dairy-molecule-database`) - low_impact: Domain-specific biological database rather than a core machine learning or general computational methodology.
+- [concept] Dairy Molecule Database (`dairy-molecule-database`) - not_novel: Domain-specific biological database rather than a reusable machine learning or algorithmic concept.
 
 ## Links
 
