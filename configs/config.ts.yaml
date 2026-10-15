@@ -1,35 +1,36 @@
-# Example research-cruise configuration
+# 供应链前沿研究追踪配置
 llm_model: "google-gla:gemini-flash-lite-latest"
 paper_search:
-  source: "openalex"  # "arxiv", "semantic_scholar", or "openalex"
+  source: "openalex"  # openalex 覆盖供应链管理期刊文献最全
   keywords:
-    - "time series"
-    - "forecasting"
-    - "timeseries"
-  max_history_days: 3  # hard cutoff: do not keep results older than this many days
-  max_results_per_keyword: 10
+    - "supply chain resilience"
+    - "supply chain optimization"
+    - "vehicle routing"
+    - "inventory management"
+    - "port operations"
+    - "logistics network"
+    - "demand forecasting"
+    - "freight transport"
+  max_history_days: 14  # 抓取近 14 天新文献
+  max_results_per_keyword: 8
   total_cap: 30
   arxiv: {}
   semantic_scholar:
-    # api_key: ""  # optional; can also come from SEMANTIC_SCHOLAR_API_KEY
     api_url: "https://api.semanticscholar.org/graph/v1/paper/search"
   openalex:
-    # api_key: ""  # optional; can also come from OPENALEX_API_KEY
-    # mailto: ""   # recommended for polite pool, e.g. name@example.com
-    relevance_mode: "all_tokens"  # "phrase" (strict) or "all_tokens" (broader)
-    max_pages_per_window: 5  # max OpenAlex pages to scan per recency window
+    relevance_mode: "phrase"  # 短语严格匹配，减少噪音
+    max_pages_per_window: 5
 federation_feeds: []
 public_feed_max_items: 10
 
 # Skill configuration
-active_skills: 
-  - "time-series"
-skills_dir: "skills"                       # Root directory for skills
+active_skills:
+  - "general-ml"
+skills_dir: "skills"
 
 # Experimental domain expert agent (crawls HTML, consumes token quotas)
 enable_domain_expert: true
 
-# Add (or update) these keys:
 daily_archive_cutoff_days: 30
 daily_overview_include_archived: false
 daily_overview_link_prefix: "/discussions"
