@@ -4,15 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "EDISCO: Equivariant DIScrete Diffusion for Euclidean Combinatorial Optimization"
-description: "EDISCO is the first discrete diffusion model for Euclidean combinatorial optimization problems (ECOPs) that achieves exact E(2)-invariant generative distributions over node-index solutions. By coupling an E(2)-equivariant edge-score network with a categorical continuous-time Markov chain over discrete edge variables, the model provides robust local geometric inductive biases without relying on data augmentation or approximate regularization. Experiments on Traveling Salesman Problem and Capacitated Vehicle Routing Problem demonstrate state-of-the-art performance and strong generalization under distribution shifts while using fewer training instances."
+description: "EDISCO is the first discrete diffusion model for Euclidean combinatorial optimization problems (ECOPs) that achieves exact E(2)-invariance over node-index solutions. By coupling an E(2)-equivariant edge-score network with a categorical continuous-time Markov chain over discrete edge variables, the model embeds a local geometric inductive bias into combinatorial solving. Empirical evaluations show that EDISCO outperforms prior learning-based state-of-the-art solvers on large-scale Traveling Salesman and Capacitated Vehicle Routing Problems while requiring significantly fewer training instances and exhibiting strong generalization under distribution shifts."
 resource: "https://arxiv.org/abs/2610.04953"
 tags:
   - "combinatorial-optimization"
-  - "machine-learning"
-  - "vehicle-routing-problem"
-  - "euclidean-combinatorial-optimization"
   - "discrete-diffusion"
-timestamp: "2026-10-15T09:35:22Z"
+  - "vehicle-routing-problem"
+timestamp: "2026-10-16T09:36:19Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -29,14 +27,15 @@ architectures:
   []
 concepts:
   - name: "edisco"
-    description: "An equivariant discrete diffusion model for Euclidean combinatorial optimization problems with exact E(2)-invariant generative distributions over node-index solutions."
+    description: "An equivariant discrete diffusion model with exact E(2)-invariance over node-index solutions for Euclidean combinatorial optimization."
 datasets:
   []
 open_questions:
-  []
+  - name: "equivariant-methods-non-euclidean-asymmetric-routing"
+    description: "Investigating whether equivariance, symmetry alignment, and metric learning representations can be successfully extended from Euclidean routing problems to arbitrary-graph problems, non-Euclidean network costs, and asymmetric routing domains."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-15T09:35:22Z"
-created_at: "2026-10-15T09:35:22Z"
+processed_at: "2026-10-16T09:36:19Z"
+created_at: "2026-10-16T09:36:19Z"
 ---
 
 # EDISCO: Equivariant DIScrete Diffusion for Euclidean Combinatorial Optimization
@@ -47,32 +46,39 @@ created_at: "2026-10-15T09:35:22Z"
 
 ## Summary
 
-EDISCO is the first discrete diffusion model for Euclidean combinatorial optimization problems (ECOPs) that achieves exact E(2)-invariant generative distributions over node-index solutions. By coupling an E(2)-equivariant edge-score network with a categorical continuous-time Markov chain over discrete edge variables, the model provides robust local geometric inductive biases without relying on data augmentation or approximate regularization. Experiments on Traveling Salesman Problem and Capacitated Vehicle Routing Problem demonstrate state-of-the-art performance and strong generalization under distribution shifts while using fewer training instances.
+EDISCO is the first discrete diffusion model for Euclidean combinatorial optimization problems (ECOPs) that achieves exact E(2)-invariance over node-index solutions. By coupling an E(2)-equivariant edge-score network with a categorical continuous-time Markov chain over discrete edge variables, the model embeds a local geometric inductive bias into combinatorial solving. Empirical evaluations show that EDISCO outperforms prior learning-based state-of-the-art solvers on large-scale Traveling Salesman and Capacitated Vehicle Routing Problems while requiring significantly fewer training instances and exhibiting strong generalization under distribution shifts.
 
 ## Key Contributions
 
-- Introduces EDISCO, the first discrete diffusion model for Euclidean combinatorial optimization problems with exact E(2)-invariant generative distributions over node-index solutions.
-- Combines an E(2)-equivariant edge-score network with a categorical continuous-time Markov chain over discrete edge variables and exact posterior sampling.
+- EDISCO introduces the first discrete diffusion model for Euclidean combinatorial optimization problems with exact E(2)-invariant generative distributions over node-index solutions.
+- Combines an E(2)-equivariant edge-score network with a categorical continuous-time Markov chain over discrete edge variables for efficient multi-step inference.
 - Outperforms previous learning-based state-of-the-art solvers on synthetic TSP (100 to 10000 nodes) and CVRP (50 to 2000 customers) while using only 33-50% of the training instances.
-- Demonstrates robust generalization under spatial distribution shift and CVRP constraint-tightness shift when trained only on uniform synthetic data.
+- Demonstrates robust generalization under spatial distribution shift and CVRP constraint-tightness shift when trained exclusively on uniform synthetic data.
 
 ## Limitations
 
-Future work could explore extending exact equivariant discrete diffusion to even broader classes of geometric constraint satisfaction and vehicle routing variants.
+Limitations are not explicitly discussed in the abstract, but the evaluation is limited to synthetic TSP and CVRP benchmarks.
+
+## Open Questions & Future Work
+
+- [[equivariant-methods-non-euclidean-asymmetric-routing]]
 
 ## Key Concepts
 
-- [[edisco]]: An equivariant discrete diffusion model for Euclidean combinatorial optimization problems with exact E(2)-invariant generative distributions over node-index solutions.
+- [[edisco]]: An equivariant discrete diffusion model with exact E(2)-invariance over node-index solutions for Euclidean combinatorial optimization.
 
 ## Archivist Review
 
-Approved the core concept EDISCO for its novel exact E(2)-invariant discrete diffusion framework. Rejected the open question as it framed generic future work rather than a distinct, rigorous bottleneck.
+Approved the central model concept EDISCO and the open question regarding non-Euclidean equivariant routing extensions, adhering to strict vault standards and avoiding redundant or subcomponent entries.
 
 ### Approved Concepts
-- EDISCO: EDISCO introduces the first discrete diffusion model for Euclidean combinatorial optimization problems with exact E(2)-invariant generative distributions over node-index solutions.
+- EDISCO: Introduces the first discrete diffusion framework with exact E(2)-invariance for Euclidean combinatorial optimization problems.
+
+### Approved Open Questions
+- Equivariance in Non-Euclidean Routing: Understanding how to extend geometric and equivariant inductive biases to non-Euclidean or asymmetric combinatorial problems is a key open frontier in neural combinatorial optimization.
 
 ### Rejected Candidates
-- [open_question] Sim-to-Real and Asymmetric Routing Generalization (`sim-to-real-and-asymmetric-routing-generalization`) - low_impact: Broad and general future work direction rather than a precise technical bottleneck.
+- [concept] E(2)-equivariant discrete diffusion (`e-2-equivariant-discrete-diffusion`) - duplicate_existing: Redundant with the main EDISCO concept.
 
 ## Links
 

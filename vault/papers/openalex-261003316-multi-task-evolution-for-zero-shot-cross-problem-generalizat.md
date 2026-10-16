@@ -4,14 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Multi-Task Evolution for Zero-Shot Cross-Problem Generalization using LLMs"
-description: "This paper introduces MECo, an LLM-driven multi-task evolutionary framework that achieves zero-shot cross-problem generalization for combinatorial optimization heuristics. MECo maintains task-conditioned heuristic populations, utilizing a transfer gap based on cross-task population performance to guide heuristic transfer and recombination. A complementary selection criterion then constructs a compact heuristic set that is directly applied to target problems without further search or adaptation. Experiments across 32 vehicle routing and flexible job-shop scheduling problem variants demonstrate that MECo outperforms existing automated heuristic design baselines in both in-domain and out-of-domain settings."
+description: "The paper introduces MECo, an LLM-driven multi-task evolutionary framework designed for zero-shot cross-problem generalization in combinatorial optimization. MECo maintains task-conditioned heuristic populations, guided by a transfer gap metric, to transfer and recombine heuristics across tasks using only source-task feedback. A complementary selection criterion then constructs a compact heuristic set capable of achieving superior performance on unseen target problems without additional search. Experiments across vehicle routing and flexible job-shop scheduling demonstrate that MECo outperforms existing automated heuristic design baselines under identical search budgets."
 resource: "https://arxiv.org/abs/2610.03316"
 tags:
   - "combinatorial-optimization"
-  - "evolutionary-algorithms"
   - "machine-learning"
-  - "vehicle-routing-problem"
-timestamp: "2026-10-15T09:33:35Z"
+timestamp: "2026-10-16T09:26:23Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -30,14 +28,14 @@ architectures:
   []
 concepts:
   - name: "meco"
-    description: "An LLM-driven multi-task evolutionary framework that maintains task-conditioned heuristic populations and uses a transfer gap to guide heuristic transfer and recombination for zero-shot cross-problem generalization."
+    description: "An LLM-driven multi-task evolutionary framework for zero-shot cross-problem generalization of combinatorial optimization heuristics."
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-15T09:33:35Z"
-created_at: "2026-10-15T09:33:35Z"
+processed_at: "2026-10-16T09:26:23Z"
+created_at: "2026-10-16T09:26:23Z"
 ---
 
 # Multi-Task Evolution for Zero-Shot Cross-Problem Generalization using LLMs
@@ -48,32 +46,32 @@ created_at: "2026-10-15T09:33:35Z"
 
 ## Summary
 
-This paper introduces MECo, an LLM-driven multi-task evolutionary framework that achieves zero-shot cross-problem generalization for combinatorial optimization heuristics. MECo maintains task-conditioned heuristic populations, utilizing a transfer gap based on cross-task population performance to guide heuristic transfer and recombination. A complementary selection criterion then constructs a compact heuristic set that is directly applied to target problems without further search or adaptation. Experiments across 32 vehicle routing and flexible job-shop scheduling problem variants demonstrate that MECo outperforms existing automated heuristic design baselines in both in-domain and out-of-domain settings.
+The paper introduces MECo, an LLM-driven multi-task evolutionary framework designed for zero-shot cross-problem generalization in combinatorial optimization. MECo maintains task-conditioned heuristic populations, guided by a transfer gap metric, to transfer and recombine heuristics across tasks using only source-task feedback. A complementary selection criterion then constructs a compact heuristic set capable of achieving superior performance on unseen target problems without additional search. Experiments across vehicle routing and flexible job-shop scheduling demonstrate that MECo outperforms existing automated heuristic design baselines under identical search budgets.
 
 ## Key Contributions
 
-- Introduces MECo, an LLM-driven multi-task evolutionary framework that maintains task-conditioned heuristic populations for zero-shot cross-problem generalization.
-- Proposes a transfer gap mechanism based on cross-task population performance to guide heuristic transfer and recombination.
-- Applies a complementary selection criterion to construct a compact heuristic set that maximizes coverage of source combinations without requiring target-task search or adaptation.
-- Achieves the lowest mean costs compared with eight automated heuristic design baselines across 32 problem variants in vehicle routing and flexible job-shop scheduling.
+- Introduced MECo, an LLM-driven multi-task evolutionary framework maintaining task-conditioned heuristic populations for zero-shot cross-problem generalization.
+- Utilized a transfer gap based on cross-task population performance to guide heuristic transfer and recombination without target-task feedback.
+- Employed a complementary selection criterion rewarding source combination coverage to construct a compact heuristic set applied directly to target problems.
+- Demonstrated lower mean costs across 32 problem variants in vehicle routing and flexible job-shop scheduling compared with eight automated heuristic design baselines.
 
 ## Limitations
 
-Evaluated primarily on vehicle routing and flexible job-shop scheduling problem variants; future work could explore scaling to a wider range of disparate combinatorial optimization domains.
+While MECo successfully generalizes zero-shot across in-domain and out-of-domain problems within vehicle routing and scheduling, its performance relies on the initial quality and diversity of source-task populations and LLM prompt generation capabilities.
 
 ## Key Concepts
 
-- [[meco]]: An LLM-driven multi-task evolutionary framework that maintains task-conditioned heuristic populations and uses a transfer gap to guide heuristic transfer and recombination for zero-shot cross-problem generalization.
+- [[meco]]: An LLM-driven multi-task evolutionary framework for zero-shot cross-problem generalization of combinatorial optimization heuristics.
 
 ## Archivist Review
 
-The concept 'meco' is already present in the vault and is appropriately approved and reused. The open question candidate was rejected as too generic, and no specific named dataset was identified.
+Approved the central framework 'meco' since it provides a distinct, reusable multi-task evolutionary approach for zero-shot cross-problem generalization using LLMs. Rejected 'automated-heuristic-design' because it is a broad umbrella term describing a whole subfield rather than a specific standalone technical artifact. No open questions or datasets met the strict novelty and standalone reusability criteria.
 
 ### Approved Concepts
-- MECo: It represents the core algorithmic contribution of the paper, introducing task-conditioned heuristic populations and transfer gap-guided interactions for zero-shot generalization across combinatorial optimization problems.
+- MECo: MECo introduces a novel multi-task evolutionary framework using LLMs to achieve zero-shot cross-problem generalization for combinatorial optimization heuristics without requiring target-task feedback.
 
 ### Rejected Candidates
-- [open_question] Zero-Shot Cross-Problem Generalization (`zero-shot-cross-problem-generalization`) - generic: Too broad and general as an open question, and closely overlaps with standard zero-shot generalization challenges in optimization.
+- [concept] Automated Heuristic Design (`automated-heuristic-design`) - not_novel: Automated heuristic design is an established broad field/task category rather than a specific novel mechanism or method introduced by the paper.
 
 ## Links
 

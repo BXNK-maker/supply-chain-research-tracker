@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Improved Approximations for Vehicle Routing with Nonuniform Speeds"
-description: "This paper studies vehicle routing problems involving vehicles with nonuniform speeds on metric graphs, aiming to minimize the maximum completion time across vehicles. For the heterogeneous traveling salesman problem (HetTSP), the author provides an improved 6-approximation algorithm. Furthermore, for the heterogeneous capacitated vehicle routing problem (HetCVRP), the author presents a ~7.965-approximation algorithm for the split-delivery version and a ~9.743-approximation algorithm for the unsplit-delivery version, substantially improving prior approximation bounds."
+description: "This paper investigates vehicle routing problems on metric graphs where vehicles operate at nonuniform speeds, with the objective of minimizing the maximum completion time. The author presents improved approximation algorithms for three variants: the heterogeneous traveling salesman problem (HetTSP), the split-delivery heterogeneous capacitated vehicle routing problem (HetCVRP), and the unsplit-delivery HetCVRP. Specifically, the paper achieves a 6-approximation for HetTSP, a 7.965-approximation for split-delivery HetCVRP, and a 9.743-approximation for unsplit-delivery HetCVRP, significantly improving over previous approximation bounds."
 resource: "https://arxiv.org/abs/2610.12195"
 tags:
   - "approximation-algorithms"
   - "vehicle-routing-problem"
-timestamp: "2026-10-15T09:33:25Z"
+timestamp: "2026-10-16T09:26:04Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,11 +28,10 @@ concepts:
 datasets:
   []
 open_questions:
-  - name: "improved-approximations-heterogeneous-vehicle-routing"
-    description: "Closing the gap between current constant-factor approximations and inapproximability lower bounds for heterogeneous vehicle routing problems (HetTSP and HetCVRP) remains an important open direction."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-15T09:33:25Z"
-created_at: "2026-10-15T09:33:25Z"
+processed_at: "2026-10-16T09:26:04Z"
+created_at: "2026-10-16T09:26:04Z"
 ---
 
 # Improved Approximations for Vehicle Routing with Nonuniform Speeds
@@ -43,31 +42,21 @@ created_at: "2026-10-15T09:33:25Z"
 
 ## Summary
 
-This paper studies vehicle routing problems involving vehicles with nonuniform speeds on metric graphs, aiming to minimize the maximum completion time across vehicles. For the heterogeneous traveling salesman problem (HetTSP), the author provides an improved 6-approximation algorithm. Furthermore, for the heterogeneous capacitated vehicle routing problem (HetCVRP), the author presents a ~7.965-approximation algorithm for the split-delivery version and a ~9.743-approximation algorithm for the unsplit-delivery version, substantially improving prior approximation bounds.
+This paper investigates vehicle routing problems on metric graphs where vehicles operate at nonuniform speeds, with the objective of minimizing the maximum completion time. The author presents improved approximation algorithms for three variants: the heterogeneous traveling salesman problem (HetTSP), the split-delivery heterogeneous capacitated vehicle routing problem (HetCVRP), and the unsplit-delivery HetCVRP. Specifically, the paper achieves a 6-approximation for HetTSP, a 7.965-approximation for split-delivery HetCVRP, and a 9.743-approximation for unsplit-delivery HetCVRP, significantly improving over previous approximation bounds.
 
 ## Key Contributions
 
-- Proposed a 6-approximation algorithm for the heterogeneous traveling salesman problem (HetTSP), significantly improving over the previous 90(1+δ)-approximation.
-- Developed a (9/2 + 2√3)-approximation algorithm (approx. 7.965) for the split-delivery version of the heterogeneous capacitated vehicle routing problem (HetCVRP).
-- Developed an (11/2 + 3√2)-approximation algorithm (approx. 9.743) for the unsplit-delivery version of HetCVRP, improving over the previous 450(1+δ)-approximation.
+- Proposes a 6-approximation algorithm for the heterogeneous traveling salesman problem (HetTSP), improving upon the previous 90(1+δ)-approximation.
+- Provides a (9/2 + 2√3) < 7.965-approximation algorithm for the split-delivery heterogeneous capacitated vehicle routing problem (HetCVRP).
+- Provides an (11/2 + 3√2) < 9.743-approximation algorithm for the unsplit-delivery version of HetCVRP, improving upon the previous 450(1+δ)-approximation.
 
 ## Limitations
 
-The paper focuses on theoretical approximation guarantees for vehicle routing with nonuniform speeds; empirical evaluations on real-world instances are not discussed.
-
-## Open Questions & Future Work
-
-- [[improved-approximations-heterogeneous-vehicle-routing]]
+The paper focuses on theoretical approximation bounds for routing with nonuniform speeds and capacities, leaving empirical evaluations or specific real-world routing constraints outside its scope.
 
 ## Archivist Review
 
-The paper presents theoretical approximation algorithms for vehicle routing with nonuniform speeds. The proposed open question is a duplicate of an existing vault entry ('improved-approximations-heterogeneous-vehicle-routing'), so it was rejected in favor of the existing note, and no new concepts or datasets met the strict novelty or reusability standards.
-
-### Approved Open Questions
-- Tight bounds for heterogeneous vehicle routing: Determining tight approximation bounds helps establish the fundamental computational complexity limits for vehicle routing with heterogeneous vehicle speeds and capacities.
-
-### Rejected Candidates
-- [open_question] Tight bounds for heterogeneous vehicle routing (`improving-heterogeneous-vehicle-routing-bounds`) - duplicate_existing: A very similar open question regarding heterogeneous vehicle routing already exists in the vault under the slug 'improved-approximations-heterogeneous-vehicle-routing'.
+No reusable conceptual innovations or named critical datasets warranting standalone vault entries were identified in this theoretical approximation algorithms paper.
 
 ## Links
 
