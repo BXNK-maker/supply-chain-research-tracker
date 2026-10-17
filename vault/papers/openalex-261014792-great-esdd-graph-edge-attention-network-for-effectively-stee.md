@@ -4,14 +4,15 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "GREAT-ESDD: Graph Edge Attention Network for Effectively Steered Delivery Decisions"
-description: "The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for online same-day delivery with home and out-of-home options. At its core, the framework uses a Graph Edge Attention Network (GREAT) as a fast neural solver for the capacitated vehicle routing problem, enabling parallel batch processing and real-time route reoptimization. By combining this neural solver with Thompson sampling using a Laplace-approximated posterior to learn customer preferences, GREAT-ESDD steers customers toward cost-effective delivery options and increases operator profit by around 11%."
+description: "The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for online same-day delivery that combines a neural CVRP solver based on the Graph-Edge-Attention-Network (GREAT) with Thompson sampling for customer preference learning. By rapidly evaluating candidate routing problems in parallel batches, the framework estimates delivery cost increases to set dynamic prices that steer customers toward out-of-home delivery options. Simulations show that the approach increases profit by approximately 11% over traditional routing solvers while successfully learning customer preferences."
 resource: "https://arxiv.org/abs/2610.14792"
 tags:
   - "choice-modeling"
   - "combinatorial-optimization"
-  - "machine-learning"
   - "vehicle-routing-problem"
-timestamp: "2026-10-16T09:36:32Z"
+  - "dynamic-pricing"
+  - "neural-routing-solver"
+timestamp: "2026-10-17T09:00:04Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -19,6 +20,7 @@ author:
   - literal: "Ze Zhou"
   - literal: "Xuegang Ban"
   - literal: "Balaźs Kulcsár"
+  - literal: "Xuegang"
 issued:
   date-parts:
     - [2026, 10, 10]
@@ -29,44 +31,55 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  []
+  - name: "graph-edge-attention-network"
+    description: "A neural solver based on Graph-Edge-Attention-Network (GREAT) designed to solve the capacitated vehicle routing problem with varying instance sizes and starting conditions."
 datasets:
   []
 open_questions:
-  []
+  - name: "adaptive-rectifiers-for-dynamic-routing"
+    description: "Investigate whether adaptive or online-learned rectification parameters (such as time-varying or dynamically adjusted scaling factors) can replace static rectifiers to improve the accuracy of marginal routing cost estimates over the operating horizon."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-16T09:36:32Z"
-created_at: "2026-10-16T09:36:32Z"
+processed_at: "2026-10-17T09:00:04Z"
+created_at: "2026-10-17T09:00:04Z"
 ---
 
 # GREAT-ESDD: Graph Edge Attention Network for Effectively Steered Delivery Decisions
 
-**Authors**: Attila Lischka, Ze Zhou, Xuegang Ban, Balaźs Kulcsár
+**Authors**: Attila Lischka, Ze Zhou, Xuegang Ban, Balaźs Kulcsár, Xuegang
 **Date**: 2026-10-10
 **Paper ID**: [openalex:2610.14792](https://arxiv.org/abs/2610.14792)
 
 ## Summary
 
-The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for online same-day delivery with home and out-of-home options. At its core, the framework uses a Graph Edge Attention Network (GREAT) as a fast neural solver for the capacitated vehicle routing problem, enabling parallel batch processing and real-time route reoptimization. By combining this neural solver with Thompson sampling using a Laplace-approximated posterior to learn customer preferences, GREAT-ESDD steers customers toward cost-effective delivery options and increases operator profit by around 11%.
+The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for online same-day delivery that combines a neural CVRP solver based on the Graph-Edge-Attention-Network (GREAT) with Thompson sampling for customer preference learning. By rapidly evaluating candidate routing problems in parallel batches, the framework estimates delivery cost increases to set dynamic prices that steer customers toward out-of-home delivery options. Simulations show that the approach increases profit by approximately 11% over traditional routing solvers while successfully learning customer preferences.
 
 ## Key Contributions
 
-- Developed GREAT-ESDD, a dynamic pricing-and-routing framework integrating a neural CVRP solver with online customer preference learning.
-- Utilized a Graph-Edge-Attention-Network (GREAT) to solve CVRP instances in parallel and reoptimize partially executed routes rapidly.
-- Demonstrated an 11% profit increase compared to traditional routing solvers under similar timing constraints.
-- Learned customer preferences online via Thompson sampling with a Laplace-approximated posterior, outperforming static pricing after 5 days.
+- Developed GREAT-ESDD, a dynamic pricing-and-routing framework that integrates a neural CVRP solver with Thompson sampling to steer customers toward out-of-home delivery options.
+- Built a neural solver using the Graph-Edge-Attention-Network (GREAT) capable of processing multiple CVRP instances in parallel batches and rapidly reoptimizing partially executed routes.
+- Demonstrated an 11% profit increase compared to traditional routing solvers under similar pricing decision time budgets, alongside successful online learning of customer preferences.
 
 ## Limitations
 
-The framework relies on simulated operations for customer preference learning and pricing validation.
+Evaluated in simulated operations; potential generalization limits to complex real-world traffic and unmodeled customer behavior variations remain to be tested.
+
+## Open Questions & Future Work
+
+- [[adaptive-rectifiers-for-dynamic-routing]]
+
+## Key Concepts
+
+- [[graph-edge-attention-network]]: A neural solver based on Graph-Edge-Attention-Network (GREAT) designed to solve the capacitated vehicle routing problem with varying instance sizes and starting conditions.
 
 ## Archivist Review
 
-I applied strict standards for vault admission, rejecting both the graph edge attention network concept as a domain-specific subcomponent of vehicle routing and the adaptive cost rectifiers question as a paper-local parameter tuning exploration. Consequently, no standalone notes were approved.
+Approved the Graph-Edge-Attention-Network concept as a reusable neural routing architecture for vehicle routing problems, and the adaptive rectifiers open question addressing learning scaling factors in dynamic routing pipelines. Both pass the high-bar novelty and reusability standards of the knowledge vault.
 
-### Rejected Candidates
-- [concept] Graph Edge Attention Network (`graph-edge-attention-network`) - subcomponent_of_broader_mechanism: The proposed Graph Edge Attention Network is a specialized architecture variant tailored for vehicle routing and acts as a subcomponent of the broader dynamic pricing-and-routing framework, lacking sufficient independent reusability outside specialized routing tasks.
-- [open_question] Adaptive Cost Rectifiers in Dynamic Pricing (`adaptive-cost-rectifiers-dynamic-pricing`) - paper_local: The question is a paper-local exploration of tuning a specific parameter omega within a simulated delivery pricing heuristic rather than a broad, foundational bottleneck in machine learning.
+### Approved Concepts
+- Graph-Edge-Attention-Network: Serves as the core neural solver for the capacitated vehicle routing problem, enabling real-time reoptimization of partially executed routes and parallel batch processing of candidate routing problems.
+
+### Approved Open Questions
+- Adaptive Rectifiers for Dynamic Routing: A dynamic or learned rectifier bridges the gap between myopic routing cost approximations and global anticipatory optimization, potentially improving decision quality in dynamic pricing-and-routing pipelines.
 
 ## Links
 

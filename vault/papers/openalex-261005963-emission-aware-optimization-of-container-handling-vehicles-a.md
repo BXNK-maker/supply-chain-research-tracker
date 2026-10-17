@@ -4,13 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Emission-Aware Optimization of Container Handling Vehicles: A HaminaKotka Port Case Study"
-description: "This paper presents a data-driven fleet scheduling framework for landside port operations at the Port of HaminaKotka to minimize carbon emissions without sacrificing workload. By formulating the task as a linear programming workload allocation problem using vehicle-specific intensity metrics derived from a two-year fleet dataset, the optimized schedule achieves a 31% reduction in total CO2eq and a 9.4% reduction in energy consumption."
+description: "This paper presents an emission-aware fleet scheduling framework for container handling vehicles at the Port of HaminaKotka, formulated as a linear programming workload allocation problem. Using a two-year operational dataset from 77 vehicles, the optimization reallocates operating hours from high-emission units to more efficient ones while keeping total workload fixed. Results demonstrate a 31% reduction in total CO2eq emissions and a 9.4% reduction in energy consumption without sacrificing aggregate operating productivity."
 resource: "https://arxiv.org/abs/2610.05963"
 tags:
   - "decarbonization"
   - "fleet-scheduling"
-  - "smart-ports"
-timestamp: "2026-10-16T09:36:50Z"
+timestamp: "2026-10-17T09:00:09Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,8 +32,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-16T09:36:50Z"
-created_at: "2026-10-16T09:36:50Z"
+processed_at: "2026-10-17T09:00:09Z"
+created_at: "2026-10-17T09:00:09Z"
 ---
 
 # Emission-Aware Optimization of Container Handling Vehicles: A HaminaKotka Port Case Study
@@ -45,24 +44,24 @@ created_at: "2026-10-16T09:36:50Z"
 
 ## Summary
 
-This paper presents a data-driven fleet scheduling framework for landside port operations at the Port of HaminaKotka to minimize carbon emissions without sacrificing workload. By formulating the task as a linear programming workload allocation problem using vehicle-specific intensity metrics derived from a two-year fleet dataset, the optimized schedule achieves a 31% reduction in total CO2eq and a 9.4% reduction in energy consumption.
+This paper presents an emission-aware fleet scheduling framework for container handling vehicles at the Port of HaminaKotka, formulated as a linear programming workload allocation problem. Using a two-year operational dataset from 77 vehicles, the optimization reallocates operating hours from high-emission units to more efficient ones while keeping total workload fixed. Results demonstrate a 31% reduction in total CO2eq emissions and a 9.4% reduction in energy consumption without sacrificing aggregate operating productivity.
 
 ## Key Contributions
 
-- Formulated a data-driven fleet scheduling framework as a linear programming workload allocation problem to minimize total CO2eq emissions while preserving aggregate workload.
-- Derived vehicle-specific intensity metrics (CO2eq per operating hour) from a two-year operational dataset of 77 port vehicles at the Port of HaminaKotka.
-- Achieved an approximately 31% reduction in total CO2eq emissions and a 9.4% reduction in total energy consumption without reducing total operating hours.
+- Formulates a linear programming workload allocation framework for container handling vehicles that minimizes total CO2eq emissions while preserving aggregate workload.
+- Demonstrates an approximately 31% reduction in total CO2eq emissions and a 9.4% reduction in total energy consumption on the Port of HaminaKotka Mussalo terminal dataset without reducing operating hours.
+- Derives vehicle-specific intensity metrics (CO2eq per operating hour) from a two-year operational dataset spanning 77 port vehicles.
 
 ## Limitations
 
-The study relies on aggregated monthly and annual data and assumes fixed total required operating hours for landside port operations.
+The framework assumes fixed total workload and operating hours without modeling dynamic real-time traffic congestion, battery charging constraints for electric vehicles, or stochastic arrival processes.
 
 ## Archivist Review
 
-Applied strict filtering criteria, resulting in no approved concepts or datasets as the work focuses on a localized port fleet case study using standard linear programming rather than reusable architectural primitives or canonical benchmarks.
+Applied strict filtering criteria, ensuring no domain-specific or application-level case studies were admitted as standalone vault notes. The paper contributes an applied case study of linear programming for port vehicle decarbonization rather than a generalizable ML concept or foundational open question.
 
 ### Rejected Candidates
-- [dataset] haminakotka-port-fleet-dataset (`haminakotka-port-fleet-dataset`) - not_reusable: Local case study dataset tied to a specific port and proprietary fleet records rather than a broadly adopted benchmark.
+- [open_question] Operational Realism in Port Fleet Scheduling (`operational-realism-multi-objective-port-scheduling`) - low_impact: The open question focuses on applying standard operational constraints and multi-objective optimization to port fleet scheduling, which is domain-specific and lacks broader foundational relevance across general machine learning or AI research.
 
 ## Links
 

@@ -4,17 +4,17 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands"
-description: "This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. By employing a traveling salesman tour constructed via matroid parity, the authors improve randomized approximation ratios to 2 (splittable) and 3 (unsplittable), and introduce deterministic (2+epsilon) and (3+epsilon) approximations. They also establish matching lower bounds of 2 and 3 that hold for randomized restocking policies."
+description: "This paper studies the vehicle routing problem with stochastic demands under fixed-order a priori and restocking policies. The authors improve randomized approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries using matroid parity, and introduce deterministic (2+ε)- and (3+ε)-approximation algorithms. Furthermore, they establish matching lower bounds of 2 and 3 that hold for randomized restocking policies, and extend their techniques to deterministic VRP variants."
 resource: "https://arxiv.org/abs/2610.16802"
 tags:
   - "approximation-algorithms"
-  - "combinatorial-optimization"
   - "vehicle-routing-problem"
-timestamp: "2026-10-16T09:27:22Z"
+  - "stochastic-demands"
+timestamp: "2026-10-17T08:57:45Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
-  - literal: "Jngyang Zhao"
+  - literal: "Jingyang Zhao"
   - literal: "Mingyu Xiao"
 issued:
   date-parts:
@@ -32,34 +32,34 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-16T09:27:22Z"
-created_at: "2026-10-16T09:27:22Z"
+processed_at: "2026-10-17T08:57:45Z"
+created_at: "2026-10-17T08:57:45Z"
 ---
 
 # Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands
 
-**Authors**: Jngyang Zhao, Mingyu Xiao
+**Authors**: Jingyang Zhao, Mingyu Xiao
 **Date**: 2026-10-12
 **Paper ID**: [openalex:2610.16802](https://arxiv.org/abs/2610.16802)
 
 ## Summary
 
-This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. By employing a traveling salesman tour constructed via matroid parity, the authors improve randomized approximation ratios to 2 (splittable) and 3 (unsplittable), and introduce deterministic (2+epsilon) and (3+epsilon) approximations. They also establish matching lower bounds of 2 and 3 that hold for randomized restocking policies.
+This paper studies the vehicle routing problem with stochastic demands under fixed-order a priori and restocking policies. The authors improve randomized approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries using matroid parity, and introduce deterministic (2+ε)- and (3+ε)-approximation algorithms. Furthermore, they establish matching lower bounds of 2 and 3 that hold for randomized restocking policies, and extend their techniques to deterministic VRP variants.
 
 ## Key Contributions
 
-- Improved randomized a priori approximation ratios from (alpha+1) and (alpha+2) down to 2 and 3 for splittable and unsplittable vehicle routing with stochastic demands.
-- Developed deterministic a priori (2+epsilon) and (3+epsilon)-approximation algorithms via cumulative demand distribution compression.
-- Established matching theoretical lower bounds of 2 and 3 even for the general class of randomized restocking policies.
-- Applied matroid-parity construction to improve approximation ratios for several vehicle routing variants with deterministic demands.
+- Improved randomized a priori approximation algorithms for vehicle routing with stochastic demands to ratios of 2 for splittable deliveries and 3 for unsplittable deliveries.
+- Developed deterministic a priori (2+ε)-approximation and (3+ε)-approximation algorithms using distribution compression and matroid parity.
+- Established matching lower bounds of 2 and 3 for randomized restocking policies.
+- Applied the matroid-parity tour construction to improve approximation ratios for several deterministic VRP variants.
 
 ## Limitations
 
-Restricted to fixed-order vehicle routing policies where client visitation order is determined prior to observing demands.
+The results are restricted to fixed-order a priori and restocking policies where clients are visited in a predetermined sequence.
 
 ## Archivist Review
 
-No concepts or datasets met the rigorous bar for standalone vault entries; all terms are either standard operational research problem formulations or specific algorithmic reductions not warranting independent permanent notes.
+No concepts or datasets met the strict novelty and reusability criteria for permanent vault entries.
 
 ## Links
 
