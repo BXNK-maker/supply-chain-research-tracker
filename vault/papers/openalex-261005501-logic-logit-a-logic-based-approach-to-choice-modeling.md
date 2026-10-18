@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Logic-Logit: A Logic-Based Approach to Choice Modeling"
-description: "The paper introduces Logic-Logit, a novel rule-based interpretable choice model designed to learn and explain human choices by mimicking heuristic consider-then-choose decision processes. By combining column generation and the Frank-Wolfe algorithm, the model efficiently extracts disjunction-of-conjunction logic rules to overcome the NP-hard nature of rule extraction. Empirical evaluations on synthetic, commercial, and healthcare datasets demonstrate that Logic-Logit achieves superior accuracy and interpretability compared to baseline models."
+description: "This paper proposes Logic-Logit, a rule-based interpretable choice model designed to mimic human heuristic decision processes represented as disjunctions of conjunctions. To overcome the NP-hard nature of rule extraction, the authors introduce an efficient optimization approach combining column generation and the Frank-Wolfe algorithm. Empirical evaluations on synthetic and real-world commercial and healthcare datasets demonstrate that Logic-Logit outperforms baseline models in both interpretability and accuracy."
 resource: "https://arxiv.org/abs/2610.05501"
 tags:
   - "choice-modeling"
   - "interpretable-machine-learning"
-timestamp: "2026-10-17T08:59:07Z"
+timestamp: "2026-10-18T09:17:47Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -27,14 +27,15 @@ architectures:
   []
 concepts:
   - name: "logic-logit"
-    description: "A rule-based interpretable choice model that leverages logic rules (OR-of-ANDs) to learn and explain human decision processes."
+    description: "A novel rule-based interpretable choice model that leverages logic rules for human choice modeling."
 datasets:
   []
 open_questions:
-  []
+  - name: "scalable-logic-rule-choice-modeling"
+    description: "Investigate advanced scalable optimization techniques and heuristics to handle extremely high-dimensional feature spaces and larger rule conjunction lengths without prohibitive computational overhead during the column generation and Frank-Wolfe steps."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-17T08:59:07Z"
-created_at: "2026-10-17T08:59:07Z"
+processed_at: "2026-10-18T09:17:47Z"
+created_at: "2026-10-18T09:17:47Z"
 ---
 
 # Logic-Logit: A Logic-Based Approach to Choice Modeling
@@ -45,32 +46,30 @@ created_at: "2026-10-17T08:59:07Z"
 
 ## Summary
 
-The paper introduces Logic-Logit, a novel rule-based interpretable choice model designed to learn and explain human choices by mimicking heuristic consider-then-choose decision processes. By combining column generation and the Frank-Wolfe algorithm, the model efficiently extracts disjunction-of-conjunction logic rules to overcome the NP-hard nature of rule extraction. Empirical evaluations on synthetic, commercial, and healthcare datasets demonstrate that Logic-Logit achieves superior accuracy and interpretability compared to baseline models.
+This paper proposes Logic-Logit, a rule-based interpretable choice model designed to mimic human heuristic decision processes represented as disjunctions of conjunctions. To overcome the NP-hard nature of rule extraction, the authors introduce an efficient optimization approach combining column generation and the Frank-Wolfe algorithm. Empirical evaluations on synthetic and real-world commercial and healthcare datasets demonstrate that Logic-Logit outperforms baseline models in both interpretability and accuracy.
 
 ## Key Contributions
 
-- Introduces Logic-Logit, a novel rule-based interpretable choice model that mimics human consider-then-choose heuristic decision processes.
-- Combines column generation techniques and the Frank-Wolfe algorithm to efficiently extract NP-hard logic rules for preference modeling.
-- Demonstrates through empirical evaluation on synthetic, commercial, and healthcare datasets that Logic-Logit outperforms baseline models in both interpretability and accuracy.
+- Proposes Logic-Logit, a novel rule-based interpretable choice model that mimics human heuristic decision processes using logic rules (disjunctions of conjunctions).
+- Introduces an efficient rule extraction framework combining column generation techniques and the Frank-Wolfe algorithm to tackle the NP-hard preference modeling problem.
+- Demonstrates through empirical evaluation on synthetic datasets and real-world commercial and healthcare data that Logic-Logit outperforms baseline models in both interpretability and predictive accuracy.
 
-## Limitations
+## Open Questions & Future Work
 
-The paper mentions that rule extraction for preference modeling is NP-hard, which may present scalability challenges for extremely large feature spaces, though mitigated by the proposed optimization techniques.
+- [[scalable-logic-rule-choice-modeling]]
 
 ## Key Concepts
 
-- [[logic-logit]]: A rule-based interpretable choice model that leverages logic rules (OR-of-ANDs) to learn and explain human decision processes.
+- [[logic-logit]]: A novel rule-based interpretable choice model that leverages logic rules for human choice modeling.
 
 ## Archivist Review
 
-Approved the central model concept (Logic-Logit) while correctly rejecting standard optimization algorithms that serve as internal implementation details. No standalone datasets or open questions met the rigorous inclusion standards.
+Approved the core concept 'logic-logit' and the open question regarding scalable logic rule choice modeling, as they represent distinct, reusable contributions to interpretable choice modeling. No named datasets were present to approve.
 
 ### Approved Concepts
-- Logic-Logit: Logic-Logit is the core model introduced in the paper, combining logic rules with logit choice modeling to achieve high interpretability and accuracy.
+- Logic-Logit: It introduces a new methodology combining column generation and the Frank-Wolfe algorithm to solve the NP-hard problem of rule extraction for choice modeling.
 
-### Rejected Candidates
-- [concept] Column Generation (`column-generation`) - not_novel: Column generation is a well-established optimization technique rather than a novel concept introduced by the paper.
-- [concept] Frank-Wolfe Algorithm (`frank-wolfe-algorithm`) - not_novel: The Frank-Wolfe algorithm is a standard optimization method, not a novel contribution of this work.
+### Approved Open Questions
 
 ## Links
 

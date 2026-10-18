@@ -4,11 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Integrated omics reveals actionable drivers of bioactive variation in US milk"
-description: "This paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, identifying 6,714 compounds and establishing absolute concentrations for 5,288 of them. The authors organized these findings into the web-accessible Dairy Molecule Database (DMD) to link milk compound variations with genetic, transcriptomic, and product-level factors. Furthermore, computational prediction and in vitro testing identified novel antimicrobial peptides active against drug-resistant pathogens, highlighting actionable drivers for milk quality optimization."
+description: "This paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, spanning genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics. The authors identified and quantified thousands of compounds, introduced the web-accessible Dairy Molecule Database (DMD) to link compound variations with genetic and product-level factors, and experimentally validated multiple computationally predicted antimicrobial peptides against bacterial pathogens."
 resource: "https://arxiv.org/abs/2610.04970"
 tags:
   - "multi-omics"
-timestamp: "2026-10-17T08:58:50Z"
+timestamp: "2026-10-18T09:17:36Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -56,8 +56,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-17T08:58:50Z"
-created_at: "2026-10-17T08:58:50Z"
+processed_at: "2026-10-18T09:17:36Z"
+created_at: "2026-10-18T09:17:36Z"
 ---
 
 # Integrated omics reveals actionable drivers of bioactive variation in US milk
@@ -68,25 +68,21 @@ created_at: "2026-10-17T08:58:50Z"
 
 ## Summary
 
-This paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, identifying 6,714 compounds and establishing absolute concentrations for 5,288 of them. The authors organized these findings into the web-accessible Dairy Molecule Database (DMD) to link milk compound variations with genetic, transcriptomic, and product-level factors. Furthermore, computational prediction and in vitro testing identified novel antimicrobial peptides active against drug-resistant pathogens, highlighting actionable drivers for milk quality optimization.
+This paper presents an integrated seven-layer omics characterization of 60 US retail milk samples, spanning genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics. The authors identified and quantified thousands of compounds, introduced the web-accessible Dairy Molecule Database (DMD) to link compound variations with genetic and product-level factors, and experimentally validated multiple computationally predicted antimicrobial peptides against bacterial pathogens.
 
 ## Key Contributions
 
-- Performed an integrated seven-layer omics characterization (genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics) on 60 US retail milk samples across ten geographic regions.
-- Identified 6,714 compounds and quantified 5,288 with absolute concentrations, adding 5,220 compounds previously unavailable in existing databases.
-- Established the Dairy Molecule Database (DMD), a web-accessible resource linking milk compound concentrations with SNPs, miRNAs, and product-level factors.
-- Validated 35 out of 54 computationally predicted antimicrobial candidate peptides, with 6 demonstrating IC50 values below 256 μg/mL against A. baumannii.
-
-## Limitations
-
-The study evaluates 60 US retail samples, and further validation across broader geographic and seasonal scales is necessary to fully establish causal links for supply-chain and breeding interventions.
+- Conducted an integrated seven-layer omics characterization (genomics, transcriptomics, peptidomics, proteomics, lipidomics, metabolomics, and glycomics) across 60 US retail milk samples.
+- Identified 6,714 compounds and quantified 5,288 with absolute concentrations, introducing absolute concentration estimates for 5,220 previously unprofiled compounds.
+- Developed the Dairy Molecule Database (DMD), a web-accessible resource linking milk compound concentrations to SNPs, miRNAs, and supply-chain factors.
+- Validated 35 out of 54 computationally predicted antimicrobial peptides, finding 6 with IC50 values below 256 ug/mL against A. baumannii.
 
 ## Archivist Review
 
-The paper presents an extensive biological multi-omics study on commercial milk, introducing a domain-specific database (Dairy Molecule Database). While valuable for agricultural and nutritional science, it does not introduce a reusable machine learning algorithm, architecture, or general computational method suited for an ML knowledge vault. Therefore, all candidate concepts are rejected.
+The submitted paper is a domain-specific biological and multi-omic study on milk composition rather than a machine learning methodology or core algorithmic contribution. Consequently, the candidate database concept is domain-specific and not a general machine learning concept suited for the permanent ML knowledge vault.
 
 ### Rejected Candidates
-- [concept] Dairy Molecule Database (`dairy-molecule-database`) - not_reusable: Domain-specific biological database rather than a reusable machine learning or computational method.
+- [concept] Dairy Molecule Database (`dairy-molecule-database`) - not_reusable: Domain-specific biological database (dairy omics resource) rather than a reusable machine learning concept, architectural pattern, or algorithmic mechanism.
 
 ## Links
 

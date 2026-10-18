@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Routes planning in a condominium company using mathematical optimization"
-description: "This paper addresses the daily route planning problem for employees in a condominium management company, incorporating customer time windows, skill-matching constraints, employee working time limits, and flexible lunch breaks. The authors formulate this as a combinatorial optimization problem aiming to minimize total travel distance and lunch break penalties. Using Microsoft Azure APIs for distance matrices and Bing Maps for visualization, the approach demonstrates practical operational benefits for service provider route management."
+description: "This paper addresses the daily route planning problem for employees in a condominium management company, incorporating customer time windows, skill requirements, maximum working hours, and conditional lunch break penalties. Using a mathematical optimization model integrated with Microsoft Azure and Bing Maps APIs, the approach minimizes total travel distance and lunch break penalties while guaranteeing all visits. Real-world evaluation demonstrates significant operational efficiencies for service provider routing."
 resource: "https://arxiv.org/abs/2610.20080"
 tags:
+  - "fleet-scheduling"
   - "vehicle-routing-problem"
-  - "combinatorial-optimization"
-timestamp: "2026-10-17T08:58:55Z"
+timestamp: "2026-10-18T09:16:33Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -31,8 +31,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-17T08:58:55Z"
-created_at: "2026-10-17T08:58:55Z"
+processed_at: "2026-10-18T09:16:33Z"
+created_at: "2026-10-18T09:16:33Z"
 ---
 
 # Routes planning in a condominium company using mathematical optimization
@@ -43,24 +43,21 @@ created_at: "2026-10-17T08:58:55Z"
 
 ## Summary
 
-This paper addresses the daily route planning problem for employees in a condominium management company, incorporating customer time windows, skill-matching constraints, employee working time limits, and flexible lunch breaks. The authors formulate this as a combinatorial optimization problem aiming to minimize total travel distance and lunch break penalties. Using Microsoft Azure APIs for distance matrices and Bing Maps for visualization, the approach demonstrates practical operational benefits for service provider route management.
+This paper addresses the daily route planning problem for employees in a condominium management company, incorporating customer time windows, skill requirements, maximum working hours, and conditional lunch break penalties. Using a mathematical optimization model integrated with Microsoft Azure and Bing Maps APIs, the approach minimizes total travel distance and lunch break penalties while guaranteeing all visits. Real-world evaluation demonstrates significant operational efficiencies for service provider routing.
 
 ## Key Contributions
 
-- Formulates a specialized doubly-open vehicle routing problem with skill-matching constraints, time windows, and flexible lunch breaks for condominium service employees.
-- Integrates Microsoft Azure routing APIs and Bing Maps visualization for real-world distance and time collection.
-- Demonstrates operational efficiency improvements in daily route planning for a condominium management company.
+- Formulates a mathematical optimization model for daily route planning in a condominium management company with skill matching, time windows, and shift constraints.
+- Incorporates conditional lunch break periods that can be avoided if routes are completed entirely within the morning or afternoon.
+- Demonstrates operational advantages of optimized route planning using real-world geographic and travel time data via Microsoft Azure and Bing Maps APIs.
 
 ## Limitations
 
-Evaluated primarily on a specific condominium management company case study; generalization to broader multi-depot or large-scale multi-service domains requires further extension.
+Evaluated on a specific condominium company dataset; scalability to large-scale urban delivery or routing remains to be fully explored.
 
 ## Archivist Review
 
-Applied strict selection criteria, keeping the vault clean by approving no concepts or open questions from this application-focused operations research paper.
-
-### Rejected Candidates
-- [concept] Doubly-open routes (`doubly-open-routes`) - not_reusable: Standard variant of vehicle routing problem paths rather than a foundational algorithmic innovation.
+No concepts or datasets met the strict novelty and reuse thresholds for the vault. The single proposed open question was also rejected because routing extensions like multi-employee collaboration are standard operational research variations rather than major conceptual bottlenecks for the vault.
 
 ## Links
 

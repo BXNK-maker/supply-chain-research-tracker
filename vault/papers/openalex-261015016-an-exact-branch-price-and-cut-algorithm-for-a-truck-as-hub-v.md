@@ -4,12 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "An Exact Branch-Price-and-Cut Algorithm for a Truck-as-Hub Vehicle Routing Problem with Drones"
-description: "This paper studies the Truck-as-Hub Vehicle Routing Problem with Drones for rural last-mile logistics, where trucks serve as mobile synchronization hubs for drone fleets. The authors formulate a mixed-integer quadratic programming model and develop an exact branch-price-and-cut algorithm featuring network transformations and tailored pricing, cutting, and branching procedures. Computational results show that the proposed algorithm efficiently proves optimality or achieves small gaps under 4% for large-scale instances, significantly outperforming direct commercial solver applications."
+description: "This paper investigates the Truck-as-Hub Vehicle Routing Problem with Drones in Rural Areas, where trucks act as mobile hubs launching and retrieving multiple drones simultaneously at predesignated synchronization pads. The authors formulate a mixed-integer quadratic programming model to optimize customer delivery delays, truck return times, and operating costs. To solve this problem exactly, they develop a custom branch-price-and-cut algorithm featuring tailored pricing, cutting, branching, and parallel-computing procedures. Computational results demonstrate that the proposed exact algorithm significantly outperforms direct commercial solver formulations on large-scale test instances."
 resource: "https://arxiv.org/abs/2610.15016"
 tags:
-  - "combinatorial-optimization"
   - "vehicle-routing-problem"
-timestamp: "2026-10-17T08:58:45Z"
+  - "combinatorial-optimization"
+  - "fleet-scheduling"
+timestamp: "2026-10-18T09:17:32Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -19,11 +20,6 @@ author:
   - literal: "Xiaopeng Li"
   - literal: "Xiubin Wang"
   - literal: "Yang Zhou"
-  - literal: "Fan Pu"
-  - literal: "Sivakumar Rathinam"
-  - literal: "Yunlong Zhang"
-  - literal: "Xiaopeng Li"
-  - literal: "Xiubin Wang"
   - literal: "Yang Zhou"
 issued:
   date-parts:
@@ -39,39 +35,45 @@ concepts:
 datasets:
   []
 open_questions:
-  []
+  - name: "integrated-network-design-stochastic-heterogeneous-drone-routing"
+    description: "Jointly optimizing synchronization-pad locations and truck-drone routes to extend the framework toward integrated network design, alongside incorporating uncertain travel times and heterogeneous drone fleets to improve applicability to realistic rural delivery operations."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-17T08:58:45Z"
-created_at: "2026-10-17T08:58:45Z"
+processed_at: "2026-10-18T09:17:32Z"
+created_at: "2026-10-18T09:17:32Z"
 ---
 
 # An Exact Branch-Price-and-Cut Algorithm for a Truck-as-Hub Vehicle Routing Problem with Drones
 
-**Authors**: Fan Pu, Sivakumar Rathinam, Yunlong Zhang, Xiaopeng Li, Xiubin Wang, Yang Zhou, Fan Pu, Sivakumar Rathinam, Yunlong Zhang, Xiaopeng Li, Xiubin Wang, Yang Zhou
+**Authors**: Fan Pu, Sivakumar Rathinam, Yunlong Zhang, Xiaopeng Li, Xiubin Wang, Yang Zhou, Yang Zhou
 **Date**: 2026-10-10
 **Paper ID**: [openalex:2610.15016](https://arxiv.org/abs/2610.15016)
 
 ## Summary
 
-This paper studies the Truck-as-Hub Vehicle Routing Problem with Drones for rural last-mile logistics, where trucks serve as mobile synchronization hubs for drone fleets. The authors formulate a mixed-integer quadratic programming model and develop an exact branch-price-and-cut algorithm featuring network transformations and tailored pricing, cutting, and branching procedures. Computational results show that the proposed algorithm efficiently proves optimality or achieves small gaps under 4% for large-scale instances, significantly outperforming direct commercial solver applications.
+This paper investigates the Truck-as-Hub Vehicle Routing Problem with Drones in Rural Areas, where trucks act as mobile hubs launching and retrieving multiple drones simultaneously at predesignated synchronization pads. The authors formulate a mixed-integer quadratic programming model to optimize customer delivery delays, truck return times, and operating costs. To solve this problem exactly, they develop a custom branch-price-and-cut algorithm featuring tailored pricing, cutting, branching, and parallel-computing procedures. Computational results demonstrate that the proposed exact algorithm significantly outperforms direct commercial solver formulations on large-scale test instances.
 
 ## Key Contributions
 
-- Formulates a mixed-integer quadratic programming model for the Truck-as-Hub Vehicle Routing Problem with Drones that captures customer delivery delays, truck return times, and operating costs.
-- Develops an exact branch-price-and-cut algorithm incorporating network transformation, tailored pricing, cutting, branching, and parallel-computing procedures.
-- Demonstrates through computational experiments that the proposed exact algorithm proves optimality for most large-scale test cases with remaining gaps under 4%, outperforming commercial solvers like Gurobi.
+- Formulated a mixed-integer quadratic programming model for the Truck-as-Hub Vehicle Routing Problem with Drones in Rural Areas, accounting for customer delivery delays, truck return times, and operating costs.
+- Developed an exact branch-price-and-cut algorithm incorporating tailored pricing, cutting, branching, and parallel-computing procedures.
+- Demonstrated through computational experiments that the algorithm proves optimality for most large-scale test cases and maintains gaps under 4% for remaining instances, outperforming direct commercial solver applications.
 
 ## Limitations
 
-The exact algorithm faces scalability limits on extremely large instances, resulting in small optimality gaps of up to 4% rather than full optimality proofs for the hardest remaining cases.
+Future work may explore more complex stochastic environments or larger fleets to further scale rural drone delivery models.
+
+## Open Questions & Future Work
+
+- [[integrated-network-design-stochastic-heterogeneous-drone-routing]]
 
 ## Archivist Review
 
-Evaluated the candidates against vault standards. The problem formulation and its future extensions belong to operations research and vehicle routing rather than general machine learning concepts, so both candidates were rejected to maintain vault focus and quality.
+Applied strict standards to ensure only reusable core contributions are added. No concepts were proposed or warranted since the paper focuses on an operations research exact solver for a specific vehicle routing variant. One open question addressing stochastic drone routing and integrated network design is approved as a valid research direction.
+
+### Approved Open Questions
 
 ### Rejected Candidates
-- [concept] Truck-as-Hub Vehicle Routing Problem with Drones (`truck-as-hub-vehicle-routing-problem-with-drones`) - paper_local: This is a specialized operations research problem instance combining trucks and drones rather than a reusable ML method, architectural pattern, or foundational concept.
-- [open_question] Integrated Network Design and Stochastic Heterogeneous Drone Routing (`integrated-network-design-stochastic-heterogeneous-drone-routing`) - low_impact: This represents a specialized operational extension for vehicle routing rather than a fundamental open bottleneck in machine learning generalization, optimization, or theory.
+- [open_question] Integrated Network Design and Stochastic Drone Routing (`integrated-network-design-stochastic-heterogeneous-drone-routing`) - other: Approved as a valid open question.
 
 ## Links
 
