@@ -4,12 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Collective Autonomous Vehicle Routing Needs Social Awareness for Coexistence with Human Drivers"
-description: "This paper investigates collective autonomous vehicle (AV) routing in mixed-autonomy traffic using Multi-Agent Reinforcement Learning and demonstrates that purely selfish AV routing creates negative externalities for human-driven vehicles (HDVs). To resolve this, the authors propose incorporating a social component—marginal cost measured via counterfactual simulation—into the AV reward function. Experiments on the Ingolstadt and Provins road networks show that this social reward limits HDV travel time increases, improves overall system performance, and surprisingly benefits the AVs themselves. Furthermore, a selective computation scheme for marginal costs significantly reduces the computational overhead of counterfactual simulations while maintaining competitive performance."
+description: "This paper investigates how collective autonomous vehicle (AV) routing in mixed-autonomy traffic impacts human-driven vehicles (HDVs) and proposes incorporating a social marginal cost component into AV rewards via multi-agent reinforcement learning. By using counterfactual simulations to capture an AV's externality on other road users, the proposed method reduces HDV travel time increases and paradoxically improves AV travel times compared to purely selfish routing. Furthermore, a selective computation scheme focusing only on high-impact AVs scales the approach efficiently across real-world road networks like Ingolstadt and Provins."
 resource: "https://arxiv.org/abs/2610.13439"
 tags:
-  - "mixed-autonomy-traffic"
   - "multi-agent-reinforcement-learning"
-timestamp: "2026-10-18T09:17:27Z"
+  - "mixed-autonomy-traffic"
+  - "fleet-scheduling"
+timestamp: "2026-10-19T10:27:40Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -27,15 +28,16 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "social-autonomous-vehicle-routing"
-    description: "A multi-agent reinforcement learning approach for autonomous vehicle routing that incorporates a social marginal-cost reward component to mitigate negative externalities on human drivers."
+  - name: "social-av-routing"
+    description: "A routing reward mechanism for autonomous vehicles that incorporates marginal costs via counterfactual simulations to account for externalities imposed on human drivers."
 datasets:
   []
 open_questions:
-  []
+  - name: "socially-aware-av-routing"
+    description: "Investigate how autonomous vehicle routing Multi-Agent Reinforcement Learning (MARL) algorithms can be systematically designed to reduce individual travel times while strictly limiting additional travel time costs or externalities imposed on human drivers and other road users sharing public infrastructure."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-18T09:17:27Z"
-created_at: "2026-10-18T09:17:27Z"
+processed_at: "2026-10-19T10:27:40Z"
+created_at: "2026-10-19T10:27:40Z"
 ---
 
 # Collective Autonomous Vehicle Routing Needs Social Awareness for Coexistence with Human Drivers
@@ -46,31 +48,39 @@ created_at: "2026-10-18T09:17:27Z"
 
 ## Summary
 
-This paper investigates collective autonomous vehicle (AV) routing in mixed-autonomy traffic using Multi-Agent Reinforcement Learning and demonstrates that purely selfish AV routing creates negative externalities for human-driven vehicles (HDVs). To resolve this, the authors propose incorporating a social component—marginal cost measured via counterfactual simulation—into the AV reward function. Experiments on the Ingolstadt and Provins road networks show that this social reward limits HDV travel time increases, improves overall system performance, and surprisingly benefits the AVs themselves. Furthermore, a selective computation scheme for marginal costs significantly reduces the computational overhead of counterfactual simulations while maintaining competitive performance.
+This paper investigates how collective autonomous vehicle (AV) routing in mixed-autonomy traffic impacts human-driven vehicles (HDVs) and proposes incorporating a social marginal cost component into AV rewards via multi-agent reinforcement learning. By using counterfactual simulations to capture an AV's externality on other road users, the proposed method reduces HDV travel time increases and paradoxically improves AV travel times compared to purely selfish routing. Furthermore, a selective computation scheme focusing only on high-impact AVs scales the approach efficiently across real-world road networks like Ingolstadt and Provins.
 
 ## Key Contributions
 
-- Introduces a social reward component based on marginal cost—computed via counterfactual simulation—to internalize the externalities autonomous vehicles (AVs) impose on human-driven vehicles (HDVs).
-- Demonstrates via Multi-Agent Reinforcement Learning (MARL) on Ingolstadt and Provins networks that social AV routing reduces HDV travel time increases (e.g., dropping from 1.7% to 1.1% at 40% penetration) while paradoxically improving AV travel times.
-- Proposes a scalable approximation strategy by computing marginal costs selectively for AVs whose route choices most impact the traffic system, significantly reducing counterfactual simulation overhead.
+- Introduces a social routing reward for autonomous vehicles that incorporates a marginal cost computed via counterfactual simulations to capture externalities on human-driven vehicles.
+- Demonstrates via multi-agent reinforcement learning experiments on Ingolstadt and Provins networks that social AV routing reduces human-driven vehicle travel times while simultaneously benefiting autonomous vehicles.
+- Proposes a scalable approximation that computes marginal costs only for AVs with the highest impact on traffic, significantly reducing computational overhead without sacrificing performance.
 
 ## Limitations
 
-The system performance is sensitive to the weight assigned to the social component in the reward function, failing to reach desired performance if the weight is set too high.
+Excessive weighting of the social component in the reward function causes the system to fail to reach desired performance levels.
+
+## Open Questions & Future Work
+
+- [[socially-aware-av-routing]]
 
 ## Key Concepts
 
-- [[social-autonomous-vehicle-routing]]: A multi-agent reinforcement learning approach for autonomous vehicle routing that incorporates a social marginal-cost reward component to mitigate negative externalities on human drivers.
+- [[social-av-routing]]: A routing reward mechanism for autonomous vehicles that incorporates marginal costs via counterfactual simulations to account for externalities imposed on human drivers.
 
 ## Archivist Review
 
-Approved the core reusable concept of social autonomous vehicle routing and its marginal-cost reward formulation. The open question was rejected because an existing vault entry already covers socially-aware autonomous vehicle routing.
+Approved the concept of social AV routing and its corresponding open question, as they represent a clear contribution and unresolved research direction in mixed-autonomy traffic management. Datasets representing specific city road networks were rejected as they are local simulation scenarios.
 
 ### Approved Concepts
-- Social Autonomous Vehicle Routing: Introduces a novel social reward formulation using marginal cost computed via counterfactual simulation to mitigate negative externalities of autonomous vehicles on human-driven vehicles.
+- Social AV Routing: Introduces a novel social reward formulation using marginal cost computed via counterfactual simulations to internalize external costs imposed by autonomous vehicles on human-driven vehicles.
+
+### Approved Open Questions
+- Socially Aware AV Routing: Crucial for ensuring equitable and socially responsible coexistence between autonomous and human-driven vehicles in urban public infrastructure without degrading human commuting efficiency.
 
 ### Rejected Candidates
-- [open_question] Socially-Aware Autonomous Vehicle Routing (`social-awareness-av-routing-mar-objectives`) - duplicate_existing: This open question is near-duplicate or closely overlaps with existing vault entries on socially-aware autonomous vehicle routing.
+- [dataset] Ingolstadt Network (`ingolstadt-network`) - paper_local: Specific real-world city road network graphs used locally for simulation and evaluation rather than standard global benchmarks.
+- [dataset] Provins Network (`provins-network`) - paper_local: Specific real-world city road network graphs used locally for simulation and evaluation rather than standard global benchmarks.
 
 ## Links
 

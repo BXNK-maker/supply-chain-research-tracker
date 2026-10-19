@@ -4,11 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Hierarchical Building-Floo-Room Framework for Privacy-Preserving Autonomous Delivery in Large-Scale Buildings"
-description: "This paper presents a hierarchical Building-Floor-Room framework for privacy-preserving autonomous delivery in large-scale buildings. The method decomposes delivery planning into building, floor, and room levels by formulating a building-aware extension of the capacitated vehicle routing problem (CVRP) that incorporates privacy constraints and structural connectivity. At the execution level, a closed-loop mapping, localization, and navigation system integrates with physical robotic hardware to ensure consistency with planned routes. Real-world validation on a multi-sensor robotic platform demonstrates enhanced delivery efficiency and multi-floor routing rationality."
+description: "Autonomous indoor delivery in large-scale buildings requires coordinated planning across building, floor, and room levels while respecting privacy constraints and physical execution limits. This paper introduces a hierarchical Building-Floor-Room framework that decomposes the routing problem and models a building-aware extension of the capacitated vehicle routing problem (CVRP) to handle inter-floor connectivity and privacy-sensitive areas. The approach integrates hardware design for non-interactive delivery with closed-loop mapping, localization, and navigation systems. Validated on a real multi-sensor robotic platform, the framework demonstrates efficient multi-floor delivery and path rationality."
 resource: "https://arxiv.org/abs/2610.21361"
 tags:
   - "vehicle-routing-problem"
-timestamp: "2026-10-18T09:18:29Z"
+  - "machine-learning"
+timestamp: "2026-10-19T10:27:56Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,11 +33,10 @@ concepts:
 datasets:
   []
 open_questions:
-  - name: "multi-robot-cooperative-routing-and-uncertainty-aware-planning"
-    description: "Extend the routing framework and motion planning architectures to support multi-robot cooperative task allocation, fleet coordination, and uncertainty-aware planning under dynamic demand and access constraints."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-18T09:18:29Z"
-created_at: "2026-10-18T09:18:29Z"
+processed_at: "2026-10-19T10:27:56Z"
+created_at: "2026-10-19T10:27:56Z"
 ---
 
 # Hierarchical Building-Floo-Room Framework for Privacy-Preserving Autonomous Delivery in Large-Scale Buildings
@@ -47,27 +47,22 @@ created_at: "2026-10-18T09:18:29Z"
 
 ## Summary
 
-This paper presents a hierarchical Building-Floor-Room framework for privacy-preserving autonomous delivery in large-scale buildings. The method decomposes delivery planning into building, floor, and room levels by formulating a building-aware extension of the capacitated vehicle routing problem (CVRP) that incorporates privacy constraints and structural connectivity. At the execution level, a closed-loop mapping, localization, and navigation system integrates with physical robotic hardware to ensure consistency with planned routes. Real-world validation on a multi-sensor robotic platform demonstrates enhanced delivery efficiency and multi-floor routing rationality.
+Autonomous indoor delivery in large-scale buildings requires coordinated planning across building, floor, and room levels while respecting privacy constraints and physical execution limits. This paper introduces a hierarchical Building-Floor-Room framework that decomposes the routing problem and models a building-aware extension of the capacitated vehicle routing problem (CVRP) to handle inter-floor connectivity and privacy-sensitive areas. The approach integrates hardware design for non-interactive delivery with closed-loop mapping, localization, and navigation systems. Validated on a real multi-sensor robotic platform, the framework demonstrates efficient multi-floor delivery and path rationality.
 
 ## Key Contributions
 
-- Introduces a hierarchical Building-Floor-Room abstraction that decomposes large-scale indoor delivery to reduce optimization complexity.
-- Formulates a building-aware extension of the capacitated vehicle routing problem (CVRP) modeling multi-level connectivity, room-level access, and privacy constraints.
-- Validates the framework on a real multi-sensor robotic platform demonstrating reliable multi-floor privacy-preserving delivery.
-
-## Open Questions & Future Work
-
-- [[multi-robot-cooperative-routing-and-uncertainty-aware-planning]]
+- Proposes a hierarchical Building-Floor-Room framework that decomposes multi-level indoor delivery into building, floor, and room abstractions to reduce optimization complexity.
+- Formulates a building-aware extension of the capacitated vehicle routing problem (CVRP) modeling inter-building connectivity, room-level access constraints, and privacy-sensitive areas.
+- Introduces a hardware design for non-interactive, privacy-preserving delivery supported by a closed-loop mapping, localization, and navigation system.
+- Validates the framework on a real multi-sensor robotic platform, demonstrating reliable multi-floor delivery with improved path rationality and efficiency.
 
 ## Archivist Review
 
-The paper-local delivery framework concept was rejected as it pertains to a specific robotics system architecture rather than a general ML mechanism. The open question on multi-robot cooperative routing and uncertainty-aware planning was approved as it captures a substantive unresolved challenge in spatial multi-agent coordination.
-
-### Approved Open Questions
-- Multi-Robot Cooperative Routing and Uncertainty-Aware Planning: Extending single-robot hierarchical delivery frameworks to multi-robot cooperative fleets is vital for scaling autonomous logistics in large commercial and residential facilities, requiring robust decentralized task allocation and collision avoidance.
+The submitted concept is a paper-local system framework for indoor delivery, and the open question heavily duplicates existing multi-robot routing and coordination challenges already tracked in the vault. Both candidates were consequently rejected to maintain vault selectivity and avoid redundancy.
 
 ### Rejected Candidates
-- [concept] Hierarchical Building-Floor-Room Framework (`hierarchical-building-floor-room-framework`) - paper_local: This is a paper-local system architecture rather than a broadly reusable machine learning primitive.
+- [concept] Building-Floor-Room Framework (`building-floor-room-framework`) - paper_local: This is a domain-specific system architecture and application-level routing abstraction for indoor delivery robots rather than a reusable core ML methodology or architectural pattern.
+- [open_question] Multi-Robot Cooperative Hierarchical Routing (`multi-robot-hierarchical-cvrp-optimization`) - duplicate_existing: This is a standard application-level extension combining multi-robot coordination with hierarchical CVRP, overlapping significantly with existing routing and multi-robot open questions in the vault.
 
 ## Links
 

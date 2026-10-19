@@ -4,13 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands"
-description: "This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. The authors improve randomized a priori approximation ratios to 2 and 3 for splittable and unsplittable deliveries, respectively, by combining replenishment rules with a TSP tour constructed via matroid parity. They also introduce deterministic (2+epsilon) and (3+epsilon) approximation algorithms via cumulative demand distribution compression. Finally, matching lower bounds of 2 and 3 are established for randomized restocking policies, alongside extensions to deterministic vehicle routing variants."
+description: "This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. The authors improve randomized a priori approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries by leveraging a matroid-parity TSP construction, matching these guarantees against new lower bounds. Additionally, they propose polynomial-time deterministic approximation algorithms by compressing cumulative demand distributions."
 resource: "https://arxiv.org/abs/2610.16802"
 tags:
-  - "approximation-algorithms"
-  - "stochastic-demands"
   - "vehicle-routing-problem"
-timestamp: "2026-10-18T09:16:29Z"
+  - "stochastic-demands"
+  - "approximation-algorithms"
+  - "combinatorial-optimization"
+timestamp: "2026-10-19T10:26:35Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,8 +33,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-18T09:16:29Z"
-created_at: "2026-10-18T09:16:29Z"
+processed_at: "2026-10-19T10:26:35Z"
+created_at: "2026-10-19T10:26:35Z"
 ---
 
 # Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands
@@ -44,18 +45,14 @@ created_at: "2026-10-18T09:16:29Z"
 
 ## Summary
 
-This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. The authors improve randomized a priori approximation ratios to 2 and 3 for splittable and unsplittable deliveries, respectively, by combining replenishment rules with a TSP tour constructed via matroid parity. They also introduce deterministic (2+epsilon) and (3+epsilon) approximation algorithms via cumulative demand distribution compression. Finally, matching lower bounds of 2 and 3 are established for randomized restocking policies, alongside extensions to deterministic vehicle routing variants.
+This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. The authors improve randomized a priori approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries by leveraging a matroid-parity TSP construction, matching these guarantees against new lower bounds. Additionally, they propose polynomial-time deterministic approximation algorithms by compressing cumulative demand distributions.
 
 ## Key Contributions
 
-- Improved randomized a priori approximation ratios to 2 and 3 for splittable and unsplittable deliveries respectively in vehicle routing with stochastic demands.
-- Developed deterministic a priori (2+epsilon) and (3+epsilon) approximation algorithms using distribution compression of cumulative demands.
-- Established matching lower bounds of 2 and 3 that hold even for randomized restocking policies.
-- Applied matroid-parity construction to improve approximation ratios for several deterministic vehicle routing problem variants.
-
-## Archivist Review
-
-No concepts proposed; paper studies approximation algorithms for vehicle routing with stochastic demands, which can be appropriately tagged using existing tags.
+- Improved randomized a priori approximation ratios for vehicle routing with stochastic demands to 2 for splittable deliveries and 3 for unsplittable deliveries using a matroid-parity TSP tour.
+- Developed deterministic a priori (2+ε)-approximation and (3+ε)-approximation algorithms via cumulative demand distribution compression.
+- Established matching lower bounds of 2 and 3 for the vehicle routing problem with stochastic demands under randomized restocking policies.
+- Applied the matroid-parity construction to improve approximation ratios for multiple vehicle routing problem variants with deterministic demands.
 
 ## Links
 
