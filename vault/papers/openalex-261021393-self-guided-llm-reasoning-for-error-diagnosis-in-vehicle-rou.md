@@ -4,19 +4,20 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Self-Guided LLM Reasoning for Error Diagnosis in Vehicle Routing Problems"
-description: "This paper investigates the capability of large language models (LLMs) to detect and correct data errors in Vehicle Routing Problem (VRP) instances, identifying major bottlenecks in complex scenarios. To address these limitations, the authors introduce a self-guided reasoning framework where LLMs autonomously generate code to provide structured insights for error diagnosis. Extensive experiments demonstrate that this approach significantly improves error detection accuracy across diverse problem settings and LLM backbones."
+description: "This paper investigates the capability of large language models to detect and correct data errors in vehicle routing problem (VRP) instances, identifying major performance drops on complex problem instances. To address this, the authors propose a self-guided reasoning framework where LLMs autonomously generate code to supply structured insights for error diagnosis. Extensive experiments across diverse settings demonstrate that this approach significantly improves error detection performance, achieving near-perfect accuracy."
 resource: "https://arxiv.org/abs/2610.21393"
 tags:
   - "vehicle-routing-problem"
-  - "combinatorial-optimization"
   - "machine-learning"
-timestamp: "2026-10-19T10:26:41Z"
+  - "combinatorial-optimization"
+timestamp: "2026-10-20T09:45:52Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
   - literal: "Ni Zhang"
   - literal: "Jianan Zhou"
   - literal: "Yue-Jiao Gong"
+  - literal: "Zhiguang Cao"
   - literal: "Zhiguang Cao"
 issued:
   date-parts:
@@ -28,58 +29,43 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "self-guided-llm-reasoning"
-    description: "A framework where large language models autonomously generate code to provide structured insights for error diagnosis in vehicle routing problems."
+  []
 datasets:
   []
 open_questions:
-  - name: "generalizing-llm-error-diagnosis-combinatorial-optimization"
-    description: "Investigate how large language models can be systematically extended or combined with external validation frameworks to automatically detect and correct complex instance-level errors across diverse combinatorial optimization problem domains and real-world noisy datasets."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-19T10:26:41Z"
-created_at: "2026-10-19T10:26:41Z"
+processed_at: "2026-10-20T09:45:52Z"
+created_at: "2026-10-20T09:45:52Z"
 ---
 
 # Self-Guided LLM Reasoning for Error Diagnosis in Vehicle Routing Problems
 
-**Authors**: Ni Zhang, Jianan Zhou, Yue-Jiao Gong, Zhiguang Cao
+**Authors**: Ni Zhang, Jianan Zhou, Yue-Jiao Gong, Zhiguang Cao, Zhiguang Cao
 **Date**: 2026-10-15
 **Paper ID**: [openalex:2610.21393](https://arxiv.org/abs/2610.21393)
 
 ## Summary
 
-This paper investigates the capability of large language models (LLMs) to detect and correct data errors in Vehicle Routing Problem (VRP) instances, identifying major bottlenecks in complex scenarios. To address these limitations, the authors introduce a self-guided reasoning framework where LLMs autonomously generate code to provide structured insights for error diagnosis. Extensive experiments demonstrate that this approach significantly improves error detection accuracy across diverse problem settings and LLM backbones.
+This paper investigates the capability of large language models to detect and correct data errors in vehicle routing problem (VRP) instances, identifying major performance drops on complex problem instances. To address this, the authors propose a self-guided reasoning framework where LLMs autonomously generate code to supply structured insights for error diagnosis. Extensive experiments across diverse settings demonstrate that this approach significantly improves error detection performance, achieving near-perfect accuracy.
 
 ## Key Contributions
 
-- Identified key limitations of large language models in detecting and correcting data errors in vehicle routing problem instances, particularly under complex problem settings.
-- Proposed a self-guided reasoning framework where LLMs autonomously generate code to provide structured insights for error diagnosis.
-- Demonstrated significant improvements in error detection performance across diverse problem settings and LLMs, achieving near-perfect accuracy.
+- Systematically investigates the capability of large language models to detect and correct data errors in vehicle routing problem instances.
+- Identifies key limitations of standard LLM reasoning when handling complex instances or high error burdens.
+- Proposes a self-guided reasoning framework where LLMs autonomously generate code to provide structured insights for error diagnosis, achieving near-perfect accuracy.
 
 ## Limitations
 
-Performance may degrade on complex instances or when errors substantially increase the reasoning burden of the LLM without structured code guidance.
-
-## Open Questions & Future Work
-
-- [[generalizing-llm-error-diagnosis-combinatorial-optimization]]
-
-## Key Concepts
-
-- [[self-guided-llm-reasoning]]: A framework where large language models autonomously generate code to provide structured insights for error diagnosis in vehicle routing problems.
+Relies on the LLM's capacity to generate correct diagnostic code and handle complex reasoning steps under high error burdens.
 
 ## Archivist Review
 
-The concept 'Self-Guided LLM Reasoning' already exists in the vault, so it was reused. The proposed open question closely aligns with the existing vault question 'generalizing-llm-error-diagnosis-combinatorial-optimization', so it was mapped and deduplicated accordingly. No custom datasets met the strict criteria for standalone notes.
-
-### Approved Concepts
-- Self-Guided LLM Reasoning: Central novelty of the paper, introducing a code-generation-based self-guided reasoning framework for error diagnosis in vehicle routing problem instances.
-
-### Approved Open Questions
-- Error Diagnosis in Optimization Instances: Real-world combinatorial optimization pipelines require robust automated data sanitization and error correction. Addressing domain generalization and noisy data robustness is critical for deploying LLM-based reasoning frameworks in practical decision-making settings.
+The concept 'self-guided-llm-reasoning' already exists in the vault, so it is rejected as a duplicate. The open question is overly narrow and specific to VRP instance error diagnosis, so it is rejected as paper-local. No datasets were identified.
 
 ### Rejected Candidates
-- [open_question] Error Diagnosis in Optimization Instances (`error-diagnosis-combinatorial-optimization-instances`) - duplicate_existing: Duplicate or very close to existing vault question 'generalizing-llm-error-diagnosis-combinatorial-optimization'; reusing the canonical slug/topic instead.
+- [concept] Self-Guided LLM Reasoning (`self-guided-llm-reasoning`) - duplicate_existing: Already exists in the vault under the exact same slug.
+- [open_question] Cascading Error Interference in VRP Diagnosis (`cascading-error-interference-in-vrp-diagnosis`) - paper_local: Too paper-local and specific to VRP instance error diagnosis rather than a broad, persistent vault-level open question.
 
 ## Links
 
