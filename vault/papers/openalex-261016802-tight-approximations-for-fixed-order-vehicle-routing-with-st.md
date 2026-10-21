@@ -4,14 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands"
-description: "This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies that fix client visitation order. By employing a TSP tour constructed via matroid parity alongside replenishment rules, the authors improve randomized a priori approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries. Furthermore, they develop deterministic approximation algorithms and establish matching lower bounds of 2 and 3 that hold even for randomized restocking policies."
+description: "This paper studies the vehicle routing problem with stochastic demands under fixed-order a priori and restocking policies. The authors improve randomized approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries using a traveling salesman tour constructed via matroid parity. They also develop deterministic (2+ε)- and (3+ε)-approximation algorithms and establish matching lower bounds for randomized restocking policies. Additionally, the matroid-parity construction is applied to improve approximation ratios for deterministic vehicle routing variants."
 resource: "https://arxiv.org/abs/2610.16802"
 tags:
   - "vehicle-routing-problem"
   - "stochastic-demands"
   - "approximation-algorithms"
-  - "combinatorial-optimization"
-timestamp: "2026-10-20T09:45:45Z"
+timestamp: "2026-10-21T09:46:46Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,8 +32,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-20T09:45:45Z"
-created_at: "2026-10-20T09:45:45Z"
+processed_at: "2026-10-21T09:46:46Z"
+created_at: "2026-10-21T09:46:46Z"
 ---
 
 # Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands
@@ -45,14 +44,18 @@ created_at: "2026-10-20T09:45:45Z"
 
 ## Summary
 
-This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies that fix client visitation order. By employing a TSP tour constructed via matroid parity alongside replenishment rules, the authors improve randomized a priori approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries. Furthermore, they develop deterministic approximation algorithms and establish matching lower bounds of 2 and 3 that hold even for randomized restocking policies.
+This paper studies the vehicle routing problem with stochastic demands under fixed-order a priori and restocking policies. The authors improve randomized approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries using a traveling salesman tour constructed via matroid parity. They also develop deterministic (2+ε)- and (3+ε)-approximation algorithms and establish matching lower bounds for randomized restocking policies. Additionally, the matroid-parity construction is applied to improve approximation ratios for deterministic vehicle routing variants.
 
 ## Key Contributions
 
-- Improved randomized a priori approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries in vehicle routing with stochastic demands.
-- Developed deterministic a priori (2+ε)-approximation and (3+ε)-approximation algorithms by compressing cumulative demand distributions.
-- Established matching lower bounds of 2 and 3 that hold even for randomized restocking policies.
-- Applied matroid-parity tour construction to improve approximation ratios for several vehicle routing variants with deterministic demands.
+- Improved randomized a priori approximation ratios for vehicle routing with stochastic demands to 2 for splittable deliveries and 3 for unsplittable deliveries using matroid parity.
+- Developed deterministic a priori (2+ε)-approximation and (3+ε)-approximation algorithms by compressing cumulative demand distributions in polynomial time.
+- Established matching lower bounds of 2 and 3 for randomized restocking policies.
+- Applied matroid-parity construction to improve approximation ratios for several vehicle routing variants with deterministic demands.
+
+## Archivist Review
+
+No novel concepts or critical named datasets identified that warrant standalone vault notes beyond standard algorithms and problem classes.
 
 ## Links
 
