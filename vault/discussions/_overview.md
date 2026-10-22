@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-10
-_5 notes. Highlights: Today's batch of papers offers a remarkably cohesive and forward-looking snapshot of **Vehicle Routing Problems (VRP)** ; Today's batch of papers showcases a vibrant intersection of classical operations research, deep learning, multi-agent sy_
+_6 notes. Highlights: The latest influx of research papers reveals a fascinating convergence between classical operations research (OR) and mo; Today's batch of papers offers a remarkably cohesive and forward-looking snapshot of **Vehicle Routing Problems (VRP)** _
 
 ### Week 2026-W43
-_2 notes. Highlights: Today's batch of papers offers a remarkably cohesive and forward-looking snapshot of **Vehicle Routing Problems (VRP)** ; Today's batch of papers showcases a vibrant intersection of classical operations research, deep learning, multi-agent sy_
+_3 notes. Highlights: The latest influx of research papers reveals a fascinating convergence between classical operations research (OR) and mo; Today's batch of papers offers a remarkably cohesive and forward-looking snapshot of **Vehicle Routing Problems (VRP)** _
 
+- [2026-10-22](/discussions/daily/2026-10-22) — The latest influx of research papers reveals a fascinating convergence between classical operations research (OR) and mo
 - [2026-10-20](/discussions/daily/2026-10-20) — Today's batch of papers offers a remarkably cohesive and forward-looking snapshot of **Vehicle Routing Problems (VRP)** 
 - [2026-10-19](/discussions/daily/2026-10-19) — Today's batch of papers showcases a vibrant intersection of classical operations research, deep learning, multi-agent sy
 

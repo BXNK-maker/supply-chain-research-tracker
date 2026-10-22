@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Improved Approximations for Vehicle Routing with Nonuniform Speeds"
-description: "This paper studies vehicle routing problems with vehicles possessing nonuniform speeds on metric graphs, aiming to minimize the maximum completion time among all vehicles. The author develops improved approximation algorithms for the heterogeneous traveling salesman problem (HetTSP) achieving a 6-approximation ratio, as well as for split-delivery and unsplit-delivery versions of the heterogeneous capacitated vehicle routing problem (HetCVRP) achieving approximation ratios of approximately 7.965 and 9.743, respectively. These results significantly improve upon previous approximation bounds in the literature."
+description: "This paper studies vehicle routing problems involving vehicles with nonuniform speeds, aiming to minimize the maximum completion time among all vehicles. The author presents improved approximation algorithms for three core variants: the heterogeneous traveling salesman problem (HetTSP) and both split-delivery and unsplit-delivery versions of the heterogeneous capacitated vehicle routing problem (HetCVRP). These results significantly improve the approximation guarantees compared to existing literature."
 resource: "https://arxiv.org/abs/2610.12195"
 tags:
-  - "approximation-algorithms"
   - "vehicle-routing-problem"
-timestamp: "2026-10-21T09:46:43Z"
+  - "approximation-algorithms"
+timestamp: "2026-10-22T09:46:25Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,10 +28,11 @@ concepts:
 datasets:
   []
 open_questions:
-  []
+  - name: "improving-heterogeneous-vehicle-routing-approximation-bounds"
+    description: "Determine whether the approximation guarantees for the heterogeneous traveling salesman problem (HetTSP) and the heterogeneous capacitated vehicle routing problem (HetCVRP) can be further improved, or if there exist matching lower bounds establishing the optimal approximation factors for these problems."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-21T09:46:43Z"
-created_at: "2026-10-21T09:46:43Z"
+processed_at: "2026-10-22T09:46:25Z"
+created_at: "2026-10-22T09:46:25Z"
 ---
 
 # Improved Approximations for Vehicle Routing with Nonuniform Speeds
@@ -42,17 +43,27 @@ created_at: "2026-10-21T09:46:43Z"
 
 ## Summary
 
-This paper studies vehicle routing problems with vehicles possessing nonuniform speeds on metric graphs, aiming to minimize the maximum completion time among all vehicles. The author develops improved approximation algorithms for the heterogeneous traveling salesman problem (HetTSP) achieving a 6-approximation ratio, as well as for split-delivery and unsplit-delivery versions of the heterogeneous capacitated vehicle routing problem (HetCVRP) achieving approximation ratios of approximately 7.965 and 9.743, respectively. These results significantly improve upon previous approximation bounds in the literature.
+This paper studies vehicle routing problems involving vehicles with nonuniform speeds, aiming to minimize the maximum completion time among all vehicles. The author presents improved approximation algorithms for three core variants: the heterogeneous traveling salesman problem (HetTSP) and both split-delivery and unsplit-delivery versions of the heterogeneous capacitated vehicle routing problem (HetCVRP). These results significantly improve the approximation guarantees compared to existing literature.
 
 ## Key Contributions
 
-- Proposes a 6-approximation algorithm for the heterogeneous traveling salesman problem (HetTSP), improving upon the previous 90(1+delta)-approximation.
-- Proposes a (9/2 + 2\sqrt{3}) < 7.965-approximation algorithm for the split-delivery version of the heterogeneous capacitated vehicle routing problem (HetCVRP).
-- Proposes an (11/2 + 3\sqrt{2}) < 9.743-approximation algorithm for the unsplit-delivery version of HetCVRP, improving upon the previous 450(1+delta)-approximation.
+- Achieves a 6-approximation algorithm for the heterogeneous traveling salesman problem (HetTSP), improving upon the previous $90(1+\delta)$-approximation.
+- Proposes a $(\frac{9}{2}+2\sqrt{3}) < 7.965$-approximation algorithm for the split-delivery version of the heterogeneous capacitated vehicle routing problem (HetCVRP).
+- Achieves an $(\frac{11}{2}+3\sqrt{2}) < 9.743$-approximation algorithm for the unsplit-delivery version of HetCVRP, improving upon the previous $450(1+\delta)$-approximation.
+
+## Open Questions & Future Work
+
+- [[improving-heterogeneous-vehicle-routing-approximation-bounds]]
 
 ## Archivist Review
 
-No novel concepts or datasets proposed for standalone vault entry as the paper focuses on approximation algorithms for existing vehicle routing variants.
+Applied rigorous selectivity for the ML/algorithms vault. No distinct reusable conceptual modules were introduced, but the open question regarding approximation bounds for heterogeneous vehicle routing is preserved as a valuable theoretical direction.
+
+### Approved Open Questions
+- Improved Approximation Bounds for Heterogeneous Routing: Closing the gap between upper and lower bounds for vehicle routing with nonuniform speeds is a fundamental open direction in approximation algorithms for heterogeneous routing.
+
+### Rejected Candidates
+- [open_question] Improved Approximation Bounds for Heterogeneous Routing (`improving-heterogeneous-vehicle-routing-approximation-bounds`) - other: Approved as a valuable open research direction in approximation algorithms.
 
 ## Links
 
