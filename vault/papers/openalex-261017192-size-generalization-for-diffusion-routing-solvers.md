@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Size Generalization for Diffusion Routing Solvers"
-description: "Routing problems like TSP and CVRP are computationally expensive for large instances, and existing diffusion solvers struggle to generalize to sizes beyond their training distribution without expensive optimal labels. To address this, the authors introduce ResizeCO, a label-free size-generalization approach that adapts diffusion models trained on small instances to large-scale instances using reinforcement learning (GRPO) and a GPU-accelerated beam search formulation of k-opt. Experiments on TSP and CVRP up to 10,000 nodes demonstrate that ResizeCO achieves a new state-of-the-art Pareto front balancing route quality and execution time."
+description: "Diffusion models for routing problems often fail to generalize to larger problem instances outside their training distribution where optimal solutions are intractable. This paper introduces ResizeCO, a label-free size-generalization framework that uses reinforcement learning to adapt diffusion models trained on small instances to large-scale routing problems. By adapting GRPO with route length rewards and formulating k-opt as a GPU-accelerated beam search, ResizeCO sets a new state of the art on TSP and CVRP instances with up to 10,000 nodes."
 resource: "https://arxiv.org/abs/2610.17192"
 tags:
-  - "vehicle-routing-problem"
+  - "machine-learning"
   - "neural-routing-solver"
   - "combinatorial-optimization"
-timestamp: "2026-10-22T09:49:12Z"
+timestamp: "2026-10-23T09:45:15Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -29,15 +29,15 @@ architectures:
   []
 concepts:
   - name: "resizeco"
-    description: "A label-free size-generalization approach for diffusion-based routing solvers using reinforcement learning and GPU-accelerated beam search."
+    description: "A label-free size-generalization approach that uses reinforcement learning to adapt small-instance-trained diffusion models to large-scale routing problem instances."
 datasets:
   []
 open_questions:
   - name: "size-generalization-diffusion-routing-solvers"
-    description: "Investigate and develop methodologies that enable diffusion-based combinatorial optimization solvers to maintain solution quality and computational efficiency when scaling to substantially larger problem instances without requiring expensive supervised labels for those large instances."
+    description: "Investigating how diffusion models and reinforcement learning routing solvers can better maintain robust zero-shot or fine-tuned size generalization on massive routing graphs (such as TSP and CVRP instances with over 10,000 nodes) without requiring prohibitively expensive optimal labels."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-22T09:49:12Z"
-created_at: "2026-10-22T09:49:12Z"
+processed_at: "2026-10-23T09:45:15Z"
+created_at: "2026-10-23T09:45:15Z"
 ---
 
 # Size Generalization for Diffusion Routing Solvers
@@ -48,14 +48,18 @@ created_at: "2026-10-22T09:49:12Z"
 
 ## Summary
 
-Routing problems like TSP and CVRP are computationally expensive for large instances, and existing diffusion solvers struggle to generalize to sizes beyond their training distribution without expensive optimal labels. To address this, the authors introduce ResizeCO, a label-free size-generalization approach that adapts diffusion models trained on small instances to large-scale instances using reinforcement learning (GRPO) and a GPU-accelerated beam search formulation of k-opt. Experiments on TSP and CVRP up to 10,000 nodes demonstrate that ResizeCO achieves a new state-of-the-art Pareto front balancing route quality and execution time.
+Diffusion models for routing problems often fail to generalize to larger problem instances outside their training distribution where optimal solutions are intractable. This paper introduces ResizeCO, a label-free size-generalization framework that uses reinforcement learning to adapt diffusion models trained on small instances to large-scale routing problems. By adapting GRPO with route length rewards and formulating k-opt as a GPU-accelerated beam search, ResizeCO sets a new state of the art on TSP and CVRP instances with up to 10,000 nodes.
 
 ## Key Contributions
 
-- Proposes ResizeCO, a label-free size-generalization framework that adapts small-instance trained diffusion models to large-scale routing instances using reinforcement learning.
-- Adapts GRPO for combinatorial optimization using route length as the training signal to handle distribution shifts in large instances.
-- Formulates k-opt as a tree search accelerated via GPU-based beam search to address the computational challenge of large instances.
-- Achieves a dominant Pareto front over route quality and inference time on TSP and CVRP instances up to 10,000 nodes, outperforming existing learned solvers.
+- Proposed ResizeCO, a label-free size-generalization approach that adapts diffusion models trained on small routing instances to large-scale instances using reinforcement learning.
+- Adapted Group Relative Policy Optimization (GRPO) using route length as the training signal for large-scale routing instances.
+- Formulated k-opt as a tree search and solved it via GPU-accelerated beam search.
+- Achieved state-of-the-art performance on TSP and CVRP instances with up to 10000 nodes, dominating existing learned solvers on a Pareto front of route quality and inference time.
+
+## Limitations
+
+Not explicitly stated in the abstract, though reliance on reinforcement learning adaptation for scaling up diffusion models requires careful tuning.
 
 ## Open Questions & Future Work
 
@@ -63,20 +67,20 @@ Routing problems like TSP and CVRP are computationally expensive for large insta
 
 ## Key Concepts
 
-- [[resizeco]]: A label-free size-generalization approach for diffusion-based routing solvers using reinforcement learning and GPU-accelerated beam search.
+- [[resizeco]]: A label-free size-generalization approach that uses reinforcement learning to adapt small-instance-trained diffusion models to large-scale routing problem instances.
 
 ## Archivist Review
 
-Approved the core framework 'ResizeCO' and the open question regarding size generalization in diffusion-based combinatorial optimization solvers. Rejected 'GRPO' because it is an established external reinforcement learning algorithm.
+Approved the core concept 'resizeco' (reusing the existing vault slug 'resizeco') as it represents a distinct and reusable framework for label-free size generalization in diffusion routing solvers. Approved the open question 'size-generalization-diffusion-routing-solvers' (matching the existing vault slug) because scaling diffusion solvers across varying graph sizes is a key bottleneck. Rejected GRPO adaptation as a subcomponent of the broader framework.
 
 ### Approved Concepts
-- ResizeCO: It is the core proposed framework combining reinforcement learning with diffusion models for size-generalization in routing problems.
+- ResizeCO: Central framework proposed by the paper for label-free size generalization in diffusion routing solvers using reinforcement learning.
 
 ### Approved Open Questions
-- Size Generalization in Diffusion Routing Solvers: Size generalization is a primary bottleneck for deploying neural combinatorial optimization models in real-world large-scale routing applications.
+- Size Generalization in Diffusion Solvers: Crucial for scaling neural combinatorial optimization to real-world, large-scale routing tasks where ground-truth optimal solutions are intractable to compute.
 
 ### Rejected Candidates
-- [concept] GRPO (`grpo`) - not_novel: GRPO is an existing reinforcement learning technique rather than a novel concept introduced by this paper.
+- [concept] GRPO for Routing Solvers (`grpo-for-routing`) - subcomponent_of_broader_mechanism: Application of GRPO to routing is a subcomponent of the broader ResizeCO framework rather than an independent concept.
 
 ## Links
 
