@@ -4,12 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "RELAGRAM: Recursive Latent Graph Model for the Capacitated Vehicle Routing Problem"
-description: "The authors introduce RELAGRAM, a recursive latent graph model that adapts latent recursion for graph combinatorial optimization, specifically targeting the capacitated vehicle routing problem (CVRP). RELAGRAM encodes CVRP instances as edge tokens and recurrently updates their latent representations via a compact transformer before decoding feasible solutions. Trained solely on CVRP-100 instances, the model demonstrates strong performance and robust zero-shot generalization to CVRP-500 and CVRP-1000."
+description: "The paper introduces RELAGRAM, a recursive latent graph model that applies latent recursion to the Capacitated Vehicle Routing Problem (CVRP) by recurrently updating edge token representations via a compact transformer. Evaluated on CVRP-100, RELAGRAM achieves competitive performance compared to a PyVRP reference while maintaining a small parameter count (0.53M). Furthermore, when trained exclusively on CVRP-100 instances, the model demonstrates zero-shot generalization capabilities to larger problem scales such as CVRP-500 and CVRP-1000."
 resource: "https://arxiv.org/abs/2610.15106"
 tags:
-  - "vehicle-routing-problem"
   - "neural-routing-solver"
-timestamp: "2026-10-23T09:44:49Z"
+  - "vehicle-routing-problem"
+  - "combinatorial-optimization"
+timestamp: "2026-10-24T09:15:35Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -26,15 +27,15 @@ architectures:
   []
 concepts:
   - name: "relagram"
-    description: "A recursive latent graph model that brings latent recursion to graph combinatorial optimization for the capacitated vehicle routing problem."
+    description: "Recursive Latent Graph Model that applies latent recursion to neural routing and graph combinatorial optimization."
 datasets:
   []
 open_questions:
   - name: "sparse-rl-signal-latent-recursion"
-    description: "Investigate and engineer advanced reinforcement learning reward signals, auxiliary losses, or curriculum learning strategies tailored specifically to provide denser guidance for intermediate latent states in recursive graph neural models."
+    description: "Investigate and design denser supervision mechanisms or credit assignment strategies tailored for latent-recursive models to improve learning efficiency and optimization stability when trained via reinforcement learning."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-23T09:44:49Z"
-created_at: "2026-10-23T09:44:49Z"
+processed_at: "2026-10-24T09:15:35Z"
+created_at: "2026-10-24T09:15:35Z"
 ---
 
 # RELAGRAM: Recursive Latent Graph Model for the Capacitated Vehicle Routing Problem
@@ -45,17 +46,17 @@ created_at: "2026-10-23T09:44:49Z"
 
 ## Summary
 
-The authors introduce RELAGRAM, a recursive latent graph model that adapts latent recursion for graph combinatorial optimization, specifically targeting the capacitated vehicle routing problem (CVRP). RELAGRAM encodes CVRP instances as edge tokens and recurrently updates their latent representations via a compact transformer before decoding feasible solutions. Trained solely on CVRP-100 instances, the model demonstrates strong performance and robust zero-shot generalization to CVRP-500 and CVRP-1000.
+The paper introduces RELAGRAM, a recursive latent graph model that applies latent recursion to the Capacitated Vehicle Routing Problem (CVRP) by recurrently updating edge token representations via a compact transformer. Evaluated on CVRP-100, RELAGRAM achieves competitive performance compared to a PyVRP reference while maintaining a small parameter count (0.53M). Furthermore, when trained exclusively on CVRP-100 instances, the model demonstrates zero-shot generalization capabilities to larger problem scales such as CVRP-500 and CVRP-1000.
 
 ## Key Contributions
 
-- Introduced RELAGRAM, a recursive latent graph model that brings latent recursion to graph combinatorial optimization and neural routing.
-- Achieved gaps to a PyVRP reference of 13.4%, 9.8%, and 8.3% on CVRP-100 under greedy decoding, eightfold symmetry augmentation, and 256-candidate search, respectively.
-- Demonstrated zero-shot generalization from CVRP-100 training to CVRP-500 and CVRP-1000 instances, achieving gaps of 15.6% and 21.7% under 256-candidate search.
+- Introduces RELAGRAM, a recursive latent graph model applying latent recursion to the Capacitated Vehicle Routing Problem (CVRP).
+- Achieves competitive gaps to PyVRP on CVRP-100 instances (8.3% gap under 256-candidate search with only 0.53M parameters).
+- Demonstrates zero-shot generalization to larger CVRP-500 and CVRP-1000 instances when trained solely on CVRP-100.
 
 ## Limitations
 
-Evaluated primarily on CVRP instances with zero-shot scaling up to 1000 nodes; broader applicability to other vehicle routing variants remains to be explored.
+Performance gaps increase on larger instances (CVRP-500 and CVRP-1000), indicating room for improvement in zero-shot scaling.
 
 ## Open Questions & Future Work
 
@@ -63,17 +64,20 @@ Evaluated primarily on CVRP instances with zero-shot scaling up to 1000 nodes; b
 
 ## Key Concepts
 
-- [[relagram]]: A recursive latent graph model that brings latent recursion to graph combinatorial optimization for the capacitated vehicle routing problem.
+- [[relagram]]: Recursive Latent Graph Model that applies latent recursion to neural routing and graph combinatorial optimization.
 
 ## Archivist Review
 
-Approved the core model RELAGRAM as a central standalone concept because it establishes a novel recursive latent graph framework for combinatorial optimization. Also approved the open question regarding sparse RL signals for latent recursion as it targets a clear foundational bottleneck. CVRP datasets were rejected because they are standard problem scale variations rather than unique named benchmark datasets.
+Approved the core model concept RELAGRAM as a reusable approach for latent recursion in graph combinatorial optimization, along with the open question on sparse reinforcement learning signals for latent recursion. Rejected the dynamic routing open question as a routine future application.
 
 ### Approved Concepts
-- RELAGRAM: Introduces latent recursion to graph combinatorial optimization and neural routing, demonstrating strong zero-shot generalization to larger problem instances.
+- RELAGRAM: Brings latent recursion to graph combinatorial optimization and neural routing.
 
 ### Approved Open Questions
-- Denser Reward Signals for Latent Recursion: Overcoming the sparse reward bottleneck in latent-recursive models is critical for enabling effective gradient propagation and representation learning across recursive reasoning steps in combinatorial optimization.
+- Denser Reinforcement Learning Supervision: Addressing sparse reinforcement learning signals is critical for enabling effective end-to-end training of latent-recursive neural architectures in combinatorial optimization.
+
+### Rejected Candidates
+- [open_question] Latent Recursion for Dynamic Routing (`latent-recursion-dynamic-routing`) - not_novel: This represents a standard future work suggestion (applying a method to a new problem variant) rather than a deep unresolved technical bottleneck.
 
 ## Links
 

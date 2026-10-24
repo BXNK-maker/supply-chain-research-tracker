@@ -4,15 +4,15 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "GREAT-ESDD: Graph Edge Attention Network for Effectively Steered Delivery Decisions"
-description: "The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for online same-day delivery that combines home and out-of-home options. It leverages a fast neural solver based on the Graph-Edge-Attention-Network (GREAT) to reoptimize capacitated vehicle routing problems in parallel, estimating cost increases to set dynamic delivery prices. Customer preferences are learned online using Thompson sampling with a Laplace-approximated posterior, successfully steering customers toward cost-effective delivery options and increasing operator profit by around 11%."
+description: "The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for same-day delivery that combines a fast neural CVRP solver (GREAT) with online customer preference learning via Thompson sampling. By rapidly evaluating routing cost changes for home versus out-of-home delivery options, the framework dynamically adjusts prices to steer customers toward cost-effective delivery methods. Simulations show an 11% profit increase over traditional routing solvers and superior performance compared to static pricing strategies."
 resource: "https://arxiv.org/abs/2610.14792"
 tags:
+  - "vehicle-routing-problem"
   - "neural-routing-solver"
   - "dynamic-pricing"
   - "choice-modeling"
-  - "vehicle-routing-problem"
-  - "time-series"
-timestamp: "2026-10-23T09:46:25Z"
+  - "reinforcement-learning"
+timestamp: "2026-10-24T09:17:47Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -31,16 +31,14 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "graph-edge-attention-network"
-    description: "A graph attention network variant designed for solving and reoptimizing capacitated vehicle routing problems."
+  []
 datasets:
   []
 open_questions:
-  - name: "anticipatory-non-myopic-cost-estimates"
-    description: "Investigate and develop non-myopic or anticipatory cost estimation techniques that account for future customer arrivals and dynamic demand patterns, moving beyond myopic marginal routing cost approximations in vehicle routing and pricing frameworks."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-23T09:46:25Z"
-created_at: "2026-10-23T09:46:25Z"
+processed_at: "2026-10-24T09:17:47Z"
+created_at: "2026-10-24T09:17:47Z"
 ---
 
 # GREAT-ESDD: Graph Edge Attention Network for Effectively Steered Delivery Decisions
@@ -51,39 +49,26 @@ created_at: "2026-10-23T09:46:25Z"
 
 ## Summary
 
-The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for online same-day delivery that combines home and out-of-home options. It leverages a fast neural solver based on the Graph-Edge-Attention-Network (GREAT) to reoptimize capacitated vehicle routing problems in parallel, estimating cost increases to set dynamic delivery prices. Customer preferences are learned online using Thompson sampling with a Laplace-approximated posterior, successfully steering customers toward cost-effective delivery options and increasing operator profit by around 11%.
+The paper introduces GREAT-ESDD, a dynamic pricing-and-routing framework for same-day delivery that combines a fast neural CVRP solver (GREAT) with online customer preference learning via Thompson sampling. By rapidly evaluating routing cost changes for home versus out-of-home delivery options, the framework dynamically adjusts prices to steer customers toward cost-effective delivery methods. Simulations show an 11% profit increase over traditional routing solvers and superior performance compared to static pricing strategies.
 
 ## Key Contributions
 
-- Developed a neural solver based on the Graph Edge Attention Network (GREAT) capable of solving and reoptimizing CVRP instances across varying sizes and starting conditions.
-- Designed a dynamic pricing-and-routing framework (GREAT-ESDD) that integrates parallel CVRP solving to estimate delivery cost increases and steer customers toward out-of-home options.
-- Employed Thompson sampling with a Laplace-approximated posterior to learn online customer preferences for delivery options.
-- Demonstrated an 11% profit increase over traditional routing solvers and superior performance compared to static pricing after 5 days of simulated operations.
+- Developed GREAT, a fast neural solver for the capacitated vehicle routing problem (CVRP) capable of handling varying instance sizes and reoptimizing partially executed routes in parallel batches.
+- Created a dynamic pricing-and-routing framework (GREAT-ESDD) that estimates delivery cost increases from neural CVRP solutions to set delivery fees and steer customers toward out-of-home options.
+- Integrated Thompson sampling with a Laplace-approximated posterior to learn online customer preferences for home versus out-of-home delivery options.
+- Demonstrated around 11% profit increase compared to traditional routing solvers under similar pricing decision time budgets, while outperforming static pricing after 5 days of simulated operations.
 
 ## Limitations
 
-Evaluated on simulated operations; relies on accurate modeling of customer choice preferences.
-
-## Open Questions & Future Work
-
-- [[anticipatory-non-myopic-cost-estimates]]
-
-## Key Concepts
-
-- [[graph-edge-attention-network]]: A graph attention network variant designed for solving and reoptimizing capacitated vehicle routing problems.
+Evaluated primarily in simulated operations; potential generalization challenges in highly volatile, large-scale real-world routing scenarios remain to be fully quantified.
 
 ## Archivist Review
 
-Applied strict selection criteria to maintain a high-signal knowledge vault. Graph Edge Attention Network is already in the vault and correctly reused. GREAT-ESDD is rejected as paper-local application branding. The open question on anticipatory non-myopic cost estimates is approved as it addresses a fundamental algorithmic bottleneck in neural combinatorial optimization and dynamic pricing.
-
-### Approved Concepts
-- Graph Edge Attention Network: Serves as the core neural routing solver handling varying instance sizes and partial route reoptimization.
-
-### Approved Open Questions
-- Anticipatory Non-Myopic Cost Estimates: Overcoming myopic routing cost approximations is a fundamental bottleneck for bridging static neural solvers with truly optimal dynamic pricing and routing in online logistics.
+Applied strict scarcity and reusability standards. The framework GREAT-ESDD and its associated parameter tuning question are highly specialized to last-mile delivery operations and do not represent broad, standalone machine learning concepts or fundamental research bottlenecks.
 
 ### Rejected Candidates
-- [concept] GREAT-ESDD (`great-esdd`) - paper_local: GREAT-ESDD is a paper-local system name combining specific routing and pricing components rather than a broadly reusable architectural pattern.
+- [concept] GREAT-ESDD (`great-esdd`) - not_reusable: The framework is highly application-specific to last-mile logistics and out-of-home delivery pricing, lacking broad standalone reusability across general machine learning research.
+- [open_question] Adaptive Routing Cost Rectification (`adaptive-rectification-parameter-learning`) - paper_local: This is a paper-local tuning detail regarding a specific heuristic parameter within the specific delivery pricing framework.
 
 ## Links
 

@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for Capacitated Drone Delivery Routing"
-description: "This paper investigates cross-scale generalization degradation in attention-based Pointer Networks trained via reinforcement learning for capacitated drone delivery routing (CVRP). The authors identify node density shifts, attention dispersion, and graph context dilution as key contributing factors, and propose targeted architectural modifications alongside a learned permutation-invariant graph-context aggregation mechanism. By exploiting the complementarity of these models, they introduce an approach selector that chooses the best model per size pair, achieving up to 3.2 percent cost reduction across seen and unseen problem scales."
+description: "This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained via reinforcement learning for capacitated drone delivery routing. The authors identify three key failure factors—node density shifts, attention dispersion, and graph context dilution—and propose a learned, permutation-invariant graph-context aggregation mechanism alongside entropy-based attention scaling. Combining these complementary strategies into an approach selector successfully reduces routing costs by up to 3.2 percent across both seen and unseen problem sizes."
 resource: "https://arxiv.org/abs/2610.27936"
 tags:
-  - "vehicle-routing-problem"
   - "reinforcement-learning"
-  - "time-series"
-timestamp: "2026-10-23T09:45:42Z"
+  - "neural-routing-solver"
+  - "vehicle-routing-problem"
+timestamp: "2026-10-24T09:17:05Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,14 +28,15 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  []
+  - name: "learned-graph-context-aggregation-mechanism"
+    description: "A permutation-invariant graph-context aggregation method implemented via weighted averages or Set2Set to improve cross-scale generalization in Pointer Networks."
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-23T09:45:42Z"
-created_at: "2026-10-23T09:45:42Z"
+processed_at: "2026-10-24T09:17:05Z"
+created_at: "2026-10-24T09:17:05Z"
 ---
 
 # From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for Capacitated Drone Delivery Routing
@@ -46,24 +47,33 @@ created_at: "2026-10-23T09:45:42Z"
 
 ## Summary
 
-This paper investigates cross-scale generalization degradation in attention-based Pointer Networks trained via reinforcement learning for capacitated drone delivery routing (CVRP). The authors identify node density shifts, attention dispersion, and graph context dilution as key contributing factors, and propose targeted architectural modifications alongside a learned permutation-invariant graph-context aggregation mechanism. By exploiting the complementarity of these models, they introduce an approach selector that chooses the best model per size pair, achieving up to 3.2 percent cost reduction across seen and unseen problem scales.
+This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained via reinforcement learning for capacitated drone delivery routing. The authors identify three key failure factors—node density shifts, attention dispersion, and graph context dilution—and propose a learned, permutation-invariant graph-context aggregation mechanism alongside entropy-based attention scaling. Combining these complementary strategies into an approach selector successfully reduces routing costs by up to 3.2 percent across both seen and unseen problem sizes.
 
 ## Key Contributions
 
-- Identified three key factors limiting cross-scale generalization in pointer networks trained with reinforcement learning for CVRP: node density shifts, attention dispersion, and mean-pooled graph context dilution.
-- Proposed a learned, permutation-invariant graph-context aggregation mechanism (weighted average and Set2Set) improving CVRP100-to-CVRP20 transfer by approximately 0.9 percentage points.
-- Introduced an approach selector that chooses the best routing model for each training-target size pair, achieving cost improvements of up to 3.2 percent across seen and unseen scales.
+- Identified three core factors behind cross-scale generalization degradation in attention-based Pointer Networks: node density shifts, attention dispersion, and graph context dilution.
+- Proposed a learned, permutation-invariant graph-context aggregation mechanism using weighted averages and Set2Set to improve cross-scale generalization.
+- Demonstrated that entropy-based attention scaling reduces the CVRP20-to-CVRP100 performance gap by 1.41 percentage points.
+- Introduced an approach selector that reduces routing cost across seen and unseen train-test problem sizes by up to 3.2 percent.
 
 ## Limitations
 
-Evaluated primarily on the CVRP proxy with specific payload constraints, and future work is needed to extend the approach selector and scaling mechanisms to more complex multi-drone delivery routing variants.
+Evaluated primarily on controlled Capacitated Vehicle Routing Problem (CVRP) proxies for drone delivery routing with fixed capacities.
+
+## Key Concepts
+
+- [[learned-graph-context-aggregation-mechanism]]: A permutation-invariant graph-context aggregation method implemented via weighted averages or Set2Set to improve cross-scale generalization in Pointer Networks.
 
 ## Archivist Review
 
-Applied strict filtering to keep the vault scarce and high-quality. The sole proposed candidate (approach-selector-cross-scale-routing) was rejected as a paper-local routing heuristic rather than a reusable core ML architectural concept.
+Approved the learned graph-context aggregation mechanism as a reusable and distinct architectural improvement for graph-based routing solvers. Rejected the approach selector as a paper-local ensemble heuristic and rejected the open question as a routine call for larger-scale experiments.
+
+### Approved Concepts
+- Learned Graph-Context Aggregation Mechanism: Addresses the dilution of the mean-pooled graph context that causes cross-scale generalization degradation in attention-based Pointer Networks.
 
 ### Rejected Candidates
-- [concept] Approach Selector for Cross-Scale Routing (`approach-selector-cross-scale-routing`) - paper_local: This is a paper-local heuristic routing selection mechanism tailored to specific training-target scale pairs, lacking broad standalone reusability across unrelated ML domains.
+- [concept] Approach Selector (`approach-selector`) - paper_local: This is a paper-specific model selection heuristic rather than a standalone architectural primitive or algorithm that will recur broadly across literature.
+- [open_question] Scaling Neural Routing Solvers (`large-scale-cvrp-generalization`) - low_impact: This is a standard call for larger-scale experiments and broader training protocols rather than a deep unresolved structural bottleneck.
 
 ## Links
 
