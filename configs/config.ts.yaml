@@ -18,7 +18,7 @@ paper_search:
     - "customs clearance"
   max_history_days: 14  # 抓取近 14 天新文献
   max_results_per_keyword: 8
-  total_cap: 30
+  total_cap: 60
   arxiv: {}
   semantic_scholar:
     api_url: "https://api.semanticscholar.org/graph/v1/paper/search"
