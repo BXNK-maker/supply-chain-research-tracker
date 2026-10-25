@@ -11,6 +11,11 @@ paper_search:
     - "logistics network"
     - "demand forecasting"
     - "freight transport"
+    - "cross-border e-commerce logistics"
+    - "freight forwarding"
+    - "last-mile delivery"
+    - "air freight"
+    - "customs clearance"
   max_history_days: 14  # 抓取近 14 天新文献
   max_results_per_keyword: 8
   total_cap: 30
