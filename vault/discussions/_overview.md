@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-10
-_8 notes. Highlights: Today's research papers showcase a striking concentration of breakthroughs at the intersection of **Combinatorial Optimi; Today's literature batch reveals a striking surge in hybrid methodologies that sit at the intersection of **Operations R_
+_9 notes. Highlights: A fascinating theme emerges from today's batch of papers: a massive resurgence in tackling **Vehicle Routing Problems (V; Today's research papers showcase a striking concentration of breakthroughs at the intersection of **Combinatorial Optimi_
 
 ### Week 2026-W43
-_5 notes. Highlights: Today's research papers showcase a striking concentration of breakthroughs at the intersection of **Combinatorial Optimi; Today's literature batch reveals a striking surge in hybrid methodologies that sit at the intersection of **Operations R_
+_6 notes. Highlights: A fascinating theme emerges from today's batch of papers: a massive resurgence in tackling **Vehicle Routing Problems (V; Today's research papers showcase a striking concentration of breakthroughs at the intersection of **Combinatorial Optimi_
 
+- [2026-10-25](/discussions/daily/2026-10-25) — A fascinating theme emerges from today's batch of papers: a massive resurgence in tackling **Vehicle Routing Problems (V
 - [2026-10-24](/discussions/daily/2026-10-24) — Today's research papers showcase a striking concentration of breakthroughs at the intersection of **Combinatorial Optimi
 - [2026-10-23](/discussions/daily/2026-10-23) — Today's literature batch reveals a striking surge in hybrid methodologies that sit at the intersection of **Operations R
 - [2026-10-22](/discussions/daily/2026-10-22) — The latest influx of research papers reveals a fascinating convergence between classical operations research (OR) and mo

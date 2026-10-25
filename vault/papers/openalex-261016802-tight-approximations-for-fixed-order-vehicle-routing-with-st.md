@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands"
-description: "This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. The authors improve randomized a priori approximation ratios to 2 and 3 for splittable and unsplittable deliveries, respectively, using a TSP construction via matroid parity. They also provide deterministic $(2+\\varepsilon)$- and $(3+\\varepsilon)$-approximation algorithms, establish matching lower bounds, and extend their matroid-parity construction to deterministic VRP variants."
+description: "This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies that fix the client order beforehand. By utilizing a traveling salesman problem tour constructed via matroid parity, the authors improve the randomized a priori approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries. Furthermore, they develop deterministic approximation algorithms and establish matching lower bounds of 2 and 3 holding even for randomized restocking policies. Finally, they extend their matroid-parity construction to improve approximation ratios for deterministic variants of the vehicle routing problem."
 resource: "https://arxiv.org/abs/2610.16802"
 tags:
   - "vehicle-routing-problem"
   - "approximation-algorithms"
   - "stochastic-demands"
-timestamp: "2026-10-24T09:14:33Z"
+timestamp: "2026-10-25T09:31:15Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -26,15 +26,14 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "matroid-parity-tsp-construction"
-    description: "A technique using matroid parity to construct TSP tours for improving approximation guarantees in vehicle routing problems."
+  []
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-24T09:14:33Z"
-created_at: "2026-10-24T09:14:33Z"
+processed_at: "2026-10-25T09:31:15Z"
+created_at: "2026-10-25T09:31:15Z"
 ---
 
 # Tight Approximations for Fixed-Order Vehicle Routing with Stochastic Demands
@@ -45,25 +44,18 @@ created_at: "2026-10-24T09:14:33Z"
 
 ## Summary
 
-This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies. The authors improve randomized a priori approximation ratios to 2 and 3 for splittable and unsplittable deliveries, respectively, using a TSP construction via matroid parity. They also provide deterministic $(2+\varepsilon)$- and $(3+\varepsilon)$-approximation algorithms, establish matching lower bounds, and extend their matroid-parity construction to deterministic VRP variants.
+This paper studies the vehicle routing problem with stochastic demands under a priori and restocking policies that fix the client order beforehand. By utilizing a traveling salesman problem tour constructed via matroid parity, the authors improve the randomized a priori approximation ratios to 2 for splittable deliveries and 3 for unsplittable deliveries. Furthermore, they develop deterministic approximation algorithms and establish matching lower bounds of 2 and 3 holding even for randomized restocking policies. Finally, they extend their matroid-parity construction to improve approximation ratios for deterministic variants of the vehicle routing problem.
 
 ## Key Contributions
 
-- Improved randomized a priori approximation ratios to 2 and 3 for splittable and unsplittable deliveries in fixed-order VRP with stochastic demands using a matroid-parity TSP tour.
+- Improved randomized a priori approximation ratios to 2 (splittable deliveries) and 3 (unsplittable deliveries) for the vehicle routing problem with stochastic demands using a matroid parity TSP tour construction.
 - Developed deterministic a priori (2+\epsilon)-approximation and (3+\epsilon)-approximation algorithms via cumulative demand distribution compression.
-- Established matching lower bounds of 2 and 3 that hold even for randomized restocking policies.
-- Applied the matroid-parity construction to improve approximation ratios for several VRP variants with deterministic demands.
-
-## Key Concepts
-
-- [[matroid-parity-tsp-construction]]: A technique using matroid parity to construct TSP tours for improving approximation guarantees in vehicle routing problems.
+- Established matching lower bounds of 2 and 3 that hold even for the more general class of randomized restocking policies.
+- Applied the matroid-parity construction to improve approximation ratios for several vehicle routing problem variants with deterministic demands.
 
 ## Archivist Review
 
-Approved the matroid-parity-tsp-construction concept as it already exists in the vault and represents a reusable combinatorial optimization technique for routing algorithms. No datasets or open questions were proposed.
-
-### Approved Concepts
-- Matroid Parity TSP Construction: Improves approximation ratios for fixed-order vehicle routing with stochastic demands by combining replenishment rules with matroid parity.
+No concepts or critical datasets met the rigorous threshold for permanent vault notes in this theoretical approximation algorithms paper.
 
 ## Links
 
