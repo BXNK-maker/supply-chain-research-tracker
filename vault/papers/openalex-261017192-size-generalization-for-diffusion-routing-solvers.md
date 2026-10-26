@@ -4,13 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Size Generalization for Diffusion Routing Solvers"
-description: "Routing problems like the Traveling Salesman Problem (TSP) and Capacitated Vehicle Routing Problem (CVRP) are NP-hard and challenging to scale. This paper introduces ResizeCO, a label-free size-generalization framework that adapts diffusion models trained on small instances to handle much larger instances without requiring optimal labels. ResizeCO combines Group Relative Policy Optimization (GRPO) using route length as a reward signal with a GPU-accelerated beam search formulation of k-opt. Experiments on TSP and CVRP instances with up to 10,000 nodes demonstrate that ResizeCO establishes a new state-of-the-art Pareto front for route quality versus computation time."
+description: "Routing problems like TSP and CVRP are computationally expensive to solve for large instances, and existing diffusion-based solvers fail to generalize to instance sizes outside their training distribution. This paper introduces ResizeCO, a label-free size-generalization approach that adapts a diffusion model trained on small instances to large-scale instances using reinforcement learning and GPU-accelerated beam search. Evaluated on TSP and CVRP instances with up to 10,000 nodes, ResizeCO sets a new state of the art by achieving a Pareto front over route quality and time that dominates existing learned solvers."
 resource: "https://arxiv.org/abs/2610.17192"
 tags:
   - "combinatorial-optimization"
-  - "neural-routing-solver"
   - "reinforcement-learning"
-timestamp: "2026-10-25T09:32:45Z"
+  - "vehicle-routing-problem"
+  - "time-series"
+timestamp: "2026-10-26T10:42:49Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -18,7 +19,10 @@ author:
   - literal: "Eli A. Meirom"
   - literal: "Ethan Fetaya"
   - literal: "Gal Chechik"
-  - literal: "ResizeCO"
+  - literal: "Barak Itzchak Davidovitch"
+  - literal: "Eli A. Meirom"
+  - literal: "Ethan Fetaya"
+  - literal: "Gal Chechik"
 issued:
   date-parts:
     - [2026, 10, 12]
@@ -30,51 +34,50 @@ architectures:
   []
 concepts:
   - name: "resizeco"
-    description: "A label-free size-generalization approach that adapts diffusion models trained on small routing instances to much larger instances using reinforcement learning."
+    description: "A label-free size-generalization approach for diffusion-based routing solvers that adapts models trained on small instances to large-scale instances via reinforcement learning and GPU beam search."
 datasets:
   []
 open_questions:
-  - name: "size-generalization-neural-co-solvers"
-    description: "The paper notes that current supervised and reinforcement learning approaches for routing problems like TSP and CVRP often fail at out-of-distribution size generalization due to shifts in statistical properties and exploding search spaces. Future work and open challenges involve developing scalable architectures and label-free fine-tuning paradigms that can robustly scale neural combinatorial optimization solvers to massive instance sizes without requiring costly optimal ground-truth labels."
+  - name: "label-free-size-generalization-routing-solvers"
+    description: "Investigate how to eliminate the reliance on expensive ground-truth optimal labels or reinforcement learning fine-tuning for scaling neural routing solvers to extremely large out-of-distribution instance sizes, or whether alternative self-training and label-free paradigms can entirely bridge the zero-shot size generalization gap without performance degradation."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-25T09:32:45Z"
-created_at: "2026-10-25T09:32:45Z"
+processed_at: "2026-10-26T10:42:49Z"
+created_at: "2026-10-26T10:42:49Z"
 ---
 
 # Size Generalization for Diffusion Routing Solvers
 
-**Authors**: Barak Itzchak Davidovitch, Eli A. Meirom, Ethan Fetaya, Gal Chechik, ResizeCO
+**Authors**: Barak Itzchak Davidovitch, Eli A. Meirom, Ethan Fetaya, Gal Chechik, Barak Itzchak Davidovitch, Eli A. Meirom, Ethan Fetaya, Gal Chechik
 **Date**: 2026-10-12
 **Paper ID**: [openalex:2610.17192](https://arxiv.org/abs/2610.17192)
 
 ## Summary
 
-Routing problems like the Traveling Salesman Problem (TSP) and Capacitated Vehicle Routing Problem (CVRP) are NP-hard and challenging to scale. This paper introduces ResizeCO, a label-free size-generalization framework that adapts diffusion models trained on small instances to handle much larger instances without requiring optimal labels. ResizeCO combines Group Relative Policy Optimization (GRPO) using route length as a reward signal with a GPU-accelerated beam search formulation of k-opt. Experiments on TSP and CVRP instances with up to 10,000 nodes demonstrate that ResizeCO establishes a new state-of-the-art Pareto front for route quality versus computation time.
+Routing problems like TSP and CVRP are computationally expensive to solve for large instances, and existing diffusion-based solvers fail to generalize to instance sizes outside their training distribution. This paper introduces ResizeCO, a label-free size-generalization approach that adapts a diffusion model trained on small instances to large-scale instances using reinforcement learning and GPU-accelerated beam search. Evaluated on TSP and CVRP instances with up to 10,000 nodes, ResizeCO sets a new state of the art by achieving a Pareto front over route quality and time that dominates existing learned solvers.
 
 ## Key Contributions
 
-- Proposes ResizeCO, a label-free size-generalization framework for diffusion-based routing solvers that adapts models trained on small instances to large instances.
-- Applies Group Relative Policy Optimization (GRPO) using route length as the training signal for large-scale instances.
-- Formulates k-opt as a GPU-accelerated beam search to address computational challenges in large-scale routing.
-- Achieves a Pareto front over route quality and time dominating existing learned solvers and sets a new state of the art on TSP and CVRP instances with up to 10000 nodes.
+- Introduces ResizeCO, a label-free size-generalization approach for diffusion-based routing solvers using reinforcement learning to adapt models trained on small instances.
+- Formulates k-opt as a tree search solved via GPU-accelerated beam search.
+- Achieves a Pareto front over route quality and time dominating existing learned solvers on TSP and CVRP instances with up to 10000 nodes.
 
 ## Open Questions & Future Work
 
-- [[size-generalization-neural-co-solvers]]
+- [[label-free-size-generalization-routing-solvers]]
 
 ## Key Concepts
 
-- [[resizeco]]: A label-free size-generalization approach that adapts diffusion models trained on small routing instances to much larger instances using reinforcement learning.
+- [[resizeco]]: A label-free size-generalization approach for diffusion-based routing solvers that adapts models trained on small instances to large-scale instances via reinforcement learning and GPU beam search.
 
 ## Archivist Review
 
-Approved ResizeCO as the core methodological contribution since it already exists or matches vault conventions, and approved the open question on size generalization in neural routing solvers because it directly targets a fundamental bottleneck. All constraints on scarcity and anti-duplication were respected.
+Approved the core concept ResizeCO as a novel label-free size-generalization framework for diffusion-based routing solvers, alongside an open question addressing label-free size generalization in combinatorial optimization. Both items meet the strict threshold for vault retention and distinct long-term value.
 
 ### Approved Concepts
-- ResizeCO: ResizeCO is the central methodological contribution of the paper, introducing a label-free size-generalization framework for diffusion-based routing solvers using reinforcement learning.
+- ResizeCO: Introduces a label-free size-generalization approach for diffusion-based routing solvers using reinforcement learning and GPU-accelerated beam search.
 
 ### Approved Open Questions
-- Size Generalization in Neural Routing Solvers: Size generalization is a central bottleneck in neural combinatorial optimization, limiting the practical deployment of learned solvers on real-world large-scale routing tasks.
+- Label-Free Size Generalization in Routing: Size generalization remains one of the fundamental bottlenecks in neural combinatorial optimization, limiting the applicability of deep learning models to large-scale real-world routing instances where optimal solutions are computationally infeasible to generate.
 
 ## Links
 

@@ -4,11 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Enhancing Cross-Grade Generalization in Banana Variety Classification via Hybrid CNN-Transformers and Knowledge Self-Distillation"
-description: "This paper investigates cross-grade banana variety classification under severe domain shifts caused by varying fruit quality grades, maturity, and post-harvest conditions. To address the limitations of single-paradigm architectures, the authors propose a dual-stream Swin ResNet hybrid framework combined with KL-divergence-based self-distillation to align probabilistic feature representations between the CNN and Transformer streams. Evaluated using a rigorous Leave-One-Grade-Out protocol on a large-scale dataset of 31,678 banana images, the proposed framework achieves an improved mean accuracy of 81.25% over baseline models. Qualitative evaluations further reveal that the method enhances discriminative feature transferability, attention localization, and optimization stability."
+description: "This paper addresses the challenge of cross-grade banana variety classification under significant domain shift, where models must generalize to unseen fruit quality grades. The authors propose a dual-stream Swin ResNet hybrid framework enhanced with KL-divergence-based self-distillation to align probabilistic features between CNN and Transformer streams. Evaluated under a Leave-One-Grade-Out protocol on 31,678 banana images, the proposed framework achieves a mean accuracy of 81.25%, outperforming baseline models."
 resource: "https://arxiv.org/abs/2610.29008"
 tags:
   - "object-detection"
-timestamp: "2026-10-25T09:32:38Z"
+timestamp: "2026-10-26T10:42:44Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,8 +33,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-25T09:32:38Z"
-created_at: "2026-10-25T09:32:38Z"
+processed_at: "2026-10-26T10:42:44Z"
+created_at: "2026-10-26T10:42:44Z"
 ---
 
 # Enhancing Cross-Grade Generalization in Banana Variety Classification via Hybrid CNN-Transformers and Knowledge Self-Distillation
@@ -45,23 +45,25 @@ created_at: "2026-10-25T09:32:38Z"
 
 ## Summary
 
-This paper investigates cross-grade banana variety classification under severe domain shifts caused by varying fruit quality grades, maturity, and post-harvest conditions. To address the limitations of single-paradigm architectures, the authors propose a dual-stream Swin ResNet hybrid framework combined with KL-divergence-based self-distillation to align probabilistic feature representations between the CNN and Transformer streams. Evaluated using a rigorous Leave-One-Grade-Out protocol on a large-scale dataset of 31,678 banana images, the proposed framework achieves an improved mean accuracy of 81.25% over baseline models. Qualitative evaluations further reveal that the method enhances discriminative feature transferability, attention localization, and optimization stability.
+This paper addresses the challenge of cross-grade banana variety classification under significant domain shift, where models must generalize to unseen fruit quality grades. The authors propose a dual-stream Swin ResNet hybrid framework enhanced with KL-divergence-based self-distillation to align probabilistic features between CNN and Transformer streams. Evaluated under a Leave-One-Grade-Out protocol on 31,678 banana images, the proposed framework achieves a mean accuracy of 81.25%, outperforming baseline models.
 
 ## Key Contributions
 
-- Proposes a dual-stream Swin ResNet hybrid framework with KL-divergence-based self-distillation for cross-grade banana variety classification.
-- Establishes a rigorous Leave-One-Grade-Out evaluation protocol on a large-scale dataset of 31,678 banana images spanning three varieties and three quality grades.
-- Achieves a mean accuracy of 81.25%, outperforming individual CNN and Transformer baseline models under severe domain shifts across quality grades.
-- Demonstrates through qualitative analysis that hybrid feature alignment improves discriminative feature transferability, attention localization, and optimization stability.
+- Presents a dual-stream Swin ResNet hybrid framework with KL-divergence-based self-distillation for cross-grade banana variety classification.
+- Evaluates models under a rigorous Leave-One-Grade-Out protocol using a dataset of 31,678 banana images across three varieties and three quality grades.
+- Achieves a mean accuracy of 81.25%, outperforming individual CNN and Transformer baseline models.
+
+## Limitations
+
+Evaluated specifically on banana varieties and quality grades; broader generalizability to other fruits and crops remains to be explored.
 
 ## Archivist Review
 
-The paper applies standard dual-stream CNN-Transformer hybrid architectures and self-distillation to a domain-specific agricultural classification task. The proposed methods and open questions are domain-specific applications rather than novel vault-worthy concepts or fundamental research problems.
+Applied strict criteria for vault admission, rejecting domain-specific open questions regarding banana grading and edge deployment as they lack broad cross-domain machine learning reusability. No concepts or datasets were proposed or approved.
 
 ### Rejected Candidates
-- [open_question] Domain Generalization for Extreme Variability (`domain-generalization-extreme-variability`) - low_impact: Standard future work proposal suggesting broader domain generalization experiments, lacking a specific unresolved algorithmic bottleneck.
-- [open_question] Lightweight Hybrids for Edge Deployment (`lightweight-hybrids-edge-deployment`) - low_impact: Standard hardware efficiency future work direction without a standalone theoretical formulation.
-- [open_question] Multi-Fruit and Region Generalization (`multi-fruit-region-generalization`) - low_impact: Routine application scaling suggestion rather than a fundamental conceptual bottleneck.
+- [open_question] Cross-Grade Domain Generalization Robustness (`cross-grade-domain-generalization-robustness`) - low_impact: Too domain-specific to fruit grading and quality shifts to warrant a permanent vault note.
+- [open_question] Lightweight Hybrid Models for Edge Deployment (`lightweight-hybrid-models-edge-deployment`) - not_reusable: Standard boilerplate future work on efficiency and edge deployment without a unique theoretical bottleneck.
 
 ## Links
 

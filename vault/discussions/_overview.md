@@ -3,7 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-10
-_9 notes. Highlights: A fascinating theme emerges from today's batch of papers: a massive resurgence in tackling **Vehicle Routing Problems (V; Today's research papers showcase a striking concentration of breakthroughs at the intersection of **Combinatorial Optimi_
+_10 notes. Highlights: The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin; A fascinating theme emerges from today's batch of papers: a massive resurgence in tackling **Vehicle Routing Problems (V_
+
+### Week 2026-W44
+_1 notes. Highlights: The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin_
+
+- [2026-10-26](/discussions/daily/2026-10-26) — The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin
 
 ### Week 2026-W43
 _6 notes. Highlights: A fascinating theme emerges from today's batch of papers: a massive resurgence in tackling **Vehicle Routing Problems (V; Today's research papers showcase a striking concentration of breakthroughs at the intersection of **Combinatorial Optimi_
