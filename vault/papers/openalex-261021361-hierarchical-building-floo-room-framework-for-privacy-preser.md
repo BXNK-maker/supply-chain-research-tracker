@@ -4,11 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Hierarchical Building-Floo-Room Framework for Privacy-Preserving Autonomous Delivery in Large-Scale Buildings"
-description: "Autonomous delivery in large-scale buildings requires coordinated planning across building, floor, and room levels while respecting privacy and physical constraints. This paper presents a hierarchical Building-Floor-Room framework that decomposes the problem to reduce optimization complexity and formulates a building-aware extension of the capacitated vehicle routing problem. At the execution level, a novel hardware design and a closed-loop mapping, localization, and navigation system ensure consistency between planned routes and physical robot motion. Real-world validation on a multi-sensor robotic platform demonstrates reliable multi-floor delivery with improved path rationality and efficiency."
+description: "Autonomous delivery in large-scale buildings requires coordinating planning across multiple spatial levels while maintaining privacy and scheduling efficiency. This paper presents a hierarchical Building-Floor-Room framework that decomposes the problem into multiple levels to reduce optimization complexity through a building-aware extension of the capacitated vehicle routing problem (CVRP). Additionally, the authors introduce a hardware design for non-interactive, privacy-preserving delivery combined with a closed-loop mapping, localization, and navigation system. Validated on a real multi-sensor robotic platform, the framework demonstrates reliable multi-floor delivery with improved path rationality and efficiency."
 resource: "https://arxiv.org/abs/2610.21361"
 tags:
   - "vehicle-routing-problem"
-timestamp: "2026-10-26T10:42:53Z"
+timestamp: "2026-10-27T10:10:42Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -18,7 +18,9 @@ author:
   - literal: "Xiang Changying"
   - literal: "Zhang Leihan"
   - literal: "Zhongyuan Liao"
-  - literal: "Diao Zhongyuan"
+  - literal: "domain:"
+  - literal: "key_contributions:["
+  - literal: ","
 issued:
   date-parts:
     - [2026, 10, 15]
@@ -33,42 +35,34 @@ concepts:
 datasets:
   []
 open_questions:
-  - name: "theoretical-performance-bounds-hierarchical-routing"
-    description: "Deriving formal theoretical performance bounds, approximation guarantees, and computational complexity characterizations for hierarchical vehicle routing formulations across multi-building, multi-floor, and room-level spatial abstractions remains an open problem."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-26T10:42:53Z"
-created_at: "2026-10-26T10:42:53Z"
+processed_at: "2026-10-27T10:10:42Z"
+created_at: "2026-10-27T10:10:42Z"
 ---
 
 # Hierarchical Building-Floo-Room Framework for Privacy-Preserving Autonomous Delivery in Large-Scale Buildings
 
-**Authors**: Xu Xiaoji, Luo Rui, Chen Jinhua, Xiang Changying, Zhang Leihan, Zhongyuan Liao, Diao Zhongyuan
+**Authors**: Xu Xiaoji, Luo Rui, Chen Jinhua, Xiang Changying, Zhang Leihan, Zhongyuan Liao, domain:, key_contributions:[, ,
 **Date**: 2026-10-15
 **Paper ID**: [openalex:2610.21361](https://arxiv.org/abs/2610.21361)
 
 ## Summary
 
-Autonomous delivery in large-scale buildings requires coordinated planning across building, floor, and room levels while respecting privacy and physical constraints. This paper presents a hierarchical Building-Floor-Room framework that decomposes the problem to reduce optimization complexity and formulates a building-aware extension of the capacitated vehicle routing problem. At the execution level, a novel hardware design and a closed-loop mapping, localization, and navigation system ensure consistency between planned routes and physical robot motion. Real-world validation on a multi-sensor robotic platform demonstrates reliable multi-floor delivery with improved path rationality and efficiency.
+Autonomous delivery in large-scale buildings requires coordinating planning across multiple spatial levels while maintaining privacy and scheduling efficiency. This paper presents a hierarchical Building-Floor-Room framework that decomposes the problem into multiple levels to reduce optimization complexity through a building-aware extension of the capacitated vehicle routing problem (CVRP). Additionally, the authors introduce a hardware design for non-interactive, privacy-preserving delivery combined with a closed-loop mapping, localization, and navigation system. Validated on a real multi-sensor robotic platform, the framework demonstrates reliable multi-floor delivery with improved path rationality and efficiency.
 
 ## Key Contributions
 
-- Proposes a hierarchical delivery framework based on Building-Floor-Room abstraction that decomposes spatial planning to reduce optimization complexity.
-- Formulates a building-aware capacitated vehicle routing problem (CVRP) incorporating inter-building/floor connectivity, room-level access constraints, and privacy-sensitive areas.
-- Introduces a hardware design for non-interactive, privacy-preserving delivery paired with a closed-loop mapping, localization, and navigation system on a multi-sensor robotic platform.
-
-## Open Questions & Future Work
-
-- [[theoretical-performance-bounds-hierarchical-routing]]
+- Proposes a hierarchical delivery framework based on a Building-Floor-Room abstraction that decomposes large-scale delivery problems across multiple spatial levels to reduce optimization complexity.
+- Formulates a building-aware extension of the capacitated vehicle routing problem (CVRP) modeling inter-building/floor connectivity, room-level access constraints, and privacy-sensitive areas.
+- Introduces a hardware design for non-interactive, privacy-preserving delivery supported by reachability-aware distances and a closed-loop mapping, localization, and navigation system validated on a physical multi-sensor robotic platform.
 
 ## Archivist Review
 
-Applied strict scarcity and novelty filters. The proposed open question on theoretical performance bounds for hierarchical routing represents a genuine algorithmic bottleneck across multi-level routing, while no concept candidates met the high threshold for standalone permanent notes.
-
-### Approved Open Questions
-- Theoretical Performance Bounds for Hierarchical Routing: Establishing theoretical performance bounds is crucial to understanding the approximation quality and scalability limits of decoupled hierarchical routing models compared to monolithic formulations.
+No valid concepts or open questions were provided in the analysis input, so all candidates were rejected to maintain vault standards.
 
 ### Rejected Candidates
-- [open_question] Theoretical Performance Bounds for Hierarchical Routing (`theoretical-performance-bounds-hierarchical-routing`) - other: Approved as a distinct, reusable question about hierarchical routing performance bounds.
+- [open_question] Hierarchical Routing Bounds and Multi-Robot Cooperation (`hierarchical-routing-bounds-and-multi-robot-cooperation`) - weak_evidence: The paper analysis provided does not include any open questions or concepts; the input structure was malformed or empty regarding candidate entries.
 
 ## Links
 

@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for for Capacitated Vehicle Routing Problem"
-description: "This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify three key failure modes—node density shifts, attention dispersion, and graph-context dilution—and propose targeted modifications including entropy-based attention scaling and permutation-invariant graph-context aggregation. By combining these complementary techniques via an approach selector, the method reduces routing costs by up to 3.2% across both seen and unseen problem sizes."
+description: "This paper investigates cross-scale generalization limitations in attention-based Pointer Networks trained via reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify node density shifts, attention dispersion, and graph context dilution as key drivers of performance degradation when upscaling or downscaling problem sizes. To address these limitations, they propose entropy-based attention scaling and permutation-invariant graph-context aggregation mechanisms, combining them via an approach selector that achieves up to 3.2% cost reductions across both seen and unseen problem scales."
 resource: "https://arxiv.org/abs/2610.27936"
 tags:
-  - "vehicle-routing-problem"
   - "reinforcement-learning"
+  - "vehicle-routing-problem"
   - "demand-forecasting"
-timestamp: "2026-10-26T10:41:40Z"
+timestamp: "2026-10-27T10:09:34Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -34,8 +34,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-26T10:41:40Z"
-created_at: "2026-10-26T10:41:40Z"
+processed_at: "2026-10-27T10:09:34Z"
+created_at: "2026-10-27T10:09:34Z"
 ---
 
 # From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for for Capacitated Vehicle Routing Problem
@@ -46,23 +46,26 @@ created_at: "2026-10-26T10:41:40Z"
 
 ## Summary
 
-This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify three key failure modes—node density shifts, attention dispersion, and graph-context dilution—and propose targeted modifications including entropy-based attention scaling and permutation-invariant graph-context aggregation. By combining these complementary techniques via an approach selector, the method reduces routing costs by up to 3.2% across both seen and unseen problem sizes.
+This paper investigates cross-scale generalization limitations in attention-based Pointer Networks trained via reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify node density shifts, attention dispersion, and graph context dilution as key drivers of performance degradation when upscaling or downscaling problem sizes. To address these limitations, they propose entropy-based attention scaling and permutation-invariant graph-context aggregation mechanisms, combining them via an approach selector that achieves up to 3.2% cost reductions across both seen and unseen problem scales.
 
 ## Key Contributions
 
-- Identified three core factors degrading cross-scale generalization in Pointer Networks for CVRP: node density shifts, attention dispersion, and mean-pooled graph context dilution.
-- Demonstrated that entropy-based attention scaling reduces the CVRP20-to-CVRP100 performance gap by 1.41 percentage points.
-- Proposed learned, permutation-invariant graph-context aggregation mechanisms (weighted average and Set2Set) that improve CVRP100-to-CVRP20 transfer by approximately 0.9 percentage points.
-- Introduced an approach selector combining complementary architectural modifications, reducing cost relative to the reference model by up to 3.2% across seen and unseen sizes.
+- Identified three core factors degrading cross-scale generalization in Pointer Networks for CVRP: shifts in node density, attention dispersion, and mean-pooled graph context dilution.
+- Proposed entropy-based attention scaling to reduce the CVRP20-to-CVRP100 performance gap by 1.41 percentage points.
+- Developed a learned, permutation-invariant graph-context aggregation mechanism using weighted averages and Set2Set, improving CVRP100-to-CVRP20 transfer by 0.9 percentage points.
+- Introduced an approach selector that improves routing cost by up to 3.2% across seen and unseen problem sizes.
+
+## Limitations
+
+Evaluated primarily on CVRP variants; generalizability to other routing problems with side constraints remains to be fully explored.
 
 ## Archivist Review
 
-Applied strict standards for the ML vault. The proposed concept (Approach Selector) is a paper-local meta-selection mechanism for vehicle routing model variants rather than a broadly recurring foundational concept. The open questions concern specialized vehicle routing training and instance selection extensions, which lack the broad theoretical weight required for permanent standalone vault notes.
+Applied rigorous filtering standards to reject paper-local concepts and narrow optimization questions. The approach selector and upscaling/downscaling unification question are too domain-specific to vehicle routing pointer networks to merit standalone vault entries.
 
 ### Rejected Candidates
-- [concept] Approach Selector (CVRP Routing) (`approach-selector-cvrp`) - paper_local: Approach selector is a paper-local system/meta-heuristic for combining specific model variants, lacking broad reusability outside of this specific combinatorial optimization pipeline.
-- [open_question] Unified Multi-Size Training Framework (`unified-multisize-training-pointer-networks`) - low_impact: This open question is a fairly routine request to combine architectural tweaks and train on multiple sizes within pointer networks.
-- [open_question] Instance-Aware Neural Model Selection (`instance-aware-model-selection-routing`) - low_impact: Instance-level feature conditioning for model selection is a narrow routing-specific extension rather than a fundamental vault-level bottleneck.
+- [concept] Approach Selector for Pointer Networks (`approach-selector-pointer-networks`) - paper_local: Too paper-local and specific to routing model selection across scales to warrant a permanent vault note.
+- [open_question] Unifying Upscaling and Downscaling Levers (`unifying-upscaling-downscaling-levers`) - low_impact: Too specific to the architectural trade-offs of pointer networks in vehicle routing rather than a foundational open research direction.
 
 ## Links
 

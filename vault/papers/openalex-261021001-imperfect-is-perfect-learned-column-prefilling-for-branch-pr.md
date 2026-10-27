@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Imperfect Is Perfect: Learned Column Prefilling for Branch-Price-and-Cut"
-description: "The paper challenges the conventional folklore that initial columns hurt column generation by demonstrating that an imperfectly constructed pool of columns can significantly accelerate the root of branch-price-and-cut. By combining a neural edge scorer, a learned initial center for Wentges smoothing, and a GPU-accelerated bucket-graph labeling solver, the proposed pipeline drastically reduces root pricing time across large capacitated vehicle routing and parallel machine scheduling benchmarks."
+description: "This paper challenges the column generation folklore that initial warm-start columns hurt branch-price-and-cut performance by demonstrating that imperfect, learned column pools combined with smoothed dual pricing significantly accelerate exact solvers. The proposed pipeline employs a neural edge scorer for column generation, a neural network to predict Wentges smoothing centers, and a GPU-accelerated bucket-graph labeling scheme. Evaluated on capacitated vehicle routing and parallel machine scheduling, the approach drastically reduces root pricing time and improves certified bound convergence."
 resource: "https://arxiv.org/abs/2610.21001"
 tags:
   - "combinatorial-optimization"
   - "vehicle-routing-problem"
-timestamp: "2026-10-26T10:43:34Z"
+timestamp: "2026-10-27T10:11:23Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -30,10 +30,10 @@ datasets:
   []
 open_questions:
   - name: "full-bpc-tree-evaluation"
-    description: "Determine the effect of learned prefilling, dual stabilization, and GPU-accelerated exact pricing on the full branch-price-and-cut tree beyond the root node relaxation."
+    description: "Extend the empirical evaluation and algorithmic design of learned column prefilling and dual stabilization beyond the root node to the entire branch-price-and-cut tree, measuring overall impact on total solution time and tree size across diverse problem instances."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-26T10:43:34Z"
-created_at: "2026-10-26T10:43:34Z"
+processed_at: "2026-10-27T10:11:23Z"
+created_at: "2026-10-27T10:11:23Z"
 ---
 
 # Imperfect Is Perfect: Learned Column Prefilling for Branch-Price-and-Cut
@@ -44,13 +44,14 @@ created_at: "2026-10-26T10:43:34Z"
 
 ## Summary
 
-The paper challenges the conventional folklore that initial columns hurt column generation by demonstrating that an imperfectly constructed pool of columns can significantly accelerate the root of branch-price-and-cut. By combining a neural edge scorer, a learned initial center for Wentges smoothing, and a GPU-accelerated bucket-graph labeling solver, the proposed pipeline drastically reduces root pricing time across large capacitated vehicle routing and parallel machine scheduling benchmarks.
+This paper challenges the column generation folklore that initial warm-start columns hurt branch-price-and-cut performance by demonstrating that imperfect, learned column pools combined with smoothed dual pricing significantly accelerate exact solvers. The proposed pipeline employs a neural edge scorer for column generation, a neural network to predict Wentges smoothing centers, and a GPU-accelerated bucket-graph labeling scheme. Evaluated on capacitated vehicle routing and parallel machine scheduling, the approach drastically reduces root pricing time and improves certified bound convergence.
 
 ## Key Contributions
 
-- Proposes a learned column prefilling approach for branch-price-and-cut that uses a neural edge scorer and constructive generator to build an imperfect column pool, achieving a 13.2% root pricing time compared to vanilla RouteOpt on capacitated vehicle routing problems.
-- Introduces a neural network to predict the initial center of Wentges smoothing from instance files, guiding smoothed pricing queries and accelerating convergence.
-- Rebuilds bucket-graph labeling around its dominance test for GPUs with CPU certification, enabling scalable exact pricing for large-scale routing instances.
+- Introduces a learned column prefilling approach for branch-price-and-cut that uses a neural edge scorer and constructive generator to build an imperfect column pool.
+- Applies Wentges smoothing with a learned center network to guide pricing queries and stabilize dual variables.
+- Rebuilds bucket-graph labeling around a GPU-based dominance test with CPU certification to accelerate pricing.
+- Achieves certified root bounds in 13.2% of vanilla RouteOpt's root pricing time on capacitated vehicle routing instances and certifies all parallel machine scheduling benchmarks 12x faster.
 
 ## Open Questions & Future Work
 
@@ -58,14 +59,14 @@ The paper challenges the conventional folklore that initial columns hurt column 
 
 ## Archivist Review
 
-Applied strict review standards regarding concept novelty and prevention of open-question duplication. The open question about full branch-price-and-cut tree evaluation is already present in the vault under 'full-bpc-tree-evaluation', and the second candidate was deemed a routine architectural combination rather than a foundational research bottleneck. No new concepts or datasets met the strict bar for permanent vault storage.
+No concepts or datasets met the strict novelty and reuse criteria for permanent vault notes. The proposed open question on full BPC tree evaluation directly duplicates an existing vault entry ('full-bpc-tree-evaluation'), and the second question on joint learning of components is a specialized sub-problem closely related to existing adaptation questions.
 
 ### Approved Open Questions
-- Full Tree Branch-Price-and-Cut Impact: Understanding whether root-node speedups translate into overall tree-level performance improvements is critical for assessing the practical utility of machine-learning-accelerated branch-price-and-cut solvers.
+- Extending Evaluation to Full BPC Tree: Understanding tree-level behavior is crucial because root-node acceleration does not always guarantee overall branch-and-bound speedups due to interactions with branching and cutting planes.
 
 ### Rejected Candidates
-- [open_question] Full Tree Branch-Price-and-Cut Impact (`full-tree-bpc-impact`) - duplicate_existing: This question is essentially identical to the existing vault open question 'full-bpc-tree-evaluation' and should be merged or dropped to prevent duplication.
-- [open_question] Joint Co-Design of Learned Components (`joint-co-design-learned-components`) - not_novel: While interesting, the co-design of separate components is a routine engineering future direction rather than a distinct conceptual bottleneck.
+- [open_question] Extending Evaluation to Full BPC Tree (`bpc-tree-level-evaluation`) - duplicate_existing: Duplicate or near-equivalent of existing vault open question 'full-bpc-tree-evaluation'.
+- [open_question] Co-design of Learned Components (`joint-learning-pool-center`) - duplicate_existing: Similar to existing joint-policy-mitigation-co-adaptation and represents a specialized co-design of internal learned modules rather than a distinct broad vault question.
 
 ## Links
 

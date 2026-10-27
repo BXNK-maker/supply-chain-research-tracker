@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-10
-_10 notes. Highlights: The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin; A fascinating theme emerges from today's batch of papers: a massive resurgence in tackling **Vehicle Routing Problems (V_
+_11 notes. Highlights: Today’s batch of papers showcases a striking convergence: traditional Operations Research (OR) and combinatorial optimiz; The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin_
 
 ### Week 2026-W44
-_1 notes. Highlights: The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin_
+_2 notes. Highlights: Today’s batch of papers showcases a striking convergence: traditional Operations Research (OR) and combinatorial optimiz; The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin_
 
+- [2026-10-27](/discussions/daily/2026-10-27) — Today’s batch of papers showcases a striking convergence: traditional Operations Research (OR) and combinatorial optimiz
 - [2026-10-26](/discussions/daily/2026-10-26) — The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin
 
 ### Week 2026-W43
