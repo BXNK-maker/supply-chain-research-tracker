@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Imperfect Is Perfect: Learned Column Prefilling for Branch-Price-and-Cut"
-description: "This paper challenges the column generation folklore that initial warm-start columns hurt branch-price-and-cut performance by demonstrating that imperfect, learned column pools combined with smoothed dual pricing significantly accelerate exact solvers. The proposed pipeline employs a neural edge scorer for column generation, a neural network to predict Wentges smoothing centers, and a GPU-accelerated bucket-graph labeling scheme. Evaluated on capacitated vehicle routing and parallel machine scheduling, the approach drastically reduces root pricing time and improves certified bound convergence."
+description: "This paper challenges the column generation folklore that warm-start initial columns slow down the root of branch-price-and-cut by demonstrating that imperfect, learned column prefilling combined with smoothed dual pricing significantly accelerates convergence. The authors introduce a neural edge scorer to construct a pool of ordinary routes and a second network to predict the initial center for Wentges smoothing, achieving massive speedups on both capacitated vehicle routing and unrelated parallel machine scheduling benchmarks."
 resource: "https://arxiv.org/abs/2610.21001"
 tags:
-  - "combinatorial-optimization"
   - "vehicle-routing-problem"
-timestamp: "2026-10-27T10:11:23Z"
+  - "combinatorial-optimization"
+timestamp: "2026-10-28T11:00:22Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -25,15 +25,16 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  []
+  - name: "learned-column-prefilling"
+    description: "A machine-learning-guided column prefilling and smoothing technique for accelerating branch-price-and-cut solvers."
 datasets:
   []
 open_questions:
-  - name: "full-bpc-tree-evaluation"
-    description: "Extend the empirical evaluation and algorithmic design of learned column prefilling and dual stabilization beyond the root node to the entire branch-price-and-cut tree, measuring overall impact on total solution time and tree size across diverse problem instances."
+  - name: "bpc-tree-wide-impact-learned-column-prefilling"
+    description: "Investigate the downstream effects of learned column prefilling and dual center prediction throughout the entire branch-and-bound tree in branch-price-and-cut algorithms, moving beyond root node performance evaluations to understand tree-wide scalability and interaction with branching and cutting decisions."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-27T10:11:23Z"
-created_at: "2026-10-27T10:11:23Z"
+processed_at: "2026-10-28T11:00:22Z"
+created_at: "2026-10-28T11:00:22Z"
 ---
 
 # Imperfect Is Perfect: Learned Column Prefilling for Branch-Price-and-Cut
@@ -44,29 +45,35 @@ created_at: "2026-10-27T10:11:23Z"
 
 ## Summary
 
-This paper challenges the column generation folklore that initial warm-start columns hurt branch-price-and-cut performance by demonstrating that imperfect, learned column pools combined with smoothed dual pricing significantly accelerate exact solvers. The proposed pipeline employs a neural edge scorer for column generation, a neural network to predict Wentges smoothing centers, and a GPU-accelerated bucket-graph labeling scheme. Evaluated on capacitated vehicle routing and parallel machine scheduling, the approach drastically reduces root pricing time and improves certified bound convergence.
+This paper challenges the column generation folklore that warm-start initial columns slow down the root of branch-price-and-cut by demonstrating that imperfect, learned column prefilling combined with smoothed dual pricing significantly accelerates convergence. The authors introduce a neural edge scorer to construct a pool of ordinary routes and a second network to predict the initial center for Wentges smoothing, achieving massive speedups on both capacitated vehicle routing and unrelated parallel machine scheduling benchmarks.
 
 ## Key Contributions
 
-- Introduces a learned column prefilling approach for branch-price-and-cut that uses a neural edge scorer and constructive generator to build an imperfect column pool.
-- Applies Wentges smoothing with a learned center network to guide pricing queries and stabilize dual variables.
-- Rebuilds bucket-graph labeling around a GPU-based dominance test with CPU certification to accelerate pricing.
-- Achieves certified root bounds in 13.2% of vanilla RouteOpt's root pricing time on capacitated vehicle routing instances and certifies all parallel machine scheduling benchmarks 12x faster.
+- Proposes learned column prefilling using a neural edge scorer and constructive generator to accelerate the root node of branch-price-and-cut solvers.
+- Combines learned column prefilling with Wentges smoothing, where a second network predicts the initial smoothing center to direct pricing queries.
+- Accelerates the root pricing time of RouteOpt to 13.2% of vanilla solver time over 95 instances with 300 to 1000 customers.
+- Certifies all 25 benchmark instances in an exact branch-price-and-cut solver for unrelated parallel machine scheduling, achieving a 12x speedup.
 
 ## Open Questions & Future Work
 
-- [[full-bpc-tree-evaluation]]
+- [[bpc-tree-wide-impact-learned-column-prefilling]]
+
+## Key Concepts
+
+- [[learned-column-prefilling]]: A machine-learning-guided column prefilling and smoothing technique for accelerating branch-price-and-cut solvers.
 
 ## Archivist Review
 
-No concepts or datasets met the strict novelty and reuse criteria for permanent vault notes. The proposed open question on full BPC tree evaluation directly duplicates an existing vault entry ('full-bpc-tree-evaluation'), and the second question on joint learning of components is a specialized sub-problem closely related to existing adaptation questions.
+Approved the central concept of learned column prefilling and the meaningful open question regarding tree-wide branch-price-and-cut evaluation. Rejected the co-design question as standard architectural combination future work.
+
+### Approved Concepts
+- Learned Column Prefilling: Challenges column generation folklore by showing that learned, imperfect initial columns accelerate branch-price-and-cut root node solving.
 
 ### Approved Open Questions
-- Extending Evaluation to Full BPC Tree: Understanding tree-level behavior is crucial because root-node acceleration does not always guarantee overall branch-and-bound speedups due to interactions with branching and cutting planes.
+- Full BPC Tree-Wide Evaluation: Understanding whether root-level speedups translate to full branch-and-bound tree efficiency is critical for establishing the practical utility of learned column generation and dual stabilization methods in integer programming.
 
 ### Rejected Candidates
-- [open_question] Extending Evaluation to Full BPC Tree (`bpc-tree-level-evaluation`) - duplicate_existing: Duplicate or near-equivalent of existing vault open question 'full-bpc-tree-evaluation'.
-- [open_question] Co-design of Learned Components (`joint-learning-pool-center`) - duplicate_existing: Similar to existing joint-policy-mitigation-co-adaptation and represents a specialized co-design of internal learned modules rather than a distinct broad vault question.
+- [open_question] Co-design of Primal-Dual Learned Components (`co-design-primal-dual-learning-components`) - not_novel: Routine future work proposing joint training or model combination without a distinct structural bottleneck.
 
 ## Links
 

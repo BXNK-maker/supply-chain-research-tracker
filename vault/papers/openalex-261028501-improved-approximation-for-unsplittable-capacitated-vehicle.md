@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Improved Approximation for Unsplittable Capacitated Vehicle Routing Using Quota Trees"
-description: "This paper presents a deterministic (5/2 + \\epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) under general capacity and arbitrary positive demands. The approach uses local search, endpoint quota trees, matching, set packing, and weighted graphic matroid parity to construct disjoint client routes. This improves upon previous approximation ratios such as the recent (2 + \\ln 2 + \\epsilon)-approximation."
+description: "The paper presents a deterministic (5/2 + \\epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) that runs in n^{O(1/\\epsilon)} time for rational \\epsilon. The approach relies on endpoint quota trees, demand rounding, local search, matching, set packing, and weighted graphic matroid parity to improve upon previous approximation bounds."
 resource: "https://arxiv.org/abs/2610.28501"
 tags:
-  - "approximation-algorithms"
   - "vehicle-routing-problem"
-timestamp: "2026-10-27T10:10:26Z"
+  - "approximation-algorithms"
+timestamp: "2026-10-28T10:58:38Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -24,15 +24,14 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "quota-trees"
-    description: "A structural tree construction used in routing algorithms to select endpoint quotas for candidate routes after demand rounding and vertex replication."
+  []
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-27T10:10:26Z"
-created_at: "2026-10-27T10:10:26Z"
+processed_at: "2026-10-28T10:58:38Z"
+created_at: "2026-10-28T10:58:38Z"
 ---
 
 # Improved Approximation for Unsplittable Capacitated Vehicle Routing Using Quota Trees
@@ -43,31 +42,25 @@ created_at: "2026-10-27T10:10:26Z"
 
 ## Summary
 
-This paper presents a deterministic (5/2 + \epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) under general capacity and arbitrary positive demands. The approach uses local search, endpoint quota trees, matching, set packing, and weighted graphic matroid parity to construct disjoint client routes. This improves upon previous approximation ratios such as the recent (2 + \ln 2 + \epsilon)-approximation.
+The paper presents a deterministic (5/2 + \epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) that runs in n^{O(1/\epsilon)} time for rational \epsilon. The approach relies on endpoint quota trees, demand rounding, local search, matching, set packing, and weighted graphic matroid parity to improve upon previous approximation bounds.
 
 ## Key Contributions
 
-- Provides a deterministic (5/2 + \epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) running in n^{O(1/\epsilon)} time.
-- Handles general capacity and arbitrary positive demands through local search route selection combined with endpoint quota trees, matching, and set packing.
-- Employs weighted graphic matroid parity to partition a constructed tour for serving remaining clients with disjoint client sets.
+- Introduces a deterministic (5/2 + \epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) running in n^{O(1/\epsilon)} time.
+- Utilizes endpoint quota trees after demand rounding and vertex replication for constructing candidate routes.
+- Combines route structures with matching, set packing, and a tour partitioned using weighted graphic matroid parity to serve remaining clients.
 
 ## Limitations
 
-Runs in polynomial time n^{O(1/\epsilon)} which depends exponentially on 1/\epsilon.
-
-## Key Concepts
-
-- [[quota-trees]]: A structural tree construction used in routing algorithms to select endpoint quotas for candidate routes after demand rounding and vertex replication.
+Running time is n^{O(1/\epsilon)}, which grows rapidly for very small epsilon values.
 
 ## Archivist Review
 
-Approved the existing concept 'quota-trees' which is already present in the vault as a canonical entry and is central to this paper's algorithmic contributions. Rejected the standard problem definition since UCVRP is a classical operations research/theoretical computer science problem.
-
-### Approved Concepts
-- Quota Trees: Quota trees are the primary structural mechanism introduced and utilized to construct candidate routes for the UCVRP algorithm.
+Applied strict evaluation criteria: quota-trees is already present in the vault, and the open question is too paper-local to justify a permanent standalone entry. Consequently, no new items were approved.
 
 ### Rejected Candidates
-- [concept] Unsplittable Capacitated Vehicle Routing Problem (`unsplittable-capacitated-vehicle-routing-problem`) - not_novel: Standard well-known problem rather than a newly introduced machine learning or algorithmic concept.
+- [concept] Quota Trees (`quota-trees`) - duplicate_existing: Quota trees are already present in the vault under the exact same slug.
+- [open_question] Approximation Limits for UCVRP (`improved-approximation-ucvrp-gap`) - paper_local: Paper-local approximation bound question for a specific vehicle routing problem variant without broader cross-cutting generalizability.
 
 ## Links
 
