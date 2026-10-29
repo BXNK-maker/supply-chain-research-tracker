@@ -4,12 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Epi: Towards a Persistent, Self-Improving Agent for Autonomous Research"
-description: "The paper introduces Épi, an autonomous research agent designed to sustain scientific investigations across model sessions and self-improve through accumulated experience and hierarchical memory. Épi integrates persistent research history, branching, and independent review to execute long-running experiments evaluated by a fixed verifier. The agent established 120 record-setting mathematical results—including dramatic interval refinements for the n-queens constant and quartic Feigenbaum attractor dimension, along with a computer-assisted proof of Tuza's conjecture. Furthermore, a lightweight configuration termed Épi-turbo developed executable solvers for operational research tasks, outperforming Codex on FrontierOR at lower model costs."
+description: "We present Épi, an autonomous research agent designed to sustain investigations across model sessions and evolve its methods through accumulated experience, persistent history, hierarchical memory, branching, and independent review. Operating across session boundaries with a fixed verifier, Épi achieves numerous record-setting mathematical results, including narrower intervals for mathematical constants and proofs for graph theory conjectures. Furthermore, a lightweight configuration termed Épi-turbo develops executable solvers for operations research tasks, outperforming Codex in efficiency and benchmark score."
 resource: "https://arxiv.org/abs/2610.24944"
 tags:
-  - "demand-forecasting"
+  - "combinatorial-optimization"
   - "vehicle-routing-problem"
-timestamp: "2026-10-28T10:58:26Z"
+  - "reinforcement-learning"
+timestamp: "2026-10-29T11:15:17Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,7 +33,6 @@ author:
   - literal: "Xiangliang Zhang"
   - literal: "Alex Pentland"
   - literal: "Zichen Chen"
-  - literal: "Zichen Chen"
 issued:
   date-parts:
     - [2026, 10, 18]
@@ -46,34 +46,36 @@ concepts:
   []
 datasets:
   - name: "FrontierOR"
-    description: "A benchmark of 30 operational research tasks used to evaluate the lightweight configuration Épi-turbo."
+    description: "A benchmark for operations research tasks used to evaluate Épi-turbo."
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-28T10:58:26Z"
-created_at: "2026-10-28T10:58:26Z"
+processed_at: "2026-10-29T11:15:17Z"
+created_at: "2026-10-29T11:15:17Z"
 ---
 
 # Epi: Towards a Persistent, Self-Improving Agent for Autonomous Research
 
-**Authors**: Yue Huang, Zhangchen Xu, Xiaonan Luo, Zheyuan Liu, Lichi Li, Yiping Wang, Peiyang Song, Eric Gabriel Ramos, Enze Xie, Olexandr Isayev, Paul Liang, Nouha Dziri, Huan Sun, Jianfeng Gao, Ying Liu, Misha Sra, Xiangliang Zhang, Alex Pentland, Zichen Chen, Zichen Chen
+**Authors**: Yue Huang, Zhangchen Xu, Xiaonan Luo, Zheyuan Liu, Lichi Li, Yiping Wang, Peiyang Song, Eric Gabriel Ramos, Enze Xie, Olexandr Isayev, Paul Liang, Nouha Dziri, Huan Sun, Jianfeng Gao, Ying Liu, Misha Sra, Xiangliang Zhang, Alex Pentland, Zichen Chen
 **Date**: 2026-10-18
 **Paper ID**: [openalex:2610.24944](https://arxiv.org/abs/2610.24944)
 
 ## Summary
 
-The paper introduces Épi, an autonomous research agent designed to sustain scientific investigations across model sessions and self-improve through accumulated experience and hierarchical memory. Épi integrates persistent research history, branching, and independent review to execute long-running experiments evaluated by a fixed verifier. The agent established 120 record-setting mathematical results—including dramatic interval refinements for the n-queens constant and quartic Feigenbaum attractor dimension, along with a computer-assisted proof of Tuza's conjecture. Furthermore, a lightweight configuration termed Épi-turbo developed executable solvers for operational research tasks, outperforming Codex on FrontierOR at lower model costs.
+We present Épi, an autonomous research agent designed to sustain investigations across model sessions and evolve its methods through accumulated experience, persistent history, hierarchical memory, branching, and independent review. Operating across session boundaries with a fixed verifier, Épi achieves numerous record-setting mathematical results, including narrower intervals for mathematical constants and proofs for graph theory conjectures. Furthermore, a lightweight configuration termed Épi-turbo develops executable solvers for operations research tasks, outperforming Codex in efficiency and benchmark score.
 
 ## Key Contributions
 
-- Épi introduces a persistent autonomous research agent combining hierarchical memory, independent review, and cross-session execution to sustain investigations and evolve methods.
-- Épi achieved 120 record-setting results, including an 84-fold narrower interval for the n-queens constant and a 3.6-million-fold narrower interval for the quartic Feigenbaum attractor dimension.
-- Épi delivered a computer-assisted proof of Tuza's conjecture for split graphs under specific constraints.
-- Épi-turbo achieved a 5.4% higher total benchmark score than Codex on 30 FrontierOR tasks at 64% of its model cost.
+- Épi produced 120 record-setting results, including 20 numerical bound records and 100 construction records across multiple families, such as an 84-fold narrower interval for the n-queens constant.
+- Épi established via exact dual certificates that the Cohn-Elkies linear-programming bound cannot be sharp in dimensions 10 and 11, and provided a computer-assisted proof of Tuza's conjecture for split graphs.
+- Épi-turbo achieved a 5.4% higher total score on 30 FrontierOR tasks than Codex at 64% of the model cost, using the same underlying model and reasoning effort.
 
 ## Archivist Review
 
-Approved the benchmark dataset FrontierOR which is already tracked in the vault, and rejected any redundant or paper-local concepts to maintain strict quality standards.
+The FrontierOR dataset is approved as it is a specific named benchmark used for evaluating operations research agents in the paper, matching existing vault conventions. The open question is rejected because it is too broad and aspirational rather than a precise structural bottleneck.
+
+### Rejected Candidates
+- [open_question] Autonomous Research Continuity and Memory (`autonomous-research-continuity-and-memory`) - low_impact: Too broad as an open-ended research question for long-horizon agents rather than a specific technical bottleneck.
 
 ## Datasets
 

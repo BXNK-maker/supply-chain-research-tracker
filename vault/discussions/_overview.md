@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-10
-_12 notes. Highlights: Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim; Today’s batch of papers showcases a striking convergence: traditional Operations Research (OR) and combinatorial optimiz_
+_13 notes. Highlights: Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization; Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim_
 
 ### Week 2026-W44
-_3 notes. Highlights: Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim; Today’s batch of papers showcases a striking convergence: traditional Operations Research (OR) and combinatorial optimiz_
+_4 notes. Highlights: Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization; Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim_
 
+- [2026-10-29](/discussions/daily/2026-10-29) — Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization
 - [2026-10-28](/discussions/daily/2026-10-28) — Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim
 - [2026-10-27](/discussions/daily/2026-10-27) — Today’s batch of papers showcases a striking convergence: traditional Operations Research (OR) and combinatorial optimiz
 - [2026-10-26](/discussions/daily/2026-10-26) — The latest body of research highlights a major intersection between classical Operations Research (OR) and modern machin

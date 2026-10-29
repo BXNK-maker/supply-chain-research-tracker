@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Self-Guided LLM Reasoning for Error Diagnosis in Vehicle Routing Problems"
-description: "This paper investigates the capability of large language models to detect and correct data errors in Vehicle Routing Problem (VRP) instances, identifying limitations when handling complex instances. To address these challenges, the authors propose a self-guided reasoning framework in which LLMs autonomously generate code to provide structured insights for error diagnosis. Experiments across diverse problem settings demonstrate that the framework achieves near-perfect error detection accuracy."
+description: "This paper investigates the ability of large language models to detect and correct data errors in vehicle routing problem instances, identifying key reasoning limitations when handling complex instances. To address this, the authors propose a self-guided reasoning framework where LLMs autonomously generate code to provide structured insights for error diagnosis. Experiments across diverse problem settings demonstrate that the framework achieves near-perfect error detection accuracy."
 resource: "https://arxiv.org/abs/2610.21393"
 tags:
   - "vehicle-routing-problem"
+  - "reinforcement-learning"
   - "data-cleaning"
-  - "autoregressive-models"
-timestamp: "2026-10-28T10:55:23Z"
+timestamp: "2026-10-29T11:14:19Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -29,15 +29,14 @@ architectures:
   []
 concepts:
   - name: "self-guided-llm-reasoning"
-    description: "A reasoning framework where LLMs autonomously generate code to provide structured insights for diagnosing data errors."
+    description: "A reasoning framework for LLMs that autonomously generates code to provide structured insights for error diagnosis in vehicle routing problems."
 datasets:
   []
 open_questions:
-  - name: "generalization-and-cascading-errors-in-self-guided-cop-diagnosis"
-    description: "Evaluate the generalization and effectiveness of self-guided error diagnosis frameworks on broader problem domains, additional combinatorial optimization problem variants, and real-world noisy datasets featuring cascading or interacting errors."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-28T10:55:23Z"
-created_at: "2026-10-28T10:55:23Z"
+processed_at: "2026-10-29T11:14:19Z"
+created_at: "2026-10-29T11:14:19Z"
 ---
 
 # Self-Guided LLM Reasoning for Error Diagnosis in Vehicle Routing Problems
@@ -48,34 +47,27 @@ created_at: "2026-10-28T10:55:23Z"
 
 ## Summary
 
-This paper investigates the capability of large language models to detect and correct data errors in Vehicle Routing Problem (VRP) instances, identifying limitations when handling complex instances. To address these challenges, the authors propose a self-guided reasoning framework in which LLMs autonomously generate code to provide structured insights for error diagnosis. Experiments across diverse problem settings demonstrate that the framework achieves near-perfect error detection accuracy.
+This paper investigates the ability of large language models to detect and correct data errors in vehicle routing problem instances, identifying key reasoning limitations when handling complex instances. To address this, the authors propose a self-guided reasoning framework where LLMs autonomously generate code to provide structured insights for error diagnosis. Experiments across diverse problem settings demonstrate that the framework achieves near-perfect error detection accuracy.
 
 ## Key Contributions
 
-- Systematically investigates the capability of large language models to detect and correct errors in Vehicle Routing Problem (VRP) instances.
-- Identifies key limitations of LLMs in handling complex instances and errors that increase reasoning burden.
-- Proposes a self-guided reasoning framework where LLMs autonomously generate code to provide structured insights for error diagnosis, achieving near-perfect accuracy across diverse problem settings.
-
-## Open Questions & Future Work
-
-- [[generalization-and-cascading-errors-in-self-guided-cop-diagnosis]]
+- Identified limitations of LLMs in detecting and correcting data errors in VRP instances under noisy real-world settings.
+- Proposed a self-guided reasoning framework enabling LLMs to autonomously generate code for structured error diagnosis.
+- Demonstrated near-perfect error detection accuracy across diverse problem settings and LLMs.
 
 ## Key Concepts
 
-- [[self-guided-llm-reasoning]]: A reasoning framework where LLMs autonomously generate code to provide structured insights for diagnosing data errors.
+- [[self-guided-llm-reasoning]]: A reasoning framework for LLMs that autonomously generates code to provide structured insights for error diagnosis in vehicle routing problems.
 
 ## Archivist Review
 
-Applied strict filtering standards to approve only the core concept of Self-Guided LLM Reasoning (already present in the vault) and mapped the open question to the canonical vault entry 'generalization-and-cascading-errors-in-self-guided-cop-diagnosis' to prevent duplication.
+Approved the core concept 'self-guided-llm-reasoning' which matches an existing vault concept, and rejected the open question due to overlap with existing generalization and robustness challenges.
 
 ### Approved Concepts
-- Self-Guided LLM Reasoning: Introduces a novel self-guided reasoning framework where LLMs generate code to provide structured insights for error diagnosis in VRP instances.
-
-### Approved Open Questions
-- Generalization and Cascading Errors in Cop Diagnosis: Addressing cascading errors and validating across diverse real-world combinatorial optimization domains is crucial for building robust, general-purpose LLM verification agents.
+- Self-Guided LLM Reasoning: Introduces a novel self-guided reasoning framework where LLMs autonomously generate code for structured insights in VRP error diagnosis.
 
 ### Rejected Candidates
-- [concept] Vehicle Routing Problem (`vehicle-routing-problem`) - duplicate_existing: Already exists as an existing vault tag.
+- [open_question] Generalizing Error Diagnosis to Diverse Combinatorial Optimization Domains (`generalization-to-diverse-copping-domains`) - duplicate_existing: Overlaps with existing generalization questions and is partially paper-local to combinatorial optimization error diagnosis.
 
 ## Links
 

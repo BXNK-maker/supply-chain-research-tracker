@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Coherent local explanations for mathematical optimization"
-description: "Explaining decisions in mathematical optimization is often hindered by standard XAI methods that ignore problem structure. To overcome this, the authors introduce CLEMO (Coherent Local Explanations for Mathematical Optimization), which simultaneously explains objective values and decision variables while preserving feasibility and problem structure. Empirical evaluations on shortest path, knapsack, and vehicle routing problems demonstrate its effectiveness over unstructured approaches like LIME."
+description: "Explaining decisions in mathematical optimization is challenging because standard XAI methods like LIME ignore problem structure and feasibility. This paper introduces CLEMO (Coherent Local Explanations for Mathematical Optimization), a framework that simultaneously explains objective values and decision variables while maintaining structural coherence. Experiments across shortest path, knapsack, and vehicle routing problems demonstrate the method's effectiveness."
 resource: "https://arxiv.org/abs/2502.04840"
 tags:
-  - "vehicle-routing-problem"
   - "combinatorial-optimization"
   - "interpretable-machine-learning"
-timestamp: "2026-10-28T10:58:11Z"
+  - "vehicle-routing-problem"
+timestamp: "2026-10-29T11:14:33Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,14 +28,15 @@ architectures:
   []
 concepts:
   - name: "clemo"
-    description: "An explainable AI framework that generates coherent local explanations for both objective values and decision variables in mathematical optimization problems."
+    description: "A local explanation method for mathematical optimization that simultaneously explains objective values and decision variables while respecting problem structure and feasibility."
 datasets:
   []
 open_questions:
-  []
+  - name: "extending-clemo-components-and-surrogates"
+    description: "Extend coherent local explanation frameworks beyond objective values and decision variables to incorporate other model components such as constraint slacks, algorithmic runtime, and optimality gaps, as well as investigate alternative classes of interpretable surrogate functions like decision trees instead of parametric linear models."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-28T10:58:11Z"
-created_at: "2026-10-28T10:58:11Z"
+processed_at: "2026-10-29T11:14:33Z"
+created_at: "2026-10-29T11:14:33Z"
 ---
 
 # Coherent local explanations for mathematical optimization
@@ -46,27 +47,31 @@ created_at: "2026-10-28T10:58:11Z"
 
 ## Summary
 
-Explaining decisions in mathematical optimization is often hindered by standard XAI methods that ignore problem structure. To overcome this, the authors introduce CLEMO (Coherent Local Explanations for Mathematical Optimization), which simultaneously explains objective values and decision variables while preserving feasibility and problem structure. Empirical evaluations on shortest path, knapsack, and vehicle routing problems demonstrate its effectiveness over unstructured approaches like LIME.
+Explaining decisions in mathematical optimization is challenging because standard XAI methods like LIME ignore problem structure and feasibility. This paper introduces CLEMO (Coherent Local Explanations for Mathematical Optimization), a framework that simultaneously explains objective values and decision variables while maintaining structural coherence. Experiments across shortest path, knapsack, and vehicle routing problems demonstrate the method's effectiveness.
 
 ## Key Contributions
 
-- Introduced CLEMO (Coherent Local Explanations for Mathematical Optimization) to explain both objective values and decision variables simultaneously.
-- Ensures coherence with underlying mathematical optimization problem structures, addressing the limitations of unstructured methods like LIME.
-- Demonstrated effectiveness across shortest path, knapsack, and vehicle routing problems.
+- Introduces Coherent Local Explanations for Mathematical Optimization (CLEMO) to explain both objective values and decision variables simultaneously.
+- Ensures coherence with the underlying problem structure and feasibility of decision variables, overcoming limitations of unstructured XAI methods like LIME.
+- Demonstrates effectiveness on shortest path, knapsack, and vehicle routing problems.
+
+## Open Questions & Future Work
+
+- [[extending-clemo-components-and-surrogates]]
 
 ## Key Concepts
 
-- [[clemo]]: An explainable AI framework that generates coherent local explanations for both objective values and decision variables in mathematical optimization problems.
+- [[clemo]]: A local explanation method for mathematical optimization that simultaneously explains objective values and decision variables while respecting problem structure and feasibility.
 
 ## Archivist Review
 
-Approved CLEMO as a reusable framework for explainable mathematical optimization. Rejected the generic combinatorial optimization benchmark label as it represents broad problem domains rather than a specific named dataset.
+Approved CLEMO as it is already present in the vault as an established concept, along with its associated open question on extending optimization explainability components. No datasets are approved as the paper evaluates on standard problem domains rather than specific named datasets.
 
 ### Approved Concepts
-- Coherent Local Explanations for Mathematical Optimization (CLEMO): Introduces a novel explainable AI framework explicitly tailored for mathematical optimization that guarantees structural coherence for both objective values and decision variables.
+- CLEMO: Introduces a novel explainable AI framework specifically designed for mathematical optimization that preserves feasibility and problem structure.
 
-### Rejected Candidates
-- [dataset] combinatorial-optimization-benchmarks (`combinatorial-optimization-benchmarks`) - generic: Generic aggregate label for standard problem classes rather than a specific named dataset.
+### Approved Open Questions
+- Extending Components and Surrogates in Optimization Explainability: Broadening explainability to constraints, runtime, and non-linear surrogate functions is critical for comprehensive transparency in complex mixed-integer and heuristic optimization pipelines.
 
 ## Links
 
