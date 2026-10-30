@@ -4,11 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A GPU-Resident Pipeline for Multi-Robot 3D Inspection with Limited Perception"
-description: "The paper presents a GPU-resident pipeline for multi-robot 3D inspection of underwater structures under limited perception. Given a triangle mesh and a fleet of robots with short-range cameras, the approach decomposes the NP-hard joint problem into five stages: viewpoint generation, visibility computation, set cover, min-max vehicle routing solved via MIP, and priority-based multi-agent path finding with continuous-time conflict checking. The method achieves GPU acceleration through custom CUDA kernels, parallel-frontier search extensions, and customized routing cuts, and is evaluated on complex meshes up to 7.2 million faces."
+description: "The authors present a complete, GPU-resident pipeline for multi-robot 3D inspection of underwater structures using fleets of robots with limited field-of-view sensors. The NP-hard joint problem is decomposed into five core stages—candidate viewpoint generation, visibility computation, set cover, min-max vehicle routing via mixed-integer programming with lifted subtour elimination, and priority-based multi-agent path finding with continuous-time conflict checking. Through custom CUDA kernels, a batch adaptation of epsilon-visibility, and a 4D space-time extension of parallel-frontier A*, the pipeline achieves end-to-end GPU acceleration evaluated on 14 meshes with up to 7.2 million faces."
 resource: "https://arxiv.org/abs/2610.26106"
 tags:
+  - "robotics"
+  - "fleet-scheduling"
   - "multi-agent-reinforcement-learning"
-timestamp: "2026-10-29T11:16:16Z"
+timestamp: "2026-10-30T11:10:08Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -30,8 +32,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-29T11:16:16Z"
-created_at: "2026-10-29T11:16:16Z"
+processed_at: "2026-10-30T11:10:08Z"
+created_at: "2026-10-30T11:10:08Z"
 ---
 
 # A GPU-Resident Pipeline for Multi-Robot 3D Inspection with Limited Perception
@@ -42,22 +44,18 @@ created_at: "2026-10-29T11:16:16Z"
 
 ## Summary
 
-The paper presents a GPU-resident pipeline for multi-robot 3D inspection of underwater structures under limited perception. Given a triangle mesh and a fleet of robots with short-range cameras, the approach decomposes the NP-hard joint problem into five stages: viewpoint generation, visibility computation, set cover, min-max vehicle routing solved via MIP, and priority-based multi-agent path finding with continuous-time conflict checking. The method achieves GPU acceleration through custom CUDA kernels, parallel-frontier search extensions, and customized routing cuts, and is evaluated on complex meshes up to 7.2 million faces.
+The authors present a complete, GPU-resident pipeline for multi-robot 3D inspection of underwater structures using fleets of robots with limited field-of-view sensors. The NP-hard joint problem is decomposed into five core stages—candidate viewpoint generation, visibility computation, set cover, min-max vehicle routing via mixed-integer programming with lifted subtour elimination, and priority-based multi-agent path finding with continuous-time conflict checking. Through custom CUDA kernels, a batch adaptation of epsilon-visibility, and a 4D space-time extension of parallel-frontier A*, the pipeline achieves end-to-end GPU acceleration evaluated on 14 meshes with up to 7.2 million faces.
 
 ## Key Contributions
 
-- An end-to-end GPU-accelerated pipeline for multi-robot 3D inspection of underwater structures featuring five decomposed stages.
-- A GPU batch adaptation of Lien's epsilon-visibility utilizing four custom CUDA kernels.
-- A beta-aware per-vehicle tour upper bound combined with Desrochers-Laporte coefficient lift and forbidden-pair cuts for min-max vehicle routing.
-- A 4D space-time extension of Zhou and Zeng's GPU parallel-frontier A* algorithm for priority-based multi-agent path finding.
-- An experimental evaluation across 14 meshes with up to 7.2 million faces, auditing collision freedom and waypoint attainment.
+- Presented an end-to-end GPU-accelerated pipeline for multi-robot 3D inspection of underwater structures integrating five core stages from viewpoint generation to collision-checked path finding.
+- Developed a GPU batch adaptation of Lien's epsilon-visibility with four custom CUDA kernels.
+- Introduced a beta-aware per-vehicle tour upper bound derived from the interpolated objective with lifted Miller-Tucker-Zemlin subtour elimination and forbidden-pair cuts.
+- Proposed a 4D space-time extension of Zhou and Zeng's GPU parallel-frontier A* algorithm for multi-agent path finding.
 
 ## Archivist Review
 
-Applied strict criteria for permanent vault inclusion. The open question on coupled location-routing viewpoint selection is highly domain-specific to multi-robot 3D inspection and vehicle routing rather than a broad, reusable machine learning or general robotics bottleneck, so it was rejected. No concepts or datasets met the threshold.
-
-### Rejected Candidates
-- [open_question] Coupled Location-Routing Viewpoint Selection (`location-routing-viewpoint-selection`) - low_impact: Too domain-specific to multi-robot 3D inspection and routing pipelines rather than a broad foundational ML or robotics bottleneck.
+No concepts, open questions, or datasets met the strict criteria for permanent standalone vault notes. The proposed concepts and open questions are either paper-internal implementation details or standard robotics extensions without broad cross-domain reusability.
 
 ## Links
 

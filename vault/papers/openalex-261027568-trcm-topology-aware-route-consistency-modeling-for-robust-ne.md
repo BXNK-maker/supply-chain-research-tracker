@@ -4,14 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "TRCM: Topology-Aware Route-Consistency Modeling for Robust Neural Vehicle Routing"
-description: "Neural combinatorial optimization models for the Capacitated Vehicle Routing Problem (CVRP) often construct solutions via sequential node selection with only implicit route organization. To address this, the authors propose Topology-Aware Route-Consistency Modeling (TRCM), which predicts pairwise same-route probabilities from node representations and injects them as a route-consistency guidance signal. TRCM combines structure-preserving augmentation with Topological Entropy-based reweighting to handle class-imbalanced supervision, reducing optimality gaps on CVRP50 and CVRP100 benchmarks."
+description: "This paper introduces Topology-Aware Route-Consistency Modeling (TRCM), a method that explicitly models route-level customer co-assignment to guide node-level decision making in autoregressive neural vehicle routing solvers. By predicting pairwise same-route probabilities using representations from standard construction pipelines and incorporating structure-preserving augmentation with Topological Entropy-based reweighting, TRCM addresses structural unevenness and class imbalance. Evaluations on CVRP50, CVRP100, and XML100 demonstrate reduced optimality gaps and improved solution robustness under matched decoding budgets and augmented inference."
 resource: "https://arxiv.org/abs/2610.27568"
 tags:
-  - "vehicle-routing-problem"
   - "autoregressive-models"
-  - "neural-routing-solver"
   - "combinatorial-optimization"
-timestamp: "2026-10-29T11:15:34Z"
+  - "neural-routing-solver"
+  - "vehicle-routing-problem"
+timestamp: "2026-10-30T11:09:04Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,14 +33,14 @@ architectures:
   []
 concepts:
   - name: "topology-aware-route-consistency-modeling"
-    description: "A modeling approach that predicts pairwise same-route probabilities and injects them as a route-consistency signal into autoregressive customer selection for neural vehicle routing."
+    description: "A method for explicit route-consistency modeling in autoregressive neural vehicle routing solvers."
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-29T11:15:34Z"
-created_at: "2026-10-29T11:15:34Z"
+processed_at: "2026-10-30T11:09:04Z"
+created_at: "2026-10-30T11:09:04Z"
 ---
 
 # TRCM: Topology-Aware Route-Consistency Modeling for Robust Neural Vehicle Routing
@@ -51,32 +51,32 @@ created_at: "2026-10-29T11:15:34Z"
 
 ## Summary
 
-Neural combinatorial optimization models for the Capacitated Vehicle Routing Problem (CVRP) often construct solutions via sequential node selection with only implicit route organization. To address this, the authors propose Topology-Aware Route-Consistency Modeling (TRCM), which predicts pairwise same-route probabilities from node representations and injects them as a route-consistency guidance signal. TRCM combines structure-preserving augmentation with Topological Entropy-based reweighting to handle class-imbalanced supervision, reducing optimality gaps on CVRP50 and CVRP100 benchmarks.
+This paper introduces Topology-Aware Route-Consistency Modeling (TRCM), a method that explicitly models route-level customer co-assignment to guide node-level decision making in autoregressive neural vehicle routing solvers. By predicting pairwise same-route probabilities using representations from standard construction pipelines and incorporating structure-preserving augmentation with Topological Entropy-based reweighting, TRCM addresses structural unevenness and class imbalance. Evaluations on CVRP50, CVRP100, and XML100 demonstrate reduced optimality gaps and improved solution robustness under matched decoding budgets and augmented inference.
 
 ## Key Contributions
 
-- Proposes Topology-Aware Route-Consistency Modeling (TRCM) to explicitly model route-level customer co-assignment and guide autoregressive node selection.
-- Combines structure-preserving augmentation with Topological Entropy (TE)-based reweighting to handle class-imbalanced and structurally uneven same-route supervision.
+- Proposes TRCM to explicitly model route-level customer co-assignment and inject same-route probabilities as a consistency signal into autoregressive neural routing.
+- Combines structure-preserving augmentation with Topological Entropy (TE)-based reweighting to address class imbalance and structurally uneven same-route supervision.
 - Reduces the optimality gap on CVRP50 from 3.67% to 3.28% and on CVRP100 from 2.11% to 1.99% under matched decoding budgets.
-- Improves the average objective on XML100 under 8-fold augmented inference by 0.24% with enhanced stability on demand variations.
+- Improves average objective on XML100 by 0.24% under 8-fold augmented inference.
 
 ## Limitations
 
-Evaluated primarily on standard CVRP and XML benchmarks under autoregressive construction settings.
+Evaluated primarily on standard CVRP instances and XML100; broader generalization to heterogeneous routing constraints requires further study.
 
 ## Key Concepts
 
-- [[topology-aware-route-consistency-modeling]]: A modeling approach that predicts pairwise same-route probabilities and injects them as a route-consistency signal into autoregressive customer selection for neural vehicle routing.
+- [[topology-aware-route-consistency-modeling]]: A method for explicit route-consistency modeling in autoregressive neural vehicle routing solvers.
 
 ## Archivist Review
 
-Approved the core concept 'topology-aware-route-consistency-modeling' which already exists in the vault (matching the paper title and method). Rejected the open question as it represents generic future work requesting efficiency improvements and broader evaluations. No critical unique datasets were proposed.
+Approved the core concept 'Topology-Aware Route-Consistency Modeling' which already exists in the vault under the exact same slug. Rejected the open question candidate as it falls into the category of routine future work requests (efficiency and reliability). No datasets were approved since CVRP benchmarks are standard routing datasets rather than unique standalone artifacts.
 
 ### Approved Concepts
-- Topology-Aware Route-Consistency Modeling: TRCM introduces explicit route-level customer co-assignment prediction to guide autoregressive node-level decisions, serving as a core architectural principle for robust neural routing.
+- Topology-Aware Route-Consistency Modeling: Central to the paper's novelty as a method for explicit route-level customer co-assignment guidance in neural vehicle routing.
 
 ### Rejected Candidates
-- [open_question] Efficiency and Reliability of Route-Consistency Signals (`reliability-and-efficiency-of-route-consistency-signals-in-neural-routing`) - not_novel: Boilerplate future work request extending evaluation and improving computational efficiency without defining a precise mechanistic bottleneck.
+- [open_question] Reliability and Efficiency of Route Consistency Signals (`improving-reliability-and-efficiency-of-route-consistency-signals-in-neural-routing`) - not_novel: Generic future work request concerning computational efficiency and signal reliability without a specific unresolved mechanism.
 
 ## Links
 

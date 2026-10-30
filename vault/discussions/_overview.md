@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-10
-_13 notes. Highlights: Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization; Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim_
+_14 notes. Highlights: Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c; Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization_
 
 ### Week 2026-W44
-_4 notes. Highlights: Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization; Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim_
+_5 notes. Highlights: Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c; Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization_
 
+- [2026-10-30](/discussions/daily/2026-10-30) — Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c
 - [2026-10-29](/discussions/daily/2026-10-29) — Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization
 - [2026-10-28](/discussions/daily/2026-10-28) — Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim
 - [2026-10-27](/discussions/daily/2026-10-27) — Today’s batch of papers showcases a striking convergence: traditional Operations Research (OR) and combinatorial optimiz
