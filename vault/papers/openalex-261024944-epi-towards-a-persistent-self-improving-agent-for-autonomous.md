@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Epi: Towards a Persistent, Self-Improving Agent for Autonomous Research"
-description: "We present Épi, an autonomous research agent that sustains investigations across model sessions and evolves its methods through persistent research history, hierarchical memory, and branching. Épi produced 120 record-setting results, including record numerical bounds, construction records, and a computer-assisted proof of Tuza's conjecture for split graphs. Furthermore, the authors introduce Épi-turbo, a lightweight configuration for algorithmic coding that outperforms Codex on FrontierOR tasks at a lower model cost."
+description: "The paper introduces Épi, a persistent autonomous research agent that maintains continuity across model sessions using hierarchical memory, branching, and independent review. Épi achieves 120 record-setting mathematical and computational results, including tighter bounds for the n-queens constant and the quartic Feigenbaum attractor dimension, alongside a computer-assisted proof of Tuza's conjecture for split graphs. Furthermore, the authors present Épi-turbo, a lightweight variant that outperforms Codex on operations research tasks at a fraction of the cost."
 resource: "https://arxiv.org/abs/2610.24944"
 tags:
-  - "reinforcement-learning"
   - "combinatorial-optimization"
+  - "reinforcement-learning"
   - "vehicle-routing-problem"
-timestamp: "2026-10-30T11:08:14Z"
+timestamp: "2026-10-31T10:42:31Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -44,15 +44,16 @@ architectures:
   []
 concepts:
   - name: "epi"
-    description: "An autonomous research agent that sustains investigations across model sessions using hierarchical memory, branching, and review."
+    description: "A persistent, self-improving autonomous research agent that sustains investigations across model sessions and evolves through accumulated experience."
 datasets:
-  []
+  - name: "FrontierOR"
+    description: "A benchmark suite comprising 30 operations research tasks used to evaluate Épi-turbo on algorithmic coding, vehicle routing, scheduling, and production planning."
 open_questions:
-  - name: "long-horizon-autonomous-research-continuity"
-    description: "Develop robust frameworks for multi-session autonomous research agents that can seamlessly maintain research continuity, learn generalizable insights from experimental feedback, and automatically balance the exploration of alternative hypotheses with backtracking."
+  - name: "autonomous-agent-branching-memory"
+    description: "Investigate and develop advanced mechanisms for autonomous research agents to dynamically prune, merge, or generate search branches and adapt hierarchical memory structures without human intervention."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-30T11:08:14Z"
-created_at: "2026-10-30T11:08:14Z"
+processed_at: "2026-10-31T10:42:31Z"
+created_at: "2026-10-31T10:42:31Z"
 ---
 
 # Epi: Towards a Persistent, Self-Improving Agent for Autonomous Research
@@ -63,35 +64,39 @@ created_at: "2026-10-30T11:08:14Z"
 
 ## Summary
 
-We present Épi, an autonomous research agent that sustains investigations across model sessions and evolves its methods through persistent research history, hierarchical memory, and branching. Épi produced 120 record-setting results, including record numerical bounds, construction records, and a computer-assisted proof of Tuza's conjecture for split graphs. Furthermore, the authors introduce Épi-turbo, a lightweight configuration for algorithmic coding that outperforms Codex on FrontierOR tasks at a lower model cost.
+The paper introduces Épi, a persistent autonomous research agent that maintains continuity across model sessions using hierarchical memory, branching, and independent review. Épi achieves 120 record-setting mathematical and computational results, including tighter bounds for the n-queens constant and the quartic Feigenbaum attractor dimension, alongside a computer-assisted proof of Tuza's conjecture for split graphs. Furthermore, the authors present Épi-turbo, a lightweight variant that outperforms Codex on operations research tasks at a fraction of the cost.
 
 ## Key Contributions
 
-- Proposed Épi, a persistent autonomous research agent combining hierarchical memory, branching, and independent review across session boundaries.
-- Achieved 120 record-setting results, including record numerical bounds and construction records across multiple families, such as narrowing the n-queens constant interval and the quartic Feigenbaum attractor dimension.
-- Provided a computer-assisted proof of Tuza's conjecture for split graphs under specific constraints.
-- Introduced Épi-turbo, a lightweight configuration for algorithmic coding that achieves a 5.4% higher benchmark score than Codex on FrontierOR tasks at 64% of its model cost.
+- Introduces Épi, a persistent autonomous research agent combining research history, hierarchical memory, branching, and independent review across session boundaries.
+- Achieves 120 record-setting results, including 20 numerical bound records and 100 construction records, such as an 84-fold narrower interval for the n-queens constant and a 3.6-million-fold narrower interval for the quartic Feigenbaum attractor dimension.
+- Provides a computer-assisted proof of Tuza's conjecture for split graphs with specific structural constraints.
+- Introduces Épi-turbo, a lightweight configuration achieving a 5.4% higher total score on 30 FrontierOR tasks than Codex at 64% of its model cost.
 
 ## Open Questions & Future Work
 
-- [[long-horizon-autonomous-research-continuity]]
+- [[autonomous-agent-branching-memory]]
 
 ## Key Concepts
 
-- [[epi]]: An autonomous research agent that sustains investigations across model sessions using hierarchical memory, branching, and review.
+- [[epi]]: A persistent, self-improving autonomous research agent that sustains investigations across model sessions and evolves through accumulated experience.
 
 ## Archivist Review
 
-Approved the core autonomous research agent concept 'Épi' and the associated open question on long-horizon research continuity, adhering to vault scarcity and novelty guidelines. FrontierOR was rejected as a routine benchmark suite.
+Approved the core agent concept 'Épi' and its associated open research question on automated branching and memory management, along with the 'FrontierOR' operations research dataset. Rejected 'Épi-turbo' as a subcomponent/variant of the broader agent architecture.
 
 ### Approved Concepts
-- Épi: Central to the paper's contribution as a persistent, self-improving autonomous research agent.
+- Épi: Épi represents a novel persistent, self-improving autonomous research agent architecture that spans model sessions.
 
 ### Approved Open Questions
-- Long-Horizon Autonomous Research Continuity: Addressing these three core challenges is fundamental to scaling autonomous agents from short script generation to long-horizon, self-improving scientific discovery.
+- Automated Branching and Memory Management: Branching strategies and automated memory curation are critical for scaling autonomous agents to handle exponentially growing combinatorial search spaces in scientific discovery.
 
 ### Rejected Candidates
-- [dataset] FrontierOR (`frontieror`) - not_reusable: Routine benchmark dataset without prior vault status.
+- [concept] Épi-turbo (`epi-turbo`) - subcomponent_of_broader_mechanism: epi-turbo is a lightweight task-specific configuration of the overarching agent system (Épi) rather than a distinct standalone mechanism.
+
+## Datasets
+
+- [[FrontierOR]]
 
 ## Links
 

@@ -4,11 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A State Augmented Approach to Paralle Modeling in High-Level Synthesis"
-description: "High-level synthesis (HLS) often struggles to extract concurrency from sequential behavioral models in feedback-coupled designs because architectural state boundaries and hazard resolutions are obscured. This paper develops an explicit architectural modeling methodology using synchronous sequential processes written in C++ to represent persistent state, communication, and feedback control while letting HLS handle scheduling and binding. Applied to a five-stage RV32I processor on a Kintex UltraScale+ FPGA, the approach achieves superior CPI-optimized performance (1.221 CPI at 220 MHz) and significant area reductions compared to algorithmic HLS baselines and hand-written references."
+description: "High-level synthesis (HLS) often struggles to extract efficient parallelism from feedback-coupled sequential behavioral models due to obscured architectural state boundaries. This paper introduces an explicit architectural modeling methodology using synchronous sequential processes written in C++ to separate designer-controlled architecture from tool-controlled scheduling. Evaluating a five-stage RV32I processor on a Kintex UltraScale+ FPGA, the proposed CPI-optimized configuration achieves 1.221 cycles per instruction at 220 MHz, outperforming both an algorithmic HLS baseline and an Ibex reference design. Additionally, an area-optimized configuration achieves substantial resource reductions while maintaining high operating frequencies."
 resource: "https://arxiv.org/abs/2610.36481"
 tags:
-  - "machine-learning"
-timestamp: "2026-10-30T11:10:13Z"
+  - "hardware-acceleration"
+timestamp: "2026-10-31T10:43:49Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,10 +28,11 @@ concepts:
 datasets:
   []
 open_questions:
-  []
+  - name: "broader-architectural-applicability-hls"
+    description: "Investigate and evaluate the broader applicability of explicit architectural modeling beyond processor case studies, extending the synchronous sequential process methodology to other feedback-coupled architectures such as switch arbiters, cryptographic round and key schedules, or cache controllers."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-30T11:10:13Z"
-created_at: "2026-10-30T11:10:13Z"
+processed_at: "2026-10-31T10:43:49Z"
+created_at: "2026-10-31T10:43:49Z"
 ---
 
 # A State Augmented Approach to Paralle Modeling in High-Level Synthesis
@@ -42,20 +43,27 @@ created_at: "2026-10-30T11:10:13Z"
 
 ## Summary
 
-High-level synthesis (HLS) often struggles to extract concurrency from sequential behavioral models in feedback-coupled designs because architectural state boundaries and hazard resolutions are obscured. This paper develops an explicit architectural modeling methodology using synchronous sequential processes written in C++ to represent persistent state, communication, and feedback control while letting HLS handle scheduling and binding. Applied to a five-stage RV32I processor on a Kintex UltraScale+ FPGA, the approach achieves superior CPI-optimized performance (1.221 CPI at 220 MHz) and significant area reductions compared to algorithmic HLS baselines and hand-written references.
+High-level synthesis (HLS) often struggles to extract efficient parallelism from feedback-coupled sequential behavioral models due to obscured architectural state boundaries. This paper introduces an explicit architectural modeling methodology using synchronous sequential processes written in C++ to separate designer-controlled architecture from tool-controlled scheduling. Evaluating a five-stage RV32I processor on a Kintex UltraScale+ FPGA, the proposed CPI-optimized configuration achieves 1.221 cycles per instruction at 220 MHz, outperforming both an algorithmic HLS baseline and an Ibex reference design. Additionally, an area-optimized configuration achieves substantial resource reductions while maintaining high operating frequencies.
 
 ## Key Contributions
 
-- Proposes an explicit architectural modeling methodology using synchronous sequential processes in HLS to separate designer-controlled architecture from tool-controlled scheduling.
-- Demonstrates that a CPI-optimized RV32I processor on a Kintex UltraScale+ FPGA achieves 1.221 cycles per instruction at 220 MHz, outperforming an algorithmic HLS baseline (4.000 CPI) and an Ibex reference (1.575 CPI at 242 MHz).
-- Shows an area-optimized configuration reducing LUTs by 65% and registers by 47% relative to the baseline while achieving a 250 MHz clock.
+- Developed an explicit architectural modeling methodology using synchronous sequential processes in C++ for high-level synthesis (HLS) to overcome the concurrency limitations of sequential behavioral models.
+- Demonstrated a CPI-optimized RV32I processor configuration achieving 1.221 cycles per instruction at 220 MHz on a Kintex UltraScale+ FPGA, outperforming an algorithmic HLS baseline (4.000 CPI) and an Ibex reference (1.575 CPI at 242 MHz).
+- Demonstrated an area-optimized RV32I processor configuration achieving a 65% reduction in LUTs and a 47% reduction in registers compared to the baseline while maintaining competitive performance (9.7% more benchmark cycles at 250 MHz).
+
+## Open Questions & Future Work
+
+- [[broader-architectural-applicability-hls]]
 
 ## Archivist Review
 
-Applied strict standards for the vault. The paper's contribution is in hardware design and high-level synthesis (FPGA/processor modeling), which falls outside the core machine learning scope of this repository.
+Applied strict vault standards, rejecting paper-local hardware design terms while preserving the open question on generalizing explicit architectural modeling in high-level synthesis beyond simple processor cores.
+
+### Approved Open Questions
+- Broader Applicability Beyond Processors: Determining whether explicit architectural modeling generalizes beyond RISC-V processors to arbitrary control-intensive and feedback-coupled hardware is crucial for establishing the methodology as a universal HLS design paradigm.
 
 ### Rejected Candidates
-- [open_question] Broader Domain Evaluation for HLS (`broader-domain-evaluation-hls`) - low_impact: The paper focuses on high-level synthesis for hardware design (FPGA/processors), which is outside the core machine learning scope of this vault.
+- [concept] State Augmented Parallel Modeling in High-Level Synthesis (`state-augmented-parallel-modeling-hls`) - paper_local: Paper-specific hardware synthesis technique tailored to RV32I processor pipelines rather than a broadly recurring ML vault concept.
 
 ## Links
 

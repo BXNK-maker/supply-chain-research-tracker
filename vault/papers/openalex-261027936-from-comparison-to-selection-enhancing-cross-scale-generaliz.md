@@ -4,14 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for Capacitated Vehicle Routing Problem"
-description: "This paper investigates the cross-scale generalization degradation of Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify shifts in node density, attention dispersion, and graph context dilution as key bottlenecks, evaluating architecture-wide, encoder-side, and decoder-side modifications. By combining entropy-based attention scaling for upscaling and a permutation-invariant graph-context aggregation mechanism for downscaling, they propose an approach selector that reduces solution costs across diverse scale pairs by up to 3.2%."
+description: "This paper investigates the cross-scale generalization limitations of reinforcement learning-trained Pointer Networks on the Capacitated Vehicle Routing Problem (CVRP), identifying shifts in node density, attention dispersion, and mean-pooled graph context dilution as primary causes. To address these issues, the authors propose a learned, permutation-invariant graph-context aggregation mechanism and entropy-based attention scaling. Combining these insights into an approach selector dynamically chooses the best model per size pair, reducing routing cost by up to 3.2% across seen and unseen problem sizes."
 resource: "https://arxiv.org/abs/2610.27936"
 tags:
   - "reinforcement-learning"
   - "vehicle-routing-problem"
   - "neural-routing-solver"
-  - "combinatorial-optimization"
-timestamp: "2026-10-30T11:07:55Z"
+timestamp: "2026-10-31T10:41:36Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,13 +32,11 @@ concepts:
 datasets:
   []
 open_questions:
-  - name: "combined-scaling-and-aggregation-multi-scale-training"
-    description: "Investigate combining attention rescaling mechanisms and learned graph-context aggregation methods into a single unified model trained simultaneously across multiple problem scales."
-  - name: "instance-feature-aware-approach-selection"
-    description: "Develop instance-aware approach selection frameworks that incorporate detailed instance features such as client density, spatial distribution, or demand-to-capacity ratios rather than relying solely on global problem scale."
+  - name: "combined-multi-scale-nco-training"
+    description: "Develop unified multi-scale reinforcement learning frameworks that simultaneously combine attention rescaling techniques (such as entropy-based or learnable scaling factors) and permutation-invariant graph-context aggregation mechanisms (such as Set2Set or weighted averaging), enabling robust performance when trained and deployed across mixed and dynamic problem scales."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-30T11:07:55Z"
-created_at: "2026-10-30T11:07:55Z"
+processed_at: "2026-10-31T10:41:36Z"
+created_at: "2026-10-31T10:41:36Z"
 ---
 
 # From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for Capacitated Vehicle Routing Problem
@@ -50,30 +47,27 @@ created_at: "2026-10-30T11:07:55Z"
 
 ## Summary
 
-This paper investigates the cross-scale generalization degradation of Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify shifts in node density, attention dispersion, and graph context dilution as key bottlenecks, evaluating architecture-wide, encoder-side, and decoder-side modifications. By combining entropy-based attention scaling for upscaling and a permutation-invariant graph-context aggregation mechanism for downscaling, they propose an approach selector that reduces solution costs across diverse scale pairs by up to 3.2%.
+This paper investigates the cross-scale generalization limitations of reinforcement learning-trained Pointer Networks on the Capacitated Vehicle Routing Problem (CVRP), identifying shifts in node density, attention dispersion, and mean-pooled graph context dilution as primary causes. To address these issues, the authors propose a learned, permutation-invariant graph-context aggregation mechanism and entropy-based attention scaling. Combining these insights into an approach selector dynamically chooses the best model per size pair, reducing routing cost by up to 3.2% across seen and unseen problem sizes.
 
 ## Key Contributions
 
-- Identified three primary factors contributing to cross-scale generalization degradation in Pointer Networks for CVRP: shifts in node density, attention dispersion, and dilution of the mean-pooled graph context.
-- Proposed a learned, permutation-invariant graph-context aggregation mechanism (weighted average and Set2Set) improving downscaling transfer from CVRP100 to CVRP20 by approximately 0.9 percentage points.
-- Employed entropy-based attention scaling to reduce the CVRP20-to-CVRP100 upscaling performance gap by 1.41 percentage points.
-- Introduced an approach selector combining complementary mechanisms to reduce cost by up to 3.2% across seen train-test pairs and most unseen sizes (CVRP35, CVRP75, CVRP200).
+- Identified three key contributing factors to cross-scale generalization degradation in Pointer Networks for CVRP: node density shifts, attention dispersion, and graph context dilution.
+- Proposed a learned, permutation-invariant graph-context aggregation mechanism using weighted averages and Set2Set to improve cross-scale generalization.
+- Introduced an approach selector that chooses the optimal model for each training-target size pair, reducing routing costs by up to 3.2% across seen and unseen problem sizes.
 
 ## Open Questions & Future Work
 
-- [[combined-scaling-and-aggregation-multi-scale-training]]
-- [[instance-feature-aware-approach-selection]]
+- [[combined-multi-scale-nco-training]]
 
 ## Archivist Review
 
-Approved both open questions as they highlight fundamental generalization and selection bottlenecks in neural combinatorial optimization. No concepts were proposed or warranted permanent vault notes.
+Applied strict filtering against the vault. No new concepts met the high bar for permanent standalone notes, as they are specific to vehicle routing or represent minor architectural variants. The open question 'combined-multi-scale-nco-training' addresses a distinct bottleneck regarding joint multi-scale training for neural combinatorial optimization, whereas 'instance-aware-model-selector' was rejected as a duplicate of 'instance-feature-aware-approach-selection'.
 
 ### Approved Open Questions
-- Combined Scale-Aware Multi-Scale Training: Crucial for developing truly size-agnostic neural combinatorial optimization solvers that perform robustly across arbitrary graph scales without requiring problem-specific fine-tuning.
-- Instance-Feature-Aware Approach Selection: Enhances routing solution quality by dynamically adapting model selection to fine-grained topological and structural properties of individual test instances.
+- Combined Multi-Scale NCO Training: Combining complementary upscaling and downscaling mechanisms into a single training regime addresses the core cross-scale generalization bottleneck in neural combinatorial optimization without requiring separate models for different problem sizes.
 
 ### Rejected Candidates
-- [concept] Combined Scale-Aware Multi-Scale Training (`combined-scaling-and-aggregation-multi-scale-training`) - generic: The input proposed no concept candidates, and the open questions are appropriately scoped for the open_questions list rather than vaults concepts.
+- [open_question] Instance-Aware Model Selector (`instance-aware-model-selector`) - duplicate_existing: Nearly identical to existing vault question 'instance-feature-aware-approach-selection' which covers instance-feature-driven dynamic model selection.
 
 ## Links
 

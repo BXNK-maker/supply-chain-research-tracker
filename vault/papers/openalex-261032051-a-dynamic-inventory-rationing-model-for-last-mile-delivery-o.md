@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A Dynamic Inventory Rationing Model for Last-Mile Delivery of Medication in Liberia's Community Health Program"
-description: "This paper investigates the dynamic allocation of scarce medications in community health programs, focusing on last-mile delivery in Liberia. To overcome the computational intractability of standard dynamic programming, the authors formulate a continuous-time approximation controlled by a reflected Brownian motion and solve it using deep neural networks via the deep splitting method. Calibrated on malaria case data from Liberia, the proposed policy reduces operating costs by about 6% compared to the strongest baseline while maintaining high fairness utility."
+description: "This paper studies the dynamic allocation of scarce medications in Liberia's community health program to balance patient travel costs, untreated risks, and geographic fairness. The authors formulate a finite-horizon stochastic control problem, approximate it in continuous time via a controlled reflected Brownian motion, and solve it using a deep splitting neural network method. Evaluated on empirical malaria data from Liberia, the proposed policy reduces operating costs by roughly 6% compared to baseline fairness-only policies while preserving nearly all fairness utility."
 resource: "https://arxiv.org/abs/2610.32051"
 tags:
   - "autonomous-delivery"
   - "demand-forecasting"
   - "stochastic-demands"
-timestamp: "2026-10-30T11:07:48Z"
+timestamp: "2026-10-31T10:41:28Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,8 +33,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-30T11:07:48Z"
-created_at: "2026-10-30T11:07:48Z"
+processed_at: "2026-10-31T10:41:28Z"
+created_at: "2026-10-31T10:41:28Z"
 ---
 
 # A Dynamic Inventory Rationing Model for Last-Mile Delivery of Medication in Liberia's Community Health Program
@@ -45,21 +45,24 @@ created_at: "2026-10-30T11:07:48Z"
 
 ## Summary
 
-This paper investigates the dynamic allocation of scarce medications in community health programs, focusing on last-mile delivery in Liberia. To overcome the computational intractability of standard dynamic programming, the authors formulate a continuous-time approximation controlled by a reflected Brownian motion and solve it using deep neural networks via the deep splitting method. Calibrated on malaria case data from Liberia, the proposed policy reduces operating costs by about 6% compared to the strongest baseline while maintaining high fairness utility.
+This paper studies the dynamic allocation of scarce medications in Liberia's community health program to balance patient travel costs, untreated risks, and geographic fairness. The authors formulate a finite-horizon stochastic control problem, approximate it in continuous time via a controlled reflected Brownian motion, and solve it using a deep splitting neural network method. Evaluated on empirical malaria data from Liberia, the proposed policy reduces operating costs by roughly 6% compared to baseline fairness-only policies while preserving nearly all fairness utility.
 
 ## Key Contributions
 
-- Formulates a finite-horizon stochastic control problem balancing referral costs, untreated patient costs, and demand-weighted fairness utility for last-mile medication allocation in community health programs.
-- Develops a continuous-time approximation controlling the drift rate of a reflected Brownian motion to overcome the computational intractability of standard dynamic programming.
-- Adapts the deep splitting method using deep neural networks to approximate the value function and its gradient for computing dynamic allocation policies.
-- Demonstrates a 6% operating cost reduction relative to the fairness-only benchmark while retaining approximately 98% of its fairness utility when calibrated on malaria cases in Liberia's Fangonda region.
+- Formulated a finite-horizon stochastic control problem for dynamic medication allocation in last-mile community health programs, balancing referral costs, untreated patient costs, and demand-weighted fairness utility.
+- Developed a continuous-time approximation approach controlling the drift rate of a reflected Brownian motion and adapted the deep splitting method using neural networks to compute the allocation policy.
+- Demonstrated that the proposed policy reduces operating costs by about 6% relative to a fairness-only benchmark while retaining roughly 98% of its fairness utility using empirical data from Liberia's Lofa County.
+
+## Limitations
+
+Limited to the evaluated community health program context and relies on continuous-time diffusion approximations of discrete inventory dynamics.
 
 ## Archivist Review
 
-Applied standard selectivity filtering. No concepts or open questions met the rigorous bar for long-term vault retention in this review cycle.
+Applied high selectivity standards: the sole proposed open question is highly domain-specific to healthcare inventory rationing rather than representing a general ML research bottleneck. No reusable concepts or datasets qualified for standalone vault notes.
 
 ### Rejected Candidates
-- [open_question] Scaling High-Dimensional Brownian Control (`high-dimensional-brownian-control-scaling`) - low_impact: While scaling high-dimensional stochastic control is relevant, this is a standard broad research direction in applied mathematics and operations research rather than a specific open technical bottleneck unique to machine learning vault integration.
+- [open_question] Scalable High-Dimensional Stochastic Control (`scalable-high-dimensional-stochastic-control-healthcare`) - low_impact: Too domain-specific to healthcare inventory distribution and does not represent a general, reusable machine learning research bottleneck.
 
 ## Links
 

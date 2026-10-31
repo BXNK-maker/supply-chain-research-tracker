@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-10
-_14 notes. Highlights: Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c; Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization_
+_15 notes. Highlights: Today's batch of papers showcases a unifying theme: **the tension between structural constraints and flexible generaliza; Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c_
 
 ### Week 2026-W44
-_5 notes. Highlights: Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c; Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization_
+_6 notes. Highlights: Today's batch of papers showcases a unifying theme: **the tension between structural constraints and flexible generaliza; Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c_
 
+- [2026-10-31](/discussions/daily/2026-10-31) — Today's batch of papers showcases a unifying theme: **the tension between structural constraints and flexible generaliza
 - [2026-10-30](/discussions/daily/2026-10-30) — Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c
 - [2026-10-29](/discussions/daily/2026-10-29) — Today's literature reveals a compelling convergence across **Operations Research (OR), Neural Combinatorial Optimization
 - [2026-10-28](/discussions/daily/2026-10-28) — Today’s batch of papers showcases a striking concentration of breakthroughs at the intersection of **combinatorial optim
