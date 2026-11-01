@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "ActTime: Action-Conditioned World Modeling for Time Series"
-description: "The paper introduces ActTime, an action-conditioned world model for time series designed to predict how future outcomes change under different actions and to support plan comparison. ActTime updates variable-specific latent states via an action-conditioned transition corrected by observations, and rolls forward under candidate actions using only factual trajectories for training. Evaluated across a simulator-grounded suite spanning building energy, traffic, greenhouse climate, and inventory management, ActTime ranks first in 12 of 16 settings. The findings also reveal that factual prediction accuracy, intervention fidelity, and decision quality are distinct and non-interchangeable performance axes."
+description: "The paper introduces ActTime, an action-conditioned world model for time series designed to predict outcomes under alternative candidate actions and support robust plan comparisons. ActTime maintains and updates variable-specific latent states via action-conditioned transitions and observation corrections, enabling future trajectory forecasting under interventions. Trained exclusively on observational factual trajectories without counterfactual supervision, ActTime achieves top performance across diverse simulator-grounded evaluation tasks in building energy, traffic, greenhouse climate, and inventory management. Furthermore, the empirical analysis demonstrates that factual accuracy, intervention fidelity, and decision quality are distinct and non-interchangeable metrics."
 resource: "https://arxiv.org/abs/2610.25764"
 tags:
   - "time-series"
-  - "dynamic-pricing"
+  - "reinforcement-learning"
   - "demand-forecasting"
-timestamp: "2026-10-31T10:42:37Z"
+timestamp: "2026-11-01T11:37:43Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -29,15 +29,15 @@ architectures:
   []
 concepts:
   - name: "acttime"
-    description: "An action-conditioned world model for time series that predicts outcomes under different actions and supports reliable plan comparison."
+    description: "An action-conditioned world model for time series that predicts counterfactual outcomes under alternative candidate plans."
 datasets:
   []
 open_questions:
   - name: "extrapolation-under-action-distribution-shift"
-    description: "Future work should address learning action-conditioned dynamics that can robustly extrapolate to substantially different action regimes unsupported by the training data, as well as characterizing and managing predictive uncertainty under such distribution shifts."
+    description: "Investigate and develop methods that explicitly address or resolve distribution shifts and extrapolation challenges when action-conditioned time-series world models are deployed in action regimes substantially unsupported by factual training data, including uncertainty characterization and online adaptation under distribution shift."
 skill: "GeneralMLSkill"
-processed_at: "2026-10-31T10:42:37Z"
-created_at: "2026-10-31T10:42:37Z"
+processed_at: "2026-11-01T11:37:43Z"
+created_at: "2026-11-01T11:37:43Z"
 ---
 
 # ActTime: Action-Conditioned World Modeling for Time Series
@@ -48,14 +48,14 @@ created_at: "2026-10-31T10:42:37Z"
 
 ## Summary
 
-The paper introduces ActTime, an action-conditioned world model for time series designed to predict how future outcomes change under different actions and to support plan comparison. ActTime updates variable-specific latent states via an action-conditioned transition corrected by observations, and rolls forward under candidate actions using only factual trajectories for training. Evaluated across a simulator-grounded suite spanning building energy, traffic, greenhouse climate, and inventory management, ActTime ranks first in 12 of 16 settings. The findings also reveal that factual prediction accuracy, intervention fidelity, and decision quality are distinct and non-interchangeable performance axes.
+The paper introduces ActTime, an action-conditioned world model for time series designed to predict outcomes under alternative candidate actions and support robust plan comparisons. ActTime maintains and updates variable-specific latent states via action-conditioned transitions and observation corrections, enabling future trajectory forecasting under interventions. Trained exclusively on observational factual trajectories without counterfactual supervision, ActTime achieves top performance across diverse simulator-grounded evaluation tasks in building energy, traffic, greenhouse climate, and inventory management. Furthermore, the empirical analysis demonstrates that factual accuracy, intervention fidelity, and decision quality are distinct and non-interchangeable metrics.
 
 ## Key Contributions
 
-- Introduces ActTime, an action-conditioned world model that updates variable-specific latent states through action-conditioned transitions and observation corrections.
-- Demonstrates that ActTime can be trained using only factual trajectories without paired alternative-action outcomes or planning supervision.
-- Establishes a simulator-grounded evaluation suite across building energy, traffic, greenhouse climate, and inventory management covering factual prediction, intervention-effect prediction, offline decision making, and closed-loop planning.
-- Shows that ActTime ranks first in 12 of 16 domain-task settings and highlights that factual accuracy, intervention fidelity, and decision quality are non-interchangeable objectives.
+- Introduced ActTime, an action-conditioned world model for time series that updates variable-specific latent states through action-conditioned transitions and observation corrections.
+- Demonstrated that ActTime can be trained solely on factual trajectories without requiring paired alternative-action outcomes or planning supervision.
+- Constructed a simulator-grounded evaluation suite covering building energy, traffic, greenhouse climate, and inventory management across factual prediction, intervention-effect prediction, offline decision making, and closed-loop planning.
+- Showed that ActTime ranks first in 12 of 16 domain-task settings and highlighted that factual accuracy, intervention fidelity, and decision quality are non-interchangeable objectives.
 
 ## Open Questions & Future Work
 
@@ -63,17 +63,20 @@ The paper introduces ActTime, an action-conditioned world model for time series 
 
 ## Key Concepts
 
-- [[acttime]]: An action-conditioned world model for time series that predicts outcomes under different actions and supports reliable plan comparison.
+- [[acttime]]: An action-conditioned world model for time series that predicts counterfactual outcomes under alternative candidate plans.
 
 ## Archivist Review
 
-Approved the core model concept 'acttime' which already exists in the vault under 'acttime' (or aligns with vault naming) and the open question regarding action distribution shift extrapolation, both of which are central and reusable for time-series control and decision-making literature.
+Approved ActTime as a core concept representing action-conditioned world modeling for time series (reusing the existing vault slug 'acttime'). Approved one open question on action distribution shift extrapolation, while rejecting the risk-sensitive planning question as a routine model extension. No standalone datasets were approved due to lack of distinct named identifiers.
 
 ### Approved Concepts
-- ActTime: It is the core model introduced by the paper for action-conditioned world modeling and intervention-effect prediction in time series.
+- ActTime: It is the core model proposed in the paper for action-conditioned time series world modeling and intervention planning.
 
 ### Approved Open Questions
-- Extrapolation Under Action Distribution Shift: Crucial for deploying world models in real-world physical systems where exploration or intervention ranges may exceed historical training data distribution.
+- Extrapolation Under Action Distribution Shift: Crucial for deploying action-conditioned world models safely in real-world environments where agents frequently encounter out-of-distribution control actions.
+
+### Rejected Candidates
+- [open_question] Risk-Sensitive Planning with Uncertainty (`risk-sensitive-planning-with-uncertainty`) - low_impact: Routine extension of utilizing predictive uncertainty in planning algorithms rather than a distinct foundational bottleneck.
 
 ## Links
 

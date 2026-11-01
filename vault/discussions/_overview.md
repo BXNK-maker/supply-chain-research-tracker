@@ -2,6 +2,14 @@
 
 This file is auto-generated from daily discussion notes.
 
+## 2026-11
+_1 notes. Highlights: Today’s research papers showcase a clear intersection between **large-scale combinatorial optimization, machine learning_
+
+### Week 2026-W44
+_1 notes. Highlights: Today’s research papers showcase a clear intersection between **large-scale combinatorial optimization, machine learning_
+
+- [2026-11-01](/discussions/daily/2026-11-01) — Today’s research papers showcase a clear intersection between **large-scale combinatorial optimization, machine learning
+
 ## 2026-10
 _15 notes. Highlights: Today's batch of papers showcases a unifying theme: **the tension between structural constraints and flexible generaliza; Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c_
 

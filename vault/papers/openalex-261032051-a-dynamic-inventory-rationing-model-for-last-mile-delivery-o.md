@@ -4,13 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A Dynamic Inventory Rationing Model for Last-Mile Delivery of Medication in Liberia's Community Health Program"
-description: "This paper studies the dynamic allocation of scarce medications in Liberia's community health program to balance patient travel costs, untreated risks, and geographic fairness. The authors formulate a finite-horizon stochastic control problem, approximate it in continuous time via a controlled reflected Brownian motion, and solve it using a deep splitting neural network method. Evaluated on empirical malaria data from Liberia, the proposed policy reduces operating costs by roughly 6% compared to baseline fairness-only policies while preserving nearly all fairness utility."
+description: "This paper studies the dynamic allocation of scarce medications in Liberia's community health program, balancing patient travel costs, untreated patient penalties, and fairness across locations. Because standard dynamic programming is intractable, the authors formulate a continuous-time approximation using a reflected Brownian motion and apply the deep splitting method with neural networks to compute allocation policies. Evaluated on malaria case data from Liberia, the proposed policy reduces operating costs by approximately 6% relative to a fairness-only benchmark while preserving nearly all of its fairness utility."
 resource: "https://arxiv.org/abs/2610.32051"
 tags:
-  - "autonomous-delivery"
   - "demand-forecasting"
   - "stochastic-demands"
-timestamp: "2026-10-31T10:41:28Z"
+timestamp: "2026-11-01T11:36:31Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,8 +32,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-10-31T10:41:28Z"
-created_at: "2026-10-31T10:41:28Z"
+processed_at: "2026-11-01T11:36:31Z"
+created_at: "2026-11-01T11:36:31Z"
 ---
 
 # A Dynamic Inventory Rationing Model for Last-Mile Delivery of Medication in Liberia's Community Health Program
@@ -45,24 +44,21 @@ created_at: "2026-10-31T10:41:28Z"
 
 ## Summary
 
-This paper studies the dynamic allocation of scarce medications in Liberia's community health program to balance patient travel costs, untreated risks, and geographic fairness. The authors formulate a finite-horizon stochastic control problem, approximate it in continuous time via a controlled reflected Brownian motion, and solve it using a deep splitting neural network method. Evaluated on empirical malaria data from Liberia, the proposed policy reduces operating costs by roughly 6% compared to baseline fairness-only policies while preserving nearly all fairness utility.
+This paper studies the dynamic allocation of scarce medications in Liberia's community health program, balancing patient travel costs, untreated patient penalties, and fairness across locations. Because standard dynamic programming is intractable, the authors formulate a continuous-time approximation using a reflected Brownian motion and apply the deep splitting method with neural networks to compute allocation policies. Evaluated on malaria case data from Liberia, the proposed policy reduces operating costs by approximately 6% relative to a fairness-only benchmark while preserving nearly all of its fairness utility.
 
 ## Key Contributions
 
-- Formulated a finite-horizon stochastic control problem for dynamic medication allocation in last-mile community health programs, balancing referral costs, untreated patient costs, and demand-weighted fairness utility.
-- Developed a continuous-time approximation approach controlling the drift rate of a reflected Brownian motion and adapted the deep splitting method using neural networks to compute the allocation policy.
-- Demonstrated that the proposed policy reduces operating costs by about 6% relative to a fairness-only benchmark while retaining roughly 98% of its fairness utility using empirical data from Liberia's Lofa County.
-
-## Limitations
-
-Limited to the evaluated community health program context and relies on continuous-time diffusion approximations of discrete inventory dynamics.
+- Formulates a finite-horizon stochastic control problem for dynamic inventory rationing in community health last-mile delivery, balancing referral costs, untreated patient penalties, and demand-weighted fairness utility.
+- Develops a continuous-time approximation controlling the drift rate of a reflected Brownian motion to overcome the computational intractability of standard dynamic programming.
+- Adapts the deep splitting method using deep neural networks to approximate the value function and its gradient for computing dynamic allocation policies.
+- Demonstrates on malaria case data from Liberia that the proposed policy reduces operating costs by about 6% relative to a fairness-only benchmark while retaining 98% of its fairness utility.
 
 ## Archivist Review
 
-Applied high selectivity standards: the sole proposed open question is highly domain-specific to healthcare inventory rationing rather than representing a general ML research bottleneck. No reusable concepts or datasets qualified for standalone vault notes.
+No concepts or open questions met the rigorous inclusion bar. The paper addresses a domain-specific application in last-mile healthcare inventory management using standard deep splitting and reflected Brownian motion approximations, which do not introduce broadly reusable core ML vault concepts or novel unresolved theoretical bottlenecks beyond standard scaling goals.
 
 ### Rejected Candidates
-- [open_question] Scalable High-Dimensional Stochastic Control (`scalable-high-dimensional-stochastic-control-healthcare`) - low_impact: Too domain-specific to healthcare inventory distribution and does not represent a general, reusable machine learning research bottleneck.
+- [open_question] Scaling High-Dimensional Stochastic Control (`high-dimensional-stochastic-control-scaling`) - low_impact: This open question asks about scaling deep-learning-based stochastic control methods to hundreds or thousands of dimensions, which is a routine scaling and performance aspiration rather than a specifically formulated, independently tracked conceptual bottleneck.
 
 ## Links
 
