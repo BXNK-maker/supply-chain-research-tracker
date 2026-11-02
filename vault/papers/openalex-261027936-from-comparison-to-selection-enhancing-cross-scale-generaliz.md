@@ -4,12 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for Capacitated Vehicle Routing Problem"
-description: "This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify three key failure factors—node density shifts, attention dispersion, and graph context dilution—and evaluate various architectural modifications including entropy-based attention scaling and permutation-invariant graph-context aggregation. Leveraging the complementarity of these approaches, they propose an approach selector that chooses the best model per size pair, achieving up to 3.2% cost reduction across seen and unseen problem sizes."
+description: "This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify three root causes—node density shifts, attention dispersion, and graph context dilution—and propose targeted modifications including entropy-based attention scaling and permutation-invariant graph context aggregation. By combining these complementary approaches via an approach selector, the method achieves improved routing costs across both seen and unseen problem sizes."
 resource: "https://arxiv.org/abs/2610.27936"
 tags:
   - "reinforcement-learning"
   - "vehicle-routing-problem"
-timestamp: "2026-11-01T11:36:38Z"
+  - "combinatorial-optimization"
+timestamp: "2026-11-02T13:00:08Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,15 +29,14 @@ architectures:
   []
 concepts:
   - name: "approach-selector-for-cross-scale-generalization"
-    description: "An approach selector that chooses the best model for each training-target size pair to enhance cross-scale generalization."
+    description: "A meta-selection framework that chooses the optimal routing model for each train-test size pair to enhance cross-scale generalization."
 datasets:
   []
 open_questions:
-  - name: "unified-multiscale-neural-routing-model"
-    description: "Investigating the integration of attention rescaling mechanisms with learned graph-context aggregation methods into a single unified model trained simultaneously across multiple scales remains an important direction for future work."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-01T11:36:38Z"
-created_at: "2026-11-01T11:36:38Z"
+processed_at: "2026-11-02T13:00:08Z"
+created_at: "2026-11-02T13:00:08Z"
 ---
 
 # From Comparison to Selection: Enhancing Cross-Scale Generalization of Pointer Networks Trained with Reinforcement Learning for Capacitated Vehicle Routing Problem
@@ -47,38 +47,29 @@ created_at: "2026-11-01T11:36:38Z"
 
 ## Summary
 
-This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify three key failure factors—node density shifts, attention dispersion, and graph context dilution—and evaluate various architectural modifications including entropy-based attention scaling and permutation-invariant graph-context aggregation. Leveraging the complementarity of these approaches, they propose an approach selector that chooses the best model per size pair, achieving up to 3.2% cost reduction across seen and unseen problem sizes.
+This paper investigates the cross-scale generalization degradation of attention-based Pointer Networks trained with reinforcement learning for the Capacitated Vehicle Routing Problem (CVRP). The authors identify three root causes—node density shifts, attention dispersion, and graph context dilution—and propose targeted modifications including entropy-based attention scaling and permutation-invariant graph context aggregation. By combining these complementary approaches via an approach selector, the method achieves improved routing costs across both seen and unseen problem sizes.
 
 ## Key Contributions
 
-- Identified three contributing factors to cross-scale generalization degradation in pointer networks for CVRP: shifts in node density, attention dispersion, and dilution of the mean-pooled graph context.
-- Proposed a learned, permutation-invariant graph-context aggregation mechanism (weighted average and Set2Set) and entropy-based attention scaling.
-- Introduced an approach selector that chooses the best model for each training-target size pair, reducing cost by up to 3.2% across seen and unseen sizes.
-
-## Limitations
-
-Evaluated specifically on the Capacitated Vehicle Routing Problem (CVRP) as a controlled proxy.
-
-## Open Questions & Future Work
-
-- [[unified-multiscale-neural-routing-model]]
+- Identified three key factors contributing to cross-scale performance degradation in Pointer Networks for CVRP: node density shifts, attention dispersion, and mean-pooled graph context dilution.
+- Proposed a learned, permutation-invariant graph-context aggregation mechanism (weighted average and Set2Set) to improve downscaling transfer (CVRP100-to-CVRP20).
+- Showed that entropy-based attention scaling reduces the CVRP20-to-CVRP100 upscaling performance gap by 1.41 percentage points.
+- Introduced an approach selector that chooses the best model for each training-target size pair, achieving cost improvements of up to 3.2% across seen and unseen sizes.
 
 ## Key Concepts
 
-- [[approach-selector-for-cross-scale-generalization]]: An approach selector that chooses the best model for each training-target size pair to enhance cross-scale generalization.
+- [[approach-selector-for-cross-scale-generalization]]: A meta-selection framework that chooses the optimal routing model for each train-test size pair to enhance cross-scale generalization.
 
 ## Archivist Review
 
-Approved the approach selector as a distinct methodological concept and the unified multi-scale neural routing question as a valuable open research direction. Rejected Set2Set context aggregation as it relies on an established pooling architecture rather than a new standalone concept.
+Approved the overarching approach-selector concept which is already tracked in the vault. Rejected the open questions as incremental architectural extensions and routine model selection variations rather than major vault-worthy bottlenecks.
 
 ### Approved Concepts
-- Approach Selector for Cross-Scale Generalization: Combines complementary cross-scale generalization strategies to consistently improve vehicle routing solutions across varying problem sizes.
-
-### Approved Open Questions
-- Unified Multi-Scale Neural Routing: Combining complementary downscaling and upscaling levers into a single multi-scale trained model addresses the fundamental cross-size generalization bottleneck in neural combinatorial optimization.
+- Approach Selector for Cross-Scale Generalization: Introduces a meta-selection framework across complementary cross-scale routing models to enhance generalization across varied problem scales.
 
 ### Rejected Candidates
-- [concept] Set2Set Context Aggregation (`set2set-context-aggregation`) - not_novel: Set2Set is an existing established mechanism applied here rather than a novel conceptual contribution of this paper.
+- [open_question] Joint Attention Scaling and Context Aggregation (`joint-attention-scaling-context-aggregation`) - subcomponent_of_broader_mechanism: Routine combination of submodules within an architecture rather than a distinct foundational research bottleneck.
+- [open_question] Instance-Feature-Driven Model Selection (`instance-feature-driven-model-selection`) - paper_local: Paper-local extension of model selection using instance-level features.
 
 ## Links
 

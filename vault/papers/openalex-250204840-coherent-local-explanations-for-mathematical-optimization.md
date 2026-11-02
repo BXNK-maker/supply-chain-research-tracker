@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Coherent local explanations for mathematical optimization"
-description: "Explaining decisions in mathematical optimization is underexplored, and standard XAI methods like LIME often fail because they ignore underlying problem structure and feasibility constraints. The authors introduce CLEMO (Coherent Local Explanations for Mathematical Optimization), which simultaneously explains objective values and decision variables while ensuring structural coherence. Experiments across shortest path, knapsack, and vehicle routing problems demonstrate the method's effectiveness."
+description: "Explaining decisions in mathematical optimization is challenging because standard explainable AI methods ignore problem structure and feasibility constraints. The authors introduce CLEMO (Coherent Local Explanations for Mathematical Optimization), a novel approach that simultaneously explains objective values and decision variables while remaining coherent with the underlying problem structure. Empirical evaluations on shortest path, knapsack, and vehicle routing problems demonstrate the effectiveness of the proposed framework."
 resource: "https://arxiv.org/abs/2502.04840"
 tags:
   - "combinatorial-optimization"
-  - "vehicle-routing-problem"
   - "interpretable-machine-learning"
-timestamp: "2026-11-01T11:36:56Z"
+  - "vehicle-routing-problem"
+timestamp: "2026-11-02T13:04:32Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,14 +28,14 @@ architectures:
   []
 concepts:
   - name: "clemo"
-    description: "A method for explaining mathematical optimization decisions by simultaneously accounting for objective values and decision variable feasibility."
+    description: "A method for generating local explanations for mathematical optimization models that simultaneously explains objective values and decision variables while respecting problem constraints and structure."
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-01T11:36:56Z"
-created_at: "2026-11-01T11:36:56Z"
+processed_at: "2026-11-02T13:04:32Z"
+created_at: "2026-11-02T13:04:32Z"
 ---
 
 # Coherent local explanations for mathematical optimization
@@ -46,24 +46,27 @@ created_at: "2026-11-01T11:36:56Z"
 
 ## Summary
 
-Explaining decisions in mathematical optimization is underexplored, and standard XAI methods like LIME often fail because they ignore underlying problem structure and feasibility constraints. The authors introduce CLEMO (Coherent Local Explanations for Mathematical Optimization), which simultaneously explains objective values and decision variables while ensuring structural coherence. Experiments across shortest path, knapsack, and vehicle routing problems demonstrate the method's effectiveness.
+Explaining decisions in mathematical optimization is challenging because standard explainable AI methods ignore problem structure and feasibility constraints. The authors introduce CLEMO (Coherent Local Explanations for Mathematical Optimization), a novel approach that simultaneously explains objective values and decision variables while remaining coherent with the underlying problem structure. Empirical evaluations on shortest path, knapsack, and vehicle routing problems demonstrate the effectiveness of the proposed framework.
 
 ## Key Contributions
 
-- Introduces CLEMO (Coherent Local Explanations for Mathematical Optimization) to explain both objective values and decision variables while preserving problem structure coherence.
-- Addresses the limitations of standard XAI methods like LIME that ignore underlying optimization and feasibility constraints.
+- Introduces Coherent Local Explanations for Mathematical Optimization (CLEMO), a framework for explaining optimization decisions that preserves underlying problem structure.
+- Simultaneously explains both objective function values and decision variable assignments while accounting for feasibility constraints.
 - Demonstrates effectiveness on shortest path, knapsack, and vehicle routing problems.
 
 ## Key Concepts
 
-- [[clemo]]: A method for explaining mathematical optimization decisions by simultaneously accounting for objective values and decision variable feasibility.
+- [[clemo]]: A method for generating local explanations for mathematical optimization models that simultaneously explains objective values and decision variables while respecting problem constraints and structure.
 
 ## Archivist Review
 
-Approved the core concept CLEMO, mapping its slug to the existing vault entry 'clemo'. No datasets or open questions met the stringent inclusion threshold.
+Approved the canonical concept 'clemo', mapping it to the existing vault slug 'clemo'. Rejected the open question as it is a routine future work suggestion for extending features and surrogate families.
 
 ### Approved Concepts
-- Coherent Local Explanations for Mathematical Optimization (CLEMO): It is the core methodological contribution of the paper, bridging explainable AI and mathematical optimization by maintaining structural coherence.
+- Coherent Local Explanations for Mathematical Optimization (CLEMO): It directly addresses the core methodological gap of explaining decisions in mathematical optimization while preserving problem structure and feasibility.
+
+### Rejected Candidates
+- [open_question] Extended Components and Surrogates for Optimization Explanations (`extended-components-and-surrogates-for-optimization-explanations`) - not_novel: The open question is essentially a routine future work direction suggesting more components and surrogate types rather than a substantive, self-contained bottleneck.
 
 ## Links
 

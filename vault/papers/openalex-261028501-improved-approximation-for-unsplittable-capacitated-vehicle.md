@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Improved Approximation for Unsplittable Capacitated Vehicle Routing Using Quota Trees"
-description: "This paper studies the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) and presents a deterministic (5/2 + \\epsilon)-approximation algorithm running in n^{O(1/\\epsilon)} time for general capacities and positive demands. The approach relies on constructing candidate routes using endpoint quota trees after demand rounding, combined with matching, set packing, and weighted graphic matroid parity. This improves upon previous approximation bounds for the problem, pushing closer to the inherent hardness limits."
+description: "This paper presents a deterministic (5/2 + epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) with general capacity and arbitrary positive demands. The method employs local search combined with endpoint quota trees, demand rounding, vertex copies, matching, set packing, and weighted graphic matroid parity to achieve an improved approximation ratio."
 resource: "https://arxiv.org/abs/2610.28501"
 tags:
   - "combinatorial-optimization"
   - "vehicle-routing-problem"
   - "approximation-algorithms"
-timestamp: "2026-11-01T11:38:42Z"
+timestamp: "2026-11-02T13:06:29Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -31,10 +31,10 @@ datasets:
   []
 open_questions:
   - name: "ucvrp-to-carp-extension"
-    description: "Extend the approximation algorithm and analysis for metric UCVRP to the single-depot undirected capacitated arc routing problem (CARP) with unsplittable demands to achieve the same (5/2 + \\\\epsilon)-approximation guarantee."
+    description: "Developing an extension of the (5/2 + \\\\epsilon)-approximation algorithm and analysis using endpoint quota trees and tour construction for the single-depot undirected capacitated arc routing problem (CARP) with unsplittable demands."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-01T11:38:42Z"
-created_at: "2026-11-01T11:38:42Z"
+processed_at: "2026-11-02T13:06:29Z"
+created_at: "2026-11-02T13:06:29Z"
 ---
 
 # Improved Approximation for Unsplittable Capacitated Vehicle Routing Using Quota Trees
@@ -45,16 +45,17 @@ created_at: "2026-11-01T11:38:42Z"
 
 ## Summary
 
-This paper studies the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) and presents a deterministic (5/2 + \epsilon)-approximation algorithm running in n^{O(1/\epsilon)} time for general capacities and positive demands. The approach relies on constructing candidate routes using endpoint quota trees after demand rounding, combined with matching, set packing, and weighted graphic matroid parity. This improves upon previous approximation bounds for the problem, pushing closer to the inherent hardness limits.
+This paper presents a deterministic (5/2 + epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) with general capacity and arbitrary positive demands. The method employs local search combined with endpoint quota trees, demand rounding, vertex copies, matching, set packing, and weighted graphic matroid parity to achieve an improved approximation ratio.
 
 ## Key Contributions
 
-- Proposes a deterministic (5/2 + \epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) running in n^{O(1/\epsilon)} time.
-- Applicable to general capacity and arbitrary positive demands by combining local search, endpoint quota trees, matching, set packing, and weighted graphic matroid parity techniques.
+- Proposes a deterministic (5/2 + epsilon)-approximation algorithm for the Unsplittable Capacitated Vehicle Routing Problem (UCVRP) running in n^{O(1/epsilon)} time.
+- Applies the algorithm to general capacity and arbitrary positive demands through local search, endpoint quota trees, demand rounding, and vertex copies.
+- Combines routing structures with matching, set packing, and weighted graphic matroid parity tour partitioning to handle remaining clients.
 
 ## Limitations
 
-The running time is n^{O(1/\epsilon)}, which grows rapidly for very small epsilon values.
+The time complexity is n^{O(1/epsilon)}, which depends polynomially on 1/epsilon in the exponent for rational epsilon <= 1/9.
 
 ## Open Questions & Future Work
 
@@ -66,16 +67,16 @@ The running time is n^{O(1/\epsilon)}, which grows rapidly for very small epsilo
 
 ## Archivist Review
 
-Quota Trees is already in the vault as a concept, so it is reused. The candidate open question for CARP extension matches the existing 'ucvrp-to-carp-extension' vault entry and is therefore rejected as a duplicate, leaving no new open questions to approve.
+Approved quota-trees as a novel concept note. Reused the existing canonical ucvrp-to-carp-extension slug for the open question, while rejecting the redundant problem-definition concept as UCVRP is standard.
 
 ### Approved Concepts
-- Quota Trees: Central algorithmic primitive used for constructing candidate routes in the improved approximation scheme for UCVRP.
+- Quota Trees: Central to constructing candidate routes for the UCVRP approximation algorithm.
 
 ### Approved Open Questions
-- Capacitated Arc Routing Extension: Extending vehicle routing approximation frameworks to arc routing problems broadens the applicability of quota trees and tour partitioning techniques to broader network design domains.
+- Capacitated Arc Routing Problem Extension: Extending advanced vehicle routing techniques and quota tree approaches to arc routing problems generalizes the applicability of these approximation frameworks.
 
 ### Rejected Candidates
-- [open_question] Capacitated Arc Routing Extension (`capacitated-arc-routing-extension`) - duplicate_existing: Duplicate or near-equivalent of an existing vault question (ucvrp-to-carp-extension).
+- [concept] Unsplittable Capacitated Vehicle Routing Problem (UCVRP) (`unsplittable-capacitated-vehicle-routing-problem`) - duplicate_existing: Already present or subsumed by existing problem definitions in combinatorial optimization.
 
 ## Links
 

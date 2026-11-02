@@ -4,14 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Designing battery swapping and charging networks for electric freight transport under demand uncertainty"
-description: "This paper studies the electrification of long-haul freight transport using a 'Swap-Locally, Charge-Centrally' network architecture that separates local battery swapping from grid-constrained charging hubs. The authors formulate a multi-period, two-stage stochastic location-inventory-fleet model to co-optimize station deployment, battery stocks, and fleet requirements under demand uncertainty. To solve this problem efficiently, they develop a Lovász-cut Benders decomposition supported by structural submodularity results and a convex battery oracle. Evaluated on a seven-state southeastern U.S. freight network, the proposed approach achieves high solution accuracy within minutes, significantly outperforming standard extensive formulations."
+description: "Long-haul freight electrification requires balancing rapid energy replenishment near freight flows with localized electrical grid capacity constraints. To address this, the authors introduce a 'Swap-Locally, Charge-Centrally' infrastructure architecture within a relay freight network, formulated as a multi-period, two-stage stochastic location-inventory-fleet model. They establish theoretical properties including the submodularity of the battery value function and affinity of fleet recourse, and develop an advanced Lovász-cut Benders decomposition method. Tested on a seven-state southeastern U.S. freight network, the proposed decomposition reaches optimality gaps below 0.01% in under four minutes, outperforming strengthened extensive formulations."
 resource: "https://arxiv.org/abs/2610.39652"
 tags:
   - "decarbonization"
   - "demand-forecasting"
   - "combinatorial-optimization"
-  - "vehicle-routing-problem"
-timestamp: "2026-11-01T11:37:52Z"
+  - "stochastic-demands"
+timestamp: "2026-11-02T13:06:12Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -29,15 +29,15 @@ architectures:
   []
 concepts:
   - name: "swap-locally-charge-centrally-architecture"
-    description: "A network design architecture for electric freight transport that decouples local battery swapping from centralized, grid-constrained charging locations."
+    description: "A freight network infrastructure design separating local battery swapping from centralized grid-suitable charging hubs."
 datasets:
   []
 open_questions:
   - name: "multistage-stochastic-electric-freight-network-design"
-    description: "Future work needs to extend current stochastic infrastructure design models to explicitly incorporate multistage investment frameworks, jointly optimize the multiple inventory buffers on remote links rather than relying on decoupled approximations, account for integer batch quantities without continuous relaxations, incorporate corridor-level adoption heterogeneity, model endogenous route choices rather than fixed relay paths, and support multiple charging suppliers per swapping hub under more advanced shortfall-recourse or chance-constrained capacity models."
+    description: "Future research should explore multistage investment frameworks, joint sizing of inventory and transit buffers for remote links, integer batch quantities, corridor-level adoption heterogeneity, endogenous route choices, and enhanced stochastic chance-constrained formulations to optimize long-haul electric freight networks under more comprehensive operating conditions."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-01T11:37:52Z"
-created_at: "2026-11-01T11:37:52Z"
+processed_at: "2026-11-02T13:06:12Z"
+created_at: "2026-11-02T13:06:12Z"
 ---
 
 # Designing battery swapping and charging networks for electric freight transport under demand uncertainty
@@ -48,14 +48,18 @@ created_at: "2026-11-01T11:37:52Z"
 
 ## Summary
 
-This paper studies the electrification of long-haul freight transport using a 'Swap-Locally, Charge-Centrally' network architecture that separates local battery swapping from grid-constrained charging hubs. The authors formulate a multi-period, two-stage stochastic location-inventory-fleet model to co-optimize station deployment, battery stocks, and fleet requirements under demand uncertainty. To solve this problem efficiently, they develop a Lovász-cut Benders decomposition supported by structural submodularity results and a convex battery oracle. Evaluated on a seven-state southeastern U.S. freight network, the proposed approach achieves high solution accuracy within minutes, significantly outperforming standard extensive formulations.
+Long-haul freight electrification requires balancing rapid energy replenishment near freight flows with localized electrical grid capacity constraints. To address this, the authors introduce a 'Swap-Locally, Charge-Centrally' infrastructure architecture within a relay freight network, formulated as a multi-period, two-stage stochastic location-inventory-fleet model. They establish theoretical properties including the submodularity of the battery value function and affinity of fleet recourse, and develop an advanced Lovász-cut Benders decomposition method. Tested on a seven-state southeastern U.S. freight network, the proposed decomposition reaches optimality gaps below 0.01% in under four minutes, outperforming strengthened extensive formulations.
 
 ## Key Contributions
 
-- Proposed a 'Swap-Locally, Charge-Centrally' architecture and a multi-period, two-stage stochastic location-inventory-fleet model for long-haul truck electrification under demand uncertainty.
-- Established mathematical properties including a scalar partial-minimization proof of battery value function submodularity and affinity of fleet recourse in binary swap-station decisions.
-- Developed a Lovász-cut Benders decomposition featuring hub-period block cuts and a convex battery oracle with analytic gradients and memoization.
-- Demonstrated on a seven-state southeastern U.S. freight network that the proposed method achieves optimality gaps below 0.01% in under four minutes, outperforming a strengthened extensive formulation.
+- Proposed the 'Swap-Locally, Charge-Centrally' architecture to decouple local battery swapping from centralized, grid-suitable charging hubs in long-haul electric freight networks.
+- Developed a multi-period, two-stage stochastic location-inventory-fleet model coordinating station deployment, inventory, and grid-bounded charging capacity under demand uncertainty.
+- Proved the submodularity of the battery value function via a scalar partial-minimization proof and showed that fleet recourse is affine in binary swap-station decisions.
+- Developed a Lovász-cut Benders decomposition featuring hub-period block cuts and a convex battery oracle with analytic gradients and memoization, achieving optimality gaps below 0.01% within four minutes on large southeastern U.S. freight instances.
+
+## Limitations
+
+None explicitly stated in the abstract.
 
 ## Open Questions & Future Work
 
@@ -63,17 +67,17 @@ This paper studies the electrification of long-haul freight transport using a 'S
 
 ## Key Concepts
 
-- [[swap-locally-charge-centrally-architecture]]: A network design architecture for electric freight transport that decouples local battery swapping from centralized, grid-constrained charging locations.
+- [[swap-locally-charge-centrally-architecture]]: A freight network infrastructure design separating local battery swapping from centralized grid-suitable charging hubs.
 
 ## Archivist Review
 
-Approved the core Swap-Locally, Charge-Centrally Architecture concept as a reusable, domain-specific network design paradigm for electric freight transport under grid constraints. Approved the multistage stochastic electric freight network design open question as it highlights structural modeling gaps in multi-echelon inventory and infrastructure optimization under uncertainty.
+The core infrastructure concept was approved because it is already present in the vault and represents a distinctive, reusable paradigm in heavy-duty electric vehicle network planning. The open question was preserved as it addresses long-term research directions in multistage stochastic infrastructure design.
 
 ### Approved Concepts
-- Swap-Locally, Charge-Centrally Architecture: Defines the core structural methodology for decoupling local energy replenishment from centralized grid-suitable charging hubs in electric freight transport.
+- Swap-Locally, Charge-Centrally Architecture: It forms the core infrastructure paradigm introduced and modeled for long-haul electric freight transport under grid capacity constraints.
 
 ### Approved Open Questions
-- Multistage Electric Freight Network Design: Identifying these modeling extensions is crucial for scaling electric freight network design to handle real-world operational complexities, dynamic decision-making under uncertainty, and precise multi-echelon inventory-fleet trade-offs.
+- Multistage Stochastic Electric Freight Networks: Extending stochastic energy infrastructure network models to handle multi-stage dynamic investments and tighter buffer/inventory coupling is critical for scaling long-haul freight electrification under real-world operational complexities.
 
 ## Links
 

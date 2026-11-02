@@ -4,12 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "When Protection Hurts: A Cytokine Storm Theory of Supply Chain Overreaction"
-description: "This paper develops a decision-theoretic framework to study how excessive defensive actions in supply chains can paradoxically worsen disruptions, a phenomenon termed a Supply Chain Cytokine Storm. The author introduces Response-Induced Loss (RIL) and the Cytokine Storm Index (CSI), deriving a closed-form critical response threshold and a spectral stability condition for interconnected networks. Numerical experiments demonstrate that optimal responses remain below the storm threshold, whereas proportional heuristics can trigger network-wide divergence."
+description: "This paper develops a decision-theoretic framework to study how defensive supply chain actions—such as hoarding and duplicate ordering—can paradoxically amplify disruptions, a phenomenon the author terms a Supply Chain Cytokine Storm. The author introduces Protective Response Intensity (PRI), Response-Induced Loss (RIL), and the Cytokine Storm Index (CSI) to model and quantify these self-inflicted costs. Furthermore, the work derives a spectral stability condition for interconnected networks, showing that optimal responses remain below the storm threshold while proportional heuristics can dangerously exceed it."
 resource: "https://arxiv.org/abs/2610.33750"
 tags:
-  - "stochastic-demands"
-  - "time-series"
-timestamp: "2026-11-01T11:36:52Z"
+  - "machine-learning"
+timestamp: "2026-11-02T13:04:26Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -24,16 +23,14 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "supply-chain-cytokine-storm"
-    description: "A theoretical phenomenon where defensive supply chain responses induce losses exceeding the original disruption intensity."
+  []
 datasets:
   []
 open_questions:
-  - name: "multi-agent-game-and-empirical-calibration-for-supply-chain-cytokine-storms"
-    description: "Develop a complete multi-agent game analysis in which multiple firms jointly optimize their defensive response intensities in a strategic equilibrium, moving beyond the current reduced-form behavioral propagation network model. Furthermore, estimate the reduced-form parameters (such as overreaction cost coefficients, mitigation effectiveness, and behavioral contagion) directly from empirical industry disruption events."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-01T11:36:52Z"
-created_at: "2026-11-01T11:36:52Z"
+processed_at: "2026-11-02T13:04:26Z"
+created_at: "2026-11-02T13:04:26Z"
 ---
 
 # When Protection Hurts: A Cytokine Storm Theory of Supply Chain Overreaction
@@ -44,35 +41,27 @@ created_at: "2026-11-01T11:36:52Z"
 
 ## Summary
 
-This paper develops a decision-theoretic framework to study how excessive defensive actions in supply chains can paradoxically worsen disruptions, a phenomenon termed a Supply Chain Cytokine Storm. The author introduces Response-Induced Loss (RIL) and the Cytokine Storm Index (CSI), deriving a closed-form critical response threshold and a spectral stability condition for interconnected networks. Numerical experiments demonstrate that optimal responses remain below the storm threshold, whereas proportional heuristics can trigger network-wide divergence.
+This paper develops a decision-theoretic framework to study how defensive supply chain actions—such as hoarding and duplicate ordering—can paradoxically amplify disruptions, a phenomenon the author terms a Supply Chain Cytokine Storm. The author introduces Protective Response Intensity (PRI), Response-Induced Loss (RIL), and the Cytokine Storm Index (CSI) to model and quantify these self-inflicted costs. Furthermore, the work derives a spectral stability condition for interconnected networks, showing that optimal responses remain below the storm threshold while proportional heuristics can dangerously exceed it.
 
 ## Key Contributions
 
-- Developed a decision-theoretic framework modeling Protective Response Intensity (PRI) and Response-Induced Loss (RIL).
-- Derived a closed-form critical response threshold (Supply Chain Cytokine Storm) where defensive losses exceed original disruption intensity.
-- Proposed the Cytokine Storm Index (CSI) and established a spectral stability condition for network-wide propagation in interconnected supply networks.
+- Developed a decision-theoretic framework modeling Protective Response Intensity (PRI) as an endogenous variable balancing disruption mitigation against Response-Induced Loss (RIL).
+- Derived a closed-form critical response threshold (Supply Chain Cytokine Storm) beyond which defensive actions worsen the original disruption.
+- Proposed the Cytokine Storm Index (CSI) to quantify response-induced loss relative to initial disruption intensity.
+- Derived a spectral stability condition for interconnected supply networks to distinguish bounded decentralized responses from network-wide propagation.
 
 ## Limitations
 
-Operational calibration of the framework requires further empirical work using real-world supply chain data.
-
-## Open Questions & Future Work
-
-- [[multi-agent-game-and-empirical-calibration-for-supply-chain-cytokine-storms]]
-
-## Key Concepts
-
-- [[supply-chain-cytokine-storm]]: A theoretical phenomenon where defensive supply chain responses induce losses exceeding the original disruption intensity.
+Future work could focus on calibrating the Cytokine Storm Index using large-scale empirical operational data across diverse industry sectors.
 
 ## Archivist Review
 
-Approved the core concept of the supply chain cytokine storm and its corresponding open question regarding multi-agent equilibria and empirical parameter calibration, as both offer rigorous and reusable modeling contributions for supply chain resilience literature.
+Applied high selectivity standards: the core concepts and open questions proposed by this paper either duplicate existing entries in the vault (such as supply-chain-cytokine-storm and its associated multi-agent game calibration open question) or represent subcomponents of the broader framework. Therefore, no new standalone notes are added.
 
-### Approved Concepts
-- Supply Chain Cytokine Storm: Introduces a novel biological analogy and mathematical threshold for when defensive supply chain actions worsen disruption.
-
-### Approved Open Questions
-- Multi-Agent Game and Empirical Parameter Calibration: Transitioning from reduced-form network models to rigorous game-theoretic equilibria and empirically grounded parameters is essential for translating theoretical cytokine storm models into actionable supply chain policy tools.
+### Rejected Candidates
+- [concept] Protective Response Intensity (`protective-response-intensity`) - subcomponent_of_broader_mechanism: Subcomponent of the broader supply-chain cytokine storm framework, and already largely captured by existing vault notes on supply chain contagion and network dynamics.
+- [concept] Supply Chain Cytokine Storm (`supply-chain-cytokine-storm`) - duplicate_existing: Synonymous with or extremely close to the existing vault concept 'supply-chain-cytokine-storm' (already present in the vault).
+- [open_question] Game-Theoretic Supply Chain Cytokine Storms (`multi-agent-game-supply-chain-cytokine-storms`) - duplicate_existing: Overlaps significantly with the existing vault open question 'multi-agent-game-and-empirical-calibration-for-supply-chain-cytokine-storms'.
 
 ## Links
 
