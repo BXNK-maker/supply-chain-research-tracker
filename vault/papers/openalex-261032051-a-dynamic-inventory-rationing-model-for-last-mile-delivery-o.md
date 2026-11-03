@@ -4,14 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A Dynamic Inventory Rationing Model for Last-Mile Delivery of Medication in Liberia's Community Health Program"
-description: "This paper studies the dynamic allocation of scarce medications in Liberia's community health program, balancing patient referral costs and untreated patient outcomes with demand-weighted fairness utility. To overcome the computational intractability of standard dynamic programming, the authors formulate a continuous-time approximation controlling the drift rate of a reflected Brownian motion and solve it using the deep splitting method with deep neural networks. Evaluated on malaria case data from Liberia, the proposed policy reduces operating costs by approximately 6% compared to a fairness-only benchmark while preserving 98% of its fairness utility."
+description: "This paper studies the dynamic allocation of scarce medications in Liberia's community health program to balance patient travel and untreated costs against a demand-weighted fairness utility. The authors formulate a finite-horizon stochastic control problem, approximate it via a reflected Brownian motion control problem, and solve it using a deep splitting method with neural networks. Calibrated on malaria data from Liberia, the proposed policy reduces operating costs by approximately 6% over a fairness-only baseline while maintaining high fairness utility."
 resource: "https://arxiv.org/abs/2610.32051"
 tags:
-  - "demand-forecasting"
-  - "stochastic-demands"
   - "autonomous-delivery"
+  - "stochastic-demands"
   - "time-series"
-timestamp: "2026-11-02T12:59:39Z"
+timestamp: "2026-11-03T12:36:02Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,10 +31,11 @@ concepts:
 datasets:
   []
 open_questions:
-  []
+  - name: "high-dimensional-stochastic-inventory-control"
+    description: "The authors note that while their current model uses a nine-dimensional control problem as a proof-of-concept, extending deep neural network and deep splitting methods to handle hundreds or thousands of dimensions in multi-echelon healthcare and humanitarian supply chains represents an important open computational direction."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-02T12:59:39Z"
-created_at: "2026-11-02T12:59:39Z"
+processed_at: "2026-11-03T12:36:02Z"
+created_at: "2026-11-03T12:36:02Z"
 ---
 
 # A Dynamic Inventory Rationing Model for Last-Mile Delivery of Medication in Liberia's Community Health Program
@@ -46,21 +46,25 @@ created_at: "2026-11-02T12:59:39Z"
 
 ## Summary
 
-This paper studies the dynamic allocation of scarce medications in Liberia's community health program, balancing patient referral costs and untreated patient outcomes with demand-weighted fairness utility. To overcome the computational intractability of standard dynamic programming, the authors formulate a continuous-time approximation controlling the drift rate of a reflected Brownian motion and solve it using the deep splitting method with deep neural networks. Evaluated on malaria case data from Liberia, the proposed policy reduces operating costs by approximately 6% compared to a fairness-only benchmark while preserving 98% of its fairness utility.
+This paper studies the dynamic allocation of scarce medications in Liberia's community health program to balance patient travel and untreated costs against a demand-weighted fairness utility. The authors formulate a finite-horizon stochastic control problem, approximate it via a reflected Brownian motion control problem, and solve it using a deep splitting method with neural networks. Calibrated on malaria data from Liberia, the proposed policy reduces operating costs by approximately 6% over a fairness-only baseline while maintaining high fairness utility.
 
 ## Key Contributions
 
-- Formulated a finite-horizon stochastic control problem for dynamic inventory rationing and allocation in last-mile medication delivery, balancing referral costs, untreated patient costs, and demand-weighted fairness utility.
+- Formulated a finite-horizon stochastic control problem for dynamic inventory rationing in last-mile medication delivery, balancing referral/untreated costs against demand-weighted fairness utility.
 - Developed a continuous-time approximation controlling the drift rate of a reflected Brownian motion to overcome the computational intractability of standard dynamic programming.
 - Adapted the deep splitting method using deep neural networks to approximate the value function and its gradient for computing dynamic allocation policies.
-- Demonstrated via empirical calibration on malaria cases in Liberia that the proposed policy reduces operating costs by about 6% relative to a fairness-only benchmark while retaining 98% of its fairness utility.
+- Calibrated the model using malaria case data from Liberia's Fangonda region, demonstrating a 6% operating cost reduction relative to the fairness-only benchmark while retaining 98% of its fairness utility.
+
+## Open Questions & Future Work
+
+- [[high-dimensional-stochastic-inventory-control]]
 
 ## Archivist Review
 
-Applied strict selectivity filters. The proposed open question focuses specifically on scaling multi-echelon healthcare supply chain operations, which is too application-specific for a general machine learning vault. No concepts or datasets were provided or warranted approval.
+Approved the open question on high-dimensional stochastic inventory control as it captures an important scalability bottleneck in multi-echelon stochastic control. No concepts or datasets met the strict novelty and reusability standards for vault inclusion.
 
-### Rejected Candidates
-- [open_question] High-Dimensional Multi-Echelon Healthcare Scaling (`high-dimensional-multi-echelon-healthcare-scaling`) - low_impact: Too domain-specific to healthcare supply chain operations and scaling rather than a general core algorithmic or machine learning bottleneck.
+### Approved Open Questions
+- High-Dimensional Stochastic Inventory Control: High-dimensional stochastic control and inventory routing models face severe computational barriers, and validating deep learning techniques for larger multi-echelon networks is crucial for broader operational deployment.
 
 ## Links
 

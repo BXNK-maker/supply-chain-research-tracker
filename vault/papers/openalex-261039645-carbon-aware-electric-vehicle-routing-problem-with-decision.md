@@ -4,15 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Carbon-Aware Electric Vehicle Routing Problem with Decision-Focused Learning"
-description: "This paper studies the Carbon-Aware Electric Vehicle Routing Problem, which minimizes charging-related emissions and routing costs by shifting charging demand to low carbon intensity periods. To handle future uncertainty, the authors propose a decision-focused learning approach using approximate SPO+ directions to train a solver-aware carbon intensity predictor. Experiments on Germany-based instances show that decision-focused training reduces realized total cost by 2.30% compared to prediction-focused learning, despite having lower pointwise predictive accuracy."
+description: "This paper studies a carbon-aware Electric Vehicle Routing Problem that optimizes routing, charging, and waiting decisions to minimize charging-related emissions driven by time-varying grid carbon intensity. To address the dependency of these decisions on carbon intensity forecasts, the authors propose a decision-focused learning approach that trains a linear predictor using approximate SPO+ directions with a Large Neighborhood Search solver. Experiments on realistic Germany-based instances demonstrate that carbon-aware optimization significantly reduces realized emissions, and decision-focused training outperforms conventional prediction-focused learning in total realized cost despite lower pointwise prediction accuracy."
 resource: "https://arxiv.org/abs/2610.39645"
 tags:
-  - "vehicle-routing-problem"
   - "decarbonization"
-  - "demand-forecasting"
-  - "combinatorial-optimization"
-  - "interpretable-machine-learning"
-timestamp: "2026-11-02T13:06:20Z"
+  - "vehicle-routing-problem"
+  - "stochastic-demands"
+timestamp: "2026-11-03T12:37:35Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -30,16 +28,16 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "decision-focused-learning"
-    description: "A machine learning training framework where prediction models are optimized directly with respect to downstream solver performance rather than standard predictive accuracy."
+  - name: "carbon-aware-electric-vehicle-routing-problem"
+    description: "An electric vehicle routing problem formulation that incorporates charging-related emissions and schedule flexibility to minimize grid carbon intensity."
 datasets:
   []
 open_questions:
-  - name: "computational-cost-scaling-dfl-routing"
-    description: "Future work should investigate reducing the time limit assigned to the large neighborhood search (LNS) during training, exploring the trade-off between the training time limit and downstream decision performance, and constructing surrogate models to reduce the number of LNS and postprocessing executions required in the training loop."
+  - name: "computational-efficiency-in-dfl-routing"
+    description: "Future work should investigate reducing the computational overhead of decision-focused learning loops by exploring lower solver time limits, surrogate models, or alternative training sample strategies to mitigate the high training time associated with large-scale routing solvers."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-02T13:06:20Z"
-created_at: "2026-11-02T13:06:20Z"
+processed_at: "2026-11-03T12:37:35Z"
+created_at: "2026-11-03T12:37:35Z"
 ---
 
 # Carbon-Aware Electric Vehicle Routing Problem with Decision-Focused Learning
@@ -50,36 +48,40 @@ created_at: "2026-11-02T13:06:20Z"
 
 ## Summary
 
-This paper studies the Carbon-Aware Electric Vehicle Routing Problem, which minimizes charging-related emissions and routing costs by shifting charging demand to low carbon intensity periods. To handle future uncertainty, the authors propose a decision-focused learning approach using approximate SPO+ directions to train a solver-aware carbon intensity predictor. Experiments on Germany-based instances show that decision-focused training reduces realized total cost by 2.30% compared to prediction-focused learning, despite having lower pointwise predictive accuracy.
+This paper studies a carbon-aware Electric Vehicle Routing Problem that optimizes routing, charging, and waiting decisions to minimize charging-related emissions driven by time-varying grid carbon intensity. To address the dependency of these decisions on carbon intensity forecasts, the authors propose a decision-focused learning approach that trains a linear predictor using approximate SPO+ directions with a Large Neighborhood Search solver. Experiments on realistic Germany-based instances demonstrate that carbon-aware optimization significantly reduces realized emissions, and decision-focused training outperforms conventional prediction-focused learning in total realized cost despite lower pointwise prediction accuracy.
 
 ## Key Contributions
 
-- Introduced a carbon-aware Electric Vehicle Routing Problem that co-optimizes routing, charging, and waiting decisions to minimize charging-related grid emissions alongside conventional routing costs.
-- Proposed a decision-focused learning approach using approximate SPO+ directions to train a linear carbon intensity predictor in a solver-aware manner.
-- Demonstrated on Germany-based instances that carbon-aware optimization reduces realized carbon emissions by 28.76% compared to carbon-blind optimization.
-- Showed that decision-focused training reduces realized total cost by 2.30% relative to conventional prediction-focused learning, achieving superior performance on 75.5% of test instances despite lower pointwise predictive accuracy.
+- Proposes a carbon-aware Electric Vehicle Routing Problem formulation that incorporates charging-related emissions and temporal charging/waiting flexibility to shift demand toward lower carbon intensity periods.
+- Applies a decision-focused learning approach using approximate SPO+ directions to train a linear carbon intensity predictor that is solver-aware of the underlying Large Neighborhood Search and exact postprocessing.
+- Demonstrates on Germany-based instances that explicit consideration of charging-related emissions reduces realized emissions by 28.76% on average compared to carbon-blind optimization.
+- Shows that decision-focused training reduces realized total cost by 2.30% relative to conventional prediction-focused learning, outperforming it on 75.5% of test instances despite having lower pointwise predictive accuracy.
 
 ## Limitations
 
-Achieves lower carbon-aware emissions at the expense of higher non-carbon operating costs.
+Results rely on realistic Germany-based instances and linear predictors with SPO+ approximations; broader generalization to non-linear predictors and other power grids remains to be fully explored.
 
 ## Open Questions & Future Work
 
-- [[computational-cost-scaling-dfl-routing]]
+- [[computational-efficiency-in-dfl-routing]]
 
 ## Key Concepts
 
-- [[decision-focused-learning]]: A machine learning training framework where prediction models are optimized directly with respect to downstream solver performance rather than standard predictive accuracy.
+- [[carbon-aware-electric-vehicle-routing-problem]]: An electric vehicle routing problem formulation that incorporates charging-related emissions and schedule flexibility to minimize grid carbon intensity.
 
 ## Archivist Review
 
-Approved Decision-Focused Learning as a central conceptual framework for solver-aware prediction, and approved the open question on computational scaling in decision-focused routing due to its clear bottleneck definition. No standalone named datasets were present.
+Approved the core carbon-aware EVRP problem formulation and the open question concerning computational efficiency in decision-focused routing, while rejecting broad pre-existing methodologies like decision-focused learning and ad-hoc case study datasets.
 
 ### Approved Concepts
-- Decision-Focused Learning: Central framework for training carbon intensity predictors that are solver-aware using approximate SPO+ directions for the electric vehicle routing problem.
+- Carbon-Aware Electric Vehicle Routing Problem: Establishes a novel vehicle routing formulation that integrates time-varying grid carbon intensity and charging/waiting flexibility to shift charging demand.
 
 ### Approved Open Questions
-- Computational Efficiency in Decision-Focused Routing: The high computational complexity of integrating combinatorial optimization solvers into decision-focused training loops remains a core bottleneck for scaling these methods to larger routing applications.
+- Improving Decision-Focused Training Efficiency: High computational cost is a primary bottleneck for scaling decision-focused learning to complex combinatorial optimization problems like vehicle routing.
+
+### Rejected Candidates
+- [concept] Decision-Focused Learning (`decision-focused-learning`) - not_novel: Decision-focused learning is a well-established existing methodology rather than a novel concept introduced by this paper.
+- [dataset] Germany-Based Instances (`germany-based-instances`) - weak_evidence: Ad-hoc synthetic or case-study instances rather than a standardized, widely adopted benchmark dataset.
 
 ## Links
 

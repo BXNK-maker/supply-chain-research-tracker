@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-11
-_2 notes. Highlights: A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio; Today’s research papers showcase a clear intersection between **large-scale combinatorial optimization, machine learning_
+_3 notes. Highlights: Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l; A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio_
 
 ### Week 2026-W45
-_1 notes. Highlights: A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio_
+_2 notes. Highlights: Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l; A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio_
 
+- [2026-11-03](/discussions/daily/2026-11-03) — Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l
 - [2026-11-02](/discussions/daily/2026-11-02) — A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio
 
 ### Week 2026-W44

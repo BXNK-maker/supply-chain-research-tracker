@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "DEG: Diffusion-Enhanced GFlowNet for Solving Vehicle Routing Problems"
-description: "This paper introduces Diffusion-Enhanced GFlowNet (DEG), a novel framework that combines Generative Flow Networks with diffusion models to address the limited solution diversity and insufficient flow expansion of traditional neural VRP solvers. By using GFlowNet to supply edge-level signals for diffusion perturbation and denoising within the GFlowNet paradigm, DEG achieves superior exploration and high-quality solutions. Extensive experiments demonstrate that DEG scales effectively to problem instances with up to 10,000 nodes."
+description: "The paper introduces Diffusion-Enhanced GFlowNet (DEG), a novel framework that integrates Generative Flow Networks with diffusion models to solve vehicle routing problems. Traditional GFlowNets suffer from limited flow expansion in high-reward regions, while diffusion models provide strong structural exploration guidance. DEG combines these paradigms by using GFlowNet to generate edge-specific backward signals, perturbing them with diffusion noise schedules, and denoising them within the GFlowNet paradigm. Evaluated on synthetic and real-world datasets with up to 10,000 nodes, DEG demonstrates superior solution quality and scalability compared to baseline methods."
 resource: "https://arxiv.org/abs/2610.39512"
 tags:
-  - "combinatorial-optimization"
   - "vehicle-routing-problem"
   - "reinforcement-learning"
-timestamp: "2026-11-02T12:59:47Z"
+  - "neural-routing-solver"
+timestamp: "2026-11-03T12:36:09Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -30,14 +30,14 @@ architectures:
   []
 concepts:
   - name: "diffusion-enhanced-gflownet"
-    description: "A novel framework that integrates GFlowNet with a diffusion model to encourage richer flow expansion toward high-reward regions in combinatorial optimization."
+    description: "A novel framework integrating Generative Flow Networks with diffusion models to encourage richer flow expansion toward high-reward regions in vehicle routing problems."
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-02T12:59:47Z"
-created_at: "2026-11-02T12:59:47Z"
+processed_at: "2026-11-03T12:36:09Z"
+created_at: "2026-11-03T12:36:09Z"
 ---
 
 # DEG: Diffusion-Enhanced GFlowNet for Solving Vehicle Routing Problems
@@ -48,28 +48,28 @@ created_at: "2026-11-02T12:59:47Z"
 
 ## Summary
 
-This paper introduces Diffusion-Enhanced GFlowNet (DEG), a novel framework that combines Generative Flow Networks with diffusion models to address the limited solution diversity and insufficient flow expansion of traditional neural VRP solvers. By using GFlowNet to supply edge-level signals for diffusion perturbation and denoising within the GFlowNet paradigm, DEG achieves superior exploration and high-quality solutions. Extensive experiments demonstrate that DEG scales effectively to problem instances with up to 10,000 nodes.
+The paper introduces Diffusion-Enhanced GFlowNet (DEG), a novel framework that integrates Generative Flow Networks with diffusion models to solve vehicle routing problems. Traditional GFlowNets suffer from limited flow expansion in high-reward regions, while diffusion models provide strong structural exploration guidance. DEG combines these paradigms by using GFlowNet to generate edge-specific backward signals, perturbing them with diffusion noise schedules, and denoising them within the GFlowNet paradigm. Evaluated on synthetic and real-world datasets with up to 10,000 nodes, DEG demonstrates superior solution quality and scalability compared to baseline methods.
 
 ## Key Contributions
 
-- Proposed Diffusion-Enhanced GFlowNet (DEG), integrating GFlowNet with a diffusion model to improve exploration and flow expansion in high-reward regions for vehicle routing problems.
-- Utilizes GFlowNet diversity to generate edge-specific backward signals, perturbing them with a diffusion noise schedule and denoising within the GFlowNet paradigm.
-- Introduced a specialized decoder capable of dynamically adapting to diverse problem scales up to 10,000 nodes.
+- Proposed Diffusion-Enhanced GFlowNet (DEG), integrating GFlowNet with diffusion models to provide stronger structural exploration and improve flow expansion in high-reward regions for vehicle routing problems.
+- Developed a mechanism where GFlowNet supplies edge-level backward signals perturbed by stochastic diffusion noise schedules and denoised within the GFlowNet paradigm.
+- Introduced a specialized decoder capable of dynamically adapting to diverse problem scales to enhance scalability up to 10,000 nodes.
+- Demonstrated consistent performance improvements on both synthetic and real-world vehicle routing problem benchmarks compared to baseline methods.
 
 ## Key Concepts
 
-- [[diffusion-enhanced-gflownet]]: A novel framework that integrates GFlowNet with a diffusion model to encourage richer flow expansion toward high-reward regions in combinatorial optimization.
+- [[diffusion-enhanced-gflownet]]: A novel framework integrating Generative Flow Networks with diffusion models to encourage richer flow expansion toward high-reward regions in vehicle routing problems.
 
 ## Archivist Review
 
-Approved the core methodological concept 'Diffusion-Enhanced GFlowNet' which already exists in the vault. Rejected open questions as standard future work extensions (routing variants and local scale adjustments). No datasets qualified.
+Approved the core concept 'diffusion-enhanced-gflownet' which is already present in the existing vault (matching its canonical slug). Rejected the open question because it focuses on a paper-local limitation regarding small-scale parallel decoding trade-offs rather than a broad, highly reusable research bottleneck.
 
 ### Approved Concepts
-- Diffusion-Enhanced GFlowNet: Central methodological framework of the paper, combining GFlowNet and diffusion models for combinatorial optimization.
+- Diffusion-Enhanced GFlowNet: Proposes a novel hybrid framework bridging GFlowNet and diffusion models for combinatorial optimization and routing problems.
 
 ### Rejected Candidates
-- [open_question] Small-Scale Local Decision-Making in VRP Solvers (`enhancing-small-scale-local-decision-making-in-non-autoregressive-vrp-solvers`) - paper_local: not_novel
-- [open_question] Extending Diffusion-Enhanced GFlowNets to VRP Variants (`extending-diffusion-enhanced-gflownets-to-diverse-vrp-variants`) - generic: not_novel
+- [open_question] Enhancing Small-Scale Decoding in Non-Autoregressive Solvers (`enhancing-small-scale-decoding-capacity-in-non-autoregressive-vsp-solvers`) - low_impact: The open question is largely tied to a specific architectural trade-off between autoregressive and non-autoregressive routing solvers rather than a broadly reusable core theoretical bottleneck.
 
 ## Links
 

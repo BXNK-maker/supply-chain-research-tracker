@@ -4,11 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A State Augmented Approach to Paralle Modeling in High-Level Synthesis"
-description: "This paper proposes a state-augmented approach to parallel modeling in high-level synthesis (HLS) using synchronous sequential processes to unlock concurrency in feedback-coupled designs. By explicitly representing persistent state, communication, and feedback control in C++, the methodology separates designer-controlled architecture from tool-controlled scheduling. Evaluations on a Kintex UltraScale+ FPGA using a five-stage RV32I processor show that the CPI-optimized design achieves 1.221 cycles per instruction at 220 MHz, significantly outperforming algorithmic HLS baselines and reference processors."
+description: "This paper presents a state-augmented parallel modeling approach for high-level synthesis (HLS) that uses synchronous sequential processes in C++ to expose architectural concurrency in feedback-coupled designs. By explicitly separating designer-controlled architecture from tool-controlled scheduling, the methodology enables fine-grained control over value consumption, timing, and memory-port mapping. Evaluated on a Kintex UltraScale+ FPGA implementing an RV32I processor, the approach achieves superior performance and area efficiency compared to algorithmic HLS baselines and hand-crafted references."
 resource: "https://arxiv.org/abs/2610.36481"
 tags:
   - "hardware-acceleration"
-timestamp: "2026-11-02T13:07:17Z"
+timestamp: "2026-11-03T12:38:32Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -24,14 +24,16 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  []
+  - name: "state-augmented-parallel-modeling"
+    description: "An explicit architectural modeling methodology using synchronous sequential processes to expose parallelism and decouple designer-controlled architecture from tool-controlled scheduling in high-level synthesis."
 datasets:
   []
 open_questions:
-  []
+  - name: "non-processor-evaluation-architectural-modeling"
+    description: "Broader applicability beyond the processor case study remains to be evaluated, specifically testing whether the proposed state-augmented synchronous sequential process methodology generalizes effectively to other feedback-coupled designs such as switch arbiters, cryptographic round and key schedules, or cache controllers."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-02T13:07:17Z"
-created_at: "2026-11-02T13:07:17Z"
+processed_at: "2026-11-03T12:38:32Z"
+created_at: "2026-11-03T12:38:32Z"
 ---
 
 # A State Augmented Approach to Paralle Modeling in High-Level Synthesis
@@ -42,20 +44,31 @@ created_at: "2026-11-02T13:07:17Z"
 
 ## Summary
 
-This paper proposes a state-augmented approach to parallel modeling in high-level synthesis (HLS) using synchronous sequential processes to unlock concurrency in feedback-coupled designs. By explicitly representing persistent state, communication, and feedback control in C++, the methodology separates designer-controlled architecture from tool-controlled scheduling. Evaluations on a Kintex UltraScale+ FPGA using a five-stage RV32I processor show that the CPI-optimized design achieves 1.221 cycles per instruction at 220 MHz, significantly outperforming algorithmic HLS baselines and reference processors.
+This paper presents a state-augmented parallel modeling approach for high-level synthesis (HLS) that uses synchronous sequential processes in C++ to expose architectural concurrency in feedback-coupled designs. By explicitly separating designer-controlled architecture from tool-controlled scheduling, the methodology enables fine-grained control over value consumption, timing, and memory-port mapping. Evaluated on a Kintex UltraScale+ FPGA implementing an RV32I processor, the approach achieves superior performance and area efficiency compared to algorithmic HLS baselines and hand-crafted references.
 
 ## Key Contributions
 
-- Developed an explicit architectural modeling methodology using synchronous sequential processes to improve concurrency in high-level synthesis (HLS) for feedback-coupled designs.
-- Demonstrated a CPI-optimized RV32I processor configuration achieving 1.221 cycles per instruction at 220 MHz on a Kintex UltraScale+ FPGA, outperforming an algorithmic HLS baseline and an Ibex reference.
-- Demonstrated an area-optimized RV32I configuration achieving a 65% reduction in LUTs and 47% in registers compared to the baseline while maintaining competitive performance.
+- Develops an explicit architectural modeling methodology using synchronous sequential processes in C++ for high-level synthesis (HLS) of feedback-coupled designs.
+- Demonstrates a CPI-optimized RV32I processor configuration achieving 1.221 CPI at 220 MHz on a Kintex UltraScale+ FPGA, outperforming an algorithmic HLS baseline (4.000 CPI) and an Ibex reference (1.575 CPI at 242 MHz).
+- Achieves a 65% reduction in LUTs and 47% reduction in registers with an area-optimized configuration that incurs only 9.7% more benchmark cycles at 250 MHz.
+
+## Open Questions & Future Work
+
+- [[non-processor-evaluation-architectural-modeling]]
+
+## Key Concepts
+
+- [[state-augmented-parallel-modeling]]: An explicit architectural modeling methodology using synchronous sequential processes to expose parallelism and decouple designer-controlled architecture from tool-controlled scheduling in high-level synthesis.
 
 ## Archivist Review
 
-Applied strict quality and reusability standards. No concepts, datasets, or open questions from this hardware synthesis paper met the criteria for permanent standalone vault notes.
+Approved one central hardware synthesis methodology concept and one open question regarding its domain generalizability beyond processor implementations.
 
-### Rejected Candidates
-- [open_question] Broader Applicability of Architectural Modeling (`broader-applicability-of-architectural-modeling`) - other: This is a standard future work suggestion exploring generalizability across different hardware workloads rather than a distinct, rigorous technical bottleneck.
+### Approved Concepts
+- State Augmented Parallel Modeling: Proposes a fundamental methodology for explicit architectural modeling in high-level synthesis to expose parallelism in feedback-coupled designs.
+
+### Approved Open Questions
+- Non-Processor Domain Evaluation: Establishing whether explicit architectural modeling in C++ scales to non-processor feedback-coupled hardware domains is vital for determining the broader utility of the proposed high-level synthesis paradigm.
 
 ## Links
 

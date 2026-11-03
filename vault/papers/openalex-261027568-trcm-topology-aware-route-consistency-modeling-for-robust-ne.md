@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "TRCM: Topology-Aware Route-Consistency Modeling for Robust Neural Vehicle Routing"
-description: "Neural combinatorial optimization models typically construct vehicle routing solutions through sequential node selection without explicitly representing route organization. This paper proposes Topology-Aware Route-Consistency Modeling (TRCM), which predicts pairwise same-route probabilities using node representations and injects them as a route-consistency signal into customer selection. To address class imbalance and uneven supervision, TRCM employs structure-preserving augmentation and Topological Entropy-based reweighting. Experimental results demonstrate improved optimality gaps across CVRP50 and CVRP100 benchmarks under matched decoding budgets."
+description: "Neural autoregressive solvers for the Capacitated Vehicle Routing Problem (CVRP) typically construct solutions sequentially without explicitly modeling route organization. This paper introduces Topology-Aware Route-Consistency Modeling (TRCM), which predicts pairwise same-route probabilities from intermediate node representations and injects them as a guidance signal during customer selection. To handle class-imbalanced and structurally uneven supervision, TRCM employs structure-preserving augmentation alongside topological entropy-based reweighting. Experimental results on CVRP and XML100 benchmarks demonstrate significant reductions in optimality gaps and enhanced robustness against demand variations."
 resource: "https://arxiv.org/abs/2610.27568"
 tags:
   - "neural-routing-solver"
   - "combinatorial-optimization"
-  - "vehicle-routing-problem"
-timestamp: "2026-11-02T13:06:43Z"
+  - "time-series"
+timestamp: "2026-11-03T12:37:57Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,14 +32,15 @@ architectures:
   []
 concepts:
   - name: "topology-aware-route-consistency-modeling"
-    description: "A method for robust neural vehicle routing that explicitly models pairwise same-route probabilities to guide node selection in autoregressive models."
+    description: "A method for neural vehicle routing that predicts pairwise same-route probabilities using structure-preserving augmentation and topological entropy-based reweighting to guide node-level customer selection."
 datasets:
   []
 open_questions:
-  []
+  - name: "route-consistency-efficiency-and-reliability"
+    description: "Future research can examine how to improve the reliability and computational efficiency of the route-consistency signal while extending its evaluation to broader routing settings, particularly addressing reference partition dependence and the high computational overhead of dense pair prediction."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-02T13:06:43Z"
-created_at: "2026-11-02T13:06:43Z"
+processed_at: "2026-11-03T12:37:57Z"
+created_at: "2026-11-03T12:37:57Z"
 ---
 
 # TRCM: Topology-Aware Route-Consistency Modeling for Robust Neural Vehicle Routing
@@ -50,31 +51,38 @@ created_at: "2026-11-02T13:06:43Z"
 
 ## Summary
 
-Neural combinatorial optimization models typically construct vehicle routing solutions through sequential node selection without explicitly representing route organization. This paper proposes Topology-Aware Route-Consistency Modeling (TRCM), which predicts pairwise same-route probabilities using node representations and injects them as a route-consistency signal into customer selection. To address class imbalance and uneven supervision, TRCM employs structure-preserving augmentation and Topological Entropy-based reweighting. Experimental results demonstrate improved optimality gaps across CVRP50 and CVRP100 benchmarks under matched decoding budgets.
+Neural autoregressive solvers for the Capacitated Vehicle Routing Problem (CVRP) typically construct solutions sequentially without explicitly modeling route organization. This paper introduces Topology-Aware Route-Consistency Modeling (TRCM), which predicts pairwise same-route probabilities from intermediate node representations and injects them as a guidance signal during customer selection. To handle class-imbalanced and structurally uneven supervision, TRCM employs structure-preserving augmentation alongside topological entropy-based reweighting. Experimental results on CVRP and XML100 benchmarks demonstrate significant reductions in optimality gaps and enhanced robustness against demand variations.
 
 ## Key Contributions
 
-- Proposes Topology-Aware Route-Consistency Modeling (TRCM) to explicitly predict pairwise same-route probabilities and guide autoregressive node selection in vehicle routing solvers.
-- Combines structure-preserving augmentation with Topological Entropy-based reweighting to handle class-imbalanced and structurally uneven same-route supervision.
-- Reduces optimality gap from 3.67% to 3.28% on CVRP50 and from 2.11% to 1.99% on CVRP100 under matched decoding budgets.
+- Proposes Topology-Aware Route-Consistency Modeling (TRCM), which explicitly predicts pairwise same-route probabilities from node representations and injects them into customer selection as a route-consistency signal.
+- Combines structure-preserving augmentation with Topological Entropy (TE)-based reweighting to handle class-imbalanced and structurally uneven same-route supervision.
+- Reduces the optimality gap on CVRP50 from 3.67% to 3.28% and on CVRP100 from 2.11% to 1.99% under matched decoding budgets, with further gains under augmented inference.
+- Demonstrates improved objective stability on XML100 and through a controlled demand-reassignment test over 500 variants.
 
-## Limitations
+## Open Questions & Future Work
 
-Tested primarily on CVRP instances up to size 100; scalability to large-scale vehicle routing remains to be fully explored.
+- [[route-consistency-efficiency-and-reliability]]
 
 ## Key Concepts
 
-- [[topology-aware-route-consistency-modeling]]: A method for robust neural vehicle routing that explicitly models pairwise same-route probabilities to guide node selection in autoregressive models.
+- [[topology-aware-route-consistency-modeling]]: A method for neural vehicle routing that predicts pairwise same-route probabilities using structure-preserving augmentation and topological entropy-based reweighting to guide node-level customer selection.
 
 ## Archivist Review
 
-The central concept 'Topology-Aware Route-Consistency Modeling' is approved as it already exists in the vault under the exact same slug ('topology-aware-route-consistency-modeling'). The open question is rejected because it amounts to routine future scaling and efficiency explorations rather than a standalone structural bottleneck. No datasets are approved as they are standard CVRP problem sizes rather than novel distinct datasets.
+Approved the core overarching framework (TRCM) and its primary open question while filtering out paper-local subcomponents and standard benchmark datasets.
 
 ### Approved Concepts
-- Topology-Aware Route-Consistency Modeling: Introduces a novel structural principle for autoregressive neural routing by explicitly modeling pairwise same-route probabilities to guide node selection.
+- Topology-Aware Route-Consistency Modeling: Introduces explicit route-level customer co-assignment and topological entropy-based reweighting to guide autoregressive neural vehicle routing solvers.
+
+### Approved Open Questions
+- Improving Route-Consistency Efficiency and Reliability: Addressing the computational bottleneck of dense pair prediction and improving the reliability of route-consistency signals are critical for scaling neural routing solvers to larger problem instances.
 
 ### Rejected Candidates
-- [open_question] Improving Route-Consistency Efficiency and Generalization (`improving-route-consistency-efficiency`) - low_impact: The question is a standard forward-looking extension regarding scalability and computational overhead rather than a sharp, technically distinct unresolved bottleneck.
+- [concept] Topological Entropy Reweighting (`topological-entropy-reweighting`) - subcomponent_of_broader_mechanism: Subcomponent of the broader TRCM framework rather than a standalone overarching mechanism.
+- [dataset] XML100 (`xml100`) - not_reusable: Standard benchmark dataset; unnecessary to create a vault note for routine instance sets.
+- [dataset] CVRP50 (`cvrp50`) - not_reusable: Standard benchmark dataset instance size.
+- [dataset] CVRP100 (`cvrp100`) - not_reusable: Standard benchmark dataset instance size.
 
 ## Links
 
