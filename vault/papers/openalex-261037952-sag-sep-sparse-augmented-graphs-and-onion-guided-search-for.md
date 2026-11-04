@@ -4,14 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "SAG-Sep: Sparse Augmented Graphs and Onion-Guided Search for Rounded Capacity Cut Separation"
-description: "The authors present SAG-Sep, a neural separation method for rounded capacity cuts (RCCs) in capacitated vehicle-routing relaxations that outperforms existing separators in speed and solution quality. By encoding fractional LP solutions into Sparse Augmented Graphs (SAG) with flow-informed multi-hop edges and employing a training-free decoder called Onion-Sweep (OS) that leverages the nested structure of high-value cuts, SAG-Sep scores node memberships in a single forward pass. On N=1000 customer instances from the NeuralSEP benchmark, SAG-Sep achieves a ~30-fold speedup per iteration and reduces the average root gap by 17.7% compared to existing neural baselines."
+description: "This paper introduces SAG-Sep, a fast and effective neural separator for rounded capacity cuts (RCCs) in capacitated vehicle-routing relaxations. SAG-Sep encodes fractional LP solutions using Sparse Augmented Graphs (SAG) to expose long-range routing structure, and uses a training-free decoder called Onion-Sweep (OS) to exploit the nested 'onion-like' structure of high-value cuts. On N=1000 customer instances from the NeuralSEP benchmark, SAG-Sep reduces the average root gap by 17.7% while accelerating separation by approximately 30-fold per iteration compared to existing baselines."
 resource: "https://arxiv.org/abs/2610.37952"
 tags:
-  - "combinatorial-optimization"
   - "vehicle-routing-problem"
-  - "neural-routing-solver"
-  - "approximation-algorithms"
-timestamp: "2026-11-03T12:38:27Z"
+  - "combinatorial-optimization"
+timestamp: "2026-11-04T12:48:24Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,18 +26,15 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "sparse-augmented-graph"
-    description: "An LP-aware sparse encoding technique with flow-informed multi-hop edges that exposes long-range routing structure without densifying graph attention."
-  - name: "onion-sweep"
-    description: "A training-free decoder that evaluates prefix violations of scored nodes in a vectorized pass to generate nested rounded capacity cut candidates."
+  - name: "sag-sep"
+    description: "A neural separator for rounded capacity cuts that encodes fractional LP solutions via sparse augmented graphs and decodes nested cuts via onion-guided search."
 datasets:
   []
 open_questions:
-  - name: "learned-decoder-for-cut-generation-diversity"
-    description: "Investigate the development of fully learned decoders that replace hand-designed test-time logic like Onion-Sweep to optimize entire cut sets and relaxation improvements rather than relying on supervised labels or heuristic ranking sweeps."
+  []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-03T12:38:27Z"
-created_at: "2026-11-03T12:38:27Z"
+processed_at: "2026-11-04T12:48:24Z"
+created_at: "2026-11-04T12:48:24Z"
 ---
 
 # SAG-Sep: Sparse Augmented Graphs and Onion-Guided Search for Rounded Capacity Cut Separation
@@ -50,34 +45,28 @@ created_at: "2026-11-03T12:38:27Z"
 
 ## Summary
 
-The authors present SAG-Sep, a neural separation method for rounded capacity cuts (RCCs) in capacitated vehicle-routing relaxations that outperforms existing separators in speed and solution quality. By encoding fractional LP solutions into Sparse Augmented Graphs (SAG) with flow-informed multi-hop edges and employing a training-free decoder called Onion-Sweep (OS) that leverages the nested structure of high-value cuts, SAG-Sep scores node memberships in a single forward pass. On N=1000 customer instances from the NeuralSEP benchmark, SAG-Sep achieves a ~30-fold speedup per iteration and reduces the average root gap by 17.7% compared to existing neural baselines.
+This paper introduces SAG-Sep, a fast and effective neural separator for rounded capacity cuts (RCCs) in capacitated vehicle-routing relaxations. SAG-Sep encodes fractional LP solutions using Sparse Augmented Graphs (SAG) to expose long-range routing structure, and uses a training-free decoder called Onion-Sweep (OS) to exploit the nested 'onion-like' structure of high-value cuts. On N=1000 customer instances from the NeuralSEP benchmark, SAG-Sep reduces the average root gap by 17.7% while accelerating separation by approximately 30-fold per iteration compared to existing baselines.
 
 ## Key Contributions
 
-- Introduces SAG-Sep, a neural separator for rounded capacity cuts that avoids iterative predict-and-coarsen inference by scoring node membership across vehicle-count levels in a single encoder forward pass.
-- Proposes Sparse Augmented Graph (SAG) encoding to expose long-range routing structure via flow-informed multi-hop edges without densifying attention.
-- Develops Onion-Sweep (OS), a training-free decoder that converts independent node scores into structured, nested RCC candidates via vectorized prefix evaluation.
-- Reduces average root gap by 17.7% relative to the strongest NeuralSEP baseline on N=1000 customer instances while achieving a ~30-fold per-iteration neural separation speedup.
-
-## Open Questions & Future Work
-
-- [[learned-decoder-for-cut-generation-diversity]]
+- Introduces SAG-Sep, a single-pass neural separator for rounded capacity cuts (RCCs) that scores node membership across vehicle-count levels.
+- Proposes Sparse Augmented Graph (SAG) encoding to capture long-range routing structure via flow-informed multi-hop edges without densifying attention.
+- Develops Onion-Sweep (OS), a training-free decoder that leverages the nested structure of high-value RCCs to generate structurally coordinated cut candidates in a vectorized pass.
+- Achieves a 17.7% reduction in average root gap on the N=1000 NeuralSEP benchmark compared to the strongest baseline, alongside a 30-fold speedup per iteration.
 
 ## Key Concepts
 
-- [[sparse-augmented-graph]]: An LP-aware sparse encoding technique with flow-informed multi-hop edges that exposes long-range routing structure without densifying graph attention.
-- [[onion-sweep]]: A training-free decoder that evaluates prefix violations of scored nodes in a vectorized pass to generate nested rounded capacity cut candidates.
+- [[sag-sep]]: A neural separator for rounded capacity cuts that encodes fractional LP solutions via sparse augmented graphs and decodes nested cuts via onion-guided search.
 
 ## Archivist Review
 
-Approved Sparse Augmented Graph and Onion-Sweep as they represent distinct, reusable architectural and decoding mechanisms for neural cut separation. The open question was mapped to the existing vault entry 'learned-decoder-for-cut-generation-diversity' to maintain taxonomy hygiene.
+Approved the core concept 'sag-sep' as a central novel architecture for neural cut separation. The open question was rejected because an equivalent question ('learned-decoder-for-cut-generation-diversity') already exists in the vault. No datasets were approved since NeuralSEP is used as a benchmark suite/framework.
 
 ### Approved Concepts
-- Sparse Augmented Graph: Introduces a novel LP-aware sparse encoding method that incorporates flow-informed multi-hop edges to expose long-range routing structure for vehicle-routing problems.
-- Onion-Sweep: Proposes a training-free decoding strategy that converts independent node scores into structurally coordinated nested cut proposals in a single vectorized pass.
+- SAG-Sep: Central novel separator architecture combining Sparse Augmented Graphs and Onion-Guided Search for vehicle-routing cuts.
 
-### Approved Open Questions
-- Learned Decoders for Cut Generation: Replacing hand-designed decoders with learned scoring or reinforcement learning loops is crucial for scaling neural cutting plane generators to broader combinatorial optimization problems without task-specific heuristic adjustments.
+### Rejected Candidates
+- [open_question] Learned Decoders for Cut Generation (`learned-decoders-cut-generation`) - duplicate_existing: This question is a close semantic duplicate of the existing vault question 'learned-decoder-for-cut-generation-diversity', which already covers learned decoders and candidate cut diversity.
 
 ## Links
 

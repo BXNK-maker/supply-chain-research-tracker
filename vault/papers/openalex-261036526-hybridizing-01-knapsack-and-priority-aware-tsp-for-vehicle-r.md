@@ -4,12 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Hybridizing 0/1 Knapsack and Priority-Aware TSP for Vehicle Routing: an Applied Variant of the TSP with Profits"
-description: "This paper models distribution logistics with capacity constraints and service priorities as a variant of the Traveling Salesperson Problem with Profits (TSPP). The authors propose a hybrid approach combining a 0/1 Knapsack objective weighted by the square of client priorities with a priority-biased Nearest Neighbor heuristic. Evaluated on a 14-customer scenario with a 1,100 kg capacity limit, the proposed method achieves 96.4% capacity utilization and significant revenue while effectively prioritizing high-value clients."
+description: "This paper investigates an applied variant of the Traveling Salesperson Problem with Profits (TSPP) for distribution logistics involving capacity constraints and customer priorities. The authors introduce a hybrid model combining a 0/1 Knapsack objective weighted by the square of client priorities with a priority-biased Nearest Neighbor heuristic. Evaluated on a 14-customer benchmark scenario, the method achieves 96.4% capacity utilization and successfully prioritizes high-value deliveries, outperforming classical greedy baselines."
 resource: "https://arxiv.org/abs/2610.36526"
 tags:
   - "vehicle-routing-problem"
-  - "combinatorial-optimization"
-timestamp: "2026-11-03T12:36:21Z"
+timestamp: "2026-11-04T12:45:27Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -31,8 +30,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-03T12:36:21Z"
-created_at: "2026-11-03T12:36:21Z"
+processed_at: "2026-11-04T12:45:27Z"
+created_at: "2026-11-04T12:45:27Z"
 ---
 
 # Hybridizing 0/1 Knapsack and Priority-Aware TSP for Vehicle Routing: an Applied Variant of the TSP with Profits
@@ -43,24 +42,24 @@ created_at: "2026-11-03T12:36:21Z"
 
 ## Summary
 
-This paper models distribution logistics with capacity constraints and service priorities as a variant of the Traveling Salesperson Problem with Profits (TSPP). The authors propose a hybrid approach combining a 0/1 Knapsack objective weighted by the square of client priorities with a priority-biased Nearest Neighbor heuristic. Evaluated on a 14-customer scenario with a 1,100 kg capacity limit, the proposed method achieves 96.4% capacity utilization and significant revenue while effectively prioritizing high-value clients.
+This paper investigates an applied variant of the Traveling Salesperson Problem with Profits (TSPP) for distribution logistics involving capacity constraints and customer priorities. The authors introduce a hybrid model combining a 0/1 Knapsack objective weighted by the square of client priorities with a priority-biased Nearest Neighbor heuristic. Evaluated on a 14-customer benchmark scenario, the method achieves 96.4% capacity utilization and successfully prioritizes high-value deliveries, outperforming classical greedy baselines.
 
 ## Key Contributions
 
-- Proposes an applied variant of the TSP with Profits integrating a 0/1 Knapsack objective weighted by client priority squared (v_i \cdot p_i^2) and a priority-biased Nearest Neighbor heuristic parameterized by \alpha.
-- Achieves 96.4\% capacity utilization and R$ 18,392.60 revenue while serving 9 out of 14 customers, correctly excluding all low-priority customers on the base scenario.
-- Performs sensitivity analysis on the priority exponent, providing formal justification for the quadratic choice in priority-aware distribution logistics.
+- Proposes an applied variant of the Traveling Salesperson Problem with Profits (TSPP) integrating a 0/1 Knapsack objective weighted by client priority squared and a priority-biased Nearest Neighbor heuristic.
+- Demonstrates on a 14-customer scenario with a 1,100 kg capacity that the approach serves 9 high-priority customers, achieves 96.4% capacity utilization, and yields R$ 18,392.60 in revenue.
+- Performs a sensitivity analysis validating the quadratic priority exponent choice over alternative formulations.
 
 ## Limitations
 
-The limitations of the hierarchical decomposition approach are explicitly discussed in the evaluation.
+The limitations of the hierarchical decomposition approach are explicitly discussed.
 
 ## Archivist Review
 
-The proposed candidate open question is too paper-local and specific to a heuristic routing parameter tuning detail. Therefore, no concepts or open questions were approved.
+Applied stringent review criteria: no concepts or datasets were proposed, and the single proposed open question was rejected as a standard request for larger-scale experiments and multi-vehicle extensions rather than a distinct structural bottleneck.
 
 ### Rejected Candidates
-- [open_question] Systematic Calibration of Priority Bias (`systematic-calibration-of-priority-bias-parameter`) - low_impact: The open question relates to a very local heuristic parameter in a small-scale applied routing variant and does not represent a broad unresolved bottleneck for machine learning or operations research as a whole.
+- [open_question] Priority-Aware TSP with Profits Extensions (`priority-aware-tsp-profits-future-work`) - low_impact: The open question primarily lists standard extensions and future experimental variations such as scaling to multiple vehicles and larger instances, lacking a deep structural methodological bottleneck.
 
 ## Links
 

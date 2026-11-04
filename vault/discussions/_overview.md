@@ -3,11 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-11
-_3 notes. Highlights: Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l; A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio_
+_4 notes. Highlights: Today’s batch of papers showcases a strong, cohesive focus on **decision-making under uncertainty, scale, and structural; Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l_
 
 ### Week 2026-W45
-_2 notes. Highlights: Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l; A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio_
+_3 notes. Highlights: Today’s batch of papers showcases a strong, cohesive focus on **decision-making under uncertainty, scale, and structural; Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l_
 
+- [2026-11-04](/discussions/daily/2026-11-04) — Today’s batch of papers showcases a strong, cohesive focus on **decision-making under uncertainty, scale, and structural
 - [2026-11-03](/discussions/daily/2026-11-03) — Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l
 - [2026-11-02](/discussions/daily/2026-11-02) — A dominant theme in today’s research influx is the intersection of **Operations Research (OR), Combinatorial Optimizatio
 
