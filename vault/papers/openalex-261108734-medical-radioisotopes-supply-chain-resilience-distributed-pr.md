@@ -4,11 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Medical Radioisotopes: Supply-chain Resilience, Distributed Production, and Access"
-description: "This review paper examines the global supply chain for medical radioisotopes, focusing on the 2025-2026 status quo, acute stressors, and mitigation strategies through a combination of literature analysis and expert interviews. The authors highlight the vulnerabilities of relying on an ageing fleet of centralized nuclear reactors. To achieve supply-chain resilience and improve access in underserved or lower-income regions, they propose complementing centralized production with regional accelerator-based centres."
+description: "This review paper examines the global supply chain, vulnerabilities, and distribution challenges of medical radioisotopes used in over 50 million diagnostic and therapeutic procedures annually. Combining literature analysis and expert interviews, the authors analyze the 2025-2026 status quo and acute disruptions caused by reliance on aging centralized nuclear reactors. To achieve supply-chain resilience and improve access in underserved and low- and middle-income regions, the paper proposes supplementing centralized reactors with distributed, regional accelerator-based production centers."
 resource: "https://arxiv.org/abs/2611.08734"
 tags:
   - "decarbonization"
-timestamp: "2026-11-13T12:45:17Z"
+timestamp: "2026-11-16T13:16:47Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -38,8 +38,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-13T12:45:17Z"
-created_at: "2026-11-13T12:45:17Z"
+processed_at: "2026-11-16T13:16:47Z"
+created_at: "2026-11-16T13:16:47Z"
 ---
 
 # Medical Radioisotopes: Supply-chain Resilience, Distributed Production, and Access
@@ -50,17 +50,17 @@ created_at: "2026-11-13T12:45:17Z"
 
 ## Summary
 
-This review paper examines the global supply chain for medical radioisotopes, focusing on the 2025-2026 status quo, acute stressors, and mitigation strategies through a combination of literature analysis and expert interviews. The authors highlight the vulnerabilities of relying on an ageing fleet of centralized nuclear reactors. To achieve supply-chain resilience and improve access in underserved or lower-income regions, they propose complementing centralized production with regional accelerator-based centres.
+This review paper examines the global supply chain, vulnerabilities, and distribution challenges of medical radioisotopes used in over 50 million diagnostic and therapeutic procedures annually. Combining literature analysis and expert interviews, the authors analyze the 2025-2026 status quo and acute disruptions caused by reliance on aging centralized nuclear reactors. To achieve supply-chain resilience and improve access in underserved and low- and middle-income regions, the paper proposes supplementing centralized reactors with distributed, regional accelerator-based production centers.
 
 ## Key Contributions
 
-- Provides a comprehensive review of the 2025-2026 status quo and supply-chain vulnerabilities for medical radioisotopes based on literature analysis and expert interviews.
-- Analyzes case studies of acute supply chain stressors and disruptions in global radioisotope production.
-- Argues for complementing the ageing fleet of centralized nuclear reactors with regional accelerator-based production centers to enhance supply resilience and access for short-lived isotopes.
+- Provides a comprehensive review of the 2025-2026 status quo and supply chain landscape for medical radioisotopes based on literature analysis and expert interviews.
+- Examines acute supply chain stressors and disruptions in centralized reactor-based medical radioisotope production.
+- Argues for complementing aging centralized nuclear reactors with regional accelerator-based production centers to improve supply resilience and access for short-lived isotopes.
 
 ## Limitations
 
-Relies on literature-based analysis and expert interviews without introducing a novel algorithmic quantitative framework.
+The paper relies on qualitative literature analysis and expert interviews rather than quantitative optimization models for supply chain reconfiguration.
 
 ## Links
 
