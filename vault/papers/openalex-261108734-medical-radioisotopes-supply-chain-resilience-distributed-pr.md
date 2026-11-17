@@ -4,11 +4,11 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Medical Radioisotopes: Supply-chain Resilience, Distributed Production, and Access"
-description: "This review paper examines the global supply chain, vulnerabilities, and distribution challenges of medical radioisotopes used in over 50 million diagnostic and therapeutic procedures annually. Combining literature analysis and expert interviews, the authors analyze the 2025-2026 status quo and acute disruptions caused by reliance on aging centralized nuclear reactors. To achieve supply-chain resilience and improve access in underserved and low- and middle-income regions, the paper proposes supplementing centralized reactors with distributed, regional accelerator-based production centers."
+description: "This paper, the second in a two-part review series, examines the resilience, distributed production, and global accessibility of medical radioisotopes. Based on a literature analysis and expert interviews, the authors review the 2025-2026 status quo and acute supply chain disruptions. They advocate for supplementing aging centralized nuclear reactors with regional accelerator-based production centers to eliminate single-point failures and enhance access to short-lived isotopes."
 resource: "https://arxiv.org/abs/2611.08734"
 tags:
   - "decarbonization"
-timestamp: "2026-11-16T13:16:47Z"
+timestamp: "2026-11-17T14:02:52Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -38,8 +38,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-16T13:16:47Z"
-created_at: "2026-11-16T13:16:47Z"
+processed_at: "2026-11-17T14:02:52Z"
+created_at: "2026-11-17T14:02:52Z"
 ---
 
 # Medical Radioisotopes: Supply-chain Resilience, Distributed Production, and Access
@@ -50,17 +50,17 @@ created_at: "2026-11-16T13:16:47Z"
 
 ## Summary
 
-This review paper examines the global supply chain, vulnerabilities, and distribution challenges of medical radioisotopes used in over 50 million diagnostic and therapeutic procedures annually. Combining literature analysis and expert interviews, the authors analyze the 2025-2026 status quo and acute disruptions caused by reliance on aging centralized nuclear reactors. To achieve supply-chain resilience and improve access in underserved and low- and middle-income regions, the paper proposes supplementing centralized reactors with distributed, regional accelerator-based production centers.
+This paper, the second in a two-part review series, examines the resilience, distributed production, and global accessibility of medical radioisotopes. Based on a literature analysis and expert interviews, the authors review the 2025-2026 status quo and acute supply chain disruptions. They advocate for supplementing aging centralized nuclear reactors with regional accelerator-based production centers to eliminate single-point failures and enhance access to short-lived isotopes.
 
 ## Key Contributions
 
-- Provides a comprehensive review of the 2025-2026 status quo and supply chain landscape for medical radioisotopes based on literature analysis and expert interviews.
-- Examines acute supply chain stressors and disruptions in centralized reactor-based medical radioisotope production.
-- Argues for complementing aging centralized nuclear reactors with regional accelerator-based production centers to improve supply resilience and access for short-lived isotopes.
+- Provides a comprehensive review and critical overview of the 2025-2026 status quo of the global medical radioisotope supply chain.
+- Analyzes acute stressors and supply chain disruptions through case studies and literature-based analysis paired with expert interviews.
+- Argues for complementing aging centralized nuclear reactors with regional accelerator-based production centers to mitigate single-point failures and improve access in underserved regions.
 
 ## Limitations
 
-The paper relies on qualitative literature analysis and expert interviews rather than quantitative optimization models for supply chain reconfiguration.
+Relies on literature-based analysis and expert interviews without providing quantitative simulation models for supply chain optimization.
 
 ## Links
 

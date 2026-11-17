@@ -4,14 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Handling Customer Preferences in Last-Mile Location-Routing: A Bilevel Optimization Approach"
-description: "This paper studies the Location-Routing Problem with Delivery Preferences in last-mile delivery, where companies make facility activation and routing decisions while anticipating customer choices over home delivery and collection points. The problem is modeled as a mixed-integer bilevel program featuring compensation mechanisms for service inconvenience, and two single-level reformulations are developed to solve it. A two-phase heuristic provides warm starts for the formulations, scaling effectively on larger instances. Computational results demonstrate that incorporating customer preferences significantly improves customer satisfaction and alters facility configurations at a negligible cost increase."
+description: "This paper introduces the Location-Routing Problem with Delivery Preferences, a last-mile delivery problem that integrates collection-point activation and vehicle routing while incorporating customer choice over home delivery versus collection points. The hierarchical interaction is modeled using a bilevel optimization framework, solved via equivalent single-level reformulations and a two-phase warm-start heuristic. Computational experiments demonstrate that accounting for customer preferences significantly alters location-routing configurations and improves customer satisfaction with minimal increase in operational costs."
 resource: "https://arxiv.org/abs/2611.05230"
 tags:
+  - "last-mile-delivery"
   - "vehicle-routing-problem"
   - "choice-modeling"
-  - "combinatorial-optimization"
-  - "last-mile-delivery"
-timestamp: "2026-11-16T13:16:53Z"
+  - "stochastic-demands"
+timestamp: "2026-11-17T14:03:36Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -34,8 +34,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-16T13:16:53Z"
-created_at: "2026-11-16T13:16:53Z"
+processed_at: "2026-11-17T14:03:36Z"
+created_at: "2026-11-17T14:03:36Z"
 ---
 
 # Handling Customer Preferences in Last-Mile Location-Routing: A Bilevel Optimization Approach
@@ -46,21 +46,14 @@ created_at: "2026-11-16T13:16:53Z"
 
 ## Summary
 
-This paper studies the Location-Routing Problem with Delivery Preferences in last-mile delivery, where companies make facility activation and routing decisions while anticipating customer choices over home delivery and collection points. The problem is modeled as a mixed-integer bilevel program featuring compensation mechanisms for service inconvenience, and two single-level reformulations are developed to solve it. A two-phase heuristic provides warm starts for the formulations, scaling effectively on larger instances. Computational results demonstrate that incorporating customer preferences significantly improves customer satisfaction and alters facility configurations at a negligible cost increase.
+This paper introduces the Location-Routing Problem with Delivery Preferences, a last-mile delivery problem that integrates collection-point activation and vehicle routing while incorporating customer choice over home delivery versus collection points. The hierarchical interaction is modeled using a bilevel optimization framework, solved via equivalent single-level reformulations and a two-phase warm-start heuristic. Computational experiments demonstrate that accounting for customer preferences significantly alters location-routing configurations and improves customer satisfaction with minimal increase in operational costs.
 
 ## Key Contributions
 
-- Introduced the Location-Routing Problem with Delivery Preferences, integrating collection-point activation, home-delivery assignment, and routing decisions while accounting for customer choice over time intervals and collection points.
-- Formulated the hierarchical interaction as a mixed-integer bilevel program incorporating compensation mechanisms for service inconvenience, along with two equivalent single-level reformulations.
-- Proposed a two-phase heuristic to generate feasible solutions acting as warm starts for the mathematical formulations, demonstrating increased effectiveness as instance size grows.
-- Showed through computational experiments that explicitly accounting for customer preferences alters location-routing configurations and improves preference satisfaction with a minor increase in company cost compared to benchmark models ignoring customer choice.
-
-## Archivist Review
-
-Applied strict selectivity standards, ensuring only genuinely reusable concepts and cross-cutting open questions are admitted to the knowledge vault. Since the provided open question was overly specific to last-mile location-routing variants, it was rejected.
-
-### Rejected Candidates
-- [open_question] Scalable Algorithms and Stochastic Preferences (`scalable-algorithms-stochastic-preferences-lrp-dp`) - paper_local: Too paper-specific to last-mile location-routing with delivery preferences, lacking the broad cross-cutting value required for permanent vault inclusion.
+- Introduces the Location-Routing Problem with Delivery Preferences, integrating collection-point activation, home-delivery offering, and routing under customer choice.
+- Formulates the hierarchical interaction between the company and customers as a mixed-integer bilevel program incorporating compensation mechanisms for service inconvenience.
+- Develops two equivalent single-level reformulations and a two-phase heuristic to generate feasible warm starts.
+- Demonstrates via computational experiments that explicitly accounting for customer preferences improves preference satisfaction at a small cost increase compared to benchmark models ignoring customer choice.
 
 ## Links
 
