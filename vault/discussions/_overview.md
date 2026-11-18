@@ -3,7 +3,12 @@
 This file is auto-generated from daily discussion notes.
 
 ## 2026-11
-_4 notes. Highlights: Today’s batch of papers showcases a strong, cohesive focus on **decision-making under uncertainty, scale, and structural; Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l_
+_5 notes. Highlights: Today’s batch of papers showcases a vibrant intersection between **Operations Research (OR), modern machine learning (di; Today’s batch of papers showcases a strong, cohesive focus on **decision-making under uncertainty, scale, and structural_
+
+### Week 2026-W47
+_1 notes. Highlights: Today’s batch of papers showcases a vibrant intersection between **Operations Research (OR), modern machine learning (di_
+
+- [2026-11-18](/discussions/daily/2026-11-18) — Today’s batch of papers showcases a vibrant intersection between **Operations Research (OR), modern machine learning (di
 
 ### Week 2026-W45
 _3 notes. Highlights: Today’s batch of papers showcases a strong, cohesive focus on **decision-making under uncertainty, scale, and structural; Today's paper collection highlights an exciting convergence across operations research, machine learning, and physical l_
@@ -18,7 +23,7 @@ _1 notes. Highlights: Today’s research papers showcase a clear intersection be
 - [2026-11-01](/discussions/daily/2026-11-01) — Today’s research papers showcase a clear intersection between **large-scale combinatorial optimization, machine learning
 
 ## 2026-10
-_13 notes. Highlights: Today's batch of papers showcases a unifying theme: **the tension between structural constraints and flexible generaliza; Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c_
+_12 notes. Highlights: Today's batch of papers showcases a unifying theme: **the tension between structural constraints and flexible generaliza; Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c_
 
 ### Week 2026-W44
 _6 notes. Highlights: Today's batch of papers showcases a unifying theme: **the tension between structural constraints and flexible generaliza; Today’s papers highlight a powerful overarching theme: **bridging structural rigor with data-driven scalability across c_
@@ -39,8 +44,3 @@ _6 notes. Highlights: A fascinating theme emerges from today's batch of papers: 
 - [2026-10-22](/discussions/daily/2026-10-22) — The latest influx of research papers reveals a fascinating convergence between classical operations research (OR) and mo
 - [2026-10-20](/discussions/daily/2026-10-20) — Today's batch of papers offers a remarkably cohesive and forward-looking snapshot of **Vehicle Routing Problems (VRP)** 
 - [2026-10-19](/discussions/daily/2026-10-19) — Today's batch of papers showcases a vibrant intersection of classical operations research, deep learning, multi-agent sy
-
-### Week 2026-W42
-_1 notes. Highlights: Today's literature reveals a powerful convergence between **classical operations research (OR)** and **modern machine le_
-
-- [2026-10-18](/discussions/daily/2026-10-18) — Today's literature reveals a powerful convergence between **classical operations research (OR)** and **modern machine le
