@@ -4,11 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Medical Radioisotopes: Supply-chain Resilience, Distributed Production, and Access"
-description: "This review paper examines the resilience, supply chain vulnerabilities, and distributed production models for medical radioisotopes during 2025-2026. Combining literature analysis with expert interviews, the authors analyze acute supply disruptions caused by the aging centralized nuclear reactor fleet. They propose complementing centralized reactors with regional accelerator-based production centers to mitigate single-point failures and improve access for underserved regions and low- and middle-income countries."
+description: "This review paper provides a comprehensive analysis of the global medical radioisotope supply chain for 2025-2026, combining literature analysis and expert interviews to examine acute disruptions and resilience strategies. The authors evaluate the vulnerabilities of the current aging fleet of nuclear reactors used for centralized production. To overcome single-point failures and logistic barriers, they propose complementing these facilities with regional accelerator-based production centers, thereby improving access to short-lived isotopes in low- and middle-income countries."
 resource: "https://arxiv.org/abs/2611.08734"
 tags:
-  - "decarbonization"
-timestamp: "2026-11-18T13:36:56Z"
+  - "control-theory"
+  - "machine-learning"
+timestamp: "2026-11-19T14:02:56Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -38,8 +39,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:36:56Z"
-created_at: "2026-11-18T13:36:56Z"
+processed_at: "2026-11-19T14:02:56Z"
+created_at: "2026-11-19T14:02:56Z"
 ---
 
 # Medical Radioisotopes: Supply-chain Resilience, Distributed Production, and Access
@@ -50,17 +51,17 @@ created_at: "2026-11-18T13:36:56Z"
 
 ## Summary
 
-This review paper examines the resilience, supply chain vulnerabilities, and distributed production models for medical radioisotopes during 2025-2026. Combining literature analysis with expert interviews, the authors analyze acute supply disruptions caused by the aging centralized nuclear reactor fleet. They propose complementing centralized reactors with regional accelerator-based production centers to mitigate single-point failures and improve access for underserved regions and low- and middle-income countries.
+This review paper provides a comprehensive analysis of the global medical radioisotope supply chain for 2025-2026, combining literature analysis and expert interviews to examine acute disruptions and resilience strategies. The authors evaluate the vulnerabilities of the current aging fleet of nuclear reactors used for centralized production. To overcome single-point failures and logistic barriers, they propose complementing these facilities with regional accelerator-based production centers, thereby improving access to short-lived isotopes in low- and middle-income countries.
 
 ## Key Contributions
 
-- Analyzes the 2025-2026 status quo and acute stressors of the global medical radioisotope supply chain via literature analysis and expert interviews.
-- Examines case studies of acute supply chain disruptions in centralized nuclear reactor production.
-- Proposes complementing aging centralized nuclear reactors with regional accelerator-based production centers to improve supply resilience and accessibility.
+- Provides a critical overview of the 2025-2026 global medical radioisotope supply chain status quo and acute disruptions based on literature analysis and expert interviews.
+- Examines case studies of acute supply chain stressors and the disruptions they caused to diagnostic and therapeutic procedures.
+- Argues for complementing aging centralized nuclear reactor fleets with regional accelerator-based production centers to improve supply resilience and access in underserved regions.
 
 ## Limitations
 
-The analysis relies on literature-based review paired with expert interviews without quantitative simulation models of supply networks.
+Focuses primarily on a qualitative and literature-based analysis paired with expert interviews rather than quantitative modeling.
 
 ## Links
 

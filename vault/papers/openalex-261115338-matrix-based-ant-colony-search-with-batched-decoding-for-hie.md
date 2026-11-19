@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Matrix-Based Ant Colony Search with Batched Decoding for Hierarchical Replenishment Routing: A Stylized Case Study Based on Korean City Data"
-description: "The authors study a single-vehicle replenishment-routing problem on a 100-node hierarchical network derived from Korean city data, where cities act as both demand and supply points under capacity and stop constraints. They propose a matrix-based ant colony search with batched local search decoding, showing competitive performance against genetic algorithms and MAX-MIN ant systems. Ablation studies reveal that batched local search is the dominant factor in solution quality, while load-aware transition factors yield negligible gains."
+description: "This paper studies a single-vehicle replenishment-routing problem on a 100-node hierarchical network derived from Korean city data, where vehicles must detour to previously visited supply points when capacity is exhausted. To solve this, the authors propose a matrix-based ant colony optimization algorithm equipped with a fixed greedy replenishment-decoding policy and batched local search. Experimental evaluations demonstrate competitive performance against genetic algorithms and MAX-MIN ant systems, while ablation studies highlight the dominance of batched local search over load-aware transition factors."
 resource: "https://arxiv.org/abs/2611.15338"
 tags:
-  - "vehicle-routing-problem"
   - "combinatorial-optimization"
-timestamp: "2026-11-18T13:39:32Z"
+  - "vehicle-routing-problem"
+timestamp: "2026-11-19T14:03:41Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -33,15 +33,17 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "matrix-based-ant-colony-search"
-    description: "An ant colony optimization variant that maintains colony states in arrays and evaluates local search candidate moves in batches."
+  []
 datasets:
   []
 open_questions:
-  []
+  - name: "exact-reload-sub-problem-quantification"
+    description: "Quantifying the optimality gap introduced by fixed greedy reloading policies through exact reload sub-problems remains an open direction for replenishment routing models."
+  - name: "route-anticipating-aco-construction-rules"
+    description: "Developing ant colony construction rules that actively anticipate remaining route structures and multi-step reload requirements remains an open challenge."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:39:32Z"
-created_at: "2026-11-18T13:39:32Z"
+processed_at: "2026-11-19T14:03:41Z"
+created_at: "2026-11-19T14:03:41Z"
 ---
 
 # Matrix-Based Ant Colony Search with Batched Decoding for Hierarchical Replenishment Routing: A Stylized Case Study Based on Korean City Data
@@ -52,28 +54,29 @@ created_at: "2026-11-18T13:39:32Z"
 
 ## Summary
 
-The authors study a single-vehicle replenishment-routing problem on a 100-node hierarchical network derived from Korean city data, where cities act as both demand and supply points under capacity and stop constraints. They propose a matrix-based ant colony search with batched local search decoding, showing competitive performance against genetic algorithms and MAX-MIN ant systems. Ablation studies reveal that batched local search is the dominant factor in solution quality, while load-aware transition factors yield negligible gains.
+This paper studies a single-vehicle replenishment-routing problem on a 100-node hierarchical network derived from Korean city data, where vehicles must detour to previously visited supply points when capacity is exhausted. To solve this, the authors propose a matrix-based ant colony optimization algorithm equipped with a fixed greedy replenishment-decoding policy and batched local search. Experimental evaluations demonstrate competitive performance against genetic algorithms and MAX-MIN ant systems, while ablation studies highlight the dominance of batched local search over load-aware transition factors.
 
 ## Key Contributions
 
-- Introduces a matrix-based ant colony search with batched decoding for hierarchical replenishment routing.
-- Constructs a 100-node benchmark based on Korean population and geographic data spanning 10 hierarchical levels.
-- Demonstrates through ablation that batch local search is the primary contributor to solution quality, performing comparably to a genetic algorithm and outperforming MAX-MIN ant system.
+- Proposed a matrix-based ant colony optimization algorithm (MACO) with batched decoding for hierarchical replenishment routing, achieving a mean total distance of 3081.7 km on a 100-node Korean city benchmark.
+- Demonstrated through ablation that batch local search is the primary contributor to solution quality in the proposed hierarchical replenishment framework, while load-aware transition factors yield no significant gain.
+- Analyzed structural sensitivities in a stylized national logistics network, showing that raising supply coefficients in lower-level cities shortens routes more effectively than relaxing stop limits.
 
-## Limitations
+## Open Questions & Future Work
 
-Evaluated on a stylized 100-node single-vehicle replenishment-routing benchmark with fixed parameters and heuristics.
-
-## Key Concepts
-
-- [[matrix-based-ant-colony-search]]: An ant colony optimization variant that maintains colony states in arrays and evaluates local search candidate moves in batches.
+- [[exact-reload-sub-problem-quantification]]
+- [[route-anticipating-aco-construction-rules]]
 
 ## Archivist Review
 
-Approved the matrix-based ant colony search concept as a reusable combinatorial optimization technique involving array-based colony states and batched local search decoding. No datasets or open questions met the strict standalone criteria.
+Applied strict selectivity criteria. No new concepts warranted permanent vault notes as the core methods are paper-specific routing heuristics. Two open questions regarding reload sub-problem quantification and route-anticipating construction rules were approved as they represent fundamental methodological gaps in constrained vehicle routing.
 
-### Approved Concepts
-- Matrix-Based Ant Colony Search: Core optimization methodology proposed and evaluated for the hierarchical replenishment routing problem.
+### Approved Open Questions
+- Quantifying Greedy Policy Gaps: Understanding the exact cost discrepancy between greedy decoding policies and optimal reload scheduling is crucial for evaluating and refining large-scale logistics routing heuristics.
+- Route-Anticipating ACO Construction Rules: Designing multi-step lookahead or route-anticipating transition rules is vital for improving metaheuristic search efficiency in constrained inventory and replenishment routing domains.
+
+### Rejected Candidates
+- [concept] Matrix-Based Ant Colony Search (`matrix-based-ant-colony-search`) - duplicate_existing: Already exists in the vault under matrix-based-ant-colony-search.
 
 ## Links
 

@@ -4,14 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Hybrid Classical-Quantum Optimization for CVRPTW: A Systems Framework with Provable Feasibility and Empirical Hardware Limits"
-description: "This paper presents a hybrid classical-quantum systems framework for solving the Capacitated Vehicle Routing Problem with Time Windows (CVRPTW) by decomposing monolithic problems into vehicle-level QUBOs solved via classical simulated bifurcation and near-term quantum processors. Evaluated on realistic London traffic benchmarks, the approach demonstrates verified fleet-distance reductions while establishing empirical hardware limits for QAOA constraint satisfaction. Diagnostic analysis further reveals that time-window tightness serves as the primary scalability bottleneck for these hybrid solvers."
+description: "This paper presents a hybrid classical-quantum optimization framework for the Capacitated Vehicle Routing Problem with Time Windows (CVRPTW), combining Mixed Integer Linear Programming with vehicle-level QUBO decomposition to circumvent the limitations of monolithic formulations. The approach is evaluated using Toshiba SQBM+ and QAOA on Rigetti Ankaa-3 and IQM Emerald processors across London traffic benchmarks of 10 to 70 customers. Results demonstrate consistent fleet-distance improvements using classical-simulated annealing solvers, while establishing current hardware boundaries for reliable constraint satisfaction with near-term quantum processors."
 resource: "https://arxiv.org/abs/2611.15343"
 tags:
   - "combinatorial-optimization"
   - "vehicle-routing-problem"
-  - "quantum-reinforcement-learning"
   - "nisq-systems"
-timestamp: "2026-11-18T13:50:04Z"
+timestamp: "2026-11-19T14:13:03Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -35,8 +34,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:50:04Z"
-created_at: "2026-11-18T13:50:04Z"
+processed_at: "2026-11-19T14:13:03Z"
+created_at: "2026-11-19T14:13:03Z"
 ---
 
 # Hybrid Classical-Quantum Optimization for CVRPTW: A Systems Framework with Provable Feasibility and Empirical Hardware Limits
@@ -47,21 +46,18 @@ created_at: "2026-11-18T13:50:04Z"
 
 ## Summary
 
-This paper presents a hybrid classical-quantum systems framework for solving the Capacitated Vehicle Routing Problem with Time Windows (CVRPTW) by decomposing monolithic problems into vehicle-level QUBOs solved via classical simulated bifurcation and near-term quantum processors. Evaluated on realistic London traffic benchmarks, the approach demonstrates verified fleet-distance reductions while establishing empirical hardware limits for QAOA constraint satisfaction. Diagnostic analysis further reveals that time-window tightness serves as the primary scalability bottleneck for these hybrid solvers.
+This paper presents a hybrid classical-quantum optimization framework for the Capacitated Vehicle Routing Problem with Time Windows (CVRPTW), combining Mixed Integer Linear Programming with vehicle-level QUBO decomposition to circumvent the limitations of monolithic formulations. The approach is evaluated using Toshiba SQBM+ and QAOA on Rigetti Ankaa-3 and IQM Emerald processors across London traffic benchmarks of 10 to 70 customers. Results demonstrate consistent fleet-distance improvements using classical-simulated annealing solvers, while establishing current hardware boundaries for reliable constraint satisfaction with near-term quantum processors.
 
 ## Key Contributions
 
-- Proposed a hybrid classical-quantum architecture combining MILP with vehicle-level QUBO for solving CVRPTW.
-- Achieved fleet-distance reductions of 2.80% on 25-customer and 0.22% on 55-customer realistic benchmarks using Toshiba SQBM+.
-- Established current quantum hardware boundaries for reliable constraint satisfaction using QAOA on Rigetti Ankaa-3 and IQM Emerald up to 4 customers (16 qubits).
-- Identified assignment-level time-window tightness as the dominant scalability bottleneck rather than local route optimization.
+- Introduces a hybrid classical-quantum architecture combining MILP with vehicle-level QUBO decomposition to avoid variable growth and constraint-enforcement difficulties in monolithic CVRPTW QUBO formulations.
+- Evaluates the framework on five realistic London traffic and location benchmarks (10–70 customers), demonstrating verified fleet-distance reductions of 2.80% for 25 customers and 0.22% for 55 customers using Toshiba SQBM+.
+- Establishes current quantum hardware boundaries using QAOA on Rigetti Ankaa-3 and IQM Emerald processors, achieving reliable constraint satisfaction at subproblems of up to 4 customers (16 qubits).
+- Identifies assignment-level time-window tightness as the dominant scalability bottleneck rather than local route optimization through diagnostic results.
 
-## Archivist Review
+## Limitations
 
-The single candidate open question was rejected because it is narrowly tied to near-term quantum hardware benchmarking and specific NISQ processors rather than representing a broad, enduring ML or optimization bottleneck. No concepts or datasets were proposed or approved, maintaining strict selectivity for the vault.
-
-### Rejected Candidates
-- [open_question] Algorithm versus Hardware Contributions (`quantum-algorithm-hardware-co-design`) - paper_local: The proposed question is too paper-local and specific to near-term quantum hardware benchmarking rather than a foundational, recurring open bottleneck across diverse ML fields.
+Current quantum hardware is limited to reliable constraint satisfaction for subproblems of up to 4 customers (16 qubits) using QAOA.
 
 ## Links
 

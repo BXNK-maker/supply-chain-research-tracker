@@ -4,14 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Solver-Admitted Metamorphic Testing of Learned Network Optimization Surrogates"
-description: "This paper introduces solver-admitted metamorphic testing to audit learned optimization surrogates for invariance under equivalent problem encodings while accounting for numerical error and multiple optima. Evaluating models across AC-OPF, TSP, CVRP, and MIS reveals frequent violations of metamorphic relations in prominent surrogate architectures like GridSFM-Open, POMO, and DIFUSCO. The findings highlight that current learned surrogates frequently lack structural consistency and motivate reporting metamorphic consistency alongside standard optimality and feasibility metrics."
+description: "This paper introduces solver-admitted metamorphic testing to audit learned network optimization surrogates against equivalent problem encodings, accounting for numerical error and multiple optima. The authors evaluate this framework across alternating-current optimal power flow, traveling salesman, capacitated vehicle routing, and maximum independent set problems, revealing widespread consistency violations in prominent models such as GridSFM-Open, POMO, and DIFUSCO. Furthermore, the study demonstrates that interventions like source patches and post hoc normalization can mitigate specific discrepancies but fail to guarantee uniform accuracy and feasibility."
 resource: "https://arxiv.org/abs/2611.08837"
 tags:
   - "combinatorial-optimization"
-  - "interpretable-machine-learning"
-  - "time-series"
-  - "vehicle-routing-problem"
-timestamp: "2026-11-18T13:51:07Z"
+  - "neural-routing-solver"
+  - "machine-learning"
+timestamp: "2026-11-19T14:13:21Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -29,14 +28,14 @@ architectures:
   []
 concepts:
   - name: "solver-admitted-metamorphic-testing"
-    description: "A testing framework for optimization solver surrogates using explicit eligibility conditions, output alignment, and numerical thresholds."
+    description: "A metamorphic testing framework for learned optimization solver surrogates that incorporates explicit eligibility conditions, output alignment, and numerical thresholds."
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:51:07Z"
-created_at: "2026-11-18T13:51:07Z"
+processed_at: "2026-11-19T14:13:21Z"
+created_at: "2026-11-19T14:13:21Z"
 ---
 
 # Solver-Admitted Metamorphic Testing of Learned Network Optimization Surrogates
@@ -47,27 +46,32 @@ created_at: "2026-11-18T13:51:07Z"
 
 ## Summary
 
-This paper introduces solver-admitted metamorphic testing to audit learned optimization surrogates for invariance under equivalent problem encodings while accounting for numerical error and multiple optima. Evaluating models across AC-OPF, TSP, CVRP, and MIS reveals frequent violations of metamorphic relations in prominent surrogate architectures like GridSFM-Open, POMO, and DIFUSCO. The findings highlight that current learned surrogates frequently lack structural consistency and motivate reporting metamorphic consistency alongside standard optimality and feasibility metrics.
+This paper introduces solver-admitted metamorphic testing to audit learned network optimization surrogates against equivalent problem encodings, accounting for numerical error and multiple optima. The authors evaluate this framework across alternating-current optimal power flow, traveling salesman, capacitated vehicle routing, and maximum independent set problems, revealing widespread consistency violations in prominent models such as GridSFM-Open, POMO, and DIFUSCO. Furthermore, the study demonstrates that interventions like source patches and post hoc normalization can mitigate specific discrepancies but fail to guarantee uniform accuracy and feasibility.
 
 ## Key Contributions
 
-- Constructs metamorphic tests for optimization solver surrogates with explicit eligibility conditions, output alignment, and numerical thresholds.
-- Evaluates surrogate models across alternating-current optimal power flow (AC-OPF), TSP, CVRP, and MIS, revealing widespread invariance violations in state-of-the-art models like GridSFM-Open, POMO, and DIFUSCO.
-- Demonstrates that post hoc normalization and source patches can remove selected discrepancies, but no single intervention establishes preserved accuracy and feasibility across all test cases.
+- Constructed metamorphic tests for optimization solver surrogates incorporating explicit eligibility conditions, output alignment, and numerical thresholds.
+- Demonstrated that GridSFM-Open violates multiple metamorphic relations across power flow test grids, with untrained random copies failing similarly.
+- Showed that routing models such as POMO exhibit sharply increasing rotation and reflection violation rates as problem scale increases from 20 to 100 cities.
+- Evaluated DIFUSCO on maximum independent set problems, showing that post hoc normalization within connected components effectively removes disjoint-union relation violations.
+
+## Limitations
+
+No evaluated intervention fully establishes preserved accuracy and feasibility within the declared margin across every tested grid or problem instance.
 
 ## Key Concepts
 
-- [[solver-admitted-metamorphic-testing]]: A testing framework for optimization solver surrogates using explicit eligibility conditions, output alignment, and numerical thresholds.
+- [[solver-admitted-metamorphic-testing]]: A metamorphic testing framework for learned optimization solver surrogates that incorporates explicit eligibility conditions, output alignment, and numerical thresholds.
 
 ## Archivist Review
 
-Approved the core concept of solver-admitted metamorphic testing as a distinct and reusable validation methodology for learned optimization surrogates. Rejected the open question candidate as it essentially restated boilerplate future directions for surrogate repair and validation.
+Approved the core overarching concept 'solver-admitted-metamorphic-testing' which already exists in the vault under a very similar name or is central enough to stand alone as a testing methodology. Rejected the open question as it bundles routine future work items rather than a distinct bottleneck.
 
 ### Approved Concepts
-- Solver-Admitted Metamorphic Testing: Introduces a principled testing methodology for learned network optimization surrogates that accounts for numerical error and multiple optima under equivalent problem encodings.
+- Solver-Admitted Metamorphic Testing: Provides a rigorous testing framework for learned network optimization surrogates by auditing equivalent problem encodings under numerical error and multiple optima.
 
 ### Rejected Candidates
-- [open_question] Validation and Repair of Learned Optimization Surrogates (`future-work-learned-surrogates-validation`) - not_novel: Too broad and acts as a generic call for future work on model validation rather than pinpointing a standalone unresolved technical bottleneck.
+- [open_question] Validating Optima Bounds and Structural Failures (`validating-optima-bounds-and-structural-failures`) - not_reusable: Combines routine future work suggestions (training from scratch, testing composed relations) without identifying a sharp, standalone bottleneck distinct from existing open questions.
 
 ## Links
 

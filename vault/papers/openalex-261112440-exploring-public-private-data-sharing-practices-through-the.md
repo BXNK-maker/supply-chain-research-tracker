@@ -4,12 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Exploring public-private data sharing practices through the lens of Open Data Ecosystems: A multiple case study on municipal and regional freight logistics"
-description: "This paper explores public-private data sharing practices within Open Data Ecosystems (ODE) for municipal and regional last-mile freight logistics through a multiple-case study in Sweden. The authors identify key socio-technical aspects—such as platform design, actor roles, sensitive data handling, data quality, and procurement—that shape data sharing. Findings are synthesized into an actor model, a conceptual model, and seven proposition sketches, highlighting the role of public actors as neutral keystone orchestrators."
+description: "This paper explores public-private data sharing practices in municipal and regional last-mile freight logistics through a multiple-case study of three cases in Sweden. Using semi-structured interviews, thematic analysis, and validation workshops, the authors examine how socio-technical factors such as platform design, actor roles, sensitive data, and procurement influence Open Data Ecosystems for Public-Private Freight (ODE-PPF). The results are synthesized into an actor model, a conceptual model, and seven proposition sketches that highlight the role of public actors as neutral keystone orchestrators."
 resource: "https://arxiv.org/abs/2611.12440"
 tags:
   - "last-mile-delivery"
   - "decarbonization"
-timestamp: "2026-11-18T13:37:08Z"
+timestamp: "2026-11-19T14:03:12Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -32,8 +32,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:37:08Z"
-created_at: "2026-11-18T13:37:08Z"
+processed_at: "2026-11-19T14:03:12Z"
+created_at: "2026-11-19T14:03:12Z"
 ---
 
 # Exploring public-private data sharing practices through the lens of Open Data Ecosystems: A multiple case study on municipal and regional freight logistics
@@ -44,24 +44,21 @@ created_at: "2026-11-18T13:37:08Z"
 
 ## Summary
 
-This paper explores public-private data sharing practices within Open Data Ecosystems (ODE) for municipal and regional last-mile freight logistics through a multiple-case study in Sweden. The authors identify key socio-technical aspects—such as platform design, actor roles, sensitive data handling, data quality, and procurement—that shape data sharing. Findings are synthesized into an actor model, a conceptual model, and seven proposition sketches, highlighting the role of public actors as neutral keystone orchestrators.
+This paper explores public-private data sharing practices in municipal and regional last-mile freight logistics through a multiple-case study of three cases in Sweden. Using semi-structured interviews, thematic analysis, and validation workshops, the authors examine how socio-technical factors such as platform design, actor roles, sensitive data, and procurement influence Open Data Ecosystems for Public-Private Freight (ODE-PPF). The results are synthesized into an actor model, a conceptual model, and seven proposition sketches that highlight the role of public actors as neutral keystone orchestrators.
 
 ## Key Contributions
 
-- Conducted a multiple-case study involving three municipal and regional freight logistics cases in Sweden to examine public-private data sharing practices.
-- Synthesized findings into an actor model and a conceptual model highlighting socio-technical aspects such as platform design, actor roles, sensitive data handling, data quality, and procurement.
-- Derived seven proposition sketches to establish a foundational framework for future research on Open Data Ecosystems in public-private freight (ODE-PPF).
+- Conducted a multiple-case study involving three cases in municipal and regional freight logistics in Sweden to explore public-private data sharing practices.
+- Identified key socio-technical aspects shaping data sharing in Open Data Ecosystems for Public-Private Freight (ODE-PPF), including platform design, actor roles, sensitive data handling, data quality, and procurement processes.
+- Synthesized findings into an actor model and a conceptual model along with seven proposition sketches to guide future research on public-private logistics ecosystems.
 
 ## Limitations
 
-Limited to municipal and regional last-mile freight logistics cases within Sweden; requires further empirical validation across broader geographic and institutional contexts.
+Future research is needed to validate the proposed actor model, conceptual model, and proposition sketches across broader regional and international contexts.
 
 ## Archivist Review
 
-Applied strict archival filters. The input paper provides an empirical case study on public-private data sharing in freight logistics and does not introduce reusable ML methods, canonical algorithmic benchmarks, or distinct technical concepts or bottleneck questions that warrant permanent standalone vault entries.
-
-### Rejected Candidates
-- [open_question] Governance and Platform Design in Open Data Ecosystems (`exploring-public-private-data-sharing-governance-and-platform-design`) - other: The proposed open question is broad future work regarding case studies and governance in public-private data sharing rather than a precise technical bottleneck or algorithmic limitation.
+No concepts or datasets met the strict novelty and reusability thresholds for standalone vault entries.
 
 ## Links
 

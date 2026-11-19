@@ -4,19 +4,18 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Scalable Reference Electrical Architectures for Modern Data Centers"
-description: "This paper presents scalable, vendor-neutral reference electrical architectures designed to address the massive electrical demands of modern cloud computing, artificial intelligence, and high-performance computing data centers. The authors propose a unified planning methodology integrating modular Power PODs, hierarchical HV/MV/LV distribution, backup generation, uninterruptible power supplies, battery energy storage systems, and scalable utility interfaces. Three representative Power POD configurations are developed to support systematic capacity expansion and provide a reproducible benchmark for evaluating large-scale data center impacts on future power systems."
+description: "The rapid growth of artificial intelligence and high-performance computing has created unprecedented power demands for modern data centers, necessitating robust electrical planning methodologies. This paper presents scalable, vendor-neutral reference electrical architectures for colocation, hyperscale, and AI data centers that integrate modular Power PODs, hierarchical distribution, and energy storage systems. By developing three representative Power POD configurations, the proposed framework supports systematic capacity expansion while maintaining consistent electrical topologies. Ultimately, the work provides a reproducible benchmark for evaluating the grid infrastructure impacts of multi-gigawatt data center campuses."
 resource: "https://arxiv.org/abs/2611.15712"
 tags:
-  - "decarbonization"
+  - "control-theory"
   - "demand-forecasting"
-  - "machine-learning"
-timestamp: "2026-11-18T13:49:43Z"
+  - "time-series"
+timestamp: "2026-11-19T14:12:48Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
   - literal: "Kiran Kumar Challa"
-  - literal: "Yan, Zhou"
-  - literal: "Kumarsinh Jhala"
+  - literal: "Yan"
   - literal: "Zhou"
   - literal: "Kumarsinh Jhala"
 issued:
@@ -35,19 +34,19 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:49:43Z"
-created_at: "2026-11-18T13:49:43Z"
+processed_at: "2026-11-19T14:12:48Z"
+created_at: "2026-11-19T14:12:48Z"
 ---
 
 # Scalable Reference Electrical Architectures for Modern Data Centers
 
-**Authors**: Kiran Kumar Challa, Yan, Zhou, Kumarsinh Jhala, Zhou, Kumarsinh Jhala
+**Authors**: Kiran Kumar Challa, Yan, Zhou, Kumarsinh Jhala
 **Date**: 2026-11-11
 **Paper ID**: [openalex:2611.15712](https://arxiv.org/abs/2611.15712)
 
 ## Summary
 
-This paper presents scalable, vendor-neutral reference electrical architectures designed to address the massive electrical demands of modern cloud computing, artificial intelligence, and high-performance computing data centers. The authors propose a unified planning methodology integrating modular Power PODs, hierarchical HV/MV/LV distribution, backup generation, uninterruptible power supplies, battery energy storage systems, and scalable utility interfaces. Three representative Power POD configurations are developed to support systematic capacity expansion and provide a reproducible benchmark for evaluating large-scale data center impacts on future power systems.
+The rapid growth of artificial intelligence and high-performance computing has created unprecedented power demands for modern data centers, necessitating robust electrical planning methodologies. This paper presents scalable, vendor-neutral reference electrical architectures for colocation, hyperscale, and AI data centers that integrate modular Power PODs, hierarchical distribution, and energy storage systems. By developing three representative Power POD configurations, the proposed framework supports systematic capacity expansion while maintaining consistent electrical topologies. Ultimately, the work provides a reproducible benchmark for evaluating the grid infrastructure impacts of multi-gigawatt data center campuses.
 
 ## Key Contributions
 
@@ -55,12 +54,13 @@ This paper presents scalable, vendor-neutral reference electrical architectures 
 - Integrates modular Power PODs, hierarchical HV/MV/LV distribution, standby generation, UPS, BESS, and scalable utility interfaces into a unified planning methodology.
 - Develops three representative Power POD configurations to support systematic capacity expansion while maintaining consistent electrical topology and equipment sizing.
 
+## Limitations
+
+Future work involves evaluating the impacts of these large-scale architectures on dynamic grid stability and transmission planning under extreme demand fluctuations.
+
 ## Archivist Review
 
-The paper focuses on electrical engineering reference architectures for data centers rather than machine learning algorithms or architectures. The proposed open question on microgrid integration is specific to power systems planning and does not represent a general ML vault question. Therefore, all candidates have been rejected in accordance with our strict selection policy.
-
-### Rejected Candidates
-- [open_question] Time-Varying Workloads and Microgrid Integration (`time-varying-workloads-microgrid-integration`) - paper_local: This is a paper-local future work direction focusing on power systems and data center electrical engineering rather than core machine learning bottlenecks or methodology.
+No concepts or datasets met the rigorous threshold for permanent vault notes, as the paper introduces a systems-level reference electrical architecture and framework rather than distinct algorithmic or architectural ML components.
 
 ## Links
 

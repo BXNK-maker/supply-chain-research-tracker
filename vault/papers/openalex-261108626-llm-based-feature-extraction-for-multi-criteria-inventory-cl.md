@@ -4,13 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "LLM-Based Feature Extraction for Multi-Criteria Inventory Classification"
-description: "This paper proposes an LLM-based feature extraction pipeline that converts unstructured customer feedback and operational data into quantitative vector embeddings and evaluation criteria for multi-criteria inventory classification (MCIC). By incorporating these text-derived features into the Hadi-Vencheh model, the approach effectively captures customer sentiment signals to enhance inventory prioritization. Experimental results show measurable reclassification effects, demonstrating the value of integrating unstructured data into traditional supply chain inventory management."
+description: "This paper introduces an LLM-based feature extraction approach that transforms unstructured customer feedback into quantitative features using vector embeddings and LLM-generated evaluation criteria for multi-criteria inventory classification (MCIC). By integrating these enriched features into the Hadi-Vencheh model, the method captures customer sentiment signals that remain underutilized in traditional inventory management. Experimental results demonstrate measurable reclassification effects and improved inventory prioritization when incorporating unstructured data."
 resource: "https://arxiv.org/abs/2611.08626"
 tags:
-  - "machine-learning"
-  - "time-series"
   - "demand-forecasting"
-timestamp: "2026-11-18T13:42:17Z"
+  - "machine-learning"
+timestamp: "2026-11-19T14:04:29Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -30,10 +29,11 @@ concepts:
 datasets:
   []
 open_questions:
-  []
+  - name: "operational-validation-inventory-reclassification"
+    description: "Further research is needed to validate whether inventory item reclassifications resulting from LLM-derived qualitative features translate into measurable operational improvements, such as enhanced service levels, reduced stockout rates, and lower holding costs, by testing against datasets with observable ground-truth outcomes."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:42:17Z"
-created_at: "2026-11-18T13:42:17Z"
+processed_at: "2026-11-19T14:04:29Z"
+created_at: "2026-11-19T14:04:29Z"
 ---
 
 # LLM-Based Feature Extraction for Multi-Criteria Inventory Classification
@@ -44,22 +44,24 @@ created_at: "2026-11-18T13:42:17Z"
 
 ## Summary
 
-This paper proposes an LLM-based feature extraction pipeline that converts unstructured customer feedback and operational data into quantitative vector embeddings and evaluation criteria for multi-criteria inventory classification (MCIC). By incorporating these text-derived features into the Hadi-Vencheh model, the approach effectively captures customer sentiment signals to enhance inventory prioritization. Experimental results show measurable reclassification effects, demonstrating the value of integrating unstructured data into traditional supply chain inventory management.
+This paper introduces an LLM-based feature extraction approach that transforms unstructured customer feedback into quantitative features using vector embeddings and LLM-generated evaluation criteria for multi-criteria inventory classification (MCIC). By integrating these enriched features into the Hadi-Vencheh model, the method captures customer sentiment signals that remain underutilized in traditional inventory management. Experimental results demonstrate measurable reclassification effects and improved inventory prioritization when incorporating unstructured data.
 
 ## Key Contributions
 
-- Proposes an LLM-based feature extraction approach to transform unstructured customer feedback and operational data into quantitative features using vector embeddings and LLM-generated evaluation criteria.
-- Integrates enriched text-derived features into a multi-criteria inventory classification (MCIC) framework based on the Hadi-Vencheh model.
-- Demonstrates measurable reclassification effects and enhanced inventory prioritization on e-commerce datasets when customer sentiment signals are included.
+- Proposes an LLM-based feature extraction approach to transform unstructured customer feedback and operational text into quantitative features for multi-criteria inventory classification.
+- Integrates LLM-generated evaluation criteria and vector embeddings with the Hadi-Vencheh model to enrich MCIC frameworks.
+- Demonstrates measurable reclassification effects and enhanced inventory prioritization by incorporating customer sentiment signals into inventory management.
+
+## Open Questions & Future Work
+
+- [[operational-validation-inventory-reclassification]]
 
 ## Archivist Review
 
-All candidates were rejected. The inventory classification concept is standard operations research rather than a novel ML primitive, and the open questions are either too domain-local or too general (bias/robustness) to qualify as permanent vault items.
+The paper applies LLM feature extraction to multi-criteria inventory classification. No reusable core ML architectural concept was proposed, but the open question regarding operational validation of inventory reclassification is worth tracking.
 
-### Rejected Candidates
-- [concept] Multi-Criteria Inventory Classification (MCIC) (`multi-criteria-inventory-classification`) - not_novel: Multi-criteria inventory classification is a well-established operations research domain rather than a novel ML machine architecture or foundational pattern.
-- [open_question] Operational Validation of LLM Inventory Classification (`operational-validation-llm-inventory-classification`) - paper_local: This is a paper-local empirical evaluation question about downstream supply chain performance for a specific model application.
-- [open_question] Robustness and Bias Detection in LLM Scores (`robustness-and-bias-detection-for-llm-scores`) - generic: Too broad and standard as a general LLM deployment concern rather than a specific structural research bottleneck.
+### Approved Open Questions
+- Operational Validation of Inventory Reclassification: Crucial for establishing the practical business value of AI-augmented multi-criteria inventory classification systems over traditional operational metrics.
 
 ## Links
 

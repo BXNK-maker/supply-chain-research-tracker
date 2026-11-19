@@ -4,13 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A Strategic Freight Market Model for Liner Shipping: Pricing, Entry, and Endogenous Service Choice"
-description: "National freight transport models often treat prices and service provision as exogenous, whereas this paper models both as outcomes of strategic interaction among operators of scheduled, loop-based freight services. The model compares oligopolistic competition, monopoly, Ramsey pricing, and welfare-maximising planning using a logit demand structure across multiple shipper segments. A solution method computing global pricing best responses and testing unilateral service deviations via an analytical profit bound is introduced. Applied to a synthetic Baltic-North Sea scenario, the findings show how market organization shapes pricing, service provision, modal shares, and welfare."
+description: "This paper proposes a strategic freight market model for liner shipping that endogenises prices, market entry, and service characteristics (port rotations, vessel classes, speeds) under different regulatory and market regimes. Using a logit demand structure and an equilibrium concept based on profitable entry, exit, and service replacement with price re-equilibration, the model compares competition, monopoly, Ramsey pricing, and social planning. Applied to a synthetic Baltic-North Sea scenario, the findings show how market organization and structural shocks influence pricing, service provision, and welfare."
 resource: "https://arxiv.org/abs/2611.14169"
 tags:
-  - "demand-forecasting"
+  - "choice-modeling"
   - "dynamic-pricing"
-  - "time-series"
-timestamp: "2026-11-18T13:47:37Z"
+timestamp: "2026-11-19T14:12:14Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -31,8 +30,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:47:37Z"
-created_at: "2026-11-18T13:47:37Z"
+processed_at: "2026-11-19T14:12:14Z"
+created_at: "2026-11-19T14:12:14Z"
 ---
 
 # A Strategic Freight Market Model for Liner Shipping: Pricing, Entry, and Endogenous Service Choice
@@ -43,20 +42,17 @@ created_at: "2026-11-18T13:47:37Z"
 
 ## Summary
 
-National freight transport models often treat prices and service provision as exogenous, whereas this paper models both as outcomes of strategic interaction among operators of scheduled, loop-based freight services. The model compares oligopolistic competition, monopoly, Ramsey pricing, and welfare-maximising planning using a logit demand structure across multiple shipper segments. A solution method computing global pricing best responses and testing unilateral service deviations via an analytical profit bound is introduced. Applied to a synthetic Baltic-North Sea scenario, the findings show how market organization shapes pricing, service provision, modal shares, and welfare.
+This paper proposes a strategic freight market model for liner shipping that endogenises prices, market entry, and service characteristics (port rotations, vessel classes, speeds) under different regulatory and market regimes. Using a logit demand structure and an equilibrium concept based on profitable entry, exit, and service replacement with price re-equilibration, the model compares competition, monopoly, Ramsey pricing, and social planning. Applied to a synthetic Baltic-North Sea scenario, the findings show how market organization and structural shocks influence pricing, service provision, and welfare.
 
 ## Key Contributions
 
-- Proposes a strategic freight market model for liner shipping that endogenous prices, entry, and service choice.
-- Develops a solution method computing global pricing best responses and testing unilateral service deviations using an analytical profit bound.
-- Compares oligopolistic competition, monopoly, Ramsey pricing, and welfare-maximising planning in a synthetic Baltic-North Sea application.
+- Develops a strategic freight market model for scheduled, loop-based liner shipping where prices, entry, and service choices are endogenous outcomes of operator interaction.
+- Compares oligopolistic competition, monopoly, Ramsey pricing (with service-level or system-wide cost recovery), and welfare-maximising planning under a unified demand and cost structure.
+- Demonstrates in a Baltic-North Sea application that multinomial logit competition sustains more overlapping services and lower prices than monopoly, while system-wide Ramsey pricing captures most of the welfare gains without incurring a deficit.
 
-## Archivist Review
+## Limitations
 
-Applied strict standards for the knowledge vault: the paper is an economics and maritime logistics modeling paper rather than a general machine learning or optimization paper. The open question is highly domain-specific to spatial transport oligopolies and does not represent a broad machine learning bottleneck.
-
-### Rejected Candidates
-- [open_question] Existence and Stability of Freight Market Equilibria (`existence-and-stability-of-freight-market-equilibria`) - low_impact: Too domain-specific to maritime liner shipping and spatial transport games rather than general machine learning or operations research methodology.
+The application is synthetic (Baltic-North Sea) and illustrates theoretical mechanisms rather than forecasting actual markets.
 
 ## Links
 
