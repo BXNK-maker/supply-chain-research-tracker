@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Strategically Robust Multi-Agent Control"
-description: "This paper introduces strategically robust multi-agent control to bridge the gap between game-theoretic control (which ignores policy misspecification) and robust control (which treats others as fully adversarial). By assuming players seek protection against misspecified control policies of other agents, the authors formulate a novel equilibrium concept termed strategically robust dynamic equilibrium. This framework is analyzed across open- and closed-loop settings, demonstrating both computational advantages and empirical resilience in vehicle platooning, inventory management, and network control."
+description: "This paper introduces strategically robust multi-agent control, a novel framework that bridges standard game-theoretic control and fully adversarial robust control by accounting for misspecified control policies of other agents. The authors formulate a new equilibrium concept, strategically robust dynamic equilibrium, which interpolates between these two paradigms across open- and closed-loop settings. Alongside theoretical guarantees and computational advantages, numerical experiments in vehicle platooning, inventory management, and network control demonstrate increased resilience and a 'free-lunch' phenomenon where robustness improves performance and social welfare."
 resource: "https://arxiv.org/abs/2611.16388"
 tags:
-  - "multi-agent-reinforcement-learning"
-  - "reinforcement-learning"
   - "control-theory"
-timestamp: "2026-11-18T13:43:08Z"
+  - "multi-agent-reinforcement-learning"
+  - "vehicle-routing-problem"
+timestamp: "2026-11-20T13:48:03Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -27,17 +27,14 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  - name: "strategically-robust-multi-agent-control"
-    description: "A control framework that interpolates between game-theoretic and robust control to protect against misspecified policies in multi-agent systems."
-  - name: "strategically-robust-dynamic-equilibrium"
-    description: "An equilibrium concept for dynamic games that interpolates between game-theoretic equilibria and fully adversarial robust control."
+  []
 datasets:
   []
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-18T13:43:08Z"
-created_at: "2026-11-18T13:43:08Z"
+processed_at: "2026-11-20T13:48:03Z"
+created_at: "2026-11-20T13:48:03Z"
 ---
 
 # Strategically Robust Multi-Agent Control
@@ -48,27 +45,23 @@ created_at: "2026-11-18T13:43:08Z"
 
 ## Summary
 
-This paper introduces strategically robust multi-agent control to bridge the gap between game-theoretic control (which ignores policy misspecification) and robust control (which treats others as fully adversarial). By assuming players seek protection against misspecified control policies of other agents, the authors formulate a novel equilibrium concept termed strategically robust dynamic equilibrium. This framework is analyzed across open- and closed-loop settings, demonstrating both computational advantages and empirical resilience in vehicle platooning, inventory management, and network control.
+This paper introduces strategically robust multi-agent control, a novel framework that bridges standard game-theoretic control and fully adversarial robust control by accounting for misspecified control policies of other agents. The authors formulate a new equilibrium concept, strategically robust dynamic equilibrium, which interpolates between these two paradigms across open- and closed-loop settings. Alongside theoretical guarantees and computational advantages, numerical experiments in vehicle platooning, inventory management, and network control demonstrate increased resilience and a 'free-lunch' phenomenon where robustness improves performance and social welfare.
 
 ## Key Contributions
 
-- Introduced strategically robust multi-agent control to interpolate between game-theoretic control and fully adversarial robust control.
-- Formulated a novel equilibrium concept, strategically robust dynamic equilibrium, applicable across open- and closed-loop settings.
-- Demonstrated computational benefits of strategic robustness over classic game-theoretic control approaches.
-- Illustrated resilience to misspecification and a 'free-lunch' performance/social welfare improvement phenomenon via vehicle platooning, inventory management, and network control experiments.
-
-## Key Concepts
-
-- [[strategically-robust-multi-agent-control]]: A control framework that interpolates between game-theoretic and robust control to protect against misspecified policies in multi-agent systems.
-- [[strategically-robust-dynamic-equilibrium]]: An equilibrium concept for dynamic games that interpolates between game-theoretic equilibria and fully adversarial robust control.
+- Introduces strategically robust multi-agent control as a bridge between game-theoretic control and fully adversarial robust control.
+- Formulates the strategically robust dynamic equilibrium concept for dynamic games that accommodates misspecified control policies of other players.
+- Demonstrates computational benefits of accounting for strategic robustness over classic game-theoretic control approaches.
+- Illustrates via numerical experiments on vehicle platooning, inventory management, and network control that strategic robustness yields resilience to misspecification and can improve social welfare (the 'free-lunch' phenomenon).
 
 ## Archivist Review
 
-The approved concepts represent the core methodological contributions of the paper: the overarching framework of strategically robust multi-agent control and its central solution concept, the strategically robust dynamic equilibrium. Both are distinct, reusable, and foundational for future multi-agent game theory and control research. No datasets or open questions were proposed or approved.
+The core concepts proposed by the paper (strategically-robust-multi-agent-control and strategically-robust-dynamic-equilibrium) already exist in the knowledge vault. The candidate open question was rejected as a paper-local extension rather than a broad foundational bottleneck.
 
-### Approved Concepts
-- Strategically Robust Multi-Agent Control: Presents a novel framework bridging game-theoretic control and robust control for multi-agent systems under policy misspecification.
-- Strategically Robust Dynamic Equilibrium: A new equilibrium concept combining robustness against policy misspecification with dynamic game formulations.
+### Rejected Candidates
+- [concept] Strategically Robust Multi-Agent Control (`strategically-robust-multi-agent-control`) - duplicate_existing: Already exists in the vault.
+- [concept] Strategically Robust Dynamic Equilibrium (`strategically-robust-dynamic-equilibrium`) - duplicate_existing: Already exists in the vault.
+- [open_question] Global Infinite-Horizon Equilibrium Computation (`infinite-horizon-equilibria-computation`) - paper_local: Paper-local specific extension of infinite-horizon game solving rather than a broadly reusable open bottleneck.
 
 ## Links
 

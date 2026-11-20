@@ -4,14 +4,14 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Maximizing Detection Probability in UAV Search Missions using Random-Key Optimizers"
-description: "This paper addresses stochastic and real-time UAV path planning for Search and Rescue (SAR) missions by modeling the problem as a dynamic probabilistic variant of the Open Vehicle Routing Problem (OVRP). The authors propose a configurable architecture that pairs a closed-loop probability update mechanism with Random-Key Optimizers to balance probability maximization and resource minimization. Computational evaluations demonstrate that the approach is scalable and competitive for multi-objective routing in unstable environments, though it remains vulnerable to systematically biased prior maps."
+description: "This paper addresses stochastic and real-time path planning for Unmanned Aerial Vehicles (UAVs) in Search and Rescue (SAR) operations by combining closed-loop probability updates with Random-Key Optimizers (RKO). The problem is formulated as a dynamic probabilistic variant of the Open Vehicle Routing Problem (OVRP), enabling adaptive balancing between probability maximization and resource minimization. Computational results demonstrate scalability and effectiveness, while highlighting that systematic prior biases degrade performance more severely than complete lack of prior information."
 resource: "https://arxiv.org/abs/2611.12317"
 tags:
-  - "vehicle-routing-problem"
   - "robotics"
+  - "vehicle-routing-problem"
   - "stochastic-demands"
   - "reinforcement-learning"
-timestamp: "2026-11-19T14:11:58Z"
+timestamp: "2026-11-20T13:48:47Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -28,14 +28,16 @@ paper_source: "openalex"
 architectures:
   []
 concepts:
-  []
+  - name: "random-key-optimizers"
+    description: "An optimization framework used here for routing Unmanned Aerial Vehicles under stochastic constraints."
 datasets:
   []
 open_questions:
-  []
+  - name: "bayesian-belief-updates-and-kinematic-constraints-in-uav-sar"
+    description: "Extend the current route-planning framework by incorporating Bayesian belief updates of target probabilities after each empty observation, relaxing the assumption of certain detection in visited cells, and replacing simplified two-dimensional obstacle-free corridors with more realistic kinematic and environmental constraints for practical field deployment."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-19T14:11:58Z"
-created_at: "2026-11-19T14:11:58Z"
+processed_at: "2026-11-20T13:48:47Z"
+created_at: "2026-11-20T13:48:47Z"
 ---
 
 # Maximizing Detection Probability in UAV Search Missions using Random-Key Optimizers
@@ -46,24 +48,35 @@ created_at: "2026-11-19T14:11:58Z"
 
 ## Summary
 
-This paper addresses stochastic and real-time UAV path planning for Search and Rescue (SAR) missions by modeling the problem as a dynamic probabilistic variant of the Open Vehicle Routing Problem (OVRP). The authors propose a configurable architecture that pairs a closed-loop probability update mechanism with Random-Key Optimizers to balance probability maximization and resource minimization. Computational evaluations demonstrate that the approach is scalable and competitive for multi-objective routing in unstable environments, though it remains vulnerable to systematically biased prior maps.
+This paper addresses stochastic and real-time path planning for Unmanned Aerial Vehicles (UAVs) in Search and Rescue (SAR) operations by combining closed-loop probability updates with Random-Key Optimizers (RKO). The problem is formulated as a dynamic probabilistic variant of the Open Vehicle Routing Problem (OVRP), enabling adaptive balancing between probability maximization and resource minimization. Computational results demonstrate scalability and effectiveness, while highlighting that systematic prior biases degrade performance more severely than complete lack of prior information.
 
 ## Key Contributions
 
-- Introduces a data-driven routing architecture combining closed-loop probability updates with Random-Key Optimizers (RKO) for UAV Search and Rescue (SAR) missions.
-- Formulates the path planning task as a dynamic probabilistic variant of the Open Vehicle Routing Problem (OVRP) with adaptive multi-objective switching.
-- Demonstrates that the proposed scheme is scalable and competitive with single-path scenarios while revealing failure modes under systematically biased prior maps.
+- Introduces a configurable data-driven routing architecture combining closed-loop probability updates with Random-Key Optimizers (RKO) for UAV search and rescue missions.
+- Formulates the problem as a dynamic probabilistic variant of the Open Vehicle Routing Problem (OVRP) balancing probability maximization and resource minimization.
+- Demonstrates that systematic map biases degrade performance twice as severely as having no prior information at all.
 
 ## Limitations
 
-The framework degrades severely under systematically biased prior maps, performing about half as well as flying with no prior at all.
+The framework degrades under systematically biased priors, performing worse than having no prior information.
+
+## Open Questions & Future Work
+
+- [[bayesian-belief-updates-and-kinematic-constraints-in-uav-sar]]
+
+## Key Concepts
+
+- [[random-key-optimizers]]: An optimization framework used here for routing Unmanned Aerial Vehicles under stochastic constraints.
 
 ## Archivist Review
 
-The paper discusses Random-Key Optimizers for UAV path planning, but random-key encoding is a standard established metaheuristic technique rather than a novel vault-worthy primitive. No other candidates were provided, so no items are approved.
+Approved the random-key optimizers concept as a reusable stochastic routing framework and the open question regarding Bayesian belief updates and kinematic constraints for UAV SAR. No standalone datasets were provided in the paper text.
 
-### Rejected Candidates
-- [concept] Random-Key Optimizers (`random-key-optimizers`) - not_novel: Random-key genetic algorithms are a long-standing established metaheuristic technique rather than a novel machine learning primitive introduced by this paper.
+### Approved Concepts
+- Random-Key Optimizers: Central architectural optimizer for UAV routing under stochastic constraints.
+
+### Approved Open Questions
+- Bayesian Updates and Kinematic Constraints: Crucial for bridging the gap between simplified heuristic simulations and real-world UAV deployment where sensor uncertainty, false negatives, and dynamic environment states heavily influence search effectiveness.
 
 ## Links
 

@@ -4,13 +4,13 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "A PTAS for Euclidean Capacitated Vehicle Routing"
-description: "This paper presents a Polynomial-Time Approximation Scheme (PTAS) for the Euclidean Capacitated Vehicle Routing Problem (CVRP), resolving a long-standing open problem in combinatorial optimization that extends Arora and Mitchell's classic PTAS for Euclidean TSP. The authors successfully bridge the gap between prior Quasi-Polynomial Time Approximation Schemes (QPTAS) and true polynomial-time approximation guarantees for Euclidean CVRP instances. This breakthrough overcomes decades of approximation barriers below the factor of 2."
+description: "This paper resolves a long-standing open problem in theoretical computer science and operations research by presenting the first polynomial-time approximation scheme (PTAS) for the Euclidean Capacitated Vehicle Routing Problem (CVRP). Euclidean CVRP generalizes the classical Euclidean Traveling Salesperson Problem (TSP) with vehicle capacity constraints $Q$, for which Arora and Mitchell established PTASs in 1996. While prior work achieved constant-factor approximations, quasipolynomial-time approximation schemes (QPTAS), and recent sub-logarithmic time improvements, this work establishes true polynomial-time approximation guarantees for Euclidean CVRP."
 resource: "https://arxiv.org/abs/2611.19018"
 tags:
   - "combinatorial-optimization"
   - "vehicle-routing-problem"
   - "approximation-algorithms"
-timestamp: "2026-11-19T14:07:33Z"
+timestamp: "2026-11-20T13:48:09Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -35,8 +35,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-19T14:07:33Z"
-created_at: "2026-11-19T14:07:33Z"
+processed_at: "2026-11-20T13:48:09Z"
+created_at: "2026-11-20T13:48:09Z"
 ---
 
 # A PTAS for Euclidean Capacitated Vehicle Routing
@@ -47,12 +47,16 @@ created_at: "2026-11-19T14:07:33Z"
 
 ## Summary
 
-This paper presents a Polynomial-Time Approximation Scheme (PTAS) for the Euclidean Capacitated Vehicle Routing Problem (CVRP), resolving a long-standing open problem in combinatorial optimization that extends Arora and Mitchell's classic PTAS for Euclidean TSP. The authors successfully bridge the gap between prior Quasi-Polynomial Time Approximation Schemes (QPTAS) and true polynomial-time approximation guarantees for Euclidean CVRP instances. This breakthrough overcomes decades of approximation barriers below the factor of 2.
+This paper resolves a long-standing open problem in theoretical computer science and operations research by presenting the first polynomial-time approximation scheme (PTAS) for the Euclidean Capacitated Vehicle Routing Problem (CVRP). Euclidean CVRP generalizes the classical Euclidean Traveling Salesperson Problem (TSP) with vehicle capacity constraints $Q$, for which Arora and Mitchell established PTASs in 1996. While prior work achieved constant-factor approximations, quasipolynomial-time approximation schemes (QPTAS), and recent sub-logarithmic time improvements, this work establishes true polynomial-time approximation guarantees for Euclidean CVRP.
 
 ## Key Contributions
 
-- Resolves a long-standing open problem in combinatorial optimization by presenting a Polynomial-Time Approximation Scheme (PTAS) for the Euclidean Capacitated Vehicle Routing Problem (CVRP).
-- Surpasses prior long-standing approximation limits (such as the 2-approximation and various recent Quasi-Polynomial Time Approximation Schemes (QPTAS)) to achieve arbitrary $(1+\epsilon)$-approximation in polynomial time for Euclidean instances.
+- Resolved a long-standing open problem in combinatorial optimization by presenting a polynomial-time approximation scheme (PTAS) for the Euclidean Capacitated Vehicle Routing Problem (CVRP).
+- Improved upon a series of prior quasipolynomial-time approximation schemes (QPTAS) that culminated in near-logarithmic dependencies on $n$.
+
+## Archivist Review
+
+No reusable concepts or critical datasets identified that require standalone vault notes.
 
 ## Links
 

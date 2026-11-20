@@ -4,19 +4,19 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Scalable Reference Electrical Architectures for Modern Data Centers"
-description: "The rapid growth of artificial intelligence and high-performance computing has created unprecedented power demands for modern data centers, necessitating robust electrical planning methodologies. This paper presents scalable, vendor-neutral reference electrical architectures for colocation, hyperscale, and AI data centers that integrate modular Power PODs, hierarchical distribution, and energy storage systems. By developing three representative Power POD configurations, the proposed framework supports systematic capacity expansion while maintaining consistent electrical topologies. Ultimately, the work provides a reproducible benchmark for evaluating the grid infrastructure impacts of multi-gigawatt data center campuses."
+description: "This paper proposes scalable, vendor-neutral reference electrical architectures for modern colocation, hyperscale, and AI data centers to address the challenges of multi-gigawatt campus power demands. The framework unifies modular Power PODs, hierarchical high/medium/low voltage distribution, UPS, and battery energy storage into a systematic planning methodology. Three representative Power POD configurations are developed to facilitate capacity expansion, utility interconnection studies, and grid infrastructure assessment."
 resource: "https://arxiv.org/abs/2611.15712"
 tags:
-  - "control-theory"
-  - "demand-forecasting"
+  - "decarbonization"
   - "time-series"
-timestamp: "2026-11-19T14:12:48Z"
+timestamp: "2026-11-20T13:49:18Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
   - literal: "Kiran Kumar Challa"
-  - literal: "Yan"
-  - literal: "Zhou"
+  - literal: "Yan, Zhou"
+  - literal: "Kumarsinh Jhala"
+  - literal: "Zhou Yan"
   - literal: "Kumarsinh Jhala"
 issued:
   date-parts:
@@ -32,21 +32,22 @@ concepts:
 datasets:
   []
 open_questions:
-  []
+  - name: "dynamic-workload-grid-modeling"
+    description: "Future work needs to extend current benchmark reference architectures by incorporating time-varying workload models, detailed dynamic models of on-site energy resources and microgrid controllers, and integrated transmission-distribution representations to evaluate large-load interconnections and grid impacts."
 skill: "GeneralMLSkill"
-processed_at: "2026-11-19T14:12:48Z"
-created_at: "2026-11-19T14:12:48Z"
+processed_at: "2026-11-20T13:49:18Z"
+created_at: "2026-11-20T13:49:18Z"
 ---
 
 # Scalable Reference Electrical Architectures for Modern Data Centers
 
-**Authors**: Kiran Kumar Challa, Yan, Zhou, Kumarsinh Jhala
+**Authors**: Kiran Kumar Challa, Yan, Zhou, Kumarsinh Jhala, Zhou Yan, Kumarsinh Jhala
 **Date**: 2026-11-11
 **Paper ID**: [openalex:2611.15712](https://arxiv.org/abs/2611.15712)
 
 ## Summary
 
-The rapid growth of artificial intelligence and high-performance computing has created unprecedented power demands for modern data centers, necessitating robust electrical planning methodologies. This paper presents scalable, vendor-neutral reference electrical architectures for colocation, hyperscale, and AI data centers that integrate modular Power PODs, hierarchical distribution, and energy storage systems. By developing three representative Power POD configurations, the proposed framework supports systematic capacity expansion while maintaining consistent electrical topologies. Ultimately, the work provides a reproducible benchmark for evaluating the grid infrastructure impacts of multi-gigawatt data center campuses.
+This paper proposes scalable, vendor-neutral reference electrical architectures for modern colocation, hyperscale, and AI data centers to address the challenges of multi-gigawatt campus power demands. The framework unifies modular Power PODs, hierarchical high/medium/low voltage distribution, UPS, and battery energy storage into a systematic planning methodology. Three representative Power POD configurations are developed to facilitate capacity expansion, utility interconnection studies, and grid infrastructure assessment.
 
 ## Key Contributions
 
@@ -54,13 +55,19 @@ The rapid growth of artificial intelligence and high-performance computing has c
 - Integrates modular Power PODs, hierarchical HV/MV/LV distribution, standby generation, UPS, BESS, and scalable utility interfaces into a unified planning methodology.
 - Develops three representative Power POD configurations to support systematic capacity expansion while maintaining consistent electrical topology and equipment sizing.
 
-## Limitations
+## Open Questions & Future Work
 
-Future work involves evaluating the impacts of these large-scale architectures on dynamic grid stability and transmission planning under extreme demand fluctuations.
+- [[dynamic-workload-grid-modeling]]
 
 ## Archivist Review
 
-No concepts or datasets met the rigorous threshold for permanent vault notes, as the paper introduces a systems-level reference electrical architecture and framework rather than distinct algorithmic or architectural ML components.
+Applied a strict standard of selectivity. No core algorithmic or methodological concept warranted a permanent standalone note. One open question addressing dynamic workload and grid modeling for large-scale data center interconnections was approved as a valuable research direction.
+
+### Approved Open Questions
+- Dynamic Workload and Grid Modeling: Essential for accurately assessing the dynamic voltage stability, transient response, and grid reliability impacts of multi-megawatt to gigawatt-scale data center interconnections.
+
+### Rejected Candidates
+- [open_question] Dynamic Workload and Grid Modeling (`dynamic-workload-grid-modeling`) - other: Approved as an open question.
 
 ## Links
 

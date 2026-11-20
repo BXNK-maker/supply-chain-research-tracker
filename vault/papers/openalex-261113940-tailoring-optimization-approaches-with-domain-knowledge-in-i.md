@@ -4,14 +4,12 @@ type: "paper"
 
 # OKF Recommended Core Fields
 title: "Tailoring Optimization Approaches with Domain Knowledge in Industry Process for Meta-heuristic Development"
-description: "The paper introduces the Industry Process for Meta-heuristic Development (IPMD) schema, a systematic methodology for designing meta- and hyper-heuristic applications for industrial optimization. Within this framework, the authors present Balancing Non-dominated Tournament Genetic Programming (BNTGP), a hyper-heuristic utilizing genetic programming to explore heuristic search spaces. BNTGP is evaluated on two challenging NP-hard multi-objective optimization problems: routing (Capacitated Vehicle Routing Problem with Time Windows) and scheduling (Multi-Skill Resource Constrained Project Scheduling Problem)."
+description: "This paper introduces the Industry Process for Meta-heuristic Development (IPMD), a systematic methodology for applying meta- and hyper-heuristic applications to complex optimization problems. The authors demonstrate the schema through a case study using Balancing Non-dominated Tournament Genetic Programming (BNTGP) to solve two NP-hard multi-objective problems: the Capacitated Vehicle Routing Problem with Time Windows and the Multi-Skill Resource Constrained Project Scheduling Problem. By leveraging genetic programming, BNTGP acts as a hyper-heuristic capable of exploring a search space of heuristics to solve problem instances generally."
 resource: "https://arxiv.org/abs/2611.13940"
 tags:
   - "combinatorial-optimization"
   - "vehicle-routing-problem"
-  - "evolutionary-algorithms"
-  - "machine-learning"
-timestamp: "2026-11-19T14:08:52Z"
+timestamp: "2026-11-20T13:48:22Z"
 
 # CSL-compatible fields (Retained as custom)
 author:
@@ -37,8 +35,8 @@ datasets:
 open_questions:
   []
 skill: "GeneralMLSkill"
-processed_at: "2026-11-19T14:08:52Z"
-created_at: "2026-11-19T14:08:52Z"
+processed_at: "2026-11-20T13:48:22Z"
+created_at: "2026-11-20T13:48:22Z"
 ---
 
 # Tailoring Optimization Approaches with Domain Knowledge in Industry Process for Meta-heuristic Development
@@ -49,23 +47,27 @@ created_at: "2026-11-19T14:08:52Z"
 
 ## Summary
 
-The paper introduces the Industry Process for Meta-heuristic Development (IPMD) schema, a systematic methodology for designing meta- and hyper-heuristic applications for industrial optimization. Within this framework, the authors present Balancing Non-dominated Tournament Genetic Programming (BNTGP), a hyper-heuristic utilizing genetic programming to explore heuristic search spaces. BNTGP is evaluated on two challenging NP-hard multi-objective optimization problems: routing (Capacitated Vehicle Routing Problem with Time Windows) and scheduling (Multi-Skill Resource Constrained Project Scheduling Problem).
+This paper introduces the Industry Process for Meta-heuristic Development (IPMD), a systematic methodology for applying meta- and hyper-heuristic applications to complex optimization problems. The authors demonstrate the schema through a case study using Balancing Non-dominated Tournament Genetic Programming (BNTGP) to solve two NP-hard multi-objective problems: the Capacitated Vehicle Routing Problem with Time Windows and the Multi-Skill Resource Constrained Project Scheduling Problem. By leveraging genetic programming, BNTGP acts as a hyper-heuristic capable of exploring a search space of heuristics to solve problem instances generally.
 
 ## Key Contributions
 
-- Proposed the Industry Process for Meta-heuristic Development (IPMD) schema as a systematic methodology for designing meta- and hyper-heuristics in industrial settings.
-- Introduced Balancing Non-dominated Tournament Genetic Programming (BNTGP) as a genetic programming-based hyper-heuristic framework.
-- Demonstrated the application of BNTGP to two complex NP-hard multi-objective optimization problems: the Capacitated Vehicle Routing Problem with Time Windows and the Multi-Skill Resource Constrained Project Scheduling Problem.
+- Introduces the Industry Process for Meta-heuristic Development (IPMD) schema as a systematic methodology for applying meta- and hyper-heuristics to optimization problems.
+- Presents a case study using Balancing Non-dominated Tournament Genetic Programming (BNTGP) for solving two NP-hard multi-objective optimization problems: the Capacitated Vehicle Routing Problem with Time Windows and the Multi-Skill Resource Constrained Project Scheduling Problem.
+- Demonstrates how genetic programming-based representations enable hyper-heuristics to explore search spaces of heuristics and generalize across problem instances.
+
+## Limitations
+
+The abstract does not report specific quantitative evaluation results, computational overhead, or scalability bounds across larger problem instances.
 
 ## Archivist Review
 
-The proposed concepts and open questions are specific to evolutionary algorithms and combinatorial optimization heuristics (meta- and hyper-heuristics), falling outside the core scope of general machine learning methodology and architectural primitives. Therefore, all candidates have been rejected in accordance with our high-selectivity standard.
+The paper focuses on an industrial process schema and evolutionary computation heuristics (genetic programming for routing and scheduling) within operations research. While well-executed, these concepts and open questions are specific to evolutionary algorithms and combinatorial optimization rather than core, cross-cutting machine learning primitives or general vault-level questions. Therefore, all candidates were rejected to maintain high selectivity.
 
 ### Rejected Candidates
-- [concept] Industry Process for Meta-heuristic Development (`industry-process-for-meta-heuristic-development`) - low_impact: A specific engineering methodology/schema for industrial deployment rather than a general ML modeling concept or architectural pattern.
-- [concept] Balancing Non-dominated Tournament Genetic Programming (`bntgp`) - not_reusable: A specialized genetic programming variant specific to combinatorial optimization heuristics, lacking widespread cross-domain reusability across general machine learning.
-- [open_question] Automatic Feature Design and Selection (`automatic-feature-design-and-selection-in-hyper-heuristics-bn-tgp`) - low_impact: A fairly standard and incremental future work direction regarding feature engineering in genetic programming.
-- [open_question] Transferability and Interpretability of Heuristics (`transferability-and-interpretability-of-evolved-heuristics`) - low_impact: A routine question about generalizability of evolved heuristics in evolutionary algorithms without a specific architectural bottleneck.
+- [concept] Industry Process for Meta-heuristic Development (`industry-process-for-meta-heuristic-development`) - not_reusable: Represents a domain-specific software engineering process/schema for meta-heuristic development rather than a fundamental algorithmic primitive or reusable machine learning architecture.
+- [concept] Balancing Non-dominated Tournament Genetic Programming (`balancing-non-dominated-tournament-genetic-programming`) - low_impact: A specialized genetic programming variant and application case study within traditional operations research and evolutionary computation rather than a core machine learning vault concept.
+- [open_question] Automatic Feature Design in Hyper-Heuristics (`automatic-feature-design-hyper-heuristics`) - low_impact: A standard evolutionary computation and hyper-heuristic research direction rather than an urgent, cross-cutting machine learning bottleneck.
+- [open_question] Transferability and Interpretability of Evolved Heuristics (`transferability-and-interpretability-of-heuristics`) - low_impact: Standard future work discussing heuristic generalization within evolutionary algorithms, lacking broader cross-domain machine learning framing.
 
 ## Links
 
